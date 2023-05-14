@@ -1,0 +1,30 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+student.activity.form.label.title = Título
+student.activity.form.label.abstractActivity = Resumen de la Actividad:
+student.activity.form.label.activityType = Tipo de actividad:
+student.activity.form.label.startPeriod = Inicio del Periodo:
+student.activity.form.label.endPeriod = Fin del Periodo:
+student.activity.form.label.link = Link:
+student.activity.list.label.enrolment = Matricula:
+
+student.activity.form.button.update = Actualizar:
+student.activity.form.button.delete = Eliminar:
+student.activity.form.button.create = Crear:
+
+student.activity.list.label.title = Título:
+student.activity.list.label.activityType = Tipo de actividad:
+student.activity.list.button.create = Crear:
+
+student.activity.form.error.validPeriod = El inicio del periodo debe ser anterior al final
+student.activity.error.end-reached-max-value: El periodo final no debe ser posterior a la fecha "2100/12/31" a las "23:59"
+student.activity.error.start-didnot-reach-min-value = El periodo inicial debe ser posterior a la fecha "2000/01/01" a las "00:00"

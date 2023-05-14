@@ -1,0 +1,16 @@
+key,title,abstract-session,start,end,link,key:practicum,code,additional,confirmed
+practicumSession-00,title-00,abstractSession-00,2024/01/01 08:00,2024/01/07 08:00,https://www.google.com,practicum-01,AAA111,false,true
+practicumSession-01,T,abstractSession-01,2024/01/01 08:00,2024/01/07 08:00,https://www.google.com,practicum-01,AAA222,false,true
+practicumSession-02,Ti,abstractSession-02,2024/02/01 08:00,2024/02/07 08:00,null,practicum-02,BBB555,false,true
+practicumSession-03,Probando un titulo que tenga como máximo 74 caracteres para el campo title,abstractSession-03,2024/03/01 08:00,2024/03/07 08:00,https://www.google.com,practicum-03,AAA333,false,true
+practicumSession-04,Probando un titulo que tenga como máximo 75 caracteres para el campo title.,abstractSession-04,2024/04/01 08:00,2024/04/07 08:00,null,practicum-04,AAA444,false,true
+practicumSession-05,サンプルテキスト,abstractSession-05,2024/05/01 08:00,2024/05/07 08:00,https://www.google.com,practicum-05,AAA555,false,true
+practicumSession-06,<title>ExampleHTML</title>,abstractSession-06,2024/06/01 08:00,2024/06/07 08:00,https://www.google.com,practicum-06,AAA000,false,true
+practicumSession-07,<script>alert('exampleJS');</script>,abstractSession-07,2024/07/01 08:00,2024/07/07 08:00,https://www.google.com,practicum-07,AAA666,false,true
+practicumSession-08,title-01,A,2024/08/01 08:00,2024/08/07 08:00,null,practicum-08,AAA777,false,true
+practicumSession-09,title-02,AA,2024/09/01 08:00,2024/09/07 08:00,null,practicum-09,AAA888,false,true
+practicumSession-10,title-03,Esto es un resumen de máximo 99 caracteres para abstractPracticum el campo summary del archivo csv.,2024/10/01 08:00,2024/10/07 08:00,null,practicum-10,AAA999,false,true
+practicumSession-11,title-04,Esto es un resumen de máximo 100 caracteres para abstractPracticum el campo summary del archivo csv,2024/11/01 08:00,2024/11/07 08:00,null,practicum-11,BBB111,false,true
+practicumSession-12,title-05,サンプルテキスト,2024/12/01 08:00,2024/12/07 08:00,null,practicum-12,BBB222,false,true
+practicumSession-13,title-06,<title>ExampleHTML</title>,2025/01/01 08:00,2025/01/07 08:00,null,practicum-13,BBB333,false,true
+practicumSession-14,title-07,<script>alert('exampleJS');</script>,2025/02/01 08:00,2025/02/07 08:00,null,practicum-14,BBB444,false,true

@@ -1,0 +1,20 @@
+# FORM #########################################################
+
+lecturer.course-ecture.label.course = Curso
+lecturer.course-ecture.label.lecture = Lección
+
+# BUTTONS #########################################################
+
+lecturer.course-lecture.button.add = Añadir
+lecturer.course-lecture.button.delete = Borrar
+
+# ERRORS #########################################################
+
+## ADD -----------------------------------------------------------
+
+lecturer.course.error.lecture.published = Can't add a lecture that is not published
+lecturer.course.error.course.published.add = Can't add a lecture to a course already published
+
+## DELETE --------------------------------------------------------
+
+lecturer.courseLecture.error.course.published.delete = Can't edit lectures from a course already published 

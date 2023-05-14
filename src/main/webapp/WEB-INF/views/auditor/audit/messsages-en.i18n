@@ -1,0 +1,41 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+auditor.audit.error.code.duplicated = Code already exists
+auditor.audit.error.course.null = Select a course
+
+# Messages for label in list
+auditor.audit.list.label.code = Code
+auditor.audit.list.label.conclusion = Conclusion
+auditor.audit.list.label.courseId = Course Id
+auditor.audit.list.label.courseCode = Course Code
+auditor.audit.list.label.course = Course
+auditor.audit.form.label.draftMode = Released
+
+# Messages for label in form
+auditor.audit.form.label.code = Code
+auditor.audit.form.label.conclusion = Conclusion
+auditor.audit.form.label.strongPoints = StrongPoints
+auditor.audit.form.label.weakPoints = WeakPoints
+auditor.audit.form.label.courseCode = Course Code
+auditor.audit.form.label.released = Released
+auditor.audit.form.label.marks = Marks
+
+auditor.audit.form.button.update = Update
+auditor.audit.form.button.delete = Delete
+auditor.audit.form.button.publish = Publish
+auditor.audit.form.button.create = Create
+
+auditor.audit.list.button.create = Create
+auditor.audit.form.button.addCorrect = Add correction
+
+
+auditor.audit.form.button.auditRecords.list = Audit Records list
+auditor.audit.form.button.auditRecords.create = Audit Record create

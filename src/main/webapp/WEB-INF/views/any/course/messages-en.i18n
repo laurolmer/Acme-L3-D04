@@ -1,0 +1,19 @@
+# FORM - COURSE - ANY ############################################
+
+any.course.label.code = Code
+any.course.label.title = Title
+any.course.label.retailPrice = Price
+any.course.label.abstraction = Resume
+any.course.label.draftMode = Draft
+any.course.label.link = Link
+
+# BUTTONS - COURSE - ANY #########################################
+
+any.course.button.update = Update
+any.course.button.delete = Delete
+any.course.button.create = Create course
+any.course.button.publish = Publish
+
+# ERRORS - COURSE - ANY ##########################################
+
+any.course.error.code.duplicated = Duplicated code

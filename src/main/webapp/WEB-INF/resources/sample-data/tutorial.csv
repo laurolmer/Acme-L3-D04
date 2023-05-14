@@ -1,0 +1,26 @@
+key,code,title,abstract-tutorial,goals,draftMode,key:assistant,key:course
+tutorial-01,TUT001,How to publish a course.,Example abstract.,"goal-1, goal-2, goal-3",false,assistant-01,course-01
+tutorial-02,TU002,How to publish a course.,Example abstract.,"goal-1, goal-2, goal-3",false,assistant-01,course-01
+tutorial-03,T003,How to publish a course.,Example abstract.,"goal-1, goal-2, goal-3",false,assistant-01,course-02
+tutorial-04,T004,This title is going to reach exactly 75chr so the restriction can be proved,Example abstract.,"goal-1, goal-2, goal-3",false,assistant-01,course-02
+tutorial-05,T005,This title will reach exactly 75 - 1 char so the restriction can be proved,Example abstract.,"goal-1, goal-2, goal-3",false,assistant-01,course-03
+tutorial-06,T006,T,Example abstract.,"goal-1, goal-2, goal-3",false,assistant-01,course-03
+tutorial-07,T007,T1,Example abstract.,"goal-1, goal-2, goal-3",false,assistant-02,course-04
+tutorial-08,T008,<title>ExampleHTML</title>,Example abstract.,"goal-1, goal-2, goal-3",false,assistant-02,course-04
+tutorial-09,T009,<script>alert('exampleJS');</script>,Example abstract.,"goal-1, goal-2, goal-3",false,assistant-02,course-05
+tutorial-10,T010,示例文本。,Example abstract.,"goal-1, goal-2, goal-3",false,assistant-02,course-05
+tutorial-11,T011,How to publish a course.,This explanation is going to reach 100 charac so the restriction can be proved in the maximum value.,"goal-1, goal-2, goal-3",false,assistant-02,course-06
+tutorial-12,T012,How to publish a course.,This explanation is going to reach 100-1 chars so the restriction can be proved in the max-1 value.,"goal-1, goal-2, goal-3",false,assistant-02,course-06
+tutorial-13,T013,How to publish a course.,T,"goal-1, goal-2, goal-3",false,assistant-01,course-07
+tutorial-14,T014,How to publish a course.,T1,"goal-1, goal-2, goal-3",false,assistant-01,course-07
+tutorial-15,T015,How to publish a course.,<title>ExampleHTML</title>,"goal-1, goal-2, goal-3",false,assistant-01,course-08
+tutorial-16,T016,How to publish a course.,<script>alert('exampleJS');</script>,"goal-1, goal-2, goal-3",false,assistant-02,course-08
+tutorial-17,T017,How to publish a course.,Образец текста.,"goal-1, goal-2, goal-3",false,assistant-02,course-09
+tutorial-18,T018,How to publish a course.,Example abstract.,This text for goals will reach 100 characters so the restriction can be proved in the maximum value.,false,assistant-02,course-09
+tutorial-19,T019,How to publish a course.,Example abstract.,This text for goals will reach 100 - 1 chars so the restriction can be proved in the max - 1 value.,false,assistant-01,course-10
+tutorial-20,T020,How to publish a course.,Example abstract.,T,false,assistant-01,course-10
+tutorial-21,T021,How to publish a course.,Example abstract.,T1,false,assistant-01,course-32
+tutorial-22,T022,How to publish a course.,Example abstract.,<title>ExampleHTML</title>,false,assistant-02,course-33
+tutorial-23,T023,How to publish a course.,Example abstract.,<script>alert('exampleJS');</script>,false,assistant-02,course-34
+tutorial-24,T024,How to publish a course.,Example abstract.,ข้อความตัวอย่าง.,false,assistant-02,course-35
+tutorial-25,T025,How to publish a course.,Example abstract.,"goal-1, goal-2, goal-3",false,assistant-02,course-37

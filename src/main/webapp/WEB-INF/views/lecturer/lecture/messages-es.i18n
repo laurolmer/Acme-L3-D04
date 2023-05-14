@@ -1,0 +1,25 @@
+# FORM - LECTURE ################################################################
+
+lecturer.lecture.label.draftMode = Publicado
+lecturer.lecture.label.title = Título
+lecturer.lecture.label.lectureAbstract = Resumen
+lecturer.lecture.label.body = Detalles
+lecturer.lecture.label.lectureType = Tipo
+lecturer.lecture.label.estimatedLearningTime = Tiempo estimado de aprendizaje
+
+# BUTTONS - LECTURE ################################################################
+
+lecturer.lecture.button.create = Crear
+lecturer.lecture.button.update = Actualizar
+lecturer.lecture.button.delete = Borrar
+lecturer.lecture.button.publish = Publicar
+
+# ERRORS - LECTURE #################################################################
+
+## CREATE --------------------------------------------------------------------------
+
+lecturer.lecture.error.estimatedLearningTime = Tiempo estimado debe ser positivo
+
+## UPDATE --------------------------------------------------------------------------
+
+lecturer.lecture.error.draftMode.published = No se puede actualizar una lección ya publicada

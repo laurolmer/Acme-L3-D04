@@ -1,0 +1,43 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+# Messages for label in form
+company.practicum-session.form.label.code = Código
+company.practicum-session.form.label.title = Título
+company.practicum-session.form.label.abstractSession = Resumen
+company.practicum-session.form.label.start = Fecha de inicio
+company.practicum-session.form.label.end = Fecha de fin
+company.practicum-session.form.label.link = Enlace
+
+
+# Messages for button in form
+company.practicum-session.form.button.create = Crear
+company.practicum-session.form.button.update = Actualizar
+company.practicum-session.form.button.delete = Eliminar
+company.practicum-session.form.button.confirm = Confirmar
+
+# Messages for label in list
+company.practicum-session.list.label.yes= Si
+company.practicum-session.list.label.no= No
+company.practicum-session.list.label.code = Código
+company.practicum-session.list.label.title = Título
+company.practicum-session.list.label.abstractSession = Resumen
+company.practicum-session.list.label.end = Fecha de fin
+company.practicum-session.list.label.start = Fecha de inicio
+company.practicum-session.list.label.additional = Adicional
+company.practicum-session.list.label.confirmed = Confirmado
+company.practicum-session.list.label.exact-duration= Duración
+
+# Messages for button in list
+company.practicum-session.list.button.create = Crear
+
+# Messages for error in form
+company.session-practicum.error.start-after-now = La fecha de inicio debe ser posterior a la fecha actual.
+company.session-practicum.error.end-before-start = La fecha de fin debe ser posterior a la fecha de inicio.

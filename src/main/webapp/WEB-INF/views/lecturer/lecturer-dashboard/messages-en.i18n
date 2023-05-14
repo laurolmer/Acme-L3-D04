@@ -1,0 +1,28 @@
+# TITLES ##########################################################################
+
+lecturer.dashboard.lecture.num = Number of Lectures
+lecturer.dashboard.lecture.data = Lectures Information
+lecturer.dashboard.course.data = Course Information
+
+# TABLE ###########################################################################
+
+# NUM -----------------------------------------------------------------------------
+
+lecturer.dashboard.lecture.numTheory = Theory lectures
+lecturer.dashboard.lecture.numHandsOn = Hands on lectures
+
+# LECTURE -------------------------------------------------------------------------
+
+lecturer.dashboard.lecture.count = Total lectures
+lecturer.dashboard.lecture.avg = Average time
+lecturer.dashboard.lecture.max = Max time
+lecturer.dashboard.lecture.min = Min time
+lecturer.dashboard.lecture.dev = Deviation time
+
+# COURSE --------------------------------------------------------------------------
+
+lecturer.dashboard.course.count = Total courses
+lecturer.dashboard.course.avg = Average time
+lecturer.dashboard.course.max = Max time
+lecturer.dashboard.course.min = Min time
+lecturer.dashboard.course.dev = Deviation time

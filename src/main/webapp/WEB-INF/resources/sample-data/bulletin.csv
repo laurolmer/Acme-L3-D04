@@ -1,0 +1,25 @@
+key,moment,title,message,critical,link
+bulletin-01,2022/01/01 00:00,title-bulletin,message-bulletin,false,null
+bulletin-02,2022/07/30 00:00,title-bulletin,message-bulletin,false,null
+bulletin-03,2022/07/29 23:00,title-bulletin,message-bulletin,false,null
+bulletin-04,2022/01/01 00:00,T,message-bulletin,false,null
+bulletin-05,2022/01/01 00:00,Ti,message-bulletin,false,null
+bulletin-06,2022/01/01 00:00,This titleee has aprox 100 characters so dont try add any more or ap'll die with terrible suffering.,message-bulletin,false,null
+bulletin-07,2022/01/01 00:00,This titleee has aprox 99 characters so dont try add any more or ap'll die with terrible suffering.,message-bulletin,false,null
+bulletin-08,2022/01/01 00:00,<h1>title-bulletin</h1>,message-bulletin,false,null
+bulletin-09,2022/01/01 00:00,"<script>alert(""title-bulletin"");</script>",message-bulletin,false,null
+bulletin-10,2022/01/01 00:00,サンプルテキスト,message-bulletin,false,null
+bulletin-11,2022/01/01 00:00,привет,message-bulletin,false,null
+bulletin-12,2022/01/01 00:00,title-bulletin,M,false,null
+bulletin-13,2022/01/01 00:00,title-bulletin,Me,false,null
+bulletin-14,2022/01/01 00:00,title-bulletin,This message has aprox 100 characters so dont try add any more or ap'll die with terrible suffering.,false,null
+bulletin-15,2022/01/01 00:00,title-bulletin,This message has aprox 99 characters so dont try add any more or ap'll die with terrible suffering.,false,null
+bulletin-16,2022/01/01 00:00,title-bulletin,<h1>title-bulletin</h1>,false,null
+bulletin-17,2022/01/01 00:00,title-bulletin,"<script>alert(""title-bulletin"");</script>",false,null
+bulletin-18,2022/01/01 00:00,title-bulletin,नमस्ते,false,null
+bulletin-19,2022/01/01 00:00,title-bulletin,добры дзень,false,null
+bulletin-20,2022/01/01 00:00,title-bulletin,message-bulletin,true,null
+bulletin-21,2022/01/01 00:00,title-bulletin,message-bulletin,true,null
+bulletin-22,2022/01/01 00:00,title-bulletin,message-bulletin,false,https:\\www.example.bulletin.com
+bulletin-23,2022/01/01 00:00,title-bulletin,message-bulletin,false,http:\\www.example.bulletin.com
+bulletin-24,2022/01/01 00:00,title-bulletin,message-bulletin,false,https:\\www.example.bulletin.es

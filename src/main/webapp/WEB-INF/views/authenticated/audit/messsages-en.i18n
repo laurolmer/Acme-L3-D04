@@ -1,0 +1,32 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+# Messages for label in list
+authenticated.audit.list.label.code = Code
+authenticated.audit.list.label.conclusion = Conclusion
+authenticated.audit.list.label.auditor = Auditor
+
+
+# Messages for label in form
+authenticated.audit.form.label.code = Code
+authenticated.audit.form.label.conclusion = Conclusion
+authenticated.audit.form.label.strongPoints = StrongPoints
+authenticated.audit.form.label.weakPoints = WeakPoints
+authenticated.audit.form.label.auditor = Auditor
+authenticated.audit.form.label.courseName = Course Name
+authenticated.audit.form.label.lecturer = Lecturer
+authenticated.audit.form.label.marks = Marks
+authenticated.audit.form.label.draftMode = Publicated
+
+authenticated.auditor.audit.form.button.update = Update
+authenticated.auditor.audit.form.button.delete = Delete
+authenticated.auditor.audit.form.button.publish = Publish
+authenticated.auditor.audit.form.button.create = Create

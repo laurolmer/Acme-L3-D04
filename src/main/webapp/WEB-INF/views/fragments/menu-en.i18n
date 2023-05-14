@@ -1,0 +1,132 @@
+# menu-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+# master.menu #################################################################
+
+master.menu.home = Home
+master.menu.sign-up = Sign up
+master.menu.sign-in = Sign in
+master.menu.sign-out = Sign out
+
+# master.menu.any #############################################################
+
+master.menu.any.course = Courses
+
+# master.menu.anonymous #######################################################
+
+master.menu.anonymous = Anonymous
+master.menu.anonymous.favourite-link.laurolmer = 29551310J: Roldán Merat, Laura 
+master.menu.anonymous.favourite-link.ivasansan1 = 30265951k: Sánchez San José, Iván
+master.menu.anonymous.favourite-link.alvhidrod = 77873483Z: Hidalgo Rodríguez, Álvaro
+master.menu.anonymous.favourite-link.albertoperleo = 53354301M: Perea León, Alberto
+master.menu.anonymous.favourite-link.danguepre = 20538880H: Guedes Preciados, Daniel 
+
+# master.menu.administrator ###################################################
+
+master.menu.administrator = Administrator
+master.menu.administrator.dashboard = Dashboard
+master.menu.administrator.user-accounts = User accounts
+master.menu.administrator.populate-initial = Populate DB (initial)
+master.menu.administrator.populate-sample = Populate DB (samples)
+master.menu.administrator.shut-down = Shut down
+master.menu.administrator.configuration = Show system configuration
+
+master.menu.administrator.banner= Banner list
+
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.note.list = List all notes
+
+master.menu.bulletin.list = List all bulletins
+master.menu.administrator.bulletin.form = Create a Bulletin
+
+master.menu.offer.list= List all offers
+master.menu.authenticated.exchange-money.perform = Exchange Money
+
+
+# master.menu.assistant ###################################################
+
+master.menu.assistant = Assistant
+master.menu.assistant.tutorial.list-mine = List my tutorials
+master.menu.assistant.tutorial.list-all = List all tutorials
+
+
+# master.menu.administrator.offer ###################################################
+
+master.menu.administrator.offer = Offers Administrator
+master.menu.administrator.offer.list = Offers list
+
+# master.menu.auditor ########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.audit.list = My audits
+
+# master.menu.provider ########################################################
+
+master.menu.provider = Provider
+master.menu.provider.favourite-link = Favourite Link
+
+# master.menu.assistant ########################################################
+
+master.menu.assistant = Assistant
+master.menu.assistant.tutorial.list-mine = List My Tutorials
+master.menu.assistant.tutorial.list-all = List All Tutorials
+master.menu.assistant.dashboard = Assistant's Dashboard
+
+# master.menu.consumer ##########################################################
+
+master.menu.consumer = Consumer
+master.menu.consumer.favourite-link = Favourite link
+
+# master.menu.lecturer ##########################################################
+
+master.menu.lecturer = Lecturer
+master.menu.lecturer.course.create = Create course
+master.menu.lecturer.course.list.all = List courses
+master.menu.lecturer.course.list.mine = List my courses
+master.menu.lecturer.lecture.list.all = List my lectures
+master.menu.lecturer.lecture.create = Create lecture
+master.menu.lecturer.lecture.dashboard = Dashboard
+
+# master.menu.company ###################################################
+
+master.menu.company= Practicums
+master.menu.company.practicum.list-mine = List my practicum
+master.menu.company.practicum.list-all = List all practicum
+
+# master.menu.studentCourse ##########################################################
+
+master.menu.student = Student
+master.menu.student.studentCourseList = Course List
+master.menu.student.studentEnrolmentList = Enrolment List
+master.menu.student.dashboard = Student Dashboard
+
+
+# master.menu.any #############################################################
+
+master.menu.any.peep= Peep List
+
+# master.menu.user-account ####################################################
+
+master.menu.user-account = Account
+master.menu.user-account.general-data = General data
+master.menu.user-account.provider = Provider data
+master.menu.user-account.become-provider = Become a provider
+master.menu.user-account.consumer = Consumer data
+master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.become-company = Become a company
+master.menu.user-account.company= Company data
+master.menu.user-account.assistant = Assistant data
+master.menu.user-account.become-assistant = Become an assistant
+master.menu.user-account.student = Student data
+master.menu.user-account.become-student = Become a student
+master.menu.user-account.lecturer = Lecturer data
+master.menu.user-account.become-lecturer = Become a lecturer

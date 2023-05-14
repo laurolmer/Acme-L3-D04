@@ -1,0 +1,42 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+# Messages for label in form
+company.practicum-session.form.label.code = Code
+company.practicum-session.form.label.title = Title
+company.practicum-session.form.label.abstractSession = Abstract
+company.practicum-session.form.label.start = start
+company.practicum-session.form.label.end = end
+company.practicum-session.form.label.link = Link
+
+# Messages for button in form
+company.practicum-session.form.button.create = Create
+company.practicum-session.form.button.update = Update
+company.practicum-session.form.button.delete = Delete
+company.practicum-session.form.button.confirm = Confirm
+
+# Messages for label in list
+company.practicum-session.list.label.yes= Yes
+company.practicum-session.list.label.no= No
+company.practicum-session.list.label.code = Code
+company.practicum-session.list.label.title = Title
+company.practicum-session.list.label.abstractSession = Abstract
+company.practicum-session.list.label.end = end
+company.practicum-session.list.label.start = start
+company.practicum-session.list.label.additional = Additional
+company.practicum-session.list.label.confirmed = Confirmed
+company.practicum-session.list.label.exact-duration= Duration
+
+# Messages for button in list
+company.practicum-session.list.button.create = Create
+
+# Messages for error in form
+company.session-practicum.error.start-after-now = The start date must be after today
+company.session-practicum.error.end-after-start = The end date must be after the start date

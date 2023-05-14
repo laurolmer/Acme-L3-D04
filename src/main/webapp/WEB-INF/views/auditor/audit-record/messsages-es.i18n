@@ -1,0 +1,43 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+auditor.audit.error.code.duplicated = Ya existe este código
+auditor.audit.error.course.draft = Selecciona un curso
+
+# Messages for label in list
+auditor.auditRecord.list.label.subject = Asignatura
+auditor.auditRecord.list.label.hours = Horas de duración
+auditor.auditRecord.list.label.mark = Nota
+
+
+# Messages for label in form
+auditor.auditRecord.form.label.subject = Asignatura
+auditor.auditRecord.form.label.assesment = Evaluación
+auditor.auditRecord.form.label.link = Link
+auditor.auditRecord.form.label.mark = Nota
+auditor.auditRecord.form.label.released = Borrador
+auditor.auditRecord.form.label.confirmated = Confirmado
+auditor.auditRecord.form.label.periodStart= Hora de inicio
+auditor.auditRecord.form.label.periodFin = Hora de finalización
+auditor.auditRecord.form.label.hours = Horas de duración
+
+auditor.audit.form.button.update = Actualizar
+auditor.audit.form.button.delete = Borrar
+auditor.audit.form.button.publish = Publicar
+auditor.audit.form.button.create = Crear
+
+auditor.auditRecord.form.button.confirmation = Confirmar
+auditor.auditRecord.form.button.correction = Correción
+auditor.audit.list.button.create = Create
+
+auditor.auditRecord.announce.correction = Este registro de auditoría ha sido publicado después de la publicación de la auditoría
+auditor.auditRecord.error.date.StartFinError = La fecha de finalicación no debe fijarse antes que la de inicio.
+auditor.auditingrecord.error.date.oneHourRule = El tiempo total debe ser de mas de una hora
+auditor.auditRecord.correction.confirmation = Registro de auditoría para correción

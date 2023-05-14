@@ -1,0 +1,43 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+auditor.auditRecord.error.code.duplicated = Code already exists
+auditor.auditRecord.error.course.null = Select a course
+
+# Messages for label in list
+auditor.auditRecord.list.label.subject = Subject
+auditor.auditRecord.list.label.hours = Duration
+auditor.auditRecord.list.label.mark = Mark
+
+
+# Messages for label in form
+auditor.auditRecord.form.label.subject = Subject
+auditor.auditRecord.form.label.assesment = Assesment
+auditor.auditRecord.form.label.link = Link
+auditor.auditRecord.form.label.mark = Mark
+auditor.auditRecord.form.label.released = Draft
+auditor.auditRecord.form.label.confirmated = Confirmated
+auditor.auditRecord.form.label.periodStart= Start hour
+auditor.auditRecord.form.label.periodFin = Finish hour
+auditor.auditRecord.form.label.hours = Duration
+
+auditor.auditRecord.form.button.update = Update
+auditor.auditRecord.form.button.delete = Delete
+auditor.auditRecord.form.button.publish = Publish
+auditor.auditRecord.form.button.create = Create
+
+auditor.auditRecord.form.button.confirmation = Confirmation
+auditor.auditRecord.form.button.correction = Correction
+auditor.auditRecord.list.button.create = Create
+
+auditor.auditRecord.announce.correction = This AuditRecord has been created after publishing the Audit
+auditor.auditRecord.error.date.StartFinError = The finish date cannot be before the start date
+auditor.auditRecord.error.date.oneHourRule = The time period must be up an hour
+auditor.auditRecord.correction.confirmation = Audit Record for correction

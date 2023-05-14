@@ -1,0 +1,28 @@
+# TITLES ##########################################################################
+
+lecturer.dashboard.lecture.num = Numero de lecciones
+lecturer.dashboard.lecture.data = Información sobre lecciones
+lecturer.dashboard.course.data = Información sobre cursos
+
+# TABLE ###########################################################################
+
+# NUM -----------------------------------------------------------------------------
+
+lecturer.dashboard.lecture.numTheory = Lecciones teóricas
+lecturer.dashboard.lecture.numHandsOn = Lecciones prácticas
+
+# LECTURE -------------------------------------------------------------------------
+
+lecturer.dashboard.lecture.count = Total lecciones
+lecturer.dashboard.lecture.avg = Tiempo medio
+lecturer.dashboard.lecture.max = Tiempo máximo
+lecturer.dashboard.lecture.min = Tiempo mínimo
+lecturer.dashboard.lecture.dev = Tiempo desviación
+
+# COURSE --------------------------------------------------------------------------
+
+lecturer.dashboard.course.count = Total cursos
+lecturer.dashboard.course.avg = Tiempo medio
+lecturer.dashboard.course.max = Tiempo máximo
+lecturer.dashboard.course.min = Tiempo mínimo
+lecturer.dashboard.course.dev = Tiempo desviación

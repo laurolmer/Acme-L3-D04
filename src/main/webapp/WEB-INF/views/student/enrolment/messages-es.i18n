@@ -1,0 +1,50 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+#Form
+student.enrolment.form.label.draftMode = Finalizado
+student.enrolment.form.label.code = Código:
+student.enrolment.form.label.motivation = Motivaciones:
+student.enrolment.form.label.goals = Objetivos:
+student.enrolment.form.label.course = Curso:
+student.enrolment.form.label.finalized = Finalizado:
+student.enrolment.form.label.student = Estudiante:
+student.enrolment.form.label.expiryDate = Fecha de caducidad:
+student.enrolment.form.label.cvc = CVC:
+student.enrolment.form.label.creditCard = Tarjeta de credito:
+student.enrolment.form.label.holderName = Nombre del propietario:
+student.enrolment.form.label.lowerNibble = Lower Nibble:
+student.enrolment.form.title.enrolment = Datos de la matrícula
+student.enrolment.form.title.finalize = Datos para la finalización de la matrícula
+student.enrolment.form.button.finalize = Finalizar:
+
+
+student.enrolment.form.button.create = Crear:
+student.enrolment.form.button.update = Actualizar:
+student.enrolment.form.button.delete = Borrar:
+
+#List
+student.enrolment.list.label.code = Código:
+student.enrolment.list.label.motivation = Motivaciones:
+student.enrolment.list.label.goals = Objetivos:
+student.enrolment.list.label.course = Curso:
+student.enrolment.list.label.student = Estudiante:
+
+student.enrolment.list.button.create = Crear:
+
+student.enrolment.form.error.expiryDate.pattern = La fecha de caducidad debe ser formato MM/YY
+student.enrolment.form.error.expiryDate.before = La fecha de caducidad debe ser posterior a la fecha actual
+student.enrolment.form.error.expiryDate.month = La fecha de caducidad debe ser una fecha real
+student.enrolment.form.error.cvc = El CVC debe tener 3 números
+student.enrolment.form.error.card = La tarjeta de crédito debe ser formato XXXX/XXXX/XXXX/XXXX
+student.enrolment.form.error.code = Código duplicado
+student.enrolment.form.error.holder = Este campo no debe ser vacío
+
+student.enrolment.form.button.activities = Actividades:

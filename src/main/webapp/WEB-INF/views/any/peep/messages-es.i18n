@@ -1,0 +1,29 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+any.peep.form.label.moment = Momento
+any.peep.form.label.title = Título
+any.peep.form.label.nick = Nombre
+any.peep.form.label.message = Mensaje
+any.peep.form.label.email = Email
+any.peep.form.label.link = Enlace
+any.peep.form.label.publish= Publicado
+
+any.peep.list.title = Título
+any.peep.list.nick = Nombre
+any.peep.list.message = Mensaje
+
+any.peep.form.button.publish= Publicar Peep
+any.peep.form.button.create = Crear Peep
+
+any.peep.moment-reached-max-value = Momento alcanzó el valor máximo para las fechas (2100/12/31 23:59)
+any.peep.moment-didnot-reach-min-value = Momento debe superar a la fecha mínima posible (2000/01/01 00:00)
+any.peep.moment-after-actualMoment = Momento debe ser presente o pasado respecto a la fecha actual

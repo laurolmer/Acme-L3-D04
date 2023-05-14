@@ -1,0 +1,26 @@
+key,code,title,abstract-practicum,goals,key:company,key:course,draft_mode
+practicum-00,AAA000,title-00,abstractPracticum-00,goal-00,company-01,course-01,true
+practicum-01,A111,title-01,abstractPracticum-01,goal-01,company-01,course-01,true
+practicum-02,BB222,title-02,abstractPracticum-02,goal-02,company-02,course-01,true
+practicum-03,CCC333,title-03,abstractPracticum-03,goal-03,company-01,course-01,true
+practicum-04,DDD444,T,abstractPracticum-04,goal-04,company-01,course-01,true
+practicum-05,EEE555,Ti,abstractPracticum-05,goal-05,company-02,course-02,true
+practicum-06,FFF666,Probando un titulo que tenga como máximo 74 caracteres para el campo title,abstractPracticum-06,goal-08,company-01,course-01,false
+practicum-07,GGG777,Probando un titulo que tenga como máximo 75 caracteres para el campo title.,abstractPracticum-07,goal-09,company-02,course-02,false
+practicum-08,HHH888,サンプルテキスト,abstractPracticum-08,goal-08,company-01,course-02,false
+practicum-09,III999,<title>ExampleHTML</title>,abstractPracticum-09,goal-09,company-02,course-02,false
+practicum-10,JJJ000,<script>alert('exampleJS');</script>,abstractPracticum-10,goal-10,company-01,course-02,false
+practicum-11,MMM111,title-04,A,goal-11,company-02,course-02,false
+practicum-12,NNN222,title-05,Ab,goal-12,company-01,course-02,false
+practicum-13,OOO333,title-06,Esto es un resumen de máximo 99 caracteres para abstractPracticum el campo summary del archivo csv.,goal-13,company-02,course-02,false
+practicum-14,PPP444,title-07,Esto es un resumen de máximo 100 caracteres para abstractPracticum el campo summary del archivo csv,goal-14,company-01,course-01,false
+practicum-15,QQQ555,title-08,サンプルテキスト,goal-15,company-01,course-01,true
+practicum-16,RRR666,title-09,<title>ExampleHTML</title>,goal-16,company-02,course-01,true
+practicum-17,SSS777,title-10,<script>alert('exampleJS');</script>,goal-17,company-01,course-01,true
+practicum-18,TTT333,title-11,abstractPracticum-11,G,company-01,course-01,true
+practicum-19,UUU333,title-12,abstractPracticum-12,Go,company-01,course-01,true
+practicum-20,VVV333,title-13,abstractPracticum-13,Esto es un resumen de máximo 99 caracteres para abstractPracticum el campo summary del archivo csv.,company-02,course-01,true
+practicum-21,WWW333,title-14,abstractPracticum-14,Esto es un resumen de máximo 100 caracteres para abstractPracticum el campo summary del archivo csv,company-02,course-02,true
+practicum-22,XXX333,title-15,abstractPracticum-15,サンプルテキスト,company-02,course-02,true
+practicum-23,YYY333,title-16,abstractPracticum-16,<title>ExampleHTML</title>,company-01,course-02,true
+practicum-24,ZZZ333,title-17,abstractPracticum-17,<script>alert('exampleJS');</script>,company-01,course-02,false

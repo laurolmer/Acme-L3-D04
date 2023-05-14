@@ -1,0 +1,20 @@
+# FORM #########################################################
+
+lecturer.course-ecture.label.course = Course
+lecturer.course-ecture.label.lecture = Lecture
+
+# BUTTONS #########################################################
+
+lecturer.course-lecture.button.add = Add
+lecturer.course-lecture.button.delete = Delete
+
+# ERRORS #########################################################
+
+## ADD -----------------------------------------------------------
+
+lecturer.course-lecture.error.lecture.published = Can't add a lecture that is not published
+lecturer.course-lecture.error.course.published.add = Can't add a lecture to a course already published
+
+## DELETE --------------------------------------------------------
+
+lecturer.course-lecture.error.course.published.delete = No se pueden editar las lecciones de un curso ya publicado

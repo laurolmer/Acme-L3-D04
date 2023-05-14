@@ -1,0 +1,15 @@
+# NOTICE.txt
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+- Iván Sánchez San José (ivasansan1@alum.us.es) 
+- Alberto Perea León (albperleo@alum.us.es)
+- Laura Roldán Merat (laurolmer@alum.us.es)
+- Álvaro Hidalgo Rodríguez (alvhidrod@alum.us.es)
+- Daniel Guedes Preciados (danguepre@alum.us.es)

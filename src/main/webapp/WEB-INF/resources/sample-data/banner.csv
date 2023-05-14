@@ -1,0 +1,23 @@
+key,upgrade,start-display,end-display,img-link,slogan,doc-link
+banner-01,2022/01/01 00:00,2024/01/01 01:00,2024/01/09 01:00,https://www.example.com,slogan-banner,https://www.example.com
+banner-02,2022/07/30 00:00,2024/07/30 01:00,2024/08/08 01:00,https://www.example.com,slogan-banner,https://www.example.com
+banner-03,2022/07/29 23:00,2024/07/29 00:00,2024/08/07 00:00,https://www.example.com,slogan-banner,https://www.example.com
+banner-04,2022/01/01 00:00,2024/01/01 01:00,2024/01/09 01:00,https://www.example.com,slogan-banner,https://www.example.com
+banner-05,2022/01/01 00:00,2024/01/01 01:00,2024/01/09 01:00,https://www.example.com,slogan-banner,https://www.example.com
+banner-06,2022/01/01 00:00,2024/01/01 01:00,2024/01/09 01:00,https://www.example.com,slogan-banner,https://www.example.com
+banner-07,2022/01/01 00:00,2024/01/01 01:00,2024/01/09 01:00,https://www.example.com,S,https://www.example.com
+banner-08,2022/01/01 00:00,2024/01/01 01:00,2024/01/09 01:00,https://www.example.com,Sl,https://www.example.com
+banner-09,2022/01/01 00:00,2024/01/01 01:00,2024/01/09 01:00,https://www.example.com,This title has aprox. 75 characters so dont try to add any more or app die.,https://www.example.com
+banner-10,2022/01/01 00:00,2024/01/01 01:00,2024/01/09 01:00,https://www.example.com,This title has aprox. 74 characters so dont try to add any more or app die,https://www.example.com
+banner-11,2022/01/01 00:00,2024/01/01 01:00,2024/01/09 01:00,https://www.example.com,<h1>slogan-banner</h1>,https://www.example.com
+banner-12,2022/01/01 00:00,2024/01/01 01:00,2024/01/09 01:00,https://www.example.com,"<script>alert(""Slogan-banner"");</script>",https://www.example.com
+banner-13,2022/01/01 00:00,2024/01/01 01:00,2024/01/09 01:00,https://www.example.com,見出しオファー,https://www.example.com
+banner-14,2022/01/01 00:00,2024/01/01 01:00,2024/01/09 01:00,https://www.example.com,привет,https://www.example.com
+banner-15,2022/01/01 00:00,2024/01/01 01:00,2024/01/09 01:00,https://www.example.com,slogan-banner,https://www.example.com
+banner-16,2022/01/01 00:00,2024/01/01 01:00,2024/01/09 01:00,https://www.example.com,slogan-banner,https://www.example.com
+banner-17,2022/01/01 00:00,2024/01/01 01:00,2024/01/09 01:00,https://www.example.com,slogan-banner,https://www.example.com
+banner-18,2022/01/01 00:00,2020/01/01 01:00,2024/01/09 01:00,https://www.informatica.us.es/docs/imagen-etsii/logo-ETSII-Color.png,ETSII,https://www.informatica.us.es/
+banner-19,2022/01/01 00:00,2020/01/01 01:00,2024/01/09 01:00,https://i.pinimg.com/564x/51/ad/3d/51ad3d1bbc374ede117fa45dd5221dbc.jpg,IKEA,https://www.ikea.com/es/es/  
+banner-20,2022/01/01 00:00,2020/01/01 01:00,2024/01/09 01:00,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Logo_Blender.svg/2560px-Logo_Blender.svg.png,BLENDER,https://www.blender.org/
+banner-21,2022/01/01 00:00,2020/01/01 01:00,2024/01/09 01:00,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/1200px-IntelliJ_IDEA_Icon.svg.png,INTELLIJ IDEA,https://lp.jetbrains.com/intellij-idea-spring/
+banner-22,2022/01/01 00:00,2020/01/01 01:00,2024/01/09 01:00,https://rosamarfil.es/tutoriales/wp-content/uploads/2019/08/java-logo-png.png,JAVA,https://www.java.com/es/

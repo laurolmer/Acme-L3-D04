@@ -1,0 +1,40 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+administrator.offer.form.label.instantiationMoment= Instantiation Moment
+administrator.offer.form.label.heading = Heading
+administrator.offer.form.label.summary = Summary
+administrator.offer.form.label.price = Price
+administrator.offer.form.label.availabilityPeriodStart = Start Period
+administrator.offer.form.label.availabilityPeriodEnd = End Period
+administrator.offer.form.label.link = Link
+
+administrator.offer.form.button.confirmation = Confirmation
+administrator.offer.form.button.create = Create
+administrator.offer.form.button.update = Update
+administrator.offer.form.button.delete = Delete
+
+administrator.offer.list.label.headding = Heading
+administrator.offer.list.label.summary = Summary
+administrator.offer.list.label.price = Price
+administrator.offer.list.label.availabilityPeriodStart = Start
+administrator.offer.list.label.availabilityPeriodEnd = End 
+administrator.offer.list.label.link = Link
+
+administrator.offer.list.button.create = Create
+
+administrator.offer.start-close-to-instantiation = Start period must be at least one day after the current date
+administrator.offer.positive-naught-price = Price must be a positive amount or naught
+administrator.offer.end-duration-insufficient = An offer must last at least one week 
+administrator.offer.end-after-start = End period must be after the start period
+administrator.offer.end-reached-max-value = End period can't be after the date "2100/12/31 at 23:59"
+administrator.offer.start-didnot-reach-min-value = Start period must be after the date "2000/01/01 at 00:00"
+administrator.offer.price-reached-limit-value = Price must be less than 1,000,000

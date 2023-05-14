@@ -1,0 +1,25 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authenticated.note.form.label.instantiationMoment = Date of creation:
+authenticated.note.form.label.title = Title:
+authenticated.note.form.label.author = Author:
+authenticated.note.form.label.message = Message:
+authenticated.note.form.label.emailAddress = Email Address:
+authenticated.note.form.label.url = Url:
+
+authenticated.note.form.button.create = Create
+authenticated.note.form.label.confirmation = Confirm
+
+authenticated.note.list.label.instantiationMoment = Date of creation
+authenticated.note.list.label.title = Title
+authenticated.note.list.label.author = Author
+
+authenticated.note.list.button.create = Create

@@ -1,0 +1,11 @@
+key,username,password,identity,enabled
+user-account-assistant-01,assistant1,assistant1,"UserIdentity{name: 'Assistant1', surname: 'One', email: 'assistant1@mail.com'}",true
+user-account-assistant-02,assistant2,assistant2,"UserIdentity{name: 'Assistant2', surname: 'Two', email: 'assistant2@mail.com'}",true
+user-account-company-01,company1,company2,"UserIdentity{name: 'Company1', surname: 'Two', email: 'company2@mail.com'}",true
+user-account-company-02,company2,company2,"UserIdentity{name: 'Company2', surname: 'Two', email: 'company2@mail.com'}",true
+user-account-lecturer-01,lecturer1,lecturer1,"UserIdentity{name: 'Lecturer1', surname: 'One', email: 'lecturer1@mail.com'}",true
+user-account-lecturer-02,lecturer2,lecturer2,"UserIdentity{name: 'Lecturer2', surname: 'Two', email: 'lecturer2@mail.com'}",true
+user-account-auditor-01,auditor1,auditor1,"UserIdentity{name: 'Auditor1', surname: 'One', email: 'auditor1@mail.com'}",true
+user-account-auditor-02,auditor2,auditor2,"UserIdentity{name: 'Auditor2', surname: 'Two', email: 'auditor2@mail.com'}",true
+user-account-student-01,student1,student1,"UserIdentity{name: 'Student1', surname: 'One', email: 'student1@mail.com'}",true
+user-account-student-02,student2,student2,"UserIdentity{name: 'Student2', surname: 'Two', email: 'student2@mail.com'}",true

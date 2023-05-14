@@ -1,0 +1,48 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+#Form
+student.enrolment.form.label.draftMode = Finalized
+student.enrolment.form.label.code = Code:
+student.enrolment.form.label.motivation = Motivation:
+student.enrolment.form.label.goals = Goals:
+student.enrolment.form.label.course = Course:
+student.enrolment.form.label.student = Student:
+student.enrolment.form.label.expiryDate = Expiry date:
+student.enrolment.form.label.cvc = CVC:
+student.enrolment.form.label.creditCard = Credit card:
+student.enrolment.form.label.holderName = Holder name:
+student.enrolment.form.label.lowerNibble = Lower nibble:
+student.enrolment.form.title.enrolment = Data of enrollment
+student.enrolment.form.title.finalize = Data for enrollment finalization
+student.enrolment.form.button.finalize = Finalize:
+
+student.enrolment.form.button.create = Create:
+student.enrolment.form.button.update = Update:
+student.enrolment.form.button.delete = Delete:
+
+#List
+student.enrolment.list.label.code = Code:
+student.enrolment.list.label.motivation = Motivation:
+student.enrolment.list.label.goals = Goals:
+student.enrolment.list.label.course = Course:
+student.enrolment.list.label.student = Student:
+
+student.enrolment.list.button.create = Create:
+
+student.enrolment.form.error.expiryDate.pattern = The expiry date's format must be MM/YY
+student.enrolment.form.error.expiryDate.before = The expiry date's format must be after the current date
+student.enrolment.form.error.expiryDate.month = The expiry date's format must be a real date
+student.enrolment.form.error.cvc = The CVC's format must be 3 numbers
+student.enrolment.form.error.card = The credit card's format must be XXXX/XXXX/XXXX/XXXX
+student.enrolment.form.error.code = Duplicated code
+student.enrolment.form.error.holder = This field mustn't be empty
+
+student.enrolment.form.button.activities = Activities:

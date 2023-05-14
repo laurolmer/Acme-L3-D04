@@ -1,0 +1,34 @@
+# FORM - COURSE ######################################################################
+
+lecturer.course.label.code = Code
+lecturer.course.label.title = Title
+lecturer.course.label.courseAbstract = Abstract
+lecturer.course.label.courseType = Type
+lecturer.course.label.retailPrice = Price
+lecturer.course.label.link = Link
+lecturer.course.label.draftMode = Published
+
+lecturer.course.label.courseType = Course type
+lecturer.course.label.estimatedTotalTime = Estimated total time
+
+# BUTTONS - COURSE ###################################################################
+
+lecturer.course.button.create = Create
+lecturer.course.button.update = Update
+lecturer.course.button.delete = Delete
+lecturer.course.button.publish = Publish
+lecturer.course.button.lectureList = Lectures list
+
+# ERRORS - COURSE ####################################################################
+
+## CREATE ----------------------------------------------------------------------------
+
+lecturer.course.error.draftMode.published = Can't create a course already published
+lecturer.course.error.code.duplicated = This course code is already in use
+lecturer.course.error.retailPrice.negative = Price must be greater than zero
+ 
+## PUBLISH ----------------------------------------------------------------------------
+
+lecturer.course.form.error.noLecture = Can't publish course without lectures
+lecturer.course.form.error.noHandsOn = Can't publish course without hands on lectures
+lecturer.course.form.error.lectureNotPublished = Can't publish course with not published lectures

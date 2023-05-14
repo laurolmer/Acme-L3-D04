@@ -1,0 +1,37 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+assistant.tutorial-session.form.label.title = Title
+assistant.tutorial-session.form.label.abstractSession = Abstract
+assistant.tutorial-session.form.label.sessionType = Session Type
+assistant.tutorial-session.form.label.startPeriod = Start Period
+assistant.tutorial-session.form.label.finishPeriod = Total Period
+assistant.tutorial-session.form.label.link = Link
+assistant.tutorial-session.label.estimatedTotalTime = Estimated total time
+
+assistant.tutorial-session.form.button.create = Create
+assistant.tutorial-session.form.button.update = Update
+assistant.tutorial-session.form.button.delete = Delete
+assistant.tutorial-session.form.button.publish = Publish
+assistant.tutorial-session.form.button.list = List
+
+assistant.tutorial-session.list.label.title = Title
+assistant.tutorial-session.list.label.abstractSession = Abstract
+assistant.tutorial-session.list.label.finishPeriod = Finish Period
+assistant.tutorial-session.list.label.startPeriod = Start Period
+
+assistant.tutorial-session.list.button.create = Create
+
+assistant.session.startPeriod-before-instantiationMoment = Start period must be after the actual moment
+assistant.session.finishPeriod-before-startPeriod = Finish period must be after start period
+assistant.session.bad-finishPeriod-time = Finish period must be between 1 to 5 hours regarding start period
+assistant.session.end-reached-max-value = End period can't be after the date "2100/12/31 at 23:59"
+assistant.session.start-didnot-reach-min-value = Start period must be after the date "2000/01/01 at 00:00"
+assistant.session.estimatedTotalTime = Estimated total time must be higher than 0.0

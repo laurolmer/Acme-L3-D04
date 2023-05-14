@@ -1,0 +1,41 @@
+key,code,title,course-abstract,retail-price,link,draft-mode,key:lecturer
+course-01,A001,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
+course-02,A002,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
+course-03,BB111,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
+course-04,CCC111,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
+course-05,D999,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
+course-06,E000,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
+course-07,AZA101,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
+course-08,ZA010,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
+course-09,GV547,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
+course-10,MHI863,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
+course-11,OPK209,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
+course-12,A003,T,abstract-course,EUR 10.00,null,false,lecturer-01
+course-13,A004,Ti,abstract-course,EUR 10.00,null,false,lecturer-01
+course-14,A005,This title has aprox. 75 characters so dont try to add any more or app die.,abstract-course,EUR 10.00,null,false,lecturer-01
+course-15,A006,This title has aprox. 74 characters so dont try to add any more or app die,abstract-course,EUR 10.00,null,false,lecturer-01
+course-16,A007,<h1>Title-course</h1>,abstract-course,EUR 10.00,null,false,lecturer-01
+course-17,A008,"<script>alert(""Title-course"");</script>",abstract-course,EUR 10.00,null,true,lecturer-01
+course-18,A009,見出しオファー,abstract-course,EUR 10.00,null,true,lecturer-01
+course-19,A010,привет,abstract-course,EUR 10.00,null,true,lecturer-01
+course-20,A011,title-course,A,EUR 10.00,null,true,lecturer-01
+course-21,A012,title-course,Ab,EUR 10.00,null,true,lecturer-01
+course-22,A013,title-course,This summary has aprox 100 characters so dont try add any more or ap'll die with terrible suffering.,EUR 10.00,null,true,lecturer-01
+course-23,A014,title-course,This summary has aprox 99 characters so dont try add any more or ap'll die with terrible suffering.,EUR 10.00,null,true,lecturer-01
+course-24,A015,title-course,<h1>Abstract-course</h1>,EUR 10.00,null,true,lecturer-01
+course-25,A016,title-course,"<script>alert(""Abstract-course"");</script>",EUR 10.00,null,true,lecturer-01
+course-26,A017,title-course,سلام,EUR 10.00,null,true,lecturer-01
+course-27,A018,title-course,Сәлеметсіз бе,EUR 10.00,null,true,lecturer-01
+course-28,A019,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
+course-29,A020,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
+course-30,A021,title-course,abstract-course,GBP 0.01,null,true,lecturer-01
+course-31,A022,title-course,abstract-course,USD 0.02,null,true,lecturer-01
+course-32,A023,title-course,abstract-course,EUR 0.9,null,true,lecturer-01
+course-33,A024,title-course,abstract-course,USD 100.0,null,true,lecturer-01
+course-34,A025,title-course,abstract-course,EUR 10.00,https:\\www.example.course.com,true,lecturer-01
+course-35,A026,title-course,abstract-course,EUR 10.00,http:\\www.example.course.com,true,lecturer-01
+course-36,A027,title-course,abstract-course,EUR 10.00,https:\\www.example.course.es,true,lecturer-01
+course-37,A028,title-course,abstract-course,EUR 10.00,null,false,lecturer-01
+course-38,A029,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
+course-39,A030,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
+course-40,A031,title-course,abstract-course,EUR 10.00,null,true,lecturer-02
