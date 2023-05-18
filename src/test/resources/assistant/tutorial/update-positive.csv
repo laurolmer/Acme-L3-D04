@@ -1,0 +1,25 @@
+tutorialRecordIndex,course,code,title,abstractTutorial,goals
+1,"Course","LOL001",Title,Abstract,Goals
+2,"Course","LO002",Title,Abstract,Goals
+3,"Course","L003",Title,Abstract,Goals
+4,"Course","L004","This title is going to reach exactly 75chr so the restriction can be proved",Abstract,Goals
+5,"Course","L005","This title will reach exactly 75 - 1 char so the restriction can be proved",Abstract,Goals
+6,"Course","L006","T",Abstract,Goals
+7,"Course","L007","Ti",Abstract,Goals
+8,"Course","L008","<title>ExampleHTML</title>",Abstract,Goals
+9,"Course","L009","<script>alert('exampleJS');</script>",Abstract,Goals
+10,"Course","L010","示例文本。",Abstract,Goals
+11,"Course","L011",Title,"This explanation is going to reach 100 charac so the restriction can be proved in the maximum value.",Goals
+12,"Course","L012",Title,"This explanation is going to reach 100-1 chars so the restriction can be proved in the max-1 value.",Goals
+13,"Course","L013",Title,"A",Goals
+14,"Course","L014",Title,"A1",Goals
+15,"Course","L015",Title,"<title>ExampleHTML</title>",Goals
+16,"Course","L016",Title,"<script>alert('exampleJS');</script>",Goals
+17,"Course","L017",Title,"Образец текста.",Goals
+18,"Course","L018",Title,Abstract,"This text for goals will reach 100 characters so the restriction can be proved in the maximum value."
+19,"Course","L019",Title,Abstract,"This text for goals will reach 100 - 1 chars so the restriction can be proved in the max - 1 value."
+20,"Course","L020",Title,Abstract,"G"
+21,"Course","L021",Title,Abstract,"G1"
+22,"Course","L022",Title,Abstract,"<title>ExampleHTML</title>"
+23,"Course","L023",Title,Abstract,"<script>alert('exampleJS');</script>"
+24,"Course","L024",Title,Abstract,"ข้อความตัวอย่าง."

@@ -1,0 +1,13 @@
+jobIndex,reference,dutyRecordIndex,title,description,workLoad,moreInfo
+0,EMP01-JOB01,0,Duty 01.01,Sample duty,100.00,
+1,EMP01-JOB02,0,Duty 02.01,Sample duty,50.00,
+1,EMP01-JOB02,1,Duty 02.02,Sample duty,50.00,
+2,EMP01-JOB03,0,Duty 03.01,Sample duty,33.33,
+2,EMP01-JOB03,1,Duty 03.02,Sample duty,33.33,
+2,EMP01-JOB03,2,Duty 03.03,Sample duty,33.34,
+3,EMP01-JOB04,0,Duty 04.01,Sample duty,80.00,
+3,EMP01-JOB04,1,Duty 04.02,Sample duty,10.00,
+3,EMP01-JOB04,2,Duty 04.03,Sample duty,10.00,
+4,EMP01-JOB05,0,Duty 05.01,Sample duty,50.00,
+4,EMP01-JOB05,1,Duty 05.02,Sample duty,49.00,
+4,EMP01-JOB05,2,Duty 05.03,Sample duty,0.00,
