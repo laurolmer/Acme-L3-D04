@@ -20,6 +20,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.entities.tutorial.Tutorial;
+import acme.entities.tutorialSession.TutorialSession;
 import acme.testing.TestHarness;
 
 public class AssistantTutorialSessionCreateTest extends TestHarness {
@@ -106,41 +107,41 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 			param = String.format("masterId=%d", tutorial.getId());
 
 			super.checkLinkExists("Sign in");
-			super.request("/assistant/tutorialSession/create", param);
+			super.request("/assistant/tutorial-session/create", param);
 			super.checkPanicExists();
 
 			super.signIn("administrator", "administrator");
-			super.request("/assistant/tutorialSession/create", param);
+			super.request("/assistant/tutorial-session/create", param);
 			super.checkPanicExists();
 			super.signOut();
 
 			super.signIn("auditor1", "auditor1");
-			super.request("/assistant/tutorialSession/create", param);
+			super.request("/assistant/tutorial-session/create", param);
 			super.checkPanicExists();
 			super.signOut();
 
 			super.signIn("company1", "company1");
-			super.request("/assistant/tutorialSession/create", param);
+			super.request("/assistant/tutorial-session/create", param);
 			super.checkPanicExists();
 			super.signOut();
 
 			super.signIn("consumer1", "consumer1");
-			super.request("/assistant/tutorialSession/create", param);
+			super.request("/assistant/tutorial-session/create", param);
 			super.checkPanicExists();
 			super.signOut();
 
 			super.signIn("lecturer1", "lecturer1");
-			super.request("/assistant/tutorialSession/create", param);
+			super.request("/assistant/tutorial-session/create", param);
 			super.checkPanicExists();
 			super.signOut();
 
 			super.signIn("provider1", "provider1");
-			super.request("/assistant/tutorialSession/create", param);
+			super.request("/assistant/tutorial-session/create", param);
 			super.checkPanicExists();
 			super.signOut();
 
 			super.signIn("student1", "student1");
-			super.request("/assistant/tutorialSession/create", param);
+			super.request("/assistant/tutorial-session/create", param);
 			super.checkPanicExists();
 			super.signOut();
 		}
@@ -150,14 +151,14 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 	public void test301Hacking() {
 		// HINT: this test tries to create a session for a published tutorial created by 
 		// the principal.
-		Collection<Tutorial> tutorials;
+		Collection<TutorialSession> sessions;
 		String param;
 
-		tutorials = this.repository.findTutorialsByAssistantUsername("assistant1");
-		for (final Tutorial tutorial : tutorials)
-			if (!tutorial.isDraftMode()) {
-				param = String.format("masterId=%d", tutorial.getId());
-				super.request("/assistant/tutorialSession/create", param);
+		sessions = this.repository.findTutorialSessionsByAssistantUsername("assistant1");
+		for (final TutorialSession session : sessions)
+			if (!session.isDraftMode()) {
+				param = String.format("masterId=%d", session.getId());
+				super.request("/assistant/tutorial-session/create", param);
 				super.checkPanicExists();
 			}
 	}
@@ -167,15 +168,15 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 		// HINT: this test tries to create sessions for tutorials that weren't created 
 		// by the principal.
 
-		Collection<Tutorial> tutorials;
+		Collection<TutorialSession> sessions;
 		String param;
 
 		super.checkLinkExists("Sign in");
 		super.signIn("assistant1", "assistant1");
-		tutorials = this.repository.findTutorialsByAssistantUsername("assistant2");
-		for (final Tutorial tutorial : tutorials) {
-			param = String.format("masterId=%d", tutorial.getId());
-			super.request("/employer/duty/create", param);
+		sessions = this.repository.findTutorialSessionsByAssistantUsername("assistant2");
+		for (final TutorialSession session : sessions) {
+			param = String.format("masterId=%d", session.getId());
+			super.request("/assistant/tutorial-session/create", param);
 			super.checkPanicExists();
 		}
 	}

@@ -76,46 +76,46 @@ public class AssistantTutorialSessionShowTest extends TestHarness {
 				param = String.format("id=%d", session.getTutorial().getId());
 
 				super.checkLinkExists("Sign in");
-				super.request("/assistant/tutorialSession/show", param);
+				super.request("/assistant/tutorial-session/show", param);
 				super.checkPanicExists();
 
 				super.signIn("administrator", "administrator");
-				super.request("/assistant/tutorialSession/show", param);
+				super.request("/assistant/tutorial-session/show", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("assistant2", "assistant2");
-				super.request("/assistant/tutorialSession/show", param);
+				super.request("/assistant/tutorial-session/show", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("auditor1", "auditor1");
-				super.request("/assistant/tutorialSession/show", param);
+				super.request("/assistant/tutorial-session/show", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("company1", "company1");
-				super.request("/assistant/tutorialSession/show", param);
+				super.request("/assistant/tutorial-session/show", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("consumer1", "consumer1");
-				super.request("/assistant/tutorialSession/show", param);
+				super.request("/assistant/tutorial-session/show", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("lecturer1", "lecturer1");
-				super.request("/assistant/tutorialSession/show", param);
+				super.request("/assistant/tutorial-session/show", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("provider1", "provider1");
-				super.request("/assistant/tutorialSession/show", param);
+				super.request("/assistant/tutorial-session/show", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("student1", "student1");
-				super.request("/assistant/tutorialSession/show", param);
+				super.request("/assistant/tutorial-session/show", param);
 				super.checkPanicExists();
 				super.signOut();
 			}
