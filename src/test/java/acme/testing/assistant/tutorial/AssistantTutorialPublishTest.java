@@ -37,7 +37,7 @@ public class AssistantTutorialPublishTest extends TestHarness {
 		// then selects one of them, and publishes it.
 		super.signIn("assistant1", "assistant1");
 
-		super.clickOnMenu("Assistant", "List my tutorials");
+		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.checkColumnHasValue(recordTutorialIndex, 0, code);
@@ -56,7 +56,7 @@ public class AssistantTutorialPublishTest extends TestHarness {
 		// HINT: this test attempts to publish a tutorial that cannot be published, yet.
 		super.signIn("assistant1", "assistant1");
 
-		super.clickOnMenu("Assistant", "List my tutorials");
+		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 

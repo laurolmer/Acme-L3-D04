@@ -20,7 +20,7 @@ assistant.tutorial-session.form.button.create = Create
 assistant.tutorial-session.form.button.update = Update
 assistant.tutorial-session.form.button.delete = Delete
 assistant.tutorial-session.form.button.publish = Publish
-assistant.tutorial-session.form.button.list = List
+assistant.tutorial-session.form.button.list = List Sessions
 
 assistant.tutorial-session.list.label.title = Title
 assistant.tutorial-session.list.label.abstractSession = Abstract

@@ -39,11 +39,11 @@ public class AssistantTutorialSessionDeleteTest extends TestHarness {
 		// the delete has actually been performed.
 
 		super.signIn("assistant1", "assistant1");
-		super.clickOnMenu("Assistant", "List my tutorials");
+		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(recordTutorialIndex);
-		super.clickOnButton("Sessions");
+		super.clickOnButton("List Sessions");
 		super.checkListingExists();
 		super.clickOnListingRecord(recordSessionIndex);
 		super.clickOnSubmit("Delete");
@@ -57,11 +57,11 @@ public class AssistantTutorialSessionDeleteTest extends TestHarness {
 		// HINT: this test attempts to delete a session with wrong data.
 
 		super.signIn("assistant1", "assistant1");
-		super.clickOnMenu("Assistant", "List my tutorials");
+		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(recordTutorialIndex);
-		super.clickOnButton("Sessions");
+		super.clickOnButton("List Sessions");
 		super.checkListingExists();
 		super.clickOnListingRecord(sessionRecordIndex);
 		super.clickOnSubmit("Delete");
@@ -126,5 +126,38 @@ public class AssistantTutorialSessionDeleteTest extends TestHarness {
 				super.checkPanicExists();
 				super.signOut();
 			}
+	}
+
+	@Test
+	public void test301Hacking() {
+		// HINT: this test tries to delete a published session that was registered by the principal.
+		Collection<TutorialSession> sessions;
+		String params;
+
+		super.signIn("assistant1", "assistant1");
+		sessions = this.repository.findTutorialSessionsByAssistantUsername("assistant1");
+		for (final TutorialSession session : sessions)
+			if (!session.getTutorial().isDraftMode() && session.isDraftMode()) {
+				params = String.format("id=%d", session.getTutorial().getId());
+				super.request("/assistant/tutorialSession/delete", params);
+			}
+		super.signOut();
+	}
+
+	@Test
+	public void test302Hacking() {
+		// HINT: this test tries to delete a session that wasn't registered by the principal,
+		// be it published or unpublished.
+		Collection<TutorialSession> sessions;
+		String params;
+
+		super.signIn("assistant2", "assistant2");
+		sessions = this.repository.findTutorialSessionsByAssistantUsername("assistant1");
+		for (final TutorialSession session : sessions)
+			if (!session.getTutorial().isDraftMode() && session.isDraftMode()) {
+				params = String.format("id=%d", session.getTutorial().getId());
+				super.request("/assistant/tutorialSession/delete", params);
+			}
+		super.signOut();
 	}
 }

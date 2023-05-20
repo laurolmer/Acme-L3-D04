@@ -37,14 +37,14 @@ public class AssistantTutorialSessionListTest extends TestHarness {
 		// selects one of them, and check that it has the expected sessions.
 		super.signIn("assistant1", "assistant1");
 
-		super.clickOnMenu("Assistant", "List my tutorials");
+		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
 		super.checkColumnHasValue(tutorialRecordIndex, 0, code);
 		super.clickOnListingRecord(tutorialRecordIndex);
 		super.checkInputBoxHasValue("code", code);
-		super.clickOnButton("Sessions");
+		super.clickOnButton("List Sessions");
 
 		super.checkListingExists();
 		super.checkColumnHasValue(sessionRecordIndex, 0, title);

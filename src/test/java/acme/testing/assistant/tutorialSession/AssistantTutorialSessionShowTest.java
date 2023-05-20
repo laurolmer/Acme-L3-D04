@@ -38,11 +38,11 @@ public class AssistantTutorialSessionShowTest extends TestHarness {
 		// one of them and checks that it's as expected.
 		super.signIn("assistant1", "assistant1");
 
-		super.clickOnMenu("Assistant", "List my tutorials");
+		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(tutorialRecordIndex);
-		super.clickOnButton("Sessions");
+		super.clickOnButton("List Sessions");
 		super.checkListingExists();
 		super.clickOnListingRecord(sessionRecordIndex);
 		super.checkFormExists();

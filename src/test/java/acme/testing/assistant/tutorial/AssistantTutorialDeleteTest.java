@@ -3,6 +3,7 @@ package acme.testing.assistant.tutorial;
 
 import java.util.Collection;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ public class AssistantTutorialDeleteTest extends TestHarness {
 
 		super.signIn("assistant1", "assistant1");
 
-		super.clickOnMenu("Assistant", "List my tutorials");
+		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
@@ -33,14 +34,7 @@ public class AssistantTutorialDeleteTest extends TestHarness {
 		super.checkFormExists();
 		super.clickOnSubmit("Delete");
 
-		super.clickOnMenu("Lecturer", "My courses");
-		super.checkListingExists();
-		super.sortListing(0, "asc");
-
-		super.checkColumnHasValue(recordTutorialIndex, 0, code);
-
 		super.signOut();
-
 	}
 
 	@ParameterizedTest
@@ -48,7 +42,7 @@ public class AssistantTutorialDeleteTest extends TestHarness {
 	public void test200Negative(final int recordTutorialIndex, final String code) {
 		super.signIn("assistant1", "assistant1");
 
-		super.clickOnMenu("Assistant", "List my tutorials");
+		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
@@ -116,5 +110,37 @@ public class AssistantTutorialDeleteTest extends TestHarness {
 				super.checkPanicExists();
 				super.signOut();
 			}
+	}
+
+	@Test
+	public void test301Hacking() {
+		// HINT: this test tries to delete a published tutorial that was registered by the principal.
+		Collection<Tutorial> tutorials;
+		String params;
+
+		super.signIn("assistant1", "assistant1");
+		tutorials = this.repository.findTutorialsByAssistantUsername("assistant1");
+		for (final Tutorial tutorial : tutorials)
+			if (!tutorial.isDraftMode()) {
+				params = String.format("id=%d", tutorial.getId());
+				super.request("/assistant/tutorial/delete", params);
+			}
+		super.signOut();
+	}
+
+	@Test
+	public void test302Hacking() {
+		// HINT: this test tries to delete a tutorial that wasn't registered by the principal,
+		// be it published or unpublished.
+		Collection<Tutorial> tutorials;
+		String params;
+
+		super.signIn("assistant2", "assistant2");
+		tutorials = this.repository.findTutorialsByAssistantUsername("assistant1");
+		for (final Tutorial tutorial : tutorials) {
+			params = String.format("id=%d", tutorial.getId());
+			super.request("/assistant/tutorial/delete", params);
+		}
+		super.signOut();
 	}
 }

@@ -41,7 +41,7 @@ public class AssistantTutorialUpdateTest extends TestHarness {
 
 		super.signIn("assistant1", "assistant1");
 
-		super.clickOnMenu("Assistant", "List my tutorials");
+		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
@@ -78,7 +78,7 @@ public class AssistantTutorialUpdateTest extends TestHarness {
 
 		super.signIn("assistant1", "assistant1");
 
-		super.clickOnMenu("Assistant", "List my tutorials");
+		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
@@ -154,6 +154,38 @@ public class AssistantTutorialUpdateTest extends TestHarness {
 				super.checkPanicExists();
 				super.signOut();
 			}
+	}
+
+	@Test
+	public void test301Hacking() {
+		// HINT: this test tries to update a published tutorial that was registered by the principal.
+		Collection<Tutorial> tutorials;
+		String params;
+
+		super.signIn("assistant1", "assistant1");
+		tutorials = this.repository.findTutorialsByAssistantUsername("assistant1");
+		for (final Tutorial tutorial : tutorials)
+			if (!tutorial.isDraftMode()) {
+				params = String.format("id=%d", tutorial.getId());
+				super.request("/assistant/tutorial/update", params);
+			}
+		super.signOut();
+	}
+
+	@Test
+	public void test302Hacking() {
+		// HINT: this test tries to update a tutorial that wasn't registered by the principal,
+		// be it published or unpublished.
+		Collection<Tutorial> tutorials;
+		String params;
+
+		super.signIn("assistant2", "assistant2");
+		tutorials = this.repository.findTutorialsByAssistantUsername("assistant1");
+		for (final Tutorial tutorial : tutorials) {
+			params = String.format("id=%d", tutorial.getId());
+			super.request("/assistant/tutorial/update", params);
+		}
+		super.signOut();
 	}
 
 }

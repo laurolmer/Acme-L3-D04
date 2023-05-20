@@ -41,11 +41,11 @@ public class AssistantTutorialSessionUpdateTest extends TestHarness {
 
 		super.signIn("assistant1", "assistant1");
 
-		super.clickOnMenu("Assistant", "List my tutorials");
+		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(recordTutorialIndex);
-		super.clickOnButton("Sessions");
+		super.clickOnButton("List Sessions");
 
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("abstractSession", abstractSession);
@@ -78,11 +78,11 @@ public class AssistantTutorialSessionUpdateTest extends TestHarness {
 
 		super.signIn("assistant1", "assistant1");
 
-		super.clickOnMenu("Assistant", "List my tutorials");
+		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(tutorialRecordIndex);
-		super.clickOnButton("Sessions");
+		super.clickOnButton("List Sessions");
 
 		super.checkFormExists();
 		super.fillInputBoxIn("title", title);
@@ -154,6 +154,39 @@ public class AssistantTutorialSessionUpdateTest extends TestHarness {
 				super.checkPanicExists();
 				super.signOut();
 			}
+	}
+
+	@Test
+	public void test301Hacking() {
+		// HINT: this test tries to update a published session that was registered by the principal.
+		Collection<TutorialSession> sessions;
+		String params;
+
+		super.signIn("assistant1", "assistant1");
+		sessions = this.repository.findTutorialSessionsByAssistantUsername("assistant1");
+		for (final TutorialSession session : sessions)
+			if (!session.getTutorial().isDraftMode() && session.isDraftMode()) {
+				params = String.format("id=%d", session.getTutorial().getId());
+				super.request("/assistant/tutorialSession/update", params);
+			}
+		super.signOut();
+	}
+
+	@Test
+	public void test302Hacking() {
+		// HINT: this test tries to update a session that wasn't registered by the principal,
+		// be it published or unpublished.
+		Collection<TutorialSession> sessions;
+		String params;
+
+		super.signIn("assistant2", "assistant2");
+		sessions = this.repository.findTutorialSessionsByAssistantUsername("assistant1");
+		for (final TutorialSession session : sessions)
+			if (!session.getTutorial().isDraftMode() && session.isDraftMode()) {
+				params = String.format("id=%d", session.getTutorial().getId());
+				super.request("/assistant/tutorialSession/update", params);
+			}
+		super.signOut();
 	}
 
 }

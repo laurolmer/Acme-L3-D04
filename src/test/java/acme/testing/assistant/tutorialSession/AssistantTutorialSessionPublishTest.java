@@ -37,11 +37,11 @@ public class AssistantTutorialSessionPublishTest extends TestHarness {
 		// then selects one of them, and publishes it.
 		super.signIn("assistant1", "assistant1");
 
-		super.clickOnMenu("Assistant", "List my tutorials");
+		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(recordTutorialIndex);
-		super.clickOnButton("Sessions");
+		super.clickOnButton("List Sessions");
 
 		super.checkListingExists();
 		super.sortListing(0, "asc");
@@ -60,11 +60,11 @@ public class AssistantTutorialSessionPublishTest extends TestHarness {
 		// HINT: this test attempts to publish a tutorial that cannot be published, yet.
 		super.signIn("assistant1", "assistant1");
 
-		super.clickOnMenu("Assistant", "List my tutorials");
+		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(recordTutorialIndex);
-		super.clickOnButton("Sessions");
+		super.clickOnButton("List Sessions");
 
 		super.checkListingExists();
 		super.sortListing(0, "asc");

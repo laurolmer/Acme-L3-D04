@@ -28,7 +28,7 @@ public class AssistantTutorialListAllTest extends TestHarness {
 
 		super.signIn("assistant1", "assistant1");
 
-		super.clickOnMenu("Assistant", "List all tutorials");
+		super.clickOnMenu("Assistant", "List All Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 

@@ -37,7 +37,7 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 		// to their tutorialSession, and checks that they have the expected data.
 		super.signIn("assistant1", "assistant1");
 
-		super.clickOnMenu("Assistant", "List my tutorials");
+		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
@@ -74,12 +74,12 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 		// HINT: this test attempts to create sessions using wrong data.
 		super.signIn("assistant1", "assistant1");
 
-		super.clickOnMenu("Assistant", "List my tutorials");
+		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
 		super.clickOnListingRecord(tutorialRecordIndex);
-		super.clickOnButton("Sessions");
+		super.clickOnButton("List Sessions");
 
 		super.clickOnButton("Create");
 		super.fillInputBoxIn("title", title);
