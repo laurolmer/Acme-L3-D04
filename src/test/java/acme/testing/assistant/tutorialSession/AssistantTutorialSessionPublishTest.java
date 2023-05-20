@@ -33,7 +33,7 @@ public class AssistantTutorialSessionPublishTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/assistant/tutorialSession/publish-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int recordTutorialIndex, final String code, final int recordSessionIndex, final String title) {
-		// HINT: this test authenticates as an assistant, lists his or her tutorials,
+		// HINT: this test authenticates as an assistant, lists his or her tutorials, then their sessions
 		// then selects one of them, and publishes it.
 		super.signIn("assistant1", "assistant1");
 

@@ -16,7 +16,11 @@ tutorialRecordIndex,course,code,title,abstractTutorial,goals
 0,Course,TTT0,Title,Abstract,Goals
 0,Course,TTT03,Title,Abstract,Goals
 0,Course,TTTT0341,Title,Abstract,Goals
-0,Course,randominput,Title,Abstract,Goals
+0,Course,randomInput,Title,Abstract,Goals
+0,Course,123.45,Title,Abstract,Goals
+0,Course,-123,Title,Abstract,Goals
+0,Course,true,Title,Abstract,Goals
+0,Course,2023/01/01 00:00,Title,Abstract,Goals
 0,Course,T010,Title,Abstract,Goals
 0,Course,T010,Title,Abstract,Goals
 0,Course,T035,,Abstract,Goals

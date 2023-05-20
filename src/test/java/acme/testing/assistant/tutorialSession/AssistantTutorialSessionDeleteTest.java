@@ -1,5 +1,4 @@
 /*
- * EmployerJobUpdateTest.java
  *
  * Copyright (C) 2012-2023 Rafael Corchuelo.
  *
@@ -22,7 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import acme.entities.tutorialSession.TutorialSession;
 import acme.testing.TestHarness;
 
-public class AssistantTutorialSessionUpdateTest extends TestHarness {
+public class AssistantTutorialSessionDeleteTest extends TestHarness {
 
 	// Internal state ---------------------------------------------------------
 
@@ -33,73 +32,46 @@ public class AssistantTutorialSessionUpdateTest extends TestHarness {
 
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/assistant/tutorialSession/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int recordTutorialIndex, final int recordSessionIndex, final String title, final String abstractSession, final String sessionType, final String startPeriod, final String finishPeriod, final String link) {
+	@CsvFileSource(resources = "/assistant/tutorialSession/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test100Positive(final int recordTutorialIndex, final int recordSessionIndex) {
 		// HINT: this test logs in as an assistant, lists his or her tutorials, 
-		// selects one of their sessions and list them, updates it, and then checks that 
-		// the update has actually been performed.
+		// selects one of their sessions and list them, deletes it, and then checks that 
+		// the delete has actually been performed.
 
 		super.signIn("assistant1", "assistant1");
-
 		super.clickOnMenu("Assistant", "List my tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(recordTutorialIndex);
 		super.clickOnButton("Sessions");
-
-		super.fillInputBoxIn("title", title);
-		super.fillInputBoxIn("abstractSession", abstractSession);
-		super.fillInputBoxIn("sessionType", sessionType);
-		super.fillInputBoxIn("startPeriod", startPeriod);
-		super.fillInputBoxIn("finishPeriod", finishPeriod);
-		super.fillInputBoxIn("link", link);
-		super.clickOnSubmit("Update");
-
 		super.checkListingExists();
-		super.sortListing(0, "asc");
-		super.checkColumnHasValue(recordSessionIndex, 0, title);
 		super.clickOnListingRecord(recordSessionIndex);
-
-		super.checkFormExists();
-		super.checkInputBoxHasValue("title", title);
-		super.checkInputBoxHasValue("abstractSession", abstractSession);
-		super.checkInputBoxHasValue("sessionType", sessionType);
-		super.checkInputBoxHasValue("startPeriod", startPeriod);
-		super.checkInputBoxHasValue("finishPeriod", finishPeriod);
-		super.checkInputBoxHasValue("link", link);
-
+		super.clickOnSubmit("Delete");
+		super.checkNotPanicExists();
 		super.signOut();
 	}
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/assistant/tutorialSession/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test200Negative(final int tutorialRecordIndex, final int sessionRecordIndex, final String title, final String abstractSession, final String sessionType, final String startPeriod, final String finishPeriod, final String link) {
-		// HINT: this test attempts to update a session with wrong data.
+	@CsvFileSource(resources = "/assistant/tutorialSession/delete-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test200Negative(final int recordTutorialIndex, final int sessionRecordIndex) {
+		// HINT: this test attempts to delete a session with wrong data.
 
 		super.signIn("assistant1", "assistant1");
-
 		super.clickOnMenu("Assistant", "List my tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
-		super.clickOnListingRecord(tutorialRecordIndex);
+		super.clickOnListingRecord(recordTutorialIndex);
 		super.clickOnButton("Sessions");
-
-		super.checkFormExists();
-		super.fillInputBoxIn("title", title);
-		super.fillInputBoxIn("abstractSession", abstractSession);
-		super.fillInputBoxIn("sessionType", sessionType);
-		super.fillInputBoxIn("startPeriod", startPeriod);
-		super.fillInputBoxIn("finishPeriod", finishPeriod);
-		super.fillInputBoxIn("link", link);
-		super.clickOnSubmit("Update");
+		super.checkListingExists();
+		super.clickOnListingRecord(sessionRecordIndex);
+		super.clickOnSubmit("Delete");
 		super.checkErrorsExist();
-
 		super.signOut();
 	}
 
 	@Test
 	public void test300Hacking() {
-		// HINT: this test tries to update a session with a role other than "Assistant",
+		// HINT: this test tries to delete a session with a role other than "Assistant",
 		// or using an assistant who is not the owner.
 		Collection<TutorialSession> sessions;
 		String param;
@@ -111,49 +83,48 @@ public class AssistantTutorialSessionUpdateTest extends TestHarness {
 				param = String.format("id=%d", session.getTutorial().getId());
 
 				super.checkLinkExists("Sign in");
-				super.request("/assistant/tutorialSession/update", param);
+				super.request("/assistant/tutorialSession/delete", param);
 				super.checkPanicExists();
 
 				super.signIn("administrator", "administrator");
-				super.request("/assistant/tutorialSession/update", param);
+				super.request("/assistant/tutorialSession/delete", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("assistant2", "assistant2");
-				super.request("/assistant/tutorialSession/update", param);
+				super.request("/assistant/tutorialSession/delete", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("auditor1", "auditor1");
-				super.request("/assistant/tutorialSession/update", param);
+				super.request("/assistant/tutorialSession/delete", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("company1", "company1");
-				super.request("/assistant/tutorialSession/update", param);
+				super.request("/assistant/tutorialSession/delete", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("consumer1", "consumer1");
-				super.request("/assistant/tutorialSession/update", param);
+				super.request("/assistant/tutorialSession/delete", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("lecturer1", "lecturer1");
-				super.request("/assistant/tutorialSession/update", param);
+				super.request("/assistant/tutorialSession/delete", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("provider1", "provider1");
-				super.request("/assistant/tutorialSession/update", param);
+				super.request("/assistant/tutorialSession/delete", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("student1", "student1");
-				super.request("/assistant/tutorialSession/update", param);
+				super.request("/assistant/tutorialSession/delete", param);
 				super.checkPanicExists();
 				super.signOut();
 			}
 	}
-
 }

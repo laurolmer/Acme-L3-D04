@@ -32,8 +32,7 @@ public class AssistantTutorialSessionListTest extends TestHarness {
 	// Test methods -----------------------------------------------------------
 	@ParameterizedTest
 	@CsvFileSource(resources = "/assistant/tutorialSession/list-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int tutorialRecordIndex, final String code, final int sessionRecordIndex, final String title, final String abstractSession, final String sessionType, final String startPeriod, final String finishPeriod,
-		final String link) {
+	public void test100Positive(final int tutorialRecordIndex, final String code, final int sessionRecordIndex, final String title, final String abstractSession) {
 		// HINT: this test authenticates as an assistant, then lists his or her tutorials, 
 		// selects one of them, and check that it has the expected sessions.
 		super.signIn("assistant1", "assistant1");
