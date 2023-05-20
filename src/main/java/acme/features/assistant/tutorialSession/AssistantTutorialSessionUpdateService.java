@@ -65,10 +65,10 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 		assert tutorialSession != null;
 		final double estimatedTotalTime;
 		final Date finishPeriod;
-		estimatedTotalTime = super.getRequest().getData("finishPeriod", Double.class);
-		finishPeriod = tutorialSession.deltaFromStartMoment(estimatedTotalTime);
+		//estimatedTotalTime = super.getRequest().getData("finishPeriod", Double.class);
+		//finishPeriod = tutorialSession.deltaFromStartMoment(estimatedTotalTime);
 		super.bind(tutorialSession, "title", "abstractSession", "sessionType", "startPeriod", "finishPeriod", "link");
-		tutorialSession.setFinishPeriod(finishPeriod);
+		//tutorialSession.setFinishPeriod(finishPeriod);
 	}
 
 	@Override
