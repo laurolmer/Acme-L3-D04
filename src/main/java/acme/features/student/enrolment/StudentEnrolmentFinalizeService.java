@@ -42,7 +42,17 @@ public class StudentEnrolmentFinalizeService extends AbstractService<Student, En
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		boolean status;
+		int enrolmentId;
+		final int id;
+		Enrolment enrolment;
+		Student student;
+		id = super.getRequest().getPrincipal().getAccountId();
+		enrolmentId = super.getRequest().getData("id", int.class);
+		enrolment = this.repository.findEnrolmentById(enrolmentId);
+		student = enrolment == null ? null : enrolment.getStudent();
+		status = (enrolment != null || super.getRequest().getPrincipal().hasRole(student)) && enrolment.isDraftMode() && enrolment.getStudent().getUserAccount().getId() == id;
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override

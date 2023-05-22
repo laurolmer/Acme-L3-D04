@@ -14,7 +14,7 @@ student.enrolment.form.label.code = Código:
 student.enrolment.form.label.motivation = Motivaciones:
 student.enrolment.form.label.goals = Objetivos:
 student.enrolment.form.label.course = Curso:
-student.enrolment.form.label.finalized = Finalizado:
+student.enrolment.form.label.estimatedTotalTime: Tiempo Total Estimado:
 student.enrolment.form.label.student = Estudiante:
 student.enrolment.form.label.expiryDate = Fecha de caducidad:
 student.enrolment.form.label.cvc = CVC:
@@ -24,7 +24,6 @@ student.enrolment.form.label.lowerNibble = Lower Nibble:
 student.enrolment.form.title.enrolment = Datos de la matrícula
 student.enrolment.form.title.finalize = Datos para la finalización de la matrícula
 student.enrolment.form.button.finalize = Finalizar:
-
 
 student.enrolment.form.button.create = Crear:
 student.enrolment.form.button.update = Actualizar:

@@ -49,7 +49,6 @@ master.menu.bulletin.list = List all bulletins
 master.menu.administrator.bulletin.form = Create a Bulletin
 
 master.menu.offer.list= List all offers
-master.menu.authenticated.exchange-money.perform = Exchange Money
 
 
 # master.menu.assistant ###################################################
