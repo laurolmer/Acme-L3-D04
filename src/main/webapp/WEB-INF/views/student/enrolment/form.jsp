@@ -22,6 +22,7 @@
 			<acme:input-textbox code="student.enrolment.form.label.motivation" path="motivation"/>
 			<acme:input-textbox code="student.enrolment.form.label.goals" path="goals"/>
 			<acme:input-select code="student.enrolment.form.label.course" path="course" choices="${courses}"/>	
+			<acme:input-textbox code="student.enrolment.form.label.estimatedTotalTime" path="estimatedTotalTime" readonly="true"/>
 	<jstl:if test="${_command != 'create'}">
 		<br>	
 		<h3><acme:message code="student.enrolment.form.title.finalize"/></h3>		
