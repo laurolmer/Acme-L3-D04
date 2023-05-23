@@ -41,7 +41,7 @@ public class CompanyPracticumShowService extends AbstractService<Company, Practi
 		principal = super.getRequest().getPrincipal();
 		Company = Practicum == null ? null : Practicum.getCompany();
 
-		status = Practicum != null && !Practicum.getDraftMode() == false || principal.hasRole(Company);
+		status = Practicum != null && Practicum.getDraftMode() || principal.hasRole(Company);
 		super.getResponse().setAuthorised(status);
 	}
 
