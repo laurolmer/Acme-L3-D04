@@ -56,12 +56,6 @@ master.menu.offer.list= Listar todas las ofertas
 master.menu.offer.list = Listar todas las ofertas
 
 
-# master.menu.assistant ###################################################
-
-master.menu.assistant = Asistente
-master.menu.assistant.tutorial.list-mine = Listar mis tutoriales
-master.menu.assistant.tutorial.list-all = Listar todos los tutoriales
-
 # master.menu.administrator.offer ###################################################
 
 master.menu.administrator.offer = Ofertas Administrador

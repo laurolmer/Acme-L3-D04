@@ -88,8 +88,8 @@ public class AssistantDashboardShowService extends AbstractService<Assistant, As
 		tutorialLength = new Statistic(countTutorial, averageTutorialLength, maximumTutorialLength, minimumTutorialLength, deviationTutorialLength);
 
 		final Map<CourseType, Collection<Course>> courseType = this.repository.coursesRegardingCourseType();
-		totalNumberOfTheoryTutorial = this.repository.findCountTutorialRegardingCourse(courseType.get(CourseType.THEORY_COURSE));
-		totalNumOfHandsOnTutorials = this.repository.findCountTutorialRegardingCourse(courseType.get(CourseType.HANDS_ON));
+		totalNumberOfTheoryTutorial = this.repository.findCountTutorialRegardingCourse(courseType.get(CourseType.THEORY_COURSE)) == null ? 0 : this.repository.findCountTutorialRegardingCourse(courseType.get(CourseType.THEORY_COURSE));
+		totalNumOfHandsOnTutorials = this.repository.findCountTutorialRegardingCourse(courseType.get(CourseType.BALANCED)) == null ? 0 : this.repository.findCountTutorialRegardingCourse(courseType.get(CourseType.BALANCED));
 
 		assistantDashboard = new AssistantDashboard();
 		assistantDashboard.setTotalNumTheoryTutorials(totalNumberOfTheoryTutorial);

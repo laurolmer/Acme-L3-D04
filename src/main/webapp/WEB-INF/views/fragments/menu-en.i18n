@@ -51,13 +51,6 @@ master.menu.administrator.bulletin.form = Create a Bulletin
 master.menu.offer.list= List all offers
 
 
-# master.menu.assistant ###################################################
-
-master.menu.assistant = Assistant
-master.menu.assistant.tutorial.list-mine = List my tutorials
-master.menu.assistant.tutorial.list-all = List all tutorials
-
-
 # master.menu.administrator.offer ###################################################
 
 master.menu.administrator.offer = Offers Administrator

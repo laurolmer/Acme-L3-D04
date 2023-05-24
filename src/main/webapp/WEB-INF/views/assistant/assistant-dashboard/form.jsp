@@ -95,13 +95,13 @@
 	</tr>
 </table>
 
-	<h2>
+	<h3>
 		<acme:message code="assistant.dashboard.form.label.theory-tutorials"/>
 		<acme:print value="${totalNumTheoryTutorials}"/>
-	</h2>
-	<h2>
+	</h3>
+	<h3>
 		<acme:message code="assistant.dashboard.form.label.handson-tutorials"/>
 		<acme:print value="${totalNumHandsOnTutorials}"/>
-	</h2>
+	</h3>
 
 <acme:return/>

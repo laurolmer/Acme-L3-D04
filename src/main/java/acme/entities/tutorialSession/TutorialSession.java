@@ -53,8 +53,6 @@ public class TutorialSession extends AbstractEntity {
 	@URL
 	protected String			link;
 
-	protected boolean			draftMode;
-
 
 	// Métodos derivados -----------------------------------------------------
 	public Date deltaFromStartMoment(final double amount) {
