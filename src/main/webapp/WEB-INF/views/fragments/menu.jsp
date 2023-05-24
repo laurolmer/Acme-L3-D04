@@ -84,11 +84,6 @@
 			<acme:menu-suboption code="master.menu.student.studentEnrolmentList" action="/student/enrolment/list"/>	
 			<acme:menu-suboption code="master.menu.student.dashboard" action="/student/student-dashboard/show"/>	
 		</acme:menu-option>
-
-		<acme:menu-option code="master.menu.assistant" access="hasRole('Assistant')">
-			<acme:menu-suboption code="master.menu.assistant.tutorial.list-mine" action="/assistant/tutorial/list-mine"/>
-			<acme:menu-suboption code="master.menu.assistant.tutorial.list-all" action="/assistant/tutorial/list-all"/>		
-		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.administrator.offer" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.offer.list" action="/administrator/offer/list"/>		

@@ -65,10 +65,10 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 		assert tutorialSession != null;
 		final double estimatedTotalTime;
 		final Date finishPeriod;
-		estimatedTotalTime = super.getRequest().getData("finishPeriod", Double.class);
-		finishPeriod = tutorialSession.deltaFromStartMoment(estimatedTotalTime);
+		//estimatedTotalTime = super.getRequest().getData("finishPeriod", Double.class);
+		//finishPeriod = tutorialSession.deltaFromStartMoment(estimatedTotalTime);
 		super.bind(tutorialSession, "title", "abstractSession", "sessionType", "startPeriod", "finishPeriod", "link");
-		tutorialSession.setFinishPeriod(finishPeriod);
+		//tutorialSession.setFinishPeriod(finishPeriod);
 	}
 
 	@Override
@@ -122,10 +122,10 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 		tuple = super.unbind(tutorialSession, "title", "abstractSession", "sessionType", "startPeriod", "finishPeriod", "link");
 		estimatedTotalTime = tutorialSession.computeEstimatedTotalTime();
 		if (estimatedTotalTime != null)
-			tuple.put("finishPeriod", estimatedTotalTime);
+			tuple.put("estimatedTotalTime", estimatedTotalTime);
 		tuple.put("masterId", super.getRequest().getData("id", int.class));
 		tuple.put("sessionType", choices);
-		tuple.put("draftMode", tutorialSession.getTutorial().isDraftMode() && tutorialSession.isDraftMode());
+		tuple.put("draftMode", tutorialSession.getTutorial().isDraftMode());
 		super.getResponse().setData(tuple);
 	}
 }

@@ -77,9 +77,9 @@ public class AssistantTutorialSessionDeleteService extends AbstractService<Assis
 		Tutorial tutorial;
 		Tuple tuple;
 		tutorial = tutorialSession.getTutorial();
-		tuple = super.unbind(tutorialSession, "title", "abstractSession", "sessionType", "startPeriod", "finishPeriod", "link", "draftMode");
+		tuple = super.unbind(tutorialSession, "title", "abstractSession", "sessionType", "startPeriod", "finishPeriod", "link");
 		tuple.put("masterId", super.getRequest().getData("id", int.class));
-		tuple.put("draftMode", tutorialSession.getTutorial().isDraftMode() && tutorialSession.isDraftMode());
+		tuple.put("draftMode", tutorialSession.getTutorial().isDraftMode());
 		super.getResponse().setData(tuple);
 	}
 }
