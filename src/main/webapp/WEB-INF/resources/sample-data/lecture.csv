@@ -32,3 +32,4 @@ lecture-30,title-lecture,abstract-lecture,2022/01/01 00:00,2022/01/01 01:00,body
 lecture-31,title-lecture,abstract-lecture,2022/01/01 00:00,2022/01/01 01:00,body-lecture,THEORETICAL,https:\\www.example.lecture.com,true,lecturer-02
 lecture-32,title-lecture,abstract-lecture,2022/01/01 00:00,2022/01/01 01:00,body-lecture,THEORETICAL,http:\\www.example.lecture.com,true,lecturer-02
 lecture-33,title-lecture,abstract-lecture,2022/01/01 00:00,2022/01/01 01:00,body-lecture,HANDS_ON,https:\\www.example.lecture.es,false,lecturer-02
+lecture-34,ztitle-lecture,abstract-lecture,2022/01/01 00:00,2022/01/01 01:00,body-lecture,HANDS_ON,https:\\www.example.lecture.es,true,lecturer-02
