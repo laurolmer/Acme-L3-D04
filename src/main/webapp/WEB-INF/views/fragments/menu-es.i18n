@@ -105,6 +105,7 @@ master.menu.lecturer.lecture.dashboard = Estadísticas
 master.menu.company= Compañía
 master.menu.company.practicum.list-mine = Mis prácticas
 master.menu.company.practicum.list-all = Todas las prácticas
+master.menu.company.dashboard= DashBoard de la Compañía
 
 # master.menu.studentCourse ##########################################################
 
