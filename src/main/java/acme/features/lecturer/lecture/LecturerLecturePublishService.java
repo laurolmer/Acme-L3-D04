@@ -41,7 +41,7 @@ public class LecturerLecturePublishService extends AbstractService<Lecturer, Lec
 		objectId = super.getRequest().getData("id", int.class);
 		object = this.repository.findOneLectureById(objectId);
 
-		status = object.getLecturer().getUserAccount().getId() == userAccountId;
+		status = object.getLecturer().getUserAccount().getId() == userAccountId && object.isDraftMode();
 
 		super.getResponse().setAuthorised(status);
 	}

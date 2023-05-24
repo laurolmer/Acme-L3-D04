@@ -39,14 +39,14 @@ public class LecturerCourseDeleteTest extends TestHarness {
 
 	@Test
 	public void test200Negative() {
-		// HINT: this test authenticates as an lecturer, lists his or her courses,
-		// then selects one of them, and publishes it. There are not cases.
+		// HINT:there aren't any negative tests for this feature since it's deletions
+		// don't involve entering anydata into any forms.
 	}
 
 	@Test
 	public void test300Hacking() {
 
-		// HINT: this test tries to update a course with a role other than "Lecturer".
+		// HINT: this test tries to delete a course with a role other than "Lecturer".
 
 		Collection<Course> courses;
 		String param;

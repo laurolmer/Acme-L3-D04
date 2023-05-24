@@ -36,19 +36,22 @@ public class LecturerCourseShowPublishedTest extends TestHarness {
 		super.checkInputBoxHasValue("published", published);
 		super.checkInputBoxHasValue("courseType", courseType);
 		super.checkInputBoxHasValue("estimatedTotalTime", estimatedTotalTime);
+		super.checkLinkExists("Lectures list");
+		super.checkButtonExists("Return");
 
 		super.signOut();
 	}
 
 	@Test
 	public void test200Negative() {
-		// HINT:there aren't any negative tests for this feature since it's a listing
-		// that doesn'tinvolve entering anydata into any forms.
+		// HINT:there aren't any negative tests for this feature since it's a show
+		// that doesn't involve entering anydata into any forms.
 	}
 
 	@Test
 	public void test300Hacking() {
-		// HINT: this test tries to show an unpublished tutorial by someone who is not the principal.
+		// HINT: this test tries to show a published course by someone who is not the owner
+		// or a "Lecturer".
 		Collection<Course> courses;
 		String param;
 

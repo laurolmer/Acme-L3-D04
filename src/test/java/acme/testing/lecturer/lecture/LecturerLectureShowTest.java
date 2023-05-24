@@ -1,5 +1,5 @@
 
-package acme.testing.lecturer.course;
+package acme.testing.lecturer.lecture;
 
 import java.util.Collection;
 
@@ -10,35 +10,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.entities.course.Course;
 import acme.testing.TestHarness;
+import acme.testing.lecturer.course.LecturerCourseRepositoryTest;
 
-public class LecturerCourseShowNotPublishedTest extends TestHarness {
+public class LecturerLectureShowTest extends TestHarness {
 
 	@Autowired
 	protected LecturerCourseRepositoryTest repository;
 
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/lecturer/course/show-not-published-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int recordIndex, final String code, final String title, final String abstractCourse, final String link, final String published, final String price) {
-		super.signIn("lecturer1", "lecturer1");
+	@CsvFileSource(resources = "/lecturer/lecture/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test100Positive(final int recordIndex, final String title, final String abstractLecture, final String lectureLearningTime, final String details, final String type, final String published) {
+		super.signIn("lecturer2", "lecturer2");
 
-		super.clickOnMenu("Lecturer", "List my courses");
+		super.clickOnMenu("Lecturer", "List my lectures");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
-		super.checkInputBoxHasValue("code", code);
-		super.checkInputBoxHasValue("title", title);
-		super.checkInputBoxHasValue("courseAbstract", abstractCourse);
-		super.checkInputBoxHasValue("retailPrice", price);
-		super.checkInputBoxHasValue("link", link);
 		super.checkInputBoxHasValue("published", published);
-		super.checkLinkExists("Lectures list");
-		super.checkButtonExists("Update");
-		super.checkButtonExists("Delete");
-		super.checkButtonExists("Publish");
-		super.checkButtonExists("Return");
+		super.checkInputBoxHasValue("title", title);
+		super.checkInputBoxHasValue("lectureAbstract", abstractLecture);
+		super.checkInputBoxHasValue("endPeriod", lectureLearningTime);
+		super.checkInputBoxHasValue("body", details);
+		super.checkInputBoxHasValue("lectureType", type);
 
 		super.signOut();
 	}
@@ -51,11 +47,12 @@ public class LecturerCourseShowNotPublishedTest extends TestHarness {
 
 	@Test
 	public void test300Hacking() {
-		// HINT: this test tries to show an unpublished course by someone who is not the principal.
+		// HINT: this test tries to show an unpublished lecture by someone who is not the owner
+		// of the lectures or is not "Lecturer".
 		Collection<Course> courses;
 		String param;
 
-		courses = this.repository.findCoursesByLecturerUsername("lecturer1");
+		courses = this.repository.findCoursesByLecturerUsername("lecturer2");
 		for (final Course course : courses)
 			if (course.isDraftMode()) {
 				param = String.format("id=%d", course.getId());
@@ -91,4 +88,22 @@ public class LecturerCourseShowNotPublishedTest extends TestHarness {
 			}
 	}
 
+	@Test
+	public void test301Hacking() {
+		// HINT: this test tries to show a lecture unpublished
+		// without being the owner.
+
+		Collection<Course> courses;
+		String param;
+
+		super.signIn("lecturer1", "lecturer1");
+		courses = this.repository.findCoursesByLecturerUsername("lecturer2");
+		for (final Course course : courses)
+			if (course.isDraftMode()) {
+				param = String.format("id=%d", course.getId());
+				super.request("/lecturer/course/update", param);
+				super.checkPanicExists();
+			}
+		super.signOut();
+	}
 }
