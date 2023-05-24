@@ -17,6 +17,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
+import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -94,10 +95,13 @@ public class StudentEnrolmentFinalizeService extends AbstractService<Student, En
 			super.state(false, "cvc", "student.enrolment.form.error.cvc");
 
 		expiryDate = super.getRequest().getData("expiryDate", String.class);
-		final DateFormat format = new SimpleDateFormat("MM/yy");
+		final Locale local = super.getRequest().getLocale();
+		final String localString = local.equals(Locale.ENGLISH) ? "yy/MM" : "MM/yy";
+		final DateFormat formate = new SimpleDateFormat(localString);
 		try {
-			final Date date = format.parse(expiryDate);
-			final int month = Integer.parseInt(expiryDate.split("/")[0]);
+			final Date date = formate.parse(expiryDate);
+			final int i = local.equals(Locale.ENGLISH) ? 1 : 0;
+			final int month = Integer.parseInt(expiryDate.split("/")[i]);
 			if (month < 1 || month > 12)
 				super.state(false, "expiryDate", "student.enrolment.form.error.expiryDate.month");
 			if (MomentHelper.isBefore(date, MomentHelper.getCurrentMoment()))
@@ -105,6 +109,7 @@ public class StudentEnrolmentFinalizeService extends AbstractService<Student, En
 		} catch (final ParseException e) {
 			super.state(false, "expiryDate", "student.enrolment.form.error.expiryDate.pattern");
 		}
+
 	}
 
 	@Override
