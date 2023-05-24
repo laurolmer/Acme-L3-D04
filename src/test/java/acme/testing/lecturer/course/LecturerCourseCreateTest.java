@@ -54,7 +54,7 @@ public class LecturerCourseCreateTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/lecturer/course/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int recordIndex, final String code, final String title, final String abstractCourse, final String price, final String link) {
+	public void test200Negative(final int recordIndex, final String code, final String title, final String abstractCourse, final String price, final String link) {
 		super.signIn("lecturer1", "lecturer1");
 
 		super.clickOnMenu("Lecturer", "Create course");

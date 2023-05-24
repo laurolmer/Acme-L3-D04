@@ -2,7 +2,7 @@ key,title,lecture-abstract,start-period,end-period,body,lecture-type,link,draft-
 lecture-01,title-lecture,abstract-lecture,2022/01/01 00:00,2022/01/01 01:00,body-lecture,THEORETICAL,null,false,lecturer-01
 lecture-02,T,abstract-lecture,2022/01/01 00:00,2022/01/01 01:00,body-lecture,THEORETICAL,null,false,lecturer-01
 lecture-03,Ti,abstract-lecture,2022/01/01 00:00,2022/01/01 01:00,body-lecture,THEORETICAL,null,false,lecturer-01
-lecture-04,This title has aprox. 75 characters so dont try to add any more or app die.,abstract-lecture,2022/01/01 00:00,2022/01/01 01:00,body-lecture,THEORETICAL,null,false,lecturer-01
+lecture-04,This title has aprox. 75 characters so dont try to add any more or app die.,abstract-lecture,2022/01/01 00:00,2022/01/01 01:00,body-lecture,HANDS_ON,null,false,lecturer-01
 lecture-05,This title has aprox. 74 characters so dont try to add any more or app die,abstract-lecture,2022/01/01 00:00,2022/01/01 01:00,body-lecture,THEORETICAL,null,false,lecturer-01
 lecture-06,<h1>Title-lecture</h1>,abstract-lecture,2022/01/01 00:00,2022/01/01 01:00,body-lecture,THEORETICAL,null,false,lecturer-01
 lecture-07,"<script>alert(""Title-lecture"");</script>",abstract-lecture,2022/01/01 00:00,2022/01/01 01:00,body-lecture,THEORETICAL,null,false,lecturer-01
