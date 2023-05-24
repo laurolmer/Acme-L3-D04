@@ -39,5 +39,5 @@ company.practicum-session.list.label.exact-duration= Duración
 company.practicum-session.list.button.create = Crear
 
 # Messages for error in form
-company.session-practicum.error.start-after-now = La fecha de inicio debe ser posterior a la fecha actual.
-company.session-practicum.error.end-before-start = La fecha de fin debe ser posterior a la fecha de inicio.
+company.practicum-session.error.start-after-now = La fecha de inicio debe ser posterior a la fecha actual.
+company.practicum-session.error.end-before-start = La fecha de fin debe ser posterior a la fecha de inicio.

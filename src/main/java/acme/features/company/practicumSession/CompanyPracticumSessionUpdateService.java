@@ -11,23 +11,16 @@ import acme.entities.practicum.Practicum;
 import acme.entities.practicumSession.PracticumSession;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.models.Tuple;
+import acme.framework.controllers.HttpMethod;
 import acme.framework.helpers.MomentHelper;
+import acme.framework.helpers.PrincipalHelper;
 import acme.framework.services.AbstractService;
 import acme.roles.Company;
 
 @Service
 public class CompanyPracticumSessionUpdateService extends AbstractService<Company, PracticumSession> {
 
-	// Constants --------------------------------------------------------------
-	protected static final String[]				PROPERTIES_BIND		= {
-		"code", "title", "abstractSession", "start", "end", "link"
-	};
-
-	protected static final String[]				PROPERTIES_UNBIND	= {
-		"code", "title", "abstractSession", "start", "end", "link", "additional", "confirmed"
-	};
-
-	public static final int						ONE_WEEK			= 1;
+	public static final int						ONE_WEEK	= 1;
 
 	// Internal state ---------------------------------------------------------
 	@Autowired
@@ -49,16 +42,15 @@ public class CompanyPracticumSessionUpdateService extends AbstractService<Compan
 	public void authorise() {
 		boolean status;
 		int PracticumSessionId;
-		PracticumSession PracticumSession;
 		Practicum practicum;
 		Principal principal;
+		Company company;
 
 		principal = super.getRequest().getPrincipal();
 		PracticumSessionId = super.getRequest().getData("id", int.class);
-		PracticumSession = this.repository.findOnePracticumSessionById(PracticumSessionId);
 		practicum = this.repository.findOnePracticumByPracticumSessionId(PracticumSessionId);
-
-		status = practicum != null && (practicum.getDraftMode() || PracticumSession.isAdditional()) && principal.hasRole(practicum.getCompany());
+		company = practicum == null ? null : practicum.getCompany();
+		status = practicum != null && practicum.getDraftMode() && principal.hasRole(company);
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -78,7 +70,7 @@ public class CompanyPracticumSessionUpdateService extends AbstractService<Compan
 	public void bind(final PracticumSession PracticumSession) {
 		assert PracticumSession != null;
 
-		super.bind(PracticumSession, CompanyPracticumSessionUpdateService.PROPERTIES_BIND);
+		super.bind(PracticumSession, "code", "title", "abstractSession", "start", "end", "link");
 	}
 
 	@Override
@@ -97,9 +89,9 @@ public class CompanyPracticumSessionUpdateService extends AbstractService<Compan
 			inAWeekFromStart = MomentHelper.deltaFromMoment(start, CompanyPracticumSessionUpdateService.ONE_WEEK, ChronoUnit.WEEKS);
 
 			if (!super.getBuffer().getErrors().hasErrors("start"))
-				super.state(MomentHelper.isAfter(start, inAWeekFromNow), "start", "company.session-practicum.error.start-after-now");
+				super.state(MomentHelper.isAfter(start, inAWeekFromNow), "start", "company.practicum-session.error.start-after-now");
 			if (!super.getBuffer().getErrors().hasErrors("end"))
-				super.state(MomentHelper.isAfter(end, inAWeekFromStart), "end", "company.session-practicum.error.end-after-start");
+				super.state(MomentHelper.isAfter(end, inAWeekFromStart), "end", "company.practicum-session.error.end-after-start");
 		}
 	}
 
@@ -118,10 +110,16 @@ public class CompanyPracticumSessionUpdateService extends AbstractService<Compan
 		Tuple tuple;
 
 		practicum = PracticumSession.getPracticum();
-		tuple = super.unbind(PracticumSession, CompanyPracticumSessionUpdateService.PROPERTIES_UNBIND);
+		tuple = super.unbind(PracticumSession, "code", "title", "abstractSession", "start", "end", "link", "additional");
 		tuple.put("masterId", practicum.getId());
 		tuple.put("draftMode", practicum.getDraftMode());
 
 		super.getResponse().setData(tuple);
+	}
+
+	@Override
+	public void onSuccess() {
+		if (super.getRequest().getMethod().equals(HttpMethod.POST))
+			PrincipalHelper.handleUpdate();
 	}
 }

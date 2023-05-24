@@ -97,7 +97,7 @@ public class CompanyPracticumPublishService extends AbstractService<Company, Pra
 		Collection<Course> courses;
 		Tuple tuple;
 		courses = this.repository.findNotInDraftCourses();
-		choices = SelectChoices.from(courses, "title", object.getCourse());
+		choices = SelectChoices.from(courses, "code", object.getCourse());
 		tuple = super.unbind(object, "code", "title", "abstractPracticum", "goals", "draftMode");
 		tuple.put("draftMode", object.getDraftMode());
 		tuple.put("course", choices.getSelected().getKey());

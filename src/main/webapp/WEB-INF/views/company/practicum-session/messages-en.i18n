@@ -38,5 +38,5 @@ company.practicum-session.list.label.exact-duration= Duration
 company.practicum-session.list.button.create = Create
 
 # Messages for error in form
-company.session-practicum.error.start-after-now = The start date must be after today
-company.session-practicum.error.end-after-start = The end date must be after the start date
+company.practicum-session.error.start-after-now = The start date must be after today
+company.practicum-session.error.end-after-start = The end date must be after the start date

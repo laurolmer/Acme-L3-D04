@@ -4,6 +4,7 @@ package acme.features.company.practicumSession;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
+// import acme.services.SpamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,9 @@ import acme.entities.practicum.Practicum;
 import acme.entities.practicumSession.PracticumSession;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.models.Tuple;
+import acme.framework.controllers.HttpMethod;
 import acme.framework.helpers.MomentHelper;
+import acme.framework.helpers.PrincipalHelper;
 import acme.framework.services.AbstractService;
 import acme.roles.Company;
 
@@ -19,14 +22,7 @@ import acme.roles.Company;
 public class CompanyPracticumSessionCreateService extends AbstractService<Company, PracticumSession> {
 
 	// Constants -------------------------------------------------------------
-	protected static final String[]				PROPERTIES_BIND		= {
-		"code", "title", "abstractSession", "start", "end", "link"
-	};
-
-	protected static final String[]				PROPERTIES_UNBIND	= {
-		"code", "title", "abstractSession", "start", "end", "link", "additional", "confirmed"
-	};
-	public static final int						ONE_WEEK			= 1;
+	public static final int						ONE_WEEK	= 1;
 
 	// Internal state ---------------------------------------------------------
 	@Autowired
@@ -51,6 +47,7 @@ public class CompanyPracticumSessionCreateService extends AbstractService<Compan
 		Practicum practicum;
 		boolean hasExtraAvailable;
 		Principal principal;
+		Company company;
 
 		principal = super.getRequest().getPrincipal();
 		practicumId = super.getRequest().getData("masterId", int.class);
@@ -59,8 +56,9 @@ public class CompanyPracticumSessionCreateService extends AbstractService<Compan
 
 		if (practicum != null) {
 			hasExtraAvailable = this.repository.findManyPracticumSessionsByExtraAvailableAndPracticumId(practicum.getId()).isEmpty();
+			company = practicum.getCompany();
 
-			status = (practicum.getDraftMode() || hasExtraAvailable) && principal.hasRole(practicum.getCompany());
+			status = (practicum.getDraftMode() || hasExtraAvailable) && principal.hasRole(company);
 		}
 
 		super.getResponse().setAuthorised(status);
@@ -80,7 +78,6 @@ public class CompanyPracticumSessionCreateService extends AbstractService<Compan
 		PracticumSession = new PracticumSession();
 		PracticumSession.setPracticum(practicum);
 		PracticumSession.setAdditional(!draftMode);
-		PracticumSession.setConfirmed(draftMode);
 
 		super.getBuffer().setData(PracticumSession);
 	}
@@ -89,7 +86,7 @@ public class CompanyPracticumSessionCreateService extends AbstractService<Compan
 	public void bind(final PracticumSession PracticumSession) {
 		assert PracticumSession != null;
 
-		super.bind(PracticumSession, CompanyPracticumSessionCreateService.PROPERTIES_BIND);
+		super.bind(PracticumSession, "code", "title", "abstractSession", "start", "end", "link");
 	}
 
 	@Override
@@ -108,9 +105,19 @@ public class CompanyPracticumSessionCreateService extends AbstractService<Compan
 			inAWeekFromStart = MomentHelper.deltaFromMoment(start, CompanyPracticumSessionCreateService.ONE_WEEK, ChronoUnit.WEEKS);
 
 			if (!super.getBuffer().getErrors().hasErrors("start"))
-				super.state(MomentHelper.isAfter(start, inAWeekFromNow), "start", "company.session-practicum.error.start-after-now");
+				super.state(MomentHelper.isAfter(start, inAWeekFromNow), "start", "company.practicum-session.error.start-after-now");
 			if (!super.getBuffer().getErrors().hasErrors("end"))
-				super.state(MomentHelper.isAfter(end, inAWeekFromStart), "end", "company.session-practicum.error.end-after-start");
+				super.state(MomentHelper.isAfter(end, inAWeekFromStart), "end", "company.practicum-session.error.end-after-start");
+		}
+
+		if (super.getRequest().hasData("confirmed") && !super.getBuffer().getErrors().hasErrors("confirmed")) {
+			Practicum practicum;
+			boolean confirmed;
+
+			confirmed = super.getRequest().getData("confirmed", boolean.class);
+			practicum = PracticumSession.getPracticum();
+
+			super.state(confirmed || practicum.getDraftMode(), "confirmed", "company.practicum-session.error.confirmed");
 		}
 	}
 
@@ -129,10 +136,16 @@ public class CompanyPracticumSessionCreateService extends AbstractService<Compan
 		Tuple tuple;
 
 		practicum = PracticumSession.getPracticum();
-		tuple = super.unbind(PracticumSession, CompanyPracticumSessionCreateService.PROPERTIES_UNBIND);
+		tuple = super.unbind(PracticumSession, "code", "title", "abstractSession", "start", "end", "link", "additional");
 		tuple.put("masterId", practicum.getId());
 		tuple.put("draftMode", practicum.getDraftMode());
 
 		super.getResponse().setData(tuple);
+	}
+
+	@Override
+	public void onSuccess() {
+		if (super.getRequest().getMethod().equals(HttpMethod.POST))
+			PrincipalHelper.handleUpdate();
 	}
 }
