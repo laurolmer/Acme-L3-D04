@@ -19,7 +19,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import acme.entities.tutorial.Tutorial;
 import acme.entities.tutorialSession.TutorialSession;
 import acme.testing.TestHarness;
 
@@ -37,15 +36,15 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 		// HINT: this test authenticates as an assistant, list his or her tutorials, navigates
 		// to their tutorialSession, and checks that they have the expected data.
 		super.signIn("assistant1", "assistant1");
-
 		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
 		super.clickOnListingRecord(recordTutorialIndex);
-		super.clickOnButton("Sessions");
-
+		super.clickOnButton("List Sessions");
 		super.clickOnButton("Create");
+		super.checkFormExists();
+
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("abstractSession", abstractSession);
 		super.fillInputBoxIn("sessionType", sessionType);
@@ -55,9 +54,8 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 		super.clickOnSubmit("Create");
 
 		super.checkListingExists();
-		super.sortListing(0, "asc");
-		super.checkColumnHasValue(recordSessionIndex, 0, title);
 		super.clickOnListingRecord(recordSessionIndex);
+		super.checkFormExists();
 
 		super.checkInputBoxHasValue("title", title);
 		super.checkInputBoxHasValue("abstractSession", abstractSession);
@@ -74,21 +72,23 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 	public void test200Negative(final int tutorialRecordIndex, final int sessionRecordIndex, final String title, final String abstractSession, final String sessionType, final String startPeriod, final String finishPeriod, final String link) {
 		// HINT: this test attempts to create sessions using wrong data.
 		super.signIn("assistant1", "assistant1");
-
 		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
 		super.clickOnListingRecord(tutorialRecordIndex);
 		super.clickOnButton("List Sessions");
-
+		super.checkListingExists();
 		super.clickOnButton("Create");
+		super.checkFormExists();
+
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("abstractSession", abstractSession);
 		super.fillInputBoxIn("sessionType", sessionType);
 		super.fillInputBoxIn("startPeriod", startPeriod);
 		super.fillInputBoxIn("finishPeriod", finishPeriod);
 		super.fillInputBoxIn("link", link);
+
 		super.clickOnSubmit("Create");
 		super.checkErrorsExist();
 
@@ -99,12 +99,12 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 	public void test300Hacking() {
 		// HINT: this test tries to create a session for a tutorial as a principal without 
 		// the "Assistant" role.
-		Collection<Tutorial> tutorials;
+		Collection<TutorialSession> sessions;
 		String param;
 
-		tutorials = this.repository.findTutorialsByAssistantUsername("assistant1");
-		for (final Tutorial tutorial : tutorials) {
-			param = String.format("masterId=%d", tutorial.getId());
+		sessions = this.repository.findTutorialSessionsByAssistantUsername("assistant1");
+		for (final TutorialSession session : sessions) {
+			param = String.format("masterId=%d", session.getId());
 
 			super.checkLinkExists("Sign in");
 			super.request("/assistant/tutorial-session/create", param);

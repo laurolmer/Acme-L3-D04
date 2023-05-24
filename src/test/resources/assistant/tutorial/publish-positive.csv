@@ -1,2 +1,5 @@
-recordTutorialIndex,code
-3,T010
+recordTutorialIndex,course,code,title,abstractTutorial,goals
+12,A004,T027,"How to publish a course.","Example abstract.","goal-1, goal-2, goal-3"
+11,A005,T026,"How to publish a course.","Example abstract.","goal-1, goal-2, goal-3"
+10,A006,T025,"How to publish a course.","Example abstract.","goal-1, goal-2, goal-3"
+

@@ -62,9 +62,8 @@ public class AssistantTutorialShowService extends AbstractService<Assistant, Tut
 		SelectChoices choices;
 		final Collection<TutorialSession> sessions;
 		final Double estimatedTotalTime;
-
-		courses = this.repository.findAllCourses();
-		choices = SelectChoices.from(courses, "title", object.getCourse());
+		courses = this.repository.findNotInDraftCourses();
+		choices = SelectChoices.from(courses, "code", object.getCourse());
 		sessions = this.repository.findSessionsByTutorialId(object.getId());
 		estimatedTotalTime = object.computeEstimatedTotalTime(sessions);
 		tuple = super.unbind(object, "code", "title", "abstractTutorial", "goals", "draftMode");

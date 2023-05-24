@@ -42,7 +42,7 @@ public class AssistantTutorialCreateTest extends TestHarness {
 		super.checkInputBoxHasValue("abstractTutorial", abstractTutorial);
 		super.checkInputBoxHasValue("goals", goals);
 
-		super.clickOnButton("Sessions");
+		super.clickOnButton("List Sessions");
 
 		super.checkListingExists();
 		super.checkListingEmpty();

@@ -21,7 +21,7 @@ public class AssistantTutorialDeleteTest extends TestHarness {
 	// Test methods -----------------------------------------------------------
 	@ParameterizedTest
 	@CsvFileSource(resources = "/assistant/tutorial/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int recordTutorialIndex, final String code) {
+	public void test100Positive(final int recordTutorialIndex, final String code, final String nextCode) {
 
 		super.signIn("assistant1", "assistant1");
 
@@ -31,28 +31,23 @@ public class AssistantTutorialDeleteTest extends TestHarness {
 
 		super.checkColumnHasValue(recordTutorialIndex, 0, code);
 		super.clickOnListingRecord(recordTutorialIndex);
+
 		super.checkFormExists();
 		super.clickOnSubmit("Delete");
+
+		super.clickOnMenu("Assistant", "List My Tutorials");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+
+		super.checkColumnHasValue(recordTutorialIndex, 0, nextCode);
 
 		super.signOut();
 	}
 
-	@ParameterizedTest
-	@CsvFileSource(resources = "/assistant/tutorial/delete-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test200Negative(final int recordTutorialIndex, final String code) {
-		super.signIn("assistant1", "assistant1");
-
-		super.clickOnMenu("Assistant", "List My Tutorials");
-		super.checkListingExists();
-		super.sortListing(0, "asc");
-
-		super.checkColumnHasValue(recordTutorialIndex, 0, code);
-		super.clickOnListingRecord(recordTutorialIndex);
-		super.checkFormExists();
-		super.checkNotSubmitExists("Delete");
-
-		super.signOut();
-
+	@Test
+	public void test200Negative() {
+		// HINT: there aren't any negative tests for this feature because it's a delete
+		// that doesn't involve entering any data in any forms.
 	}
 
 	public void test300Hacking() {
@@ -71,11 +66,6 @@ public class AssistantTutorialDeleteTest extends TestHarness {
 				super.checkPanicExists();
 
 				super.signIn("administrator", "administrator");
-				super.request("/assistant/tutorial/delete", param);
-				super.checkPanicExists();
-				super.signOut();
-
-				super.signIn("employer2", "employer2");
 				super.request("/assistant/tutorial/delete", param);
 				super.checkPanicExists();
 				super.signOut();

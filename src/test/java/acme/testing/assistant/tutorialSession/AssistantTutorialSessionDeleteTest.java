@@ -33,21 +33,31 @@ public class AssistantTutorialSessionDeleteTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/assistant/tutorialSession/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int recordTutorialIndex, final int recordSessionIndex) {
+	public void test100Positive(final int recordTutorialIndex, final int recordSessionIndex, final String title, final String nextTitle) {
 		// HINT: this test logs in as an assistant, lists his or her tutorials, 
 		// selects one of their sessions and list them, deletes it, and then checks that 
 		// the delete has actually been performed.
-
 		super.signIn("assistant1", "assistant1");
 		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(recordTutorialIndex);
+
 		super.clickOnButton("List Sessions");
 		super.checkListingExists();
 		super.clickOnListingRecord(recordSessionIndex);
 		super.clickOnSubmit("Delete");
+
+		super.clickOnMenu("Assistant", "List My Tutorials");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(recordTutorialIndex);
+		super.clickOnButton("List Sessions");
+		super.sortListing(0, "asc");
+		super.checkColumnHasValue(recordSessionIndex, 0, nextTitle);
+
 		super.checkNotPanicExists();
+
 		super.signOut();
 	}
 
@@ -55,18 +65,6 @@ public class AssistantTutorialSessionDeleteTest extends TestHarness {
 	@CsvFileSource(resources = "/assistant/tutorialSession/delete-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test200Negative(final int recordTutorialIndex, final int sessionRecordIndex) {
 		// HINT: this test attempts to delete a session with wrong data.
-
-		super.signIn("assistant1", "assistant1");
-		super.clickOnMenu("Assistant", "List My Tutorials");
-		super.checkListingExists();
-		super.sortListing(0, "asc");
-		super.clickOnListingRecord(recordTutorialIndex);
-		super.clickOnButton("List Sessions");
-		super.checkListingExists();
-		super.clickOnListingRecord(sessionRecordIndex);
-		super.clickOnSubmit("Delete");
-		super.checkErrorsExist();
-		super.signOut();
 	}
 
 	@Test

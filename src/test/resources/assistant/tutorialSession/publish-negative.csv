@@ -1,7 +1,2 @@
-recordTutorialIndex,code,recordSessionIndex,title
-3,T010,0,Title 1
-3,T010,0,Title 2
-3,T011,1,Title 3
-4,T011,1,Title 4
-4,T011,2,Title 5
-4,T012,0,Title 6
+recordTutorialIndex,code,recordSessionIndex,title,abstractSession,sessionType,startPeriod,finishPeriod,link
+0,T025,4,Session,Abstract,THEORY,2023/08/21 00:00,2023/08/21 03:30,

@@ -102,7 +102,7 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 		final Double estimatedTotalTime;
 
 		courses = this.repository.findNotInDraftCourses();
-		choices = SelectChoices.from(courses, "title", object.getCourse());
+		choices = SelectChoices.from(courses, "code", object.getCourse());
 		sessions = this.repository.findSessionsByTutorialId(object.getId());
 		estimatedTotalTime = object.computeEstimatedTotalTime(sessions);
 		tuple = super.unbind(object, "code", "title", "abstractTutorial", "goals");
