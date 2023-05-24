@@ -40,6 +40,7 @@ class StudentEnrolmentShowTest extends TestHarness {
 		super.signIn("student1", "student1");
 
 		super.clickOnMenu("Student", "Enrolment List");
+		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
@@ -70,6 +71,7 @@ class StudentEnrolmentShowTest extends TestHarness {
 		super.signIn("student1", "student1");
 
 		super.clickOnMenu("Student", "Enrolment List");
+		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();

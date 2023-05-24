@@ -48,12 +48,10 @@ public class StudentEnrolmentUpdateService extends AbstractService<Student, Enro
 		int enrolmentId;
 		final int id;
 		Enrolment enrolment;
-		Student student;
 		id = super.getRequest().getPrincipal().getAccountId();
 		enrolmentId = super.getRequest().getData("id", int.class);
 		enrolment = this.repository.findEnrolmentById(enrolmentId);
-		student = enrolment == null ? null : enrolment.getStudent();
-		status = (enrolment != null || super.getRequest().getPrincipal().hasRole(student)) && enrolment.isDraftMode() && enrolment.getStudent().getUserAccount().getId() == id;
+		status = enrolment.isDraftMode() && enrolment.getStudent().getUserAccount().getId() == id;
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -85,10 +83,10 @@ public class StudentEnrolmentUpdateService extends AbstractService<Student, Enro
 	@Override
 	public void validate(final Enrolment object) {
 		assert object != null;
-		final Enrolment otherEnrolment;
+		Collection<String> codes;
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
-			otherEnrolment = this.repository.findAEnrolmentByCode(object.getCode());
-			super.state(otherEnrolment == null || otherEnrolment.getCode().equals(object.getCode()) || otherEnrolment.getId() != object.getId(), "code", "student.enrolment.form.error.code");
+			codes = this.repository.findAllCodesFromEnrolments();
+			super.state(!codes.contains(object.getCode()), "code", "student.enrolment.form.error.code");
 		}
 	}
 

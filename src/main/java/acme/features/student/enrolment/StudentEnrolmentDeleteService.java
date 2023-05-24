@@ -20,7 +20,6 @@ import org.springframework.stereotype.Service;
 import acme.entities.activity.Activity;
 import acme.entities.course.Course;
 import acme.entities.enrolment.Enrolment;
-import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Student;
@@ -47,12 +46,10 @@ public class StudentEnrolmentDeleteService extends AbstractService<Student, Enro
 		int enrolmentId;
 		final int id;
 		Enrolment enrolment;
-		Student student;
 		id = super.getRequest().getPrincipal().getAccountId();
 		enrolmentId = super.getRequest().getData("id", int.class);
 		enrolment = this.repository.findEnrolmentById(enrolmentId);
-		student = enrolment == null ? null : enrolment.getStudent();
-		status = (enrolment != null || super.getRequest().getPrincipal().hasRole(student)) && enrolment.isDraftMode() && enrolment.getStudent().getUserAccount().getId() == id;
+		status = enrolment.isDraftMode() && enrolment.getStudent().getUserAccount().getId() == id;
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -97,14 +94,8 @@ public class StudentEnrolmentDeleteService extends AbstractService<Student, Enro
 	@Override
 	public void unbind(final Enrolment object) {
 		assert object != null;
-		SelectChoices choices;
-		Collection<Course> courses;
 		Tuple tuple;
-		courses = this.repository.findNotInDraftCourses();
-		choices = SelectChoices.from(courses, "code", object.getCourse());
-		tuple = super.unbind(object, "code", "motivation", "goals", "course");
-		tuple.put("course", choices.getSelected().getKey());
-		tuple.put("courses", choices);
+		tuple = super.unbind(object, "code", "motivation", "goals");
 		super.getResponse().setData(tuple);
 	}
 
