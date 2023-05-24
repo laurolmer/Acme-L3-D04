@@ -14,6 +14,7 @@ student.enrolment.form.label.code = Code:
 student.enrolment.form.label.motivation = Motivation:
 student.enrolment.form.label.goals = Goals:
 student.enrolment.form.label.course = Course:
+student.enrolment.form.label.estimatedTotalTime = Estimated Total Time:
 student.enrolment.form.label.student = Student:
 student.enrolment.form.label.expiryDate = Expiry date:
 student.enrolment.form.label.cvc = CVC:

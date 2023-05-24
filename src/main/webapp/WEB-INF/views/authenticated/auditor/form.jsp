@@ -16,10 +16,11 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:form>
-	<acme:input-money code="authenticated.exchange-money.form.label.source-money" path="sourceMoney"/>
-	<acme:input-textbox code="authenticated.exchange-money.form.label.target-currency" path="targetCurrency" placeholder="EUR, USD, GBP, ..."/>
-	<acme:input-money code="authenticated.exchange-money.form.label.date" path="date" readonly="true" placeholder=""/>
-	<acme:input-money code="authenticated.exchange-money.form.label.target-money" path="targetMoney" readonly="true" placeholder=""/>
+	<acme:input-textbox code="authenticated.auditor.form.label.firm" path="firm"/>
+	<acme:input-textbox code="authenticated.auditor.form.label.resume" path="professionalId"/>
+	<acme:input-textbox code="authenticated.auditor.form.label.certifications" path="certifications"/>
+	<acme:input-textbox code="authenticated.auditor.form.label.link" path="link"/>
 
-	<acme:submit code="authenticated.exchange-money.form.button.perform" action="/authenticated/exchange-money/perform"/>
+	<acme:submit test="${_command == 'create'}" code="authenticated.auditor.form.button.create" action="/authenticated/auditor/create"/>
+	<acme:submit test="${_command == 'update'}" code="authenticated.auditor.form.button.update" action="/authenticated/auditor/update"/>
 </acme:form>

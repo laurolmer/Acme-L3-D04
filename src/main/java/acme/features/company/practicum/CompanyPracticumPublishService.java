@@ -40,7 +40,7 @@ public class CompanyPracticumPublishService extends AbstractService<Company, Pra
 		Practicum = this.repository.findPracticumById(PracticumId);
 		Company = Practicum == null ? null : Practicum.getCompany();
 
-		status = Practicum != null && Practicum.getDraftMode() == false || super.getRequest().getPrincipal().hasRole(Company);
+		status = Practicum != null && !Practicum.getDraftMode() || super.getRequest().getPrincipal().hasRole(Company);
 		super.getResponse().setAuthorised(status);
 	}
 

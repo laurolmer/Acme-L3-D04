@@ -1,0 +1,7 @@
+enrolmentRecordIndex,activityRecordIndex,title,abstractActivity,activityType,startPeriod,endPeriod,link
+0,0,T1,Resume example,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.google.com/
+0,1,Title example,Resume example,HANDS_ON,2000/01/01 00:01,2000/01/01 00:10,https://www.google.com/
+1,0,示例文本,Resume example,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.google.com/
+2,0,Title example,This  abstract  is  going  to reach  exactly 100-1 characters  so  the restriction  can  be proved.,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.google.com/
+3,0,Title example,T1,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.google.com/
+4,0,Title example,示例文本,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.google.com/

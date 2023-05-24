@@ -8,11 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.exchange-money.form.label.source-money = Source money:
-authenticated.exchange-money.form.label.target-currency = Target currency:
-authenticated.exchange-money.form.label.date = Exchange date:
-authenticated.exchange-money.form.label.target-money = Target money:
+authenticated.auditor.form.label.firm = Firm
+authenticated.auditor.form.label.resume = Resume
+authenticated.auditor.form.label.certifications = Certifictions
+authenticated.auditor.form.label.link = Link
 
-authenticated.exchange-money.form.button.perform = Perform exchange
-
-authenticated.exchange-money.form.label.error = Sorry, couldn't perform the exchange
+authenticated.auditor.form.button.create = Create
+authenticated.auditor.form.button.update = Update

@@ -8,11 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.exchange-money.form.label.source-money = Cantidad origen:
-authenticated.exchange-money.form.label.target-currency = Moneda destino:
-authenticated.exchange-money.form.label.date = Fecha del cambio:
-authenticated.exchange-money.form.label.target-money = Cantidad destino:
+authenticated.auditor.form.label.firm = Empresa
+authenticated.auditor.form.label.resume = Currículum
+authenticated.auditor.form.label.certifications = Certificaciones
+authenticated.auditor.form.label.link = Enlace
 
-authenticated.exchange-money.form.button.perform = Realizar cambio
-
-authenticated.exchange-money.form.label.error = Lo sentimos, no se pudo hacer este cambio
+authenticated.auditor.form.button.create = Crear
+authenticated.auditor.form.button.update = Editar
