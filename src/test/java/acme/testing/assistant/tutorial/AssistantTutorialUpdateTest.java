@@ -55,6 +55,7 @@ public class AssistantTutorialUpdateTest extends TestHarness {
 
 		super.checkListingExists();
 		super.sortListing(0, "asc");
+
 		super.clickOnListingRecord(tutorialRecordIndex);
 		super.checkFormExists();
 		super.checkInputBoxHasValue("code", code);

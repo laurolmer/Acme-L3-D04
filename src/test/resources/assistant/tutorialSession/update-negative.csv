@@ -1,36 +1,36 @@
 recordTutorialIndex,recordSessionIndex,title,abstractSession,sessionType,startPeriod,finishPeriod,link
-3,3,,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,http://www.example.com
-3,4,This session is going to reach over 75 characters in order to trigger a restriction.,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,http://www.example.com
-4,8,Title,,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
-4,9,Title,This abstract is going to reach more than 100 characters so it can trigger a specific restriction to see if it works.,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
-4,13,Title,Abstract,,2023/08/21 19:30,2023/08/21 20:45,
-5,18,Title,Abstract,THEORY,,2023/08/21 20:45,
-5,19,Title,Abstract,THEORY,2023/08/21,2023/08/21 20:45,
-5,20,Title,Abstract,THEORY,19:30,2023/08/21 20:45,
-5,21,Title,Abstract,THEORY,notADate,2023/08/21 20:45,
-5,22,Title,Abstract,THEORY,123.45,2023/08/21 20:45,
-5,23,Title,Abstract,THEORY,-123,2023/08/21 20:45,
-5,24,Title,Abstract,THEORY,false,2023/08/21 20:45,
-5,25,Title,Abstract,THEORY,2023/08/21 19:30,,
-5,26,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21,
-5,27,Title,Abstract,THEORY,2023/08/21 19:30,20:45,
-5,28,Title,Abstract,THEORY,2023/08/21 19:30,notADate,
-5,29,Title,Abstract,THEORY,2023/08/21 19:30,123.45,
-5,30,Title,Abstract,THEORY,2023/08/21 19:30,-123,
-5,31,Title,Abstract,THEORY,2023/08/21 19:30,false,
-5,32,Title,Abstract,THEORY,2023/08/21 00:00,2023/08/21 00:30,
-6,33,Title,Abstract,THEORY,2023/08/21 00:00,2023/08/21 00:59,
-6,34,Title,Abstract,THEORY,2023/08/21 00:00,2023/08/21 07:00,
-6,35,Title,Abstract,THEORY,2023/08/21 00:00,2023/08/21 05:01,
-6,36,Title,Abstract,THEORY,1999/12/31 23:59,2000/01/01 03:00,
-6,37,Title,Abstract,THEORY,1999/01/01 00:00,1999/01/01 03:00,
-6,38,Title,Abstract,THEORY,2000/01/01 03:00,1999/12/31 23:59,
-6,39,Title,Abstract,THEORY,2101/01/01 00:00,2101/01/01 03:00,
-6,40,Title,Abstract,THEORY,2100/12/31 23:59,2101/01/01 03:00,
-6,41,Title,Abstract,THEORY,2101/12/31 23:59,2100/01/01 03:00,
-6,42,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,not-A-URL
-6,43,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,123.45
-6,44,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,123
-6,45,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,2023/08/21
-6,46,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,00:00
-6,47,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,true
+10,0,,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,http://www.example.com
+10,0,This session is going to reach over 75 characters in order to trigger a restriction.,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,http://www.example.com
+10,0,Title,,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
+10,0,Title,This abstract is going to reach more than 100 characters so it can trigger a specific restriction to see if it works.,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
+10,0,Title,Abstract,---,2023/08/21 19:30,2023/08/21 20:45,
+10,0,Title,Abstract,THEORY,,2023/08/21 20:45,
+10,0,Title,Abstract,THEORY,2023/08/21,2023/08/21 20:45,
+10,0,Title,Abstract,THEORY,19:30,2023/08/21 20:45,
+10,0,Title,Abstract,THEORY,notADate,2023/08/21 20:45,
+10,0,Title,Abstract,THEORY,123.45,2023/08/21 20:45,
+10,0,Title,Abstract,THEORY,-123,2023/08/21 20:45,
+10,0,Title,Abstract,THEORY,false,2023/08/21 20:45,
+10,0,Title,Abstract,THEORY,2023/08/21 19:30,,
+10,0,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21,
+10,0,Title,Abstract,THEORY,2023/08/21 19:30,20:45,
+10,0,Title,Abstract,THEORY,2023/08/21 19:30,notADate,
+10,0,Title,Abstract,THEORY,2023/08/21 19:30,123.45,
+10,0,Title,Abstract,THEORY,2023/08/21 19:30,-123,
+10,0,Title,Abstract,THEORY,2023/08/21 19:30,false,
+10,0,Title,Abstract,THEORY,2023/08/21 00:00,2023/08/21 00:30,
+10,0,Title,Abstract,THEORY,2023/08/21 00:00,2023/08/21 00:59,
+10,0,Title,Abstract,THEORY,2023/08/21 00:00,2023/08/21 07:00,
+10,0,Title,Abstract,THEORY,2023/08/21 00:00,2023/08/21 05:01,
+10,0,Title,Abstract,THEORY,1999/12/31 23:59,2000/01/01 03:00,
+10,0,Title,Abstract,THEORY,1999/01/01 00:00,1999/01/01 03:00,
+10,0,Title,Abstract,THEORY,2000/01/01 03:00,1999/12/31 23:59,
+10,0,Title,Abstract,THEORY,2101/01/01 00:00,2101/01/01 03:00,
+10,0,Title,Abstract,THEORY,2100/12/31 23:59,2101/01/01 03:00,
+10,0,Title,Abstract,THEORY,2101/12/31 23:59,2100/01/01 03:00,
+10,0,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,not-A-URL
+10,0,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,123.45
+10,0,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,123
+10,0,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,2023/08/21
+10,0,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,00:00
+10,0,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,true

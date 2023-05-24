@@ -77,7 +77,7 @@ public class AssistantTutorialSessionDeleteTest extends TestHarness {
 		super.signIn("assistant1", "assistant1");
 		sessions = this.repository.findTutorialSessionsByAssistantUsername("assistant1");
 		for (final TutorialSession session : sessions)
-			if (!session.getTutorial().isDraftMode() && session.isDraftMode()) {
+			if (!session.getTutorial().isDraftMode()) {
 				param = String.format("id=%d", session.getTutorial().getId());
 
 				super.checkLinkExists("Sign in");
@@ -135,7 +135,7 @@ public class AssistantTutorialSessionDeleteTest extends TestHarness {
 		super.signIn("assistant1", "assistant1");
 		sessions = this.repository.findTutorialSessionsByAssistantUsername("assistant1");
 		for (final TutorialSession session : sessions)
-			if (!session.getTutorial().isDraftMode() && session.isDraftMode()) {
+			if (!session.getTutorial().isDraftMode()) {
 				params = String.format("id=%d", session.getTutorial().getId());
 				super.request("/assistant/tutorial-session/delete", params);
 			}
@@ -152,7 +152,7 @@ public class AssistantTutorialSessionDeleteTest extends TestHarness {
 		super.signIn("assistant2", "assistant2");
 		sessions = this.repository.findTutorialSessionsByAssistantUsername("assistant1");
 		for (final TutorialSession session : sessions)
-			if (!session.getTutorial().isDraftMode() && session.isDraftMode()) {
+			if (!session.getTutorial().isDraftMode()) {
 				params = String.format("id=%d", session.getTutorial().getId());
 				super.request("/assistant/tutorial-session/delete", params);
 			}

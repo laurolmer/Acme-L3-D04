@@ -125,7 +125,7 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 			tuple.put("estimatedTotalTime", estimatedTotalTime);
 		tuple.put("masterId", super.getRequest().getData("id", int.class));
 		tuple.put("sessionType", choices);
-		tuple.put("draftMode", tutorialSession.getTutorial().isDraftMode() && tutorialSession.isDraftMode());
+		tuple.put("draftMode", tutorialSession.getTutorial().isDraftMode());
 		super.getResponse().setData(tuple);
 	}
 }

@@ -56,7 +56,6 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 		tutorial = this.repository.findTutorialById(tutorialId);
 		tutorialSession = new TutorialSession();
 		tutorialSession.setStartPeriod(MomentHelper.getCurrentMoment());
-		tutorialSession.setDraftMode(true);
 		tutorialSession.setTutorial(tutorial);
 		super.getBuffer().setData(tutorialSession);
 	}
@@ -120,13 +119,13 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 		SelectChoices choices;
 		Double estimatedTotalTime;
 		choices = SelectChoices.from(SessionType.class, tutorialSession.getSessionType());
-		tuple = super.unbind(tutorialSession, "title", "abstractSession", "sessionType", "startPeriod", "finishPeriod", "link", "draftMode");
+		tuple = super.unbind(tutorialSession, "title", "abstractSession", "sessionType", "startPeriod", "finishPeriod", "link");
 		estimatedTotalTime = tutorialSession.computeEstimatedTotalTime();
 		if (estimatedTotalTime != null)
 			tuple.put("estimatedTotalTime", estimatedTotalTime);
 		tuple.put("masterId", super.getRequest().getData("masterId", int.class));
 		tuple.put("sessionType", choices);
-		tuple.put("draftMode", tutorialSession.getTutorial().isDraftMode() && tutorialSession.isDraftMode());
+		tuple.put("draftMode", tutorialSession.getTutorial().isDraftMode());
 		super.getResponse().setData(tuple);
 	}
 }

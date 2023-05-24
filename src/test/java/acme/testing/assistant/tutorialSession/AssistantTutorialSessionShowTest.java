@@ -69,8 +69,7 @@ public class AssistantTutorialSessionShowTest extends TestHarness {
 		Collection<TutorialSession> sessions;
 		String param;
 
-		super.signIn("employer1", "employer1");
-		sessions = this.repository.findTutorialSessionsByAssistantUsername("assistant2");
+		sessions = this.repository.findTutorialSessionsByAssistantUsername("assistant1");
 		for (final TutorialSession session : sessions)
 			if (session.getTutorial().isDraftMode()) {
 				param = String.format("id=%d", session.getTutorial().getId());
@@ -84,7 +83,7 @@ public class AssistantTutorialSessionShowTest extends TestHarness {
 				super.checkPanicExists();
 				super.signOut();
 
-				super.signIn("assistant2", "assistant2");
+				super.signIn("assistant1", "assistant1");
 				super.request("/assistant/tutorial-session/show", param);
 				super.checkPanicExists();
 				super.signOut();

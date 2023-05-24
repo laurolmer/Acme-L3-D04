@@ -71,6 +71,7 @@ public class AssistantTutorialShowService extends AbstractService<Assistant, Tut
 		tuple.put("courses", choices);
 		tuple.put("estimatedTotalTime", estimatedTotalTime);
 		tuple.put("published", !object.isDraftMode());
+		tuple.put("hasNoSessions", sessions);
 		super.getResponse().setData(tuple);
 	}
 }
