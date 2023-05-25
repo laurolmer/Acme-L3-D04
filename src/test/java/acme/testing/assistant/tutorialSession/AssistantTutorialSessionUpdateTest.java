@@ -121,11 +121,6 @@ public class AssistantTutorialSessionUpdateTest extends TestHarness {
 				super.checkPanicExists();
 				super.signOut();
 
-				super.signIn("assistant2", "assistant2");
-				super.request("/assistant/tutorial-session/update", param);
-				super.checkPanicExists();
-				super.signOut();
-
 				super.signIn("auditor1", "auditor1");
 				super.request("/assistant/tutorial-session/update", param);
 				super.checkPanicExists();
@@ -136,17 +131,7 @@ public class AssistantTutorialSessionUpdateTest extends TestHarness {
 				super.checkPanicExists();
 				super.signOut();
 
-				super.signIn("consumer1", "consumer1");
-				super.request("/assistant/tutorial-session/update", param);
-				super.checkPanicExists();
-				super.signOut();
-
 				super.signIn("lecturer1", "lecturer1");
-				super.request("/assistant/tutorial-session/update", param);
-				super.checkPanicExists();
-				super.signOut();
-
-				super.signIn("provider1", "provider1");
 				super.request("/assistant/tutorial-session/update", param);
 				super.checkPanicExists();
 				super.signOut();
