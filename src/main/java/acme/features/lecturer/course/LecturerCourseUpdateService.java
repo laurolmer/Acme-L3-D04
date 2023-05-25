@@ -86,6 +86,11 @@ public class LecturerCourseUpdateService extends AbstractService<Lecturer, Cours
 		if (!super.getBuffer().getErrors().hasErrors("retailPrice")) {
 			final double retailPrice = object.getRetailPrice().getAmount();
 			super.state(retailPrice >= 0, "retailPrice", "lecturer.course.error.retailPrice.negative");
+
+			final String currency = object.getRetailPrice().getCurrency();
+			final String acceptedCurrencies = this.repository.findAcceptedCurrencies();
+			final boolean validCurrency = acceptedCurrencies.contains(currency);
+			super.state(validCurrency, "retailPrice", "lecturer.course.error.retailPrice.currency");
 		}
 	}
 
@@ -103,6 +108,7 @@ public class LecturerCourseUpdateService extends AbstractService<Lecturer, Cours
 		Tuple tuple;
 
 		tuple = super.unbind(object, "code", "title", "courseAbstract", "retailPrice", "link");
+		tuple.put("draftMode", object.isDraftMode());
 
 		super.getResponse().setData(tuple);
 	}

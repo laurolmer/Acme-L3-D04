@@ -88,12 +88,21 @@ public class LecturerCourseLectureAddService extends AbstractService<Lecturer, C
 		assert object != null;
 		final boolean lectureInDraftMode;
 		final boolean courseInDraftMode;
+		boolean validLectureId = false;
 
-		lectureInDraftMode = this.repository.isLectureInDraftModeByCourseId(object.getLecture().getId());
-		courseInDraftMode = this.repository.isCourseInDraftModeByCourseId(object.getCourse().getId());
+		if (!super.getBuffer().getErrors().hasErrors("lectureId")) {
+			final Integer lectureId = super.getRequest().getData("lectureId", Integer.class);
+			validLectureId = lectureId != null && lectureId > 0;
+			super.state(validLectureId, "*", "lecturer.course-lecture.error.lectureIdNull");
+		}
 
-		super.state(!lectureInDraftMode, "*", "lecturer.course-lecture.error.lecture.published");
-		super.state(courseInDraftMode, "*", "lecturer.course-lecture.error.course.published.add");
+		if (validLectureId) {
+			lectureInDraftMode = this.repository.isLectureInDraftModeByCourseId(object.getLecture().getId());
+			courseInDraftMode = this.repository.isCourseInDraftModeByCourseId(object.getCourse().getId());
+
+			super.state(!lectureInDraftMode, "*", "lecturer.course-lecture.error.lecture.published");
+			super.state(courseInDraftMode, "*", "lecturer.course-lecture.error.course.published.add");
+		}
 
 	}
 

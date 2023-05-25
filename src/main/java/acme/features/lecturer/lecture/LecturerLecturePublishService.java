@@ -101,6 +101,7 @@ public class LecturerLecturePublishService extends AbstractService<Lecturer, Lec
 		tuple = super.unbind(object, "title", "lectureAbstract", "body", "lectureType", "link");
 		tuple.put("lectureType", choices.getSelected().getKey());
 		tuple.put("lectureTypes", choices);
+		tuple.put("draftMode", object.isDraftMode());
 		super.getResponse().setData(tuple);
 	}
 
