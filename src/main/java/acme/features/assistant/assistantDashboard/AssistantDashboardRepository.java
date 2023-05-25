@@ -84,9 +84,8 @@ public interface AssistantDashboardRepository extends AbstractRepository {
 			Collection<Course> coursesListByType = new ArrayList<>();
 			if (coursesByType.containsKey(ct)) {
 				coursesListByType = coursesByType.get(ct);
-				coursesListByType.add(c);
-			} else
-				coursesListByType.add(c);
+			}
+			coursesListByType.add(c);
 			coursesByType.put(ct, coursesListByType);
 		}
 		return coursesByType;

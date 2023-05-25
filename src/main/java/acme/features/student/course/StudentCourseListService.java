@@ -18,8 +18,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.course.Course;
-import acme.entities.course.CourseType;
-import acme.entities.lecture.Lecture;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Student;
@@ -55,12 +53,7 @@ public class StudentCourseListService extends AbstractService<Student, Course> {
 	public void unbind(final Course object) {
 		assert object != null;
 		Tuple tuple;
-		final Collection<Lecture> lectures;
-		final CourseType courseType;
-		lectures = this.repository.findLecturesByCourseId(object.getId());
-		courseType = object.computeCourseType(lectures);
-		tuple = super.unbind(object, "code", "title", "courseAbstract", "retailPrice", "link");
-		tuple.put("courseType", courseType);
+		tuple = super.unbind(object, "code", "title", "courseAbstract");
 		super.getResponse().setData(tuple);
 	}
 }

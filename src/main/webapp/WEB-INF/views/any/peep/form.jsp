@@ -16,14 +16,14 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:form>
-
+	<jstl:if test="${_command != 'create'}">
 	<acme:input-moment code="any.peep.form.label.moment" path="moment"/>
+	</jstl:if>
 	<acme:input-textbox code="any.peep.form.label.title" path="title"/>
 	<acme:input-textbox code="any.peep.form.label.nick" path="nick"/>	
 	<acme:input-textarea code="any.peep.form.label.message" path="message"/>
 	<acme:input-email code="any.peep.form.label.email" path="email"/>
 	<acme:input-url code="any.peep.form.label.link" path="link"/>
-	<acme:input-checkbox code="any.peep.form.label.publish" path="publish" readonly="true"/>
 	
 <jstl:choose>
         <jstl:when test="${acme:anyOf(_command,'show') && draftMode== true}">

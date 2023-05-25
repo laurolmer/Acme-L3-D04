@@ -42,7 +42,7 @@ public class AnyPeepCreateService extends AbstractService<Any, Peep> {
 		Principal principal;
 		int userAccountId;
 		final UserAccount userAccount;
-
+		final Date moment;
 		//Default
 		String Name = "";
 
@@ -53,8 +53,9 @@ public class AnyPeepCreateService extends AbstractService<Any, Peep> {
 			userAccount = this.repository.findOneUserAccountById(userAccountId);
 			Name = userAccount.getIdentity().getFullName();
 		}
+		moment = MomentHelper.getCurrentMoment();
+		object.setMoment(moment);
 		object.setNick(Name);
-		object.setPublish(false);
 		super.getBuffer().setData(object);
 
 	}
@@ -62,25 +63,12 @@ public class AnyPeepCreateService extends AbstractService<Any, Peep> {
 	@Override
 	public void bind(final Peep object) {
 		assert object != null;
-		super.bind(object, "moment", "title", "nick", "message", "link", "email", "publish");
+		super.bind(object, "title", "nick", "message", "link", "email");
 	}
 
 	@Override
 	public void validate(final Peep object) {
 		assert object != null;
-		Date actualMoment;
-		final Date maxValue = new Date("2100/12/31 23:59");
-		final Date minValue = new Date("2000/01/01 00:00");
-		if (!super.getBuffer().getErrors().hasErrors("moment")) {
-			actualMoment = MomentHelper.getCurrentMoment();
-			super.state(MomentHelper.isBeforeOrEqual(object.getMoment(), actualMoment), "moment", "any.peep.moment-after-actualMoment");
-		}
-		// EndPeriod must be before 2100/12/31 23:59
-		if (!super.getBuffer().getErrors().hasErrors("moment"))
-			super.state(MomentHelper.isBefore(object.getMoment(), maxValue), "moment", "any.peep.moment-reached-max-value");
-		// StartPeriod must be after 2000/01/01 00:00
-		if (!super.getBuffer().getErrors().hasErrors("moment"))
-			super.state(MomentHelper.isAfter(object.getMoment(), minValue), "moment", "any.peep.moment-didnot-reach-min-value");
 	}
 
 	@Override
@@ -92,8 +80,7 @@ public class AnyPeepCreateService extends AbstractService<Any, Peep> {
 	@Override
 	public void unbind(final Peep object) {
 		Tuple tuple;
-		tuple = super.unbind(object, "moment", "title", "nick", "message", "link", "email", "publish");
-		tuple.put("publish", true);
+		tuple = super.unbind(object, "moment", "title", "nick", "message", "link", "email");
 		super.getResponse().setData(tuple);
 
 	}

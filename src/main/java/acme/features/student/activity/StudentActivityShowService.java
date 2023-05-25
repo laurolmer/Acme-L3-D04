@@ -47,14 +47,15 @@ public class StudentActivityShowService extends AbstractService<Student, Activit
 	@Override
 	public void authorise() {
 		boolean status;
-
-		final int activityId = super.getRequest().getData("id", int.class);
-		final Activity activity = this.repository.findActivityById(activityId);
-
-		final int id = super.getRequest().getPrincipal().getAccountId();
-
-		status = activity.getEnrolment().getStudent().getUserAccount().getId() == id;
-
+		Activity activity;
+		Enrolment enrolment;
+		int id;
+		int enrolmentId;
+		id = super.getRequest().getPrincipal().getAccountId();
+		enrolmentId = super.getRequest().getData("id", int.class);
+		activity = this.repository.findActivityById(enrolmentId);
+		enrolment = activity.getEnrolment();
+		status = enrolment.getStudent().getUserAccount().getId() == id;
 		super.getResponse().setAuthorised(status);
 	}
 

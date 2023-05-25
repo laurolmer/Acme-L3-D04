@@ -22,7 +22,8 @@
 			<acme:input-textbox code="student.enrolment.form.label.motivation" path="motivation"/>
 			<acme:input-textbox code="student.enrolment.form.label.goals" path="goals"/>
 			<acme:input-select code="student.enrolment.form.label.course" path="course" choices="${courses}"/>	
-	<jstl:if test="${_command != 'create'}">
+		<jstl:if test="${_command != 'create'}">
+			<acme:input-textbox code="student.enrolment.form.label.estimatedTotalTime" path="estimatedTotalTime" readonly="true"/>
 		<br>	
 		<h3><acme:message code="student.enrolment.form.title.finalize"/></h3>		
 			<jstl:if test="${draftMode}">
@@ -30,7 +31,7 @@
 			</jstl:if>
 				<acme:input-textbox code="student.enrolment.form.label.holderName" path="holderName"/>
 			<jstl:if test="${draftMode}">
-				<acme:input-textbox code="student.enrolment.form.label.expiryDate" path="expiryDate" placeholder="MM/YY"/>
+				<acme:input-textbox code="student.enrolment.form.label.expiryDate" path="expiryDate" placeholder="student.enrolment.form.expiryDate.placeholder"/>
 				<acme:input-textbox code="student.enrolment.form.label.cvc" path="cvc" placeholder="XXX"/>
 			</jstl:if>
 			<jstl:if test="${!draftMode}">

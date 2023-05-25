@@ -16,4 +16,6 @@
 		<acme:input-double code="lecturer.course.label.courseType" path="courseType" readonly="true"/>
 		<acme:input-textbox code="lecturer.course.label.estimatedTotalTime" path="estimatedTotalTime" readonly="true"/>
 	</jstl:if>
+	<acme:button code="authenticated.audit.form.button.audits.list" action="/authenticated/audit/list?courseId=${id}"/>		
+	
 </acme:form>
