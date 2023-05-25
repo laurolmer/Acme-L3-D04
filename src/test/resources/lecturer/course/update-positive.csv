@@ -1,0 +1,40 @@
+recordIndex,code,Title,abstractCourse,price,link,published
+2,A030,Y,abstract-course,EUR 10.00,,false
+2,A030,YT,abstract-course,EUR 10.00,,false
+2,A030,YThis Title has aprox. 75 characters so dont try to add any more or app die,abstract-course,EUR 10.00,,false
+2,A030,YThis Title has aprox 74 characters so dont try to add any more or app die,abstract-course,EUR 10.00,,false
+2,A030,Y<h1>Title-course</h1>,abstract-course,EUR 10.00,,false
+2,A030,Y<script>alert("Title-course");</script>,abstract-course,EUR 10.00,,false
+2,A030,Y見出しオファー,abstract-course,EUR 10.00,,false
+2,A030,Yпривет,abstract-course,EUR 10.00,,false
+2,A030,YTitle11,abstract-course,EUR 10.00,,false
+2,A030,YTitle12,abstract-course,EUR 10.00,,false
+2,A030,YTitle13,abstract-course,EUR 10.00,,false
+2,A030,YTitle14,abstract-course,EUR 10.00,,false
+2,A030,YTitle15,abstract-course,EUR 10.00,,false
+2,A030,YTitle16,abstract-course,EUR 10.00,,false
+2,A030,YTitle17,abstract-course,EUR 10.00,,false
+2,A030,YTitle18,abstract-course,EUR 10.00,,false
+2,A030,YTitle19,abstract-course,EUR 10.00,,false
+2,A030,YTitle20,abstract-course,EUR 10.00,,false
+2,A030,YTitle21,A,EUR 10.00,,false
+2,A030,YTitle22,Ab,EUR 10.00,,false
+2,A030,YTitle23,This summary has aprox 100 characters so dont try add any more or ap'll die with terrible suffering.,EUR 10.00,,false
+2,A030,YTitle24,This summary has aprox 99 characters so dont try add any more or ap'll die with terrible suffering.,EUR 10.00,,false
+2,A030,YTitle25,<h1>Abstract-course</h1>,EUR 10.00,,false
+2,A030,YTitle26,<script>alert("Abstract-course");</script>,EUR 10.00,,false
+2,A030,YTitle27,سلام,EUR 10.00,,false
+2,A030,YTitle28,Сәлеметсіз бе,EUR 10.00,,false
+2,A030,YTitle29,abstract-course,EUR 10.00,,false
+2,A030,YTitle30,abstract-course,EUR 10.00,,false
+2,A030,YTitle31,abstract-course,GBP 0.01,,false
+2,A030,YTitle32,abstract-course,USD 0.02,,false
+2,A030,YTitle33,abstract-course,EUR 0.90,,false
+2,A030,YTitle34,abstract-course,USD 100.00,,false
+2,A030,YTitle35,abstract-course,EUR 10.00,https:\\www.example.course.com,false
+2,A030,YTitle36,abstract-course,EUR 10.00,http:\\www.example.course.com,false
+2,A030,YTitle37,abstract-course,EUR 10.00,https:\\www.example.course.es,false
+2,A030,YTitle38,abstract-course,EUR 10.00,,false
+2,A030,YTitle39,abstract-course,EUR 10.00,,false
+2,A030,YTitle40,abstract-course,EUR 10.00,,false
+2,A030,YTitle41,abstract-course,EUR 10.00,,false

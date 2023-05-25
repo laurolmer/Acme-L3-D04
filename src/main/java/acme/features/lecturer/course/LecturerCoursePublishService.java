@@ -98,7 +98,7 @@ public class LecturerCoursePublishService extends AbstractService<Lecturer, Cour
 		hasHandsOnLecturesInCourse = this.repository.hasACourseHandsOnLecturesByCourseId(courseId);
 
 		super.state(hasLectures, "*", "lecturer.course.form.error.noLecture");
-		super.state(hasLecturesNotPublished, "*", "lecturer.course.form.error.lectureNotPublished");
+		super.state(!hasLecturesNotPublished, "*", "lecturer.course.form.error.lectureNotPublished");
 		super.state(hasHandsOnLecturesInCourse, "*", "lecturer.course.form.error.noHandsOn");
 	}
 

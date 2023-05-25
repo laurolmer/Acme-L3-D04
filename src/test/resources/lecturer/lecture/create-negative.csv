@@ -1,0 +1,12 @@
+recordIndex,title,lectureAbstract,lectureLearningTime,details,type
+0,,,,,---
+0,,Abstract,1.00,body,HANDS_ON
+0,This Title has aprox. 75 characters so dont try to add any more or app die..,Abstract,1.00,body,HANDS_ON
+0,Title,,1.00,body,HANDS_ON
+0,Title,This summary has aprox 100 characters so dont try add any more or ap'll die with terrible suffering..,1.00,body,HANDS_ON
+0,Title,Abstract,,body,HANDS_ON
+0,Title,Abstract,-1.00,body,HANDS_ON
+0,Title,Abstract,mucho,body,HANDS_ON
+0,Title,Abstract,1.00,,HANDS_ON
+0,Title,Abstract,1.00,This summary has aprox 100 characters so dont try add any more or ap'll die with terrible suffering..,HANDS_ON
+0,Title,Abstract,1.00,body,---

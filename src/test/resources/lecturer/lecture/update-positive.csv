@@ -1,0 +1,27 @@
+recordIndex,title,abstractLecture,lectureLearningTime,details,type,published
+0,Y,abstract-course,1.00,body,HANDS_ON,false
+0,YY,abstract-course,1.00,body,HANDS_ON,false
+0,YThis Title has aprox. 75 characters so dont try to add any more or app die,abstract-course,1.00,body,HANDS_ON,false
+0,YThis Title has aprox 74 characters so dont try to add any more or app die,abstract-course,1.00,body,HANDS_ON,false
+0,Y<h1>Title-course</h1>,abstract-course,1.00,body,HANDS_ON,false
+0,Y<script>alert("Title-course");</script>,abstract-course,1.00,body,HANDS_ON,false
+0,Y見出しオファー,abstract-course,1.00,body,HANDS_ON,false
+0,Yпривет,abstract-course,1.00,body,HANDS_ON,false
+0,YTitle21,A,1.00,body,HANDS_ON,false
+0,YTitle22,Ab,1.00,body,HANDS_ON,false
+0,YTitle23,This summary has aprox 100 characters so dont try add any more or ap'll die with terrible suffering.,1.00,body,HANDS_ON,false
+0,YTitle24,This summary has aprox 99 characters so dont try add any more or ap'll die with terrible suffering.,1.00,body,HANDS_ON,false
+0,YTitle25,<h1>Abstract-course</h1>,1.00,body,HANDS_ON,false
+0,YTitle26,<script>alert("Abstract-course");</script>,1.00,body,HANDS_ON,false
+0,YTitle27,سلام,1.00,body,HANDS_ON,false
+0,YTitle28,Сәлеметсіз бе,1.00,body,HANDS_ON,false
+0,YTitle30,abstract-course,1.50,body,HANDS_ON,false
+0,YTitle36,abstract-course,1.35,body,THEORETICAL,false
+0,YTitle35,abstract-course,1.00,A,HANDS_ON,false
+0,YTitle35,abstract-course,1.00,Ab,HANDS_ON,false
+0,YTitle35,abstract-course,1.00,This summary has aprox 100 characters so dont try add any more or ap'll die with terrible suffering.,HANDS_ON,false
+0,YTitle35,abstract-course,1.00,This summary has aprox 99 characters so dont try add any more or ap'll die with terrible suffering.,HANDS_ON,false
+0,YTitle35,abstract-course,1.00,<h1>Abstract-course</h1>,HANDS_ON,false
+0,YTitle35,abstract-course,1.00,<script>alert("Abstract-course");</script>,HANDS_ON,false
+0,YTitle35,abstract-course,1.00,سلام,HANDS_ON,false
+0,YTitle35,abstract-course,1.00,Сәлеметсіз бе,HANDS_ON,false
