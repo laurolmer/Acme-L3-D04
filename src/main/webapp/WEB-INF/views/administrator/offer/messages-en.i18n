@@ -25,9 +25,6 @@ administrator.offer.form.button.delete = Delete
 administrator.offer.list.label.headding = Heading
 administrator.offer.list.label.summary = Summary
 administrator.offer.list.label.price = Price
-administrator.offer.list.label.availabilityPeriodStart = Start
-administrator.offer.list.label.availabilityPeriodEnd = End 
-administrator.offer.list.label.link = Link
 
 administrator.offer.list.button.create = Create
 

@@ -83,10 +83,10 @@ public class StudentEnrolmentUpdateService extends AbstractService<Student, Enro
 	@Override
 	public void validate(final Enrolment object) {
 		assert object != null;
-		Collection<String> codes;
+		Enrolment enrolment;
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
-			codes = this.repository.findAllCodesFromEnrolments();
-			super.state(!codes.contains(object.getCode()), "code", "student.enrolment.form.error.code");
+			enrolment = this.repository.findAEnrolmentByCode(object.getCode());
+			super.state(enrolment.getCode().equals(object.getCode()) && enrolment.getId() == object.getId(), "code", "student.enrolment.form.error.code");
 		}
 	}
 
@@ -102,9 +102,11 @@ public class StudentEnrolmentUpdateService extends AbstractService<Student, Enro
 		SelectChoices choices;
 		Collection<Course> courses;
 		Tuple tuple;
+		final String estimatedTotalTime = super.getRequest().getData("estimatedTotalTime", String.class);
 		courses = this.repository.findNotInDraftCourses();
 		choices = SelectChoices.from(courses, "code", object.getCourse());
 		tuple = super.unbind(object, "code", "motivation", "goals", "course");
+		tuple.put("estimatedTotalTime", estimatedTotalTime);
 		tuple.put("draftMode", object.isDraftMode());
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
