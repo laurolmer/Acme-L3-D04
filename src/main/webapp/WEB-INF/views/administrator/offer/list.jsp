@@ -19,9 +19,6 @@
 	<acme:list-column code="administrator.offer.list.label.headding" path="heading"/>
 	<acme:list-column code="administrator.offer.list.label.summary" path="summary"/>
 	<acme:list-column code="administrator.offer.list.label.price" path="price"/>
-	<acme:list-column code="administrator.offer.list.label.availabilityPeriodStart" path="availabilityPeriodStart"/>
-	<acme:list-column code="administrator.offer.list.label.availabilityPeriodEnd" path="availabilityPeriodEnd"/>
-	<acme:list-column code="administrator.offer.list.label.link" path="link"/>
 </acme:list>
 
 <acme:button code="administrator.offer.list.button.create" action="/administrator/offer/create"/>
