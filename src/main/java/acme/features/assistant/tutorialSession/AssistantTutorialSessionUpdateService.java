@@ -47,7 +47,7 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 		session = this.repository.findTutorialSessionById(sessionId);
 		assistant = session == null ? null : session.getTutorial().getAssistant();
 		tutorial = this.repository.findTutorialByTutorialSessionId(sessionId);
-		status = tutorial != null && session != null && (tutorial.isDraftMode() || principal.hasRole(assistant));
+		status = tutorial != null && session != null && tutorial.isDraftMode() && principal.hasRole(assistant);
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -82,7 +82,7 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 		// El periodo de inicio de la sesión de tutoría debe ser mínimo un día después a la fecha actual.
 		if (!super.getBuffer().getErrors().hasErrors("startPeriod")) {
 			minStartPeriod = MomentHelper.deltaFromCurrentMoment(1, ChronoUnit.DAYS);
-			super.state(MomentHelper.isAfter(tutorialSession.getStartPeriod(), minStartPeriod), "startPeriod", "assistant.session.startPeriod-before-instantiationMoment");
+			super.state(MomentHelper.isAfterOrEqual(tutorialSession.getStartPeriod(), minStartPeriod), "startPeriod", "assistant.session.startPeriod-before-instantiationMoment");
 		}
 		// El periodo de finalización debe ser posterior al periodo de inicio.
 		if (!super.getBuffer().getErrors().hasErrors("finishPeriod"))

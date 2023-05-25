@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import acme.entities.tutorial.Tutorial;
 import acme.entities.tutorialSession.SessionType;
 import acme.entities.tutorialSession.TutorialSession;
-import acme.framework.components.accounts.Principal;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.helpers.MomentHelper;
@@ -37,13 +36,13 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 	@Override
 	public void authorise() {
 		boolean status;
-		Principal principal;
 		Tutorial tutorial;
 		int tutorialId;
+		Assistant assistant;
 		tutorialId = super.getRequest().getData("masterId", int.class);
 		tutorial = this.repository.findTutorialById(tutorialId);
-		principal = super.getRequest().getPrincipal();
-		status = tutorial != null && (tutorial.isDraftMode() || principal.hasRole(Assistant.class));
+		assistant = tutorial == null ? null : tutorial.getAssistant();
+		status = tutorial != null && tutorial.isDraftMode() && super.getRequest().getPrincipal().hasRole(assistant);
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -65,10 +64,7 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 		assert tutorialSession != null;
 		final Date endPeriod;
 		final double estimatedTotalTime;
-		//estimatedTotalTime = super.getRequest().getData("finishPeriod", Double.class);
-		//endPeriod = tutorialSession.deltaFromStartMoment(estimatedTotalTime);
 		super.bind(tutorialSession, "title", "abstractSession", "sessionType", "startPeriod", "finishPeriod", "link");
-		//tutorialSession.setFinishPeriod(endPeriod);
 	}
 
 	@Override
@@ -82,7 +78,7 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 		// El periodo de inicio de la sesión de tutoría debe ser mínimo un día después a la fecha actual.
 		if (!super.getBuffer().getErrors().hasErrors("startPeriod")) {
 			minStartPeriod = MomentHelper.deltaFromCurrentMoment(1, ChronoUnit.DAYS);
-			super.state(MomentHelper.isAfter(tutorialSession.getStartPeriod(), minStartPeriod), "startPeriod", "assistant.session.startPeriod-before-instantiationMoment");
+			super.state(MomentHelper.isAfterOrEqual(tutorialSession.getStartPeriod(), minStartPeriod), "startPeriod", "assistant.session.startPeriod-before-instantiationMoment");
 		}
 		// El periodo de finalización debe ser posterior al periodo de inicio.
 		if (!super.getBuffer().getErrors().hasErrors("finishPeriod"))
