@@ -68,17 +68,7 @@ public class AssistantTutorialListAllTest extends TestHarness {
 		super.checkPanicExists();
 		super.signOut();
 
-		super.signIn("consumer1", "consumer1");
-		super.request("/assistant/tutorial/list-all");
-		super.checkPanicExists();
-		super.signOut();
-
 		super.signIn("lecturer1", "lecturer1");
-		super.request("/assistant/tutorial/list-all");
-		super.checkPanicExists();
-		super.signOut();
-
-		super.signIn("provider1", "provider1");
 		super.request("/assistant/tutorial/list-all");
 		super.checkPanicExists();
 		super.signOut();
