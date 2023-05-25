@@ -130,12 +130,14 @@ public class StudentEnrolmentFinalizeService extends AbstractService<Student, En
 		final String creditCard = super.getRequest().getData("creditCard", String.class);
 		final String cvc = super.getRequest().getData("cvc", String.class);
 		final String expiryDate = super.getRequest().getData("expiryDate", String.class);
+		final String estimatedTotalTime = super.getRequest().getData("estimatedTotalTime", String.class);
 		SelectChoices choices;
 		Collection<Course> courses;
 		Tuple tuple;
 		courses = this.repository.findNotInDraftCourses();
 		choices = SelectChoices.from(courses, "code", object.getCourse());
 		tuple = super.unbind(object, "code", "motivation", "goals", "course", "holderName");
+		tuple.put("estimatedTotalTime", estimatedTotalTime);
 		tuple.put("draftMode", object.isDraftMode());
 		tuple.put("creditCard", creditCard);
 		tuple.put("cvc", cvc);
