@@ -9,7 +9,7 @@
 # they accept any liabilities with respect to them.
 
 
-administrator.offer.form.label.instantiationMoment= Instantiation Moment
+administrator.offer.form.label.instantationMoment= Instantation Moment
 administrator.offer.form.label.heading = Heading
 administrator.offer.form.label.summary = Summary
 administrator.offer.form.label.price = Price
@@ -38,3 +38,4 @@ administrator.offer.end-after-start = End period must be after the start period
 administrator.offer.end-reached-max-value = End period can't be after the date "2100/12/31 at 23:59"
 administrator.offer.start-didnot-reach-min-value = Start period must be after the date "2000/01/01 at 00:00"
 administrator.offer.price-reached-limit-value = Price must be less than 1,000,000
+administrator.offer.currency-not-valid = The currency must be an accepted currency
