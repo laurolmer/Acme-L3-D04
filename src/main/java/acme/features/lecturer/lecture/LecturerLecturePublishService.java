@@ -73,15 +73,8 @@ public class LecturerLecturePublishService extends AbstractService<Lecturer, Lec
 			super.state(draftMode, "draftMode", "lecturer.lecture.error.draftMode.published");
 		}
 
-		boolean data = false;
-		data = object.getTitle() == null ? true : false;
-		data = object.getLectureAbstract() == null ? true : false;
-		data = object.getBody() == null ? true : false;
-		data = object.getLectureType() == null ? true : false;
-		data = object.getStartPeriod() == null ? true : false;
-		data = object.getEndPeriod() == null ? true : false;
-		if (data)
-			super.state(!data, "*", "lecturer.lecture.error.dataNotFilled");
+		final boolean data = object.getTitle() == null || object.getLectureAbstract() == null || object.getBody() == null || object.getLectureType() == null || object.getStartPeriod() == null || object.getEndPeriod() == null;
+		super.state(!data, "*", "lecturer.lecture.error.dataNotFilled");
 	}
 
 	@Override
