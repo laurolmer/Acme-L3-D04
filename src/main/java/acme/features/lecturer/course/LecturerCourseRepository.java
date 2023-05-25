@@ -73,4 +73,7 @@ public interface LecturerCourseRepository extends AbstractRepository {
 			return CourseType.HANDS_ON;
 		return CourseType.THEORY_COURSE;
 	}
+
+	@Query("select c.acceptedCurrencies from Configuration c")
+	String findAcceptedCurrencies();
 }

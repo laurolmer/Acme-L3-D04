@@ -26,6 +26,7 @@ lecturer.course.button.lectureList = Lectures list
 lecturer.course.error.draftMode.published = Can't create a course already published
 lecturer.course.error.code.duplicated = This course code is already in use
 lecturer.course.error.retailPrice.negative = Price must be greater than zero
+lecturer.course.error.retailPrice.currency = Invalid currency
  
 ## PUBLISH ----------------------------------------------------------------------------
 

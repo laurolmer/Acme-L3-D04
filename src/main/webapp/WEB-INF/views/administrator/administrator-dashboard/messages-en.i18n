@@ -1,0 +1,23 @@
+
+administrator.dashboard.form.title.general-indicators = General indicators
+
+administrator.dashboard.form.title.num-principals = Number of principals
+administrator.dashboard.form.label.lecturer = Lecturer
+administrator.dashboard.form.label.assistant = Assistant
+administrator.dashboard.form.label.provider = Provider
+administrator.dashboard.form.label.company = Company
+administrator.dashboard.form.label.student = Student
+administrator.dashboard.form.label.administrator = Administrator
+administrator.dashboard.form.label.auditor = Auditor
+
+administrator.dashboard.form.title.bulletins-by-critically = Bulletins by critically
+administrator.dashboard.form.label.critical = Critical
+administrator.dashboard.form.label.non-critical = Non critical
+
+administrator.dashboard.form.label.offer.count = Number
+administrator.dashboard.form.label.offer.average = Average
+administrator.dashboard.form.label.offer.min = Minimum
+administrator.dashboard.form.label.offer.max = Maximum
+administrator.dashboard.form.label.offer.deviation = Deviation
+
+administrator.dashboard.form.title.notes-in-last-ten-weeks = Notes in last ten weeks

@@ -63,7 +63,7 @@ public class LecturerLectureUpdateService extends AbstractService<Lecturer, Lect
 	public void bind(final Lecture object) {
 		assert object != null;
 
-		final double estimatedLearningTime;
+		final Double estimatedLearningTime;
 		final Date endPeriod;
 		int activeRoleId;
 		Lecturer lecturer;
