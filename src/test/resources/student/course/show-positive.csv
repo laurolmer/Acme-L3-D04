@@ -1,0 +1,6 @@
+indexRecord,code,title,courseAbstract,courseType,retailPrice,link,lecturer
+0,A001,title-course,abstract-course,BALANCED,EUR 10.00,,Formando lideres con vision global y compromiso social
+1,A002,title-course,abstract-course,BALANCED,EUR 10.00,,Formando lideres con vision global y compromiso social
+2,A003,T,abstract-course,BALANCED,EUR 10.00,,Formando lideres con vision global y compromiso social
+3,A004,Ti,abstract-course,BALANCED,EUR 10.00,,Formando lideres con vision global y compromiso social
+4,A005,This title has aprox. 75 characters so dont try to add any more or app die.,abstract-course,BALANCED,EUR 10.00,,Formando lideres con vision global y compromiso social

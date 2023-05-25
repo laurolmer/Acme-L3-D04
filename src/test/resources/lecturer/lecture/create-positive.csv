@@ -1,0 +1,32 @@
+recordIndex,title,abstractLecture,lectureLearningTime,details,type,published
+0,A,abstract-course,1.00,body,HANDS_ON,false
+1,AA,abstract-course,1.00,body,HANDS_ON,false
+2,AAThis Title has aprox 75 characters so dont try to add any more or app die,abstract-course,1.00,body,HANDS_ON,false
+3,ATbis Title has aprox 74 characters so dont try to add any more or app die,abstract-course,1.00,body,HANDS_ON,false
+4,ATc<h1>Title-course</h1>,abstract-course,1.00,body,HANDS_ON,false
+5,ATd<script>alert("Title-course");</script>,abstract-course,1.00,body,HANDS_ON,false
+6,A見出しオファー,abstract-course,1.00,body,HANDS_ON,false
+7,Aпривет,abstract-course,1.00,body,HANDS_ON,false
+8,ATitle11,abstract-course,1.00,body,HANDS_ON,false
+9,ATitle12,abstract-course,1.00,body,HANDS_ON,false
+10,ATitle13,abstract-course,1.00,body,HANDS_ON,false
+11,ATitle14,abstract-course,1.00,body,HANDS_ON,false
+12,ATitle15,abstract-course,1.00,body,HANDS_ON,false
+13,ATitle16,abstract-course,1.00,body,HANDS_ON,false
+14,ATitle17,abstract-course,1.00,body,HANDS_ON,false
+15,ATitle18,abstract-course,1.00,body,HANDS_ON,false
+16,ATitle19,abstract-course,1.00,body,HANDS_ON,false
+17,ATitle20,abstract-course,1.00,body,HANDS_ON,false
+18,ATitle21,A,1.00,body,HANDS_ON,false
+19,ATitle22,Ab,1.00,body,HANDS_ON,false
+20,ATitle23,This summary has aprox 100 characters so dont try add any more or ap'll die with terrible suffering.,1.00,body,HANDS_ON,false
+21,ATitle24,This summary has aprox 99 characters so dont try add any more or ap'll die with terrible suffering.,1.00,body,HANDS_ON,false
+22,ATitle25,<h1>Abstract-course</h1>,1.00,body,HANDS_ON,false
+23,ATitle26,<script>alert("Abstract-course");</script>,1.00,body,HANDS_ON,false
+24,ATitle27,سلام,1.00,body,HANDS_ON,false
+25,ATitle28,Сәлеметсіз бе,1.00,body,HANDS_ON,false
+26,ATitle29,abstract-course,10.00,body,HANDS_ON,false
+27,ATitle30,abstract-course,1.50,body,HANDS_ON,false
+28,ATitle31,abstract-course,1.35,body,HANDS_ON,false
+29,ATitle32,abstract-course,1.00,body,HANDS_ON,false
+30,ATitle33,abstract-course,1.00,body,HANDS_ON,false

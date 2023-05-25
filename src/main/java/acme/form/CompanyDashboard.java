@@ -1,7 +1,7 @@
 
 package acme.form;
 
-import java.util.List;
+import java.util.Map;
 
 import acme.framework.data.AbstractForm;
 import lombok.Getter;
@@ -17,8 +17,8 @@ public class CompanyDashboard extends AbstractForm {
 	// Attributes -------------------------------------------------------------
 
 	//total number of practica regarding theory or hands-on courses grouped by month during the last year
-	//[0,1,2,3,4,5,6,7,8] 0=Enero; 1=Febrero; 2=Marzo;....
-	private List<Integer>		numTotalPractica;
+	//{[Enero,0],[Febrero,1],[Marzo,2],...} 
+	private Map<String, Long>	TotalNumberOfPractica;
 
 	// Average, deviation, minimum, and maximum time of his or her sessions.
 	private Statistic			sessionLength;

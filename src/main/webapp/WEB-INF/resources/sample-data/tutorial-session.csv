@@ -1,25 +1,32 @@
-key,title,abstract-session,session-type,start-period,finish-period,link,draftMode,key:tutorial
-tutorial-session-01,Session,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,false,tutorial-01
-tutorial-session-02,This session is going to reach 75 characs in order to prove the restriction,Abstract 2,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,false,tutorial-02
-tutorial-session-03,This session is going to reach 74 chars in order to prove the restriction.,Abstract 3,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,false,tutorial-03
-tutorial-session-04,S,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,false,tutorial-04
-tutorial-session-05,S5,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,false,tutorial-05
-tutorial-session-06,<title>ExampleHTML</title>,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,false,tutorial-06
-tutorial-session-07,<script>alert('exampleJS');</script>,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,false,tutorial-07
-tutorial-session-08,નમૂના ટેક્સ્ટ.,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,false,tutorial-08
-tutorial-session-09,Session,This abstract is going to reach exactly 100 characters so it can be proven the specific restriction.,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,false,tutorial-09
-tutorial-session-10,Session,This abstract is going to reach exactly 99 characters so it can be proven the specific restriction.,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,false,tutorial-10
-tutorial-session-11,Session,A,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,false,tutorial-11
-tutorial-session-12,Session,A1,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,false,tutorial-12
-tutorial-session-13,Session,<title>ExampleHTML</title>,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,false,tutorial-13
-tutorial-session-14,Session,<script>alert('exampleJS');</script>,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,false,tutorial-14
-tutorial-session-15,Session,نص بسيط.,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,false,tutorial-15
-tutorial-session-16,Session,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,null,false,tutorial-16
-tutorial-session-17,Session,Abstract,HANDS_ON,2023/12/31 00:00,2023/12/31 05:00,null,false,tutorial-17
-tutorial-session-18,Session,Abstract,HANDS_ON,2023/08/21 00:00,2023/08/21 04:59,null,false,tutorial-18
-tutorial-session-19,Session,Abstract,HANDS_ON,2023/08/21 00:00,2023/08/21 01:00,null,false,tutorial-19
-tutorial-session-20,Session,Abstract,HANDS_ON,2023/08/21 00:00,2023/08/21 01:01,null,false,tutorial-20
-tutorial-session-21,Session,Abstract,HANDS_ON,2023/12/31 23:59,2024/01/01 01:45,null,true,tutorial-21
-tutorial-session-22,Session,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,true,tutorial-22
-tutorial-session-23,Session,Abstract,HANDS_ON,2000/01/01 00:00,2000/01/01 03:00,null,true,tutorial-23
-tutorial-session-24,Session,Abstract,HANDS_ON,2100/12/31 21:30,2100/12/31 23:59,null,true,tutorial-24
+key,title,abstract-session,session-type,start-period,finish-period,link,key:tutorial
+tutorial-session-01,Session,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-01
+tutorial-session-02,This session is going to reach 75 characs in order to prove the restriction,Abstract 2,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-02
+tutorial-session-03,This session is going to reach 74 chars in order to prove the restriction.,Abstract 3,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-03
+tutorial-session-04,S,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-04
+tutorial-session-05,S5,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-05
+tutorial-session-06,<title>ExampleHTML</title>,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-06
+tutorial-session-07,<script>alert('exampleJS');</script>,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-07
+tutorial-session-08,નમૂના ટેક્સ્ટ.,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-08
+tutorial-session-09,Session,This abstract is going to reach exactly 100 characters so it can be proven the specific restriction.,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-09
+tutorial-session-10,Session,This abstract is going to reach exactly 99 characters so it can be proven the specific restriction.,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-10
+tutorial-session-11,Session,A,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-11
+tutorial-session-12,Session,A1,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-12
+tutorial-session-13,Session,<title>ExampleHTML</title>,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-13
+tutorial-session-14,Session,<script>alert('exampleJS');</script>,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-14
+tutorial-session-15,Session,نص بسيط.,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-15
+tutorial-session-16,Session,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-16
+tutorial-session-17,Session,Abstract,HANDS_ON,2023/12/31 00:00,2023/12/31 05:00,null,tutorial-17
+tutorial-session-18,Session,Abstract,HANDS_ON,2023/08/21 00:00,2023/08/21 04:59,null,tutorial-18
+tutorial-session-19,Session,Abstract,HANDS_ON,2023/08/21 00:00,2023/08/21 01:00,null,tutorial-19
+tutorial-session-20,Session,Abstract,HANDS_ON,2023/08/21 00:00,2023/08/21 01:01,null,tutorial-20
+tutorial-session-21,Session,Abstract,HANDS_ON,2023/12/31 23:59,2024/01/01 01:45,null,tutorial-21
+tutorial-session-22,Session,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-22
+tutorial-session-23,Session,Abstract,HANDS_ON,2000/01/01 00:00,2000/01/01 03:00,null,tutorial-23
+tutorial-session-24,Session,Abstract,HANDS_ON,2100/12/31 21:30,2100/12/31 23:59,null,tutorial-24
+tutorial-session-25,Session,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-25
+tutorial-session-26,Session,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-25
+tutorial-session-27,Session,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-25
+tutorial-session-28,Session,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,null,tutorial-25
+tutorial-session-29,Session,Abstract,THEORY,2023/08/21 00:00,2023/08/21 03:30,null,tutorial-25
+tutorial-session-30,Session,Abstract,THEORY,2023/08/21 00:00,2023/08/21 03:30,null,tutorial-26
+tutorial-session-31,Session,Abstract,THEORY,2023/08/21 00:00,2023/08/21 03:30,null,tutorial-27

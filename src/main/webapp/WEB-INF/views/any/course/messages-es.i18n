@@ -17,3 +17,5 @@ any.course.button.publish = Publicar
 # ERRORS - COURSE - ANY ###########################################
 
 any.course.error.code.duplicated = Código duplicado
+
+authenticated.audit.form.button.audits.list = Auditorías

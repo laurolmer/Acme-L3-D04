@@ -1,0 +1,34 @@
+recordIndex,code,YTitle,abstractCourse,price,link,published
+2,,,,,,false
+2,,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,T,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,0,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,03,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,033,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,T0,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,T03,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,T0341,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,TT,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,TT0,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,TT03,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,TT0341,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,TTT,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,TTT0,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,TTT03,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,TTTT0341,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,randomInput,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,123.45,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,-123,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,true,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,2023/01/01 00:00,YTitle,Abstract,EUR 10.00,https://hola.com,false
+2,T010,,Abstract,EUR 10.00,https://hola.com,false
+2,T010,This YTitle has aprox. 75 characters so dont try to add any more or app die..,Abstract,EUR 10.00,https://hola.com,false
+2,T010,YTitle,,EUR 10.00,https://hola.com,false
+2,T010,YTitle,This summary has aprox 100 characters so dont try add any more or ap'll die with terrible suffering..,EUR 10.00,https://hola.com,false
+2,T010,YTitle,Abstract,,https://hola.com,false
+2,T010,YTitle,Abstract,EUR,https://hola.com,false
+2,T010,YTitle,Abstract,123,https://hola.com,false
+2,T010,YTitle,Abstract,123.45,https://hola.com,false
+2,T010,YTitle,Abstract,EUR -10.00,https://hola.com,false
+2,T010,YTitle,Abstract,EUR 10.00,url,false
+2,T010,YTitle,Abstract,EUR 10.00,123,false

@@ -46,7 +46,6 @@
 		  	<acme:menu-suboption code="master.menu.any.course" action="/any/course/list"/>
 			<acme:menu-suboption code="master.menu.offer.list" action="/authenticated/offer/list"/>
 			<acme:menu-suboption code="master.menu.bulletin.list" action="/authenticated/bulletin/list"/>
-			<acme:menu-suboption code="master.menu.authenticated.exchange-money.perform" action="/authenticated/exchange-money/perform"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
@@ -84,11 +83,6 @@
 			<acme:menu-suboption code="master.menu.student.studentEnrolmentList" action="/student/enrolment/list"/>	
 			<acme:menu-suboption code="master.menu.student.dashboard" action="/student/student-dashboard/show"/>	
 		</acme:menu-option>
-
-		<acme:menu-option code="master.menu.assistant" access="hasRole('Assistant')">
-			<acme:menu-suboption code="master.menu.assistant.tutorial.list-mine" action="/assistant/tutorial/list-mine"/>
-			<acme:menu-suboption code="master.menu.assistant.tutorial.list-all" action="/assistant/tutorial/list-all"/>		
-		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.administrator.offer" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.offer.list" action="/administrator/offer/list"/>		
@@ -97,8 +91,9 @@
 
 		<acme:menu-option code="master.menu.company" access="hasRole('Company')">
 			<acme:menu-suboption code="master.menu.company.practicum.list-mine" action="/company/practicum/list-mine"/>
-			<acme:menu-suboption code="master.menu.company.practicum.list-all" action="/company/practicum/list-all"/>	
-		
+			<acme:menu-suboption code="master.menu.company.practicum.list-all" action="/company/practicum/list-all"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.company.dashboard" action="/company/company-dashboard/show"/>
 				
 		</acme:menu-option>
 		
@@ -127,7 +122,8 @@
 			<acme:menu-suboption code="master.menu.user-account.student" action="/authenticated/student/update" access="hasRole('Student')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-lecturer" action="/authenticated/lecturer/create" access="!hasRole('Lecturer')"/>
 			<acme:menu-suboption code="master.menu.user-account.lecturer" action="/authenticated/lecturer/update" access="hasRole('Lecturer')"/>
-
+			<acme:menu-suboption code="master.menu.user-account.become-auditor" action="/authenticated/auditor/create" access="!hasRole('Auditor')"/>
+			<acme:menu-suboption code="master.menu.user-account.auditor" action="/authenticated/auditor/update" access="hasRole('Auditor')"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()"/>

@@ -39,7 +39,7 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 		tutorialId = super.getRequest().getData("id", int.class);
 		tutorial = this.repository.findTutorialById(tutorialId);
 		assistant = tutorial == null ? null : tutorial.getAssistant();
-		status = tutorial != null && tutorial.isDraftMode() == false || super.getRequest().getPrincipal().hasRole(assistant);
+		status = tutorial != null && !tutorial.isDraftMode() || super.getRequest().getPrincipal().hasRole(assistant);
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -102,9 +102,10 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 		final Double estimatedTotalTime;
 
 		courses = this.repository.findNotInDraftCourses();
-		choices = SelectChoices.from(courses, "title", object.getCourse());
+		choices = SelectChoices.from(courses, "code", object.getCourse());
 		sessions = this.repository.findSessionsByTutorialId(object.getId());
 		estimatedTotalTime = object.computeEstimatedTotalTime(sessions);
+
 		tuple = super.unbind(object, "code", "title", "abstractTutorial", "goals");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
