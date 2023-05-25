@@ -39,6 +39,7 @@ student.enrolment.list.label.student = Estudiante:
 student.enrolment.list.button.create = Crear:
 
 student.enrolment.form.error.expiryDate.pattern = La fecha de caducidad debe ser formato MM/YY
+student.enrolment.form.expiryDate.placeholder = MM/yy
 student.enrolment.form.error.expiryDate.before = La fecha de caducidad debe ser posterior a la fecha actual
 student.enrolment.form.error.expiryDate.month = La fecha de caducidad debe ser una fecha real
 student.enrolment.form.error.cvc = El CVC debe tener 3 números
