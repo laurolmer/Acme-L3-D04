@@ -1,0 +1,31 @@
+auditIndex,code,conclusion,strong-points,weak-points,draft-mode,key:auditor,key:course
+0,A900,texto de prueba,texto de prueba,texto de prueba,true,auditor-01,course-01
+1,AA900,texto de prueba,texto de prueba,texto de prueba,false,auditor-01,course-01
+2,AAA900,texto de prueba,texto de prueba,texto de prueba,false,auditor-01,course-01
+3,AAA901,E,texto de prueba,texto de prueba,false,auditor-01,course-01
+4,AAA902,Es,texto de prueba,texto de prueba,false,auditor-01,course-01
+5,AAA903,Esta frase contiene 50 caracteres para un testeo .,texto de prueba,texto de prueba,false,auditor-01,course-01
+6,AAA904,Esta frase contiene en total 99 caracteres para testear las restricciones de mi aplicacion ACME-L3.,texto de prueba,texto de prueba,false,auditor-01,course-01
+7,AAA906,証明,texto de prueba,texto de prueba,false,auditor-01,course-01
+8,AAA907,证明,texto de prueba,texto de prueba,false,auditor-01,course-01
+9,AAA908,<p>Suki para de molestar</p>,texto de prueba,texto de prueba,false,auditor-01,course-01
+10,AAA909,<script>alert('adio!')</script>,texto de prueba,texto de prueba,false,auditor-01,course-01
+11,AAA910,texto de prueba,E,texto de prueba,false,auditor-01,course-01
+12,AAA911,texto de prueba,Es,texto de prueba,false,auditor-01,course-01
+13,AAA912,texto de prueba,Esta proposicion contiene 50 caracteres para test.,texto de prueba,false,auditor-01,course-01
+14,AAA913,texto de prueba,Esta proposicion contiene 99 caracteres para testear la base de datos de mi aplicacion de ACME-L3 .,texto de prueba,false,auditor-01,course-01
+15,AAA915,texto de prueba,証明,texto de prueba,false,auditor-01,course-01
+16,AAA916,texto de prueba,证明,texto de prueba,false,auditor-01,course-01
+17,AAA917,texto de prueba,<p>Suki para de molestar</p>,texto de prueba,false,auditor-01,course-01
+18,AAA918,texto de prueba,<script>alert('adio!')</script>,texto de prueba,false,auditor-01,course-01
+19,AAA919,texto de prueba,texto de prueba,E,false,auditor-01,course-01
+20,AAA920,texto de prueba,texto de prueba,Es,false,auditor-01,course-01
+21,AAA921,texto de prueba,texto de prueba,Esta proposicion contiene 50 caracteres para test.,false,auditor-01,course-01
+22,AAA922,texto de prueba,texto de prueba,Esta proposicion contiene 99 caracteres para testear la base de datos de mi aplicacion de ACME-L3 .,false,auditor-01,course-01
+23,AAA924,texto de prueba,texto de prueba,証明,false,auditor-01,course-01
+24,AAA925,texto de prueba,texto de prueba,证明,false,auditor-01,course-01
+25,AAA926,texto de prueba,texto de prueba,<p>Suki para de molestar</p>,false,auditor-01,course-01
+26,AAA927,texto de prueba,texto de prueba,<script>alert('adio!')</script>,false,auditor-01,course-01
+27,AAA928,texto de prueba,texto de prueba,texto de prueba,false,auditor-01,course-01
+28,AAA929,texto de prueba,texto de prueba,texto de prueba,false,auditor-02,course-01
+29,AAA930,texto de prueba,texto de prueba,texto de prueba,true,auditor-01,course-01
