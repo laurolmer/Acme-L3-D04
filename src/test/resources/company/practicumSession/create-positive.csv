@@ -1,0 +1,16 @@
+practicumRecordIndex,PracticumSessionRecordIndex,title,abstract-session,start,end,link,code
+6,0,#テキスト,abstractSession-00,2024/01/01 08:00,2024/01/08 08:00,https://www.google.com,AA000
+6,1,<script>alert('exampleJS');</script>,abstractSession-01,2024/01/01 08:00,2024/01/08 08:00,https://www.google.com,AA001
+6,2,<title>ExampleHTML</title>,abstractSession-02,2024/02/01 08:00,2024/02/08 08:00,,AA002
+6,3,Probando un titulo que tenga como máximo 74 caracteres para el campo title,abstractSession-03,2024/03/01 08:00,2024/03/08 08:00,https://www.google.com,AA003
+6,4,Probando un titulo que tenga como máximo 75 caracteres para el campo title.,abstractSession-04,2024/04/01 08:00,2024/04/08 08:00,,AA004
+6,5,T,abstractSession-05,2024/05/01 08:00,2024/05/08 08:00,https://www.google.com,AA005
+6,6,TI,abstractSession-06,2024/06/01 08:00,2024/06/08 08:00,https://www.google.com,AA006
+6,7,title-00,abstractSession-07,2024/07/01 08:00,2024/07/08 08:00,https://www.google.com,AA007
+6,8,title-01,A,2024/08/01 08:00,2024/08/08 08:00,,AA008
+6,9,title-02,AA,2024/09/01 08:00,2024/09/08 08:00,,AA009
+6,10,title-03,Esto es un resumen de máximo 99 caracteres para abstractPracticum el campo summary del archivo csv.,2024/10/01 08:00,2024/10/08 08:00,,AA010
+6,11,title-04,Esto es un resumen de máximo 100 caracteres para abstractPracticum el campo summary del archivo csv,2024/11/01 08:00,2024/11/08 08:00,,AA011
+6,12,title-05,サンプルテキスト,2024/12/01 08:00,2024/12/08 08:00,,AA012
+6,13,title-06,<title>ExampleHTML</title>,2025/01/01 08:00,2025/01/08 08:00,,AA013
+6,14,title-07,<script>alert('exampleJS');</script>,2025/02/01 08:00,2025/02/08 08:00,,AA014

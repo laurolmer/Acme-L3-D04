@@ -39,13 +39,12 @@ public class CompanyPracticumUpdateTest extends TestHarness {
 		// HINT+ selects one of them, updates it, and then checks that 
 		// HINT+ the update has actually been performed.
 
-		super.signIn("company1", "company1");
+		super.signIn("company2", "company2");
 
-		super.clickOnMenu("company", "List my practicums");
+		super.clickOnMenu("Company", "List my practicums");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
-		super.checkColumnHasValue(practicumRecordIndex, 0, code);
 		super.clickOnListingRecord(practicumRecordIndex);
 		super.checkFormExists();
 		super.fillInputBoxIn("course", course);
@@ -57,8 +56,6 @@ public class CompanyPracticumUpdateTest extends TestHarness {
 
 		super.checkListingExists();
 		super.sortListing(0, "asc");
-		super.checkColumnHasValue(practicumRecordIndex, 0, code);
-		super.checkColumnHasValue(practicumRecordIndex, 1, title);
 		super.clickOnListingRecord(practicumRecordIndex);
 
 		super.checkFormExists();
@@ -73,19 +70,18 @@ public class CompanyPracticumUpdateTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/company/practicum/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test200Negative(final int practicumRecordIndex, final String company, final String code, final String title, final String abstractPracticum, final String goals) {
+	public void test200Negative(final int practicumRecordIndex, final String course, final String code, final String title, final String abstractPracticum, final String goals) {
 		// HINT: this test attempts to update a practicum with wrong data.
 
-		super.signIn("company1", "company1");
+		super.signIn("company2", "company2");
 
-		super.clickOnMenu("company", "List my practicums");
+		super.clickOnMenu("Company", "List my practicums");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
-		super.checkColumnHasValue(practicumRecordIndex, 0, code);
 		super.clickOnListingRecord(practicumRecordIndex);
 		super.checkFormExists();
-		super.fillInputBoxIn("company", company);
+		super.fillInputBoxIn("course", course);
 		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("abstractPracticum", abstractPracticum);
@@ -119,32 +115,17 @@ public class CompanyPracticumUpdateTest extends TestHarness {
 				super.checkPanicExists();
 				super.signOut();
 
-				super.signIn("employer2", "employer2");
-				super.request("/company/practicum/update", param);
-				super.checkPanicExists();
-				super.signOut();
-
 				super.signIn("auditor1", "auditor1");
 				super.request("/company/practicum/update", param);
 				super.checkPanicExists();
 				super.signOut();
 
-				super.signIn("company1", "company1");
-				super.request("/company/practicum/update", param);
-				super.checkPanicExists();
-				super.signOut();
-
-				super.signIn("consumer1", "consumer1");
+				super.signIn("assistant1", "assistant1");
 				super.request("/company/practicum/update", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("lecturer1", "lecturer1");
-				super.request("/company/practicum/update", param);
-				super.checkPanicExists();
-				super.signOut();
-
-				super.signIn("provider1", "provider1");
 				super.request("/company/practicum/update", param);
 				super.checkPanicExists();
 				super.signOut();

@@ -21,16 +21,16 @@ public class CompanyPracticumDeleteTest extends TestHarness {
 	// Test methods -----------------------------------------------------------
 	@ParameterizedTest
 	@CsvFileSource(resources = "/company/practicum/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int recordpracticumIndex, final String code) {
+	public void test100Positive(final int recordPracticumIndex, final String code) {
 
-		super.signIn("company1", "company1");
+		super.signIn("company2", "company2");
 
 		super.clickOnMenu("Company", "List my practicums");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
-		super.checkColumnHasValue(recordpracticumIndex, 0, code);
-		super.clickOnListingRecord(recordpracticumIndex);
+		super.checkColumnHasValue(recordPracticumIndex, 0, code);
+		super.clickOnListingRecord(recordPracticumIndex);
 		super.checkFormExists();
 		super.clickOnSubmit("Delete");
 
@@ -39,15 +39,15 @@ public class CompanyPracticumDeleteTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/company/practicum/delete-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test200Negative(final int recordpracticumIndex, final String code) {
-		super.signIn("company1", "company1");
+	public void test200Negative(final int recordPracticumIndex, final String code) {
+		super.signIn("company2", "company2");
 
-		super.clickOnMenu("company", "List my practicums");
+		super.clickOnMenu("Company", "List my practicums");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
-		super.checkColumnHasValue(recordpracticumIndex, 0, code);
-		super.clickOnListingRecord(recordpracticumIndex);
+		super.checkColumnHasValue(recordPracticumIndex, 0, code);
+		super.clickOnListingRecord(recordPracticumIndex);
 		super.checkFormExists();
 		super.checkNotSubmitExists("Delete");
 
@@ -75,32 +75,17 @@ public class CompanyPracticumDeleteTest extends TestHarness {
 				super.checkPanicExists();
 				super.signOut();
 
-				super.signIn("employer2", "employer2");
-				super.request("/company/practicum/delete", param);
-				super.checkPanicExists();
-				super.signOut();
-
 				super.signIn("auditor1", "auditor1");
 				super.request("/company/practicum/delete", param);
 				super.checkPanicExists();
 				super.signOut();
 
-				super.signIn("company1", "company1");
-				super.request("/company/practicum/delete", param);
-				super.checkPanicExists();
-				super.signOut();
-
-				super.signIn("consumer1", "consumer1");
+				super.signIn("assistant1", "assistant1");
 				super.request("/company/practicum/delete", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("lecturer1", "lecturer1");
-				super.request("/company/practicum/delete", param);
-				super.checkPanicExists();
-				super.signOut();
-
-				super.signIn("provider1", "provider1");
 				super.request("/company/practicum/delete", param);
 				super.checkPanicExists();
 				super.signOut();

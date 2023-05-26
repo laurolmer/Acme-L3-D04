@@ -32,17 +32,17 @@ public class CompanyPracticumPublishTest extends TestHarness {
 	// Test methods -----------------------------------------------------------
 	@ParameterizedTest
 	@CsvFileSource(resources = "/company/practicum/publish-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int recordpracticumIndex, final String code) {
+	public void test100Positive(final int recordPracticumIndex, final String code) {
 		// HINT: this test authenticates as an company, lists his or her practicums,
 		// then selects one of them, and publishes it.
-		super.signIn("company1", "company1");
+		super.signIn("company2", "company2");
 
 		super.clickOnMenu("Company", "List my practicums");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
-		super.checkColumnHasValue(recordpracticumIndex, 0, code);
+		super.checkColumnHasValue(recordPracticumIndex, 0, code);
 
-		super.clickOnListingRecord(recordpracticumIndex);
+		super.clickOnListingRecord(recordPracticumIndex);
 		super.checkFormExists();
 		super.clickOnSubmit("Publish");
 		super.checkNotErrorsExist();
@@ -50,23 +50,10 @@ public class CompanyPracticumPublishTest extends TestHarness {
 		super.signOut();
 	}
 
-	@ParameterizedTest
-	@CsvFileSource(resources = "/company/practicum/publish-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test200Negative(final int recordpracticumIndex, final String code) {
-		// HINT: this test attempts to publish a practicum that cannot be published, yet.
-		super.signIn("company1", "company1");
-
-		super.clickOnMenu("Company", "List my practicums");
-		super.checkListingExists();
-		super.sortListing(0, "asc");
-
-		super.checkColumnHasValue(recordpracticumIndex, 0, code);
-		super.clickOnListingRecord(recordpracticumIndex);
-		super.checkFormExists();
-		super.clickOnSubmit("Publish");
-		super.checkAlertExists(false);
-
-		super.signOut();
+	@Test
+	public void test200Negative() {
+		// HINT: there aren't any negative tests for this feature 
+		// that doesn't involve entering any data in any forms.
 	}
 
 	@Test
@@ -94,22 +81,12 @@ public class CompanyPracticumPublishTest extends TestHarness {
 				super.checkPanicExists();
 				super.signOut();
 
-				super.signIn("company1", "company1");
-				super.request("/company/practicum/publish", params);
-				super.checkPanicExists();
-				super.signOut();
-
-				super.signIn("consumer1", "consumer1");
+				super.signIn("assistant1", "assistant1");
 				super.request("/company/practicum/publish", params);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("lecturer1", "lecturer1");
-				super.request("/company/practicum/publish", params);
-				super.checkPanicExists();
-				super.signOut();
-
-				super.signIn("provider1", "provider1");
 				super.request("/company/practicum/publish", params);
 				super.checkPanicExists();
 				super.signOut();

@@ -1,0 +1,6 @@
+recordPracticumIndex,code,title,abstractPracticum,goals,course
+0,"FFF666",Probando un titulo que tenga como máximo 74 caracteres para el campo title,abstractPracticum-06,goal-08,A001
+1,GGG777,Probando un titulo que tenga como máximo 75 caracteres para el campo title.,abstractPracticum-07,goal-09,A002
+3,III999,<title>ExampleHTML</title>,abstractPracticum-09,goal-09,A002
+4,JJJ000,<script>alert('exampleJS');</script>,abstractPracticum-10,goal-10,A002
+5,MMM111,title-04,A,goal-11,A002

@@ -32,22 +32,24 @@ public class CompanyPracticumShowTest extends TestHarness {
 	// Test data --------------------------------------------------------------
 	@ParameterizedTest
 	@CsvFileSource(resources = "/company/practicum/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int practicumRecordIndex, final String course, final String code, final String title, final String abstractPracticum, final String goals) {
+	public void test100Positive(final int recordPracticumIndex, final String code, final String title, final String abstractPracticum, final String goals, final String course) {
 		// HINT: this test signs in as an company, lists all of the practicums, click on  
 		// one of them, and checks that the form has the expected data.
 
-		super.signIn("company1", "company1");
+		super.signIn("company2", "company2");
 
 		super.clickOnMenu("Company", "List all practicums");
 		super.sortListing(0, "asc");
-		super.clickOnListingRecord(practicumRecordIndex);
+		super.clickOnListingRecord(recordPracticumIndex);
 		super.checkFormExists();
 
-		super.fillInputBoxIn("course", course);
-		super.fillInputBoxIn("code", code);
-		super.fillInputBoxIn("title", title);
-		super.fillInputBoxIn("abstractPracticum", abstractPracticum);
-		super.fillInputBoxIn("goals", goals);
+		super.checkFormExists();
+
+		super.checkInputBoxHasValue("code", code);
+		super.checkInputBoxHasValue("title", title);
+		super.checkInputBoxHasValue("abstractPracticum", abstractPracticum);
+		super.checkInputBoxHasValue("goals", goals);
+		super.checkInputBoxHasValue("course", course);
 
 		super.signOut();
 	}
@@ -78,32 +80,17 @@ public class CompanyPracticumShowTest extends TestHarness {
 				super.checkPanicExists();
 				super.signOut();
 
-				super.signIn("employer2", "employer2");
-				super.request("/company/practicum/show", param);
-				super.checkPanicExists();
-				super.signOut();
-
 				super.signIn("auditor1", "auditor1");
 				super.request("/company/practicum/show", param);
 				super.checkPanicExists();
 				super.signOut();
 
-				super.signIn("company1", "company1");
-				super.request("/company/practicum/show", param);
-				super.checkPanicExists();
-				super.signOut();
-
-				super.signIn("consumer1", "consumer1");
+				super.signIn("assistant1", "assistant1");
 				super.request("/company/practicum/show", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("lecturer1", "lecturer1");
-				super.request("/company/practicum/show", param);
-				super.checkPanicExists();
-				super.signOut();
-
-				super.signIn("provider1", "provider1");
 				super.request("/company/practicum/show", param);
 				super.checkPanicExists();
 				super.signOut();
