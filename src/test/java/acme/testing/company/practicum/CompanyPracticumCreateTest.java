@@ -15,7 +15,7 @@ public class CompanyPracticumCreateTest extends TestHarness {
 		// HINT: this test authenticates as an company and then lists his or her
 		// practicums, creates a new one, and check that it's been created properly.
 
-		super.signIn("company1", "company1");
+		super.signIn("company2", "company2");
 
 		super.clickOnMenu("Company", "List my practicums");
 		super.checkListingExists();
@@ -28,7 +28,7 @@ public class CompanyPracticumCreateTest extends TestHarness {
 		super.fillInputBoxIn("goals", goals);
 		super.clickOnSubmit("Create");
 
-		super.clickOnMenu("company", "List my practicums");
+		super.clickOnMenu("Company", "List my practicums");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.checkColumnHasValue(practicumRecordIndex, 0, code);
@@ -55,7 +55,7 @@ public class CompanyPracticumCreateTest extends TestHarness {
 	public void test200Negative(final int practicumRecordIndex, final String course, final String code, final String title, final String abstractPracticum, final String goals) {
 		// HINT: this test attempts to create practicums with incorrect data.
 
-		super.signIn("company1", "company1");
+		super.signIn("company2", "company2");
 
 		super.clickOnMenu("Company", "List my practicums");
 		super.clickOnButton("Create");
@@ -92,22 +92,12 @@ public class CompanyPracticumCreateTest extends TestHarness {
 		super.checkPanicExists();
 		super.signOut();
 
-		super.signIn("company1", "company1");
-		super.request("/company/practicum/create");
-		super.checkPanicExists();
-		super.signOut();
-
-		super.signIn("consumer1", "consumer1");
+		super.signIn("assistant1", "assistant1");
 		super.request("/company/practicum/create");
 		super.checkPanicExists();
 		super.signOut();
 
 		super.signIn("lecturer1", "lecturer1");
-		super.request("/company/practicum/create");
-		super.checkPanicExists();
-		super.signOut();
-
-		super.signIn("provider1", "provider1");
 		super.request("/company/practicum/create");
 		super.checkPanicExists();
 		super.signOut();

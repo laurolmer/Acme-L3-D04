@@ -107,7 +107,7 @@ public class CompanyPracticumSessionCreateService extends AbstractService<Compan
 			if (!super.getBuffer().getErrors().hasErrors("start"))
 				super.state(MomentHelper.isAfter(start, inAWeekFromNow), "start", "company.practicum-session.error.start-after-now");
 			if (!super.getBuffer().getErrors().hasErrors("end"))
-				super.state(MomentHelper.isAfter(end, inAWeekFromStart), "end", "company.practicum-session.error.end-after-start");
+				super.state(MomentHelper.isAfterOrEqual(end, inAWeekFromStart), "end", "company.practicum-session.error.end-after-start");
 		}
 
 		if (super.getRequest().hasData("confirmed") && !super.getBuffer().getErrors().hasErrors("confirmed")) {

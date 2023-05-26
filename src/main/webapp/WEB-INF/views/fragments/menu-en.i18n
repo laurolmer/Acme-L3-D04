@@ -98,8 +98,8 @@ master.menu.lecturer.lecture.dashboard = Dashboard
 # master.menu.company ###################################################
 
 master.menu.company= Company
-master.menu.company.practicum.list-mine = List my practicum
-master.menu.company.practicum.list-all = List all practicum
+master.menu.company.practicum.list-mine = List my practicums
+master.menu.company.practicum.list-all = List all practicums
 
 # master.menu.studentCourse ##########################################################
 

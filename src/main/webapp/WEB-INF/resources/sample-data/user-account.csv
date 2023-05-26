@@ -10,3 +10,5 @@ user-account-auditor-02,auditor2,auditor2,"UserIdentity{name: 'Auditor2', surnam
 user-account-student-01,student1,student1,"UserIdentity{name: 'Student1', surname: 'One', email: 'student1@mail.com'}",true
 user-account-student-02,student2,student2,"UserIdentity{name: 'Student2', surname: 'Two', email: 'student2@mail.com'}",true
 user-account-student-03,student3,student3,"UserIdentity{name: 'Student3', surname: 'Three', email: 'student3@mail.com'}",true
+user-account-consumer-01,consumer1,consumer1,"UserIdentity{name: 'Consumer1', surname: 'One', email: 'consumer1@mail.com'}",true
+user-account-provider-01,provider1,provider1,"UserIdentity{name: 'Provider1', surname: 'One', email: 'provider1@mail.com'}",true

@@ -1,14 +1,3 @@
-/*
- * EmployerJobUpdateTest.java
- *
- * Copyright (C) 2012-2023 Rafael Corchuelo.
- *
- * In keeping with the traditional purpose of furthering education and research, it is
- * the policy of the copyright owner to permit non-commercial use and redistribution of
- * this software. It has been tested carefully, but it is not guaranteed for any particular
- * purposes. The copyright owner does not offer any warranties or representations, nor do
- * they accept any liabilities with respect to them.
- */
 
 package acme.testing.company.practicumSession;
 
@@ -25,90 +14,116 @@ import acme.testing.TestHarness;
 public class CompanyPracticumSessionUpdateTest extends TestHarness {
 
 	// Internal state ---------------------------------------------------------
-
 	@Autowired
 	protected CompanyPracticumSessionTestRepository repository;
-
-	// Test methods ------------------------------------------------------------
+	// Test data --------------------------------------------------------------
 
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/company/practicumSession/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int recordpracticumIndex, final int recordSessionIndex, final String title, final String abstractSession, final String code, final String start, final String end, final String link) {
-		// HINT: this test logs in as an company, lists his or her practicums, 
-		// selects one of their sessions and list them, updates it, and then checks that 
-		// the update has actually been performed.
+	void test100Positive(final int practicumRecordIndex, final int PracticumSessionRecordIndex, final String title, final String abstractSession, final String start, final String end, final String link, final String code) {
+		// HINT: this test logs in as a company,
+		// HINT+ lists his or her practicums, navigates
+		// HINT+ to their session practicums, and
+		// HINT+ selects one of them, updates it, and then checks that
+		// HINT+ the update has actually been performed.
 
-		super.signIn("company1", "company1");
+		super.signIn("company2", "company2");
 
 		super.clickOnMenu("Company", "List my practicums");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
-		super.clickOnListingRecord(recordpracticumIndex);
-		super.clickOnButton("List Sessions");
+
+		super.clickOnListingRecord(practicumRecordIndex);
+		super.checkFormExists();
+
+		super.clickOnButton("Sessions");
+		super.checkListingExists();
+
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(PracticumSessionRecordIndex);
 
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("abstractSession", abstractSession);
-		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("start", start);
 		super.fillInputBoxIn("end", end);
 		super.fillInputBoxIn("link", link);
+		super.fillInputBoxIn("code", code);
 		super.clickOnSubmit("Update");
+
+		super.clickOnMenu("Company", "List my practicums");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+
+		super.clickOnListingRecord(practicumRecordIndex);
+		super.checkFormExists();
+
+		super.clickOnButton("Sessions");
+		super.checkListingExists();
 
 		super.checkListingExists();
 		super.sortListing(0, "asc");
-		super.checkColumnHasValue(recordSessionIndex, 0, title);
-		super.clickOnListingRecord(recordSessionIndex);
+		super.checkColumnHasValue(PracticumSessionRecordIndex, 0, title);
 
+		super.clickOnListingRecord(PracticumSessionRecordIndex);
 		super.checkFormExists();
 		super.checkInputBoxHasValue("title", title);
 		super.checkInputBoxHasValue("abstractSession", abstractSession);
-		super.checkInputBoxHasValue("code", code);
 		super.checkInputBoxHasValue("start", start);
 		super.checkInputBoxHasValue("end", end);
 		super.checkInputBoxHasValue("link", link);
+		super.checkInputBoxHasValue("code", code);
 
 		super.signOut();
 	}
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/company/practicumSession/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test200Negative(final int practicumRecordIndex, final int sessionRecordIndex, final String title, final String abstractSession, final String code, final String start, final String end, final String link) {
-		// HINT: this test attempts to update a session with wrong data.
 
-		super.signIn("company1", "company1");
+	@CsvFileSource(resources = "/company/practicumSession/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	void test200Negative(final int practicumRecordIndex, final int PracticumSessionRecordIndex, final String title, final String abstractSession, final String start, final String end, final String link, final String code) {
+		// HINT: this test attempts to update a session practicum with wrong data.
+
+		super.signIn("company2", "company2");
 
 		super.clickOnMenu("Company", "List my practicums");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
+
 		super.clickOnListingRecord(practicumRecordIndex);
-		super.clickOnButton("List Sessions");
+		super.checkFormExists();
+
+		super.clickOnButton("Sessions");
+		super.checkListingExists();
+
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(PracticumSessionRecordIndex);
 
 		super.checkFormExists();
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("abstractSession", abstractSession);
-		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("start", start);
 		super.fillInputBoxIn("end", end);
 		super.fillInputBoxIn("link", link);
+		super.fillInputBoxIn("code", code);
 		super.clickOnSubmit("Update");
+
 		super.checkErrorsExist();
 
 		super.signOut();
 	}
 
 	@Test
-	public void test300Hacking() {
-		// HINT: this test tries to update a session with a role other than "company",
-		// or using an company who is not the owner.
-		Collection<PracticumSession> sessions;
+	void test300Hacking() {
+		// HINT: this test tries to update a session practicum that isn't additional
+		// HINT+ with a role other than "Company" or using an employer who is not the owner.
+
+		Collection<PracticumSession> PracticumSessions;
 		String param;
 
-		super.signIn("company1", "company1");
-		sessions = this.repository.findpracticumSessionsBycompanyUsername("company1");
-		for (final PracticumSession session : sessions)
-			if (!session.getPracticum().getDraftMode()) {
-				param = String.format("id=%d", session.getPracticum().getId());
+		PracticumSessions = this.repository.findManyPracticumSessionsByCompanyUsernameInDraftMode("company1");
+		for (final PracticumSession PracticumSession : PracticumSessions)
+			if (!PracticumSession.isAdditional()) {
+				param = String.format("id=%d", PracticumSession.getId());
 
 				super.checkLinkExists("Sign in");
 				super.request("/company/practicum-session/update", param);
@@ -124,31 +139,6 @@ public class CompanyPracticumSessionUpdateTest extends TestHarness {
 				super.checkPanicExists();
 				super.signOut();
 
-				super.signIn("auditor1", "auditor1");
-				super.request("/company/practicum-session/update", param);
-				super.checkPanicExists();
-				super.signOut();
-
-				super.signIn("company1", "company1");
-				super.request("/company/practicum-session/update", param);
-				super.checkPanicExists();
-				super.signOut();
-
-				super.signIn("consumer1", "consumer1");
-				super.request("/company/practicum-session/update", param);
-				super.checkPanicExists();
-				super.signOut();
-
-				super.signIn("lecturer1", "lecturer1");
-				super.request("/company/practicum-session/update", param);
-				super.checkPanicExists();
-				super.signOut();
-
-				super.signIn("provider1", "provider1");
-				super.request("/company/practicum-session/update", param);
-				super.checkPanicExists();
-				super.signOut();
-
 				super.signIn("student1", "student1");
 				super.request("/company/practicum-session/update", param);
 				super.checkPanicExists();
@@ -157,36 +147,79 @@ public class CompanyPracticumSessionUpdateTest extends TestHarness {
 	}
 
 	@Test
-	public void test301Hacking() {
-		// HINT: this test tries to update a published session that was registered by the principal.
-		Collection<PracticumSession> sessions;
-		String params;
+	void test301Hacking() {
+		// HINT: this test tries to update a session practicum that is additional
+		// HINT+ with a role other than "Company" or using an employer who is not the owner.
 
-		super.signIn("company1", "company1");
-		sessions = this.repository.findpracticumSessionsBycompanyUsername("company1");
-		for (final PracticumSession session : sessions)
-			if (!session.getPracticum().getDraftMode()) {
-				params = String.format("id=%d", session.getPracticum().getId());
-				super.request("/company/practicum-session/update", params);
+		Collection<PracticumSession> PracticumSessions;
+		String param;
+
+		PracticumSessions = this.repository.findManyPracticumSessionsByCompanyUsernameInFinalMode("company1");
+		for (final PracticumSession PracticumSession : PracticumSessions)
+			if (PracticumSession.isAdditional()) {
+				param = String.format("id=%d", PracticumSession.getId());
+
+				super.checkLinkExists("Sign in");
+				super.request("/company/practicum-session/update", param);
+				super.checkPanicExists();
+
+				super.signIn("administrator", "administrator");
+				super.request("/company/practicum-session/update", param);
+				super.checkPanicExists();
+				super.signOut();
+
+				super.signIn("company2", "company2");
+				super.request("/company/practicum-session/update", param);
+				super.checkPanicExists();
+				super.signOut();
+
+				super.signIn("student1", "student1");
+				super.request("/company/practicum-session/update", param);
+				super.checkPanicExists();
+				super.signOut();
+
+				super.signIn("company1", "company1");
+				super.request("/company/practicum-session/update", param);
+				super.checkPanicExists();
+				super.signOut();
 			}
-		super.signOut();
 	}
 
 	@Test
-	public void test302Hacking() {
-		// HINT: this test tries to update a session that wasn't registered by the principal,
-		// be it published or unpublished.
-		Collection<PracticumSession> sessions;
-		String params;
+	void test302Hacking() {
+		// HINT: this test tries to update a session practicum that his practicum is not on draft
+		// HINT+ mode with a role other than "Company", with the owner or using an employer who is not the owner.
 
-		super.signIn("company2", "company2");
-		sessions = this.repository.findpracticumSessionsBycompanyUsername("company1");
-		for (final PracticumSession session : sessions)
-			if (!session.getPracticum().getDraftMode()) {
-				params = String.format("id=%d", session.getPracticum().getId());
-				super.request("/company/practicum-session/update", params);
-			}
-		super.signOut();
+		Collection<PracticumSession> PracticumSessions;
+		String param;
+
+		PracticumSessions = this.repository.findManyPracticumSessionsByCompanyUsernameInFinalMode("company1");
+		for (final PracticumSession PracticumSession : PracticumSessions) {
+			param = String.format("id=%d", PracticumSession.getId());
+
+			super.checkLinkExists("Sign in");
+			super.request("/company/practicum-session/update", param);
+			super.checkPanicExists();
+
+			super.signIn("administrator", "administrator");
+			super.request("/company/practicum-session/update", param);
+			super.checkPanicExists();
+			super.signOut();
+
+			super.signIn("company2", "company2");
+			super.request("/company/practicum-session/update", param);
+			super.checkPanicExists();
+			super.signOut();
+
+			super.signIn("student1", "student1");
+			super.request("/company/practicum-session/update", param);
+			super.checkPanicExists();
+			super.signOut();
+
+			super.signIn("company1", "company1");
+			super.request("/company/practicum-session/update", param);
+			super.checkPanicExists();
+			super.signOut();
+		}
 	}
-
 }
