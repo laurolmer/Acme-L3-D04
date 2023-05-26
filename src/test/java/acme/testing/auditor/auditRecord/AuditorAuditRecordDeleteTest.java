@@ -19,7 +19,7 @@ public class AuditorAuditRecordDeleteTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/auditor/auditRecord/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	void test100Positive(final int auditRecordIndex, final int auditRecordRecordIndex, final String subject, final String abstractAuditRecord, final String nextSubject) {
+	void test100Positive(final int auditRecordIndex, final int auditRecordRecordIndex, final String subject, final String nextSubject) {
 
 		super.signIn("auditor1", "auditor1");
 

@@ -1,0 +1,11 @@
+auditRecordIndex,auditRecordRecordIndex,subject,link,assesment,startDate,finishDate,mark
+0,1,La frase contiene mas de 75 caracteres para hacer realizar testeo en nuestra app .,,prueba,2019/02/02 11:30,2019/02/02 15:30,APLUS
+0,2,prueba,,Esta proposicion contiene mas de 99 caracteres para testear la base de datos de mi aplicacion de ACME-L3 .,2019/02/02 11:30,2019/02/02 15:30,FMINUS
+0,3,証明,,prueba,2019/02/02 11:30,2019/02/02 15:30,APLUS
+0,4,prueba,,証明,2019/02/02 11:30,2019/02/02 15:30,APLUS
+0,5,<p>Suki para de molestar</p>,,prueba,2019/02/02 11:30,2019/02/02 15:30,APLUS
+0,6,prueba,,<p>Suki para de molestar</p>,2019/02/02 11:30,2019/02/02 15:30,APLUS
+0,7,<script>alert('adio!')</script>,,prueba,2019/02/02 11:30,2019/02/02 15:30,APLUS
+0,8,prueba,hola,<script>alert('adio!')</script>,2019/02/02 11:30,2019/02/02 15:30,null
+0,9,prueba,,prueba,02/02/2019 11:30,2019/02/02 15:30,APLUS
+0,10,prueba,,prueba,2019/02/02 11:30,02/02/2019 15:30,APLUS

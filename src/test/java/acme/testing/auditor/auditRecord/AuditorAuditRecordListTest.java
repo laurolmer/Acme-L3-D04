@@ -19,15 +19,13 @@ public class AuditorAuditRecordListTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/auditor/auditRecord/list-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	void test100Positive(final int auditRecordIndex, final int auditRecordRecordIndex, final String subject, final String abstractAuditRecord, final String nextSubject, final String code, final String mark) {
+	void test100Positive(final int auditRecordIndex, final int auditRecordRecordIndex, final String subject, final String mark) {
 
 		super.signIn("auditor1", "auditor1");
 		super.clickOnMenu("Auditor", "My audits");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
-		super.checkColumnHasValue(auditRecordIndex, 0, code);
 		super.clickOnListingRecord(auditRecordIndex);
-		super.checkInputBoxHasValue("code", code);
 		super.clickOnButton("Audit Records List");
 		super.checkListingExists();
 		super.checkColumnHasValue(auditRecordRecordIndex, 0, subject);

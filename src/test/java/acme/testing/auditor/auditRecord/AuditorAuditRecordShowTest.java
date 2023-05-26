@@ -19,7 +19,7 @@ public class AuditorAuditRecordShowTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/auditor/auditRecord/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	void test100Positive(final int auditRecordIndex, final int auditRecordRecordIndex, final String subject, final String abstractAuditRecord, final String link, final String assesment, final String startDate, final String finishDate, final String mark) {
+	void test100Positive(final int auditRecordIndex, final int auditRecordRecordIndex, final String subject, final String link, final String assesment, final String startDate, final String finishDate, final String mark) {
 
 		super.signIn("auditor1", "auditor1");
 
@@ -32,12 +32,12 @@ public class AuditorAuditRecordShowTest extends TestHarness {
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(auditRecordRecordIndex);
 		super.checkFormExists();
-		super.checkInputBoxHasValue("Subject", subject);
-		super.checkInputBoxHasValue("Assesment", assesment);
-		super.checkInputBoxHasValue("Link", link);
-		super.checkInputBoxHasValue("Start date", startDate);
-		super.checkInputBoxHasValue("Finish date", finishDate);
-		super.checkInputBoxHasValue("Mark", mark);
+		super.checkInputBoxHasValue("subject", subject);
+		super.checkInputBoxHasValue("assesment", assesment);
+		super.checkInputBoxHasValue("link", link);
+		super.checkInputBoxHasValue("periodStart", startDate);
+		super.checkInputBoxHasValue("periodFin", finishDate);
+		super.checkInputBoxHasValue("mark", mark);
 		super.signOut();
 	}
 

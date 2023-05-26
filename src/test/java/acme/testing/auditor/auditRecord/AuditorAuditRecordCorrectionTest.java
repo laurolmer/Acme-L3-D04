@@ -19,7 +19,7 @@ public class AuditorAuditRecordCorrectionTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/auditor/auditRecord/correction-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	void test100Positive(final int auditRecordIndex, final int auditRecordRecordIndex, final String subject, final String abstractAuditRecord, final String link, final String assesment, final String startDate, final String finishDate, final String mark) {
+	void test100Positive(final int auditRecordIndex, final int auditRecordRecordIndex, final String subject, final String link, final String assesment, final String startDate, final String finishDate, final String mark, final String confirmation) {
 
 		super.signIn("auditor1", "auditor1");
 
@@ -33,31 +33,35 @@ public class AuditorAuditRecordCorrectionTest extends TestHarness {
 
 		super.clickOnButton("Add correction");
 		super.checkFormExists();
-		super.fillInputBoxIn("Subject", subject);
-		super.fillInputBoxIn("Assesment", assesment);
-		super.fillInputBoxIn("Link", link);
-		super.fillInputBoxIn("Start date", startDate);
-		super.fillInputBoxIn("Finish date", finishDate);
-		super.fillInputBoxIn("Mark", mark);
-		super.clickOnButton("Correction");
+		super.fillInputBoxIn("subject", subject);
+		super.fillInputBoxIn("link", link);
+		super.fillInputBoxIn("assesment", assesment);
+		super.fillInputBoxIn("periodStart", startDate);
+		super.fillInputBoxIn("periodFin", finishDate);
+		super.fillInputBoxIn("mark", mark);
+		super.fillInputBoxIn("confirmation", confirmation);
 		super.clickOnSubmit("Create");
-
+		super.clickOnMenu("Auditor", "My audits");
+		super.checkListingExists();
 		super.sortListing(0, "asc");
-
+		super.clickOnListingRecord(auditRecordIndex);
+		super.clickOnButton("Audit Records List");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
 		super.clickOnListingRecord(auditRecordRecordIndex);
 		super.checkFormExists();
-		super.checkInputBoxHasValue("Subject", subject);
-		super.checkInputBoxHasValue("Assesment", assesment);
-		super.checkInputBoxHasValue("Link", link);
-		super.checkInputBoxHasValue("Start date", startDate);
-		super.checkInputBoxHasValue("Finish date", finishDate);
-		super.checkInputBoxHasValue("Mark", mark);
+		super.checkInputBoxHasValue("subject", subject);
+		super.checkInputBoxHasValue("assesment", assesment);
+		super.checkInputBoxHasValue("link", link);
+		super.checkInputBoxHasValue("periodStart", startDate);
+		super.checkInputBoxHasValue("periodFin", finishDate);
+		super.checkInputBoxHasValue("mark", mark);
 		super.signOut();
 	}
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/student/activity/correction-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	void test200Negative(final int auditRecordIndex, final int auditRecordRecordIndex, final String subject, final String abstractAuditRecord, final String link, final String assesment, final String startDate, final String finishDate, final String mark) {
+	@CsvFileSource(resources = "/auditor/auditRecord/correction-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	void test200Negative(final int auditRecordIndex, final int auditRecordRecordIndex, final String subject, final String link, final String assesment, final String startDate, final String finishDate, final String mark, final String confirmation) {
 		// HINT: this test attempts to create jobs with incorrect data.
 
 		super.signIn("auditor1", "auditor1");
@@ -72,13 +76,13 @@ public class AuditorAuditRecordCorrectionTest extends TestHarness {
 
 		super.clickOnButton("Add correction");
 		super.checkFormExists();
-		super.fillInputBoxIn("Subject", subject);
-		super.fillInputBoxIn("Assesment", assesment);
-		super.fillInputBoxIn("Link", link);
-		super.fillInputBoxIn("Start date", startDate);
-		super.fillInputBoxIn("Finish date", finishDate);
-		super.fillInputBoxIn("Mark", mark);
-		super.clickOnButton("Correction");
+		super.fillInputBoxIn("subject", subject);
+		super.fillInputBoxIn("link", link);
+		super.fillInputBoxIn("assesment", assesment);
+		super.fillInputBoxIn("periodStart", startDate);
+		super.fillInputBoxIn("periodFin", finishDate);
+		super.fillInputBoxIn("mark", mark);
+		super.fillInputBoxIn("confirmation", confirmation);
 		super.clickOnSubmit("Create");
 
 		super.checkErrorsExist();

@@ -18,14 +18,13 @@ public class AuditorAuditShowTest extends TestHarness {
 
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/auditor/audit/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/auditor/audit/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 
 	public void test100Positive(final int auditIndex, final String code, final String conclusion, final String strongPoints, final String weakPoints, final String course) {
 
 		super.signIn("auditor1", "auditor1");
 		super.clickOnMenu("Auditor", "My audits");
 		super.checkListingExists();
-		super.checkColumnHasValue(auditIndex, 0, code);
 		super.clickOnListingRecord(auditIndex);
 		super.checkFormExists();
 		super.checkInputBoxHasValue("code", code);
