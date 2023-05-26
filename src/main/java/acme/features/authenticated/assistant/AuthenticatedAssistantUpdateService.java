@@ -37,7 +37,11 @@ public class AuthenticatedAssistantUpdateService extends AbstractService<Authent
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		Principal principal;
+		boolean status;
+		principal = super.getRequest().getPrincipal();
+		status = principal.hasRole(Assistant.class);
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
