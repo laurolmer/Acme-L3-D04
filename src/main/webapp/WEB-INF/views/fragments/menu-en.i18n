@@ -100,6 +100,7 @@ master.menu.lecturer.lecture.dashboard = Dashboard
 master.menu.company= Company
 master.menu.company.practicum.list-mine = List my practicums
 master.menu.company.practicum.list-all = List all practicums
+master.menu.company.dashboard= DashBoard
 
 # master.menu.studentCourse ##########################################################
 
