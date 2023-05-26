@@ -50,10 +50,22 @@ public class CompanyPracticumPublishTest extends TestHarness {
 		super.signOut();
 	}
 
-	@Test
-	public void test200Negative() {
-		// HINT: there aren't any negative tests for this feature 
-		// that doesn't involve entering any data in any forms.
+	@ParameterizedTest
+	@CsvFileSource(resources = "/company/practicum/publish-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	void test200Negative(final int practicumRecordIndex, final String code) {
+		// HINT: this test attempts to publish a practicum that cannot be published, yet.
+
+		super.signIn("company2", "company2");
+
+		super.clickOnMenu("Company", "List my practicums");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.checkColumnHasValue(practicumRecordIndex, 0, code);
+
+		super.clickOnListingRecord(practicumRecordIndex);
+
+		super.checkNotButtonExists("Publish");
+		super.signOut();
 	}
 
 	@Test
