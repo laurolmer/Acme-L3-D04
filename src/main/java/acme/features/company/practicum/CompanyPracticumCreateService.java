@@ -75,7 +75,7 @@ public class CompanyPracticumCreateService extends AbstractService<Company, Prac
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			Practicum isCodeUnique;
 			isCodeUnique = this.repository.findAPracticumByCode(object.getCode());
-			super.state(isCodeUnique == null, "code", "Company.Practicum.form.error.code-uniqueness");
+			super.state(isCodeUnique == null, "code", "company.practicum.form.error.code-uniqueness");
 		}
 	}
 

@@ -92,11 +92,14 @@ public interface AssistantDashboardRepository extends AbstractRepository {
 
 	default Integer findCountTutorialRegardingCourse(final Collection<Course> courses) {
 		int totalNumberTutorialsByCoursesCollection = 0;
-		for (final Course c : courses) {
-			final Collection<Tutorial> tutorialsByCourse = this.findTutorialsByCourse(c.getId());
-			totalNumberTutorialsByCoursesCollection += tutorialsByCourse.size();
+		if (courses != null) {
+			for (final Course c : courses) {
+				final Collection<Tutorial> tutorialsByCourse = this.findTutorialsByCourse(c.getId());
+				totalNumberTutorialsByCoursesCollection += tutorialsByCourse.size();
+			}
+			return totalNumberTutorialsByCoursesCollection;
 		}
-		return totalNumberTutorialsByCoursesCollection;
+		return 0;
 	}
 
 	@Query("select a from Assistant a where a.userAccount.id = :accountId")

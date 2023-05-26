@@ -89,7 +89,7 @@ public class AssistantDashboardShowService extends AbstractService<Assistant, As
 
 		final Map<CourseType, Collection<Course>> courseType = this.repository.coursesRegardingCourseType(assistantId);
 		totalNumberOfTheoryTutorial = this.repository.findCountTutorialRegardingCourse(courseType.get(CourseType.THEORY_COURSE)) == null ? 0 : this.repository.findCountTutorialRegardingCourse(courseType.get(CourseType.THEORY_COURSE));
-		totalNumOfHandsOnTutorials = this.repository.findCountTutorialRegardingCourse(courseType.get(CourseType.BALANCED)) == null ? 0 : this.repository.findCountTutorialRegardingCourse(courseType.get(CourseType.BALANCED));
+		totalNumOfHandsOnTutorials = this.repository.findCountTutorialRegardingCourse(courseType.get(CourseType.HANDS_ON)) == null ? 0 : this.repository.findCountTutorialRegardingCourse(courseType.get(CourseType.HANDS_ON));
 
 		assistantDashboard = new AssistantDashboard();
 		assistantDashboard.setTotalNumTheoryTutorials(totalNumberOfTheoryTutorial);
