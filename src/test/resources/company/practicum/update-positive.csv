@@ -4,9 +4,8 @@ practicumRecordIndex,course,code,title,abstractPracticum,goals
 0,"A001","BB222",t,abstractPracticum-02,goal-02
 0,"A001","BB222",ti,abstractPracticum-02,goal-02
 0,"A001","BB222",Probando un titulo que tenga como máximo 74 caracteres para el campo title,abstractPracticum-02,goal-02
-0,"A001","BB222",Probando un titulo que tenga como máximo 75 caracteres para el campo title.,abstractPracticum-02,goal-02
 0,"A001","BB222",サンプルテキスト,abstractPracticum-02,goal-02
-0,"A001","BB222",<title>ExampleHTML</title>,abstractPracticum-02,goal-02
+0,"A001","BB222","<title>ExampleHTML</title>",abstractPracticum-02,goal-02
 0,"A001","BB222",title-02,a,goal-02
 0,"A001","BB222",title-02,ab,goal-02
 0,"A001","BB222",title-02,Esto es un resumen de máximo 99 caracteres para abstractPracticum el campo summary del archivo csv,goal-02
