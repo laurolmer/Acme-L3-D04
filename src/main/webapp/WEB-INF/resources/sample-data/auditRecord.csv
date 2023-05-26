@@ -1,28 +1,28 @@
 key,subject,assesment,period-start,period-fin,mark,link,draft-mode,correction,key:audit
 auditing-record-01,E,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-02,Es,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-03,La frase contiene 40 caracteres en total,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-04,La frase contiene 74 caracteres para hacer realizar testeo en nuestra app.,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-05,La frase contiene 75 caracteres para hacer realizar testeo en nuestra app .,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-06,証明,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-07,证明,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-08,<p>Mi gato es muy gruñon</p>,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-09,<script>alert('adio!')</script>,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-10,texto de prueba,E,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-11,texto de prueba,Es,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-12,texto de prueba,Esta frase contiene 50 caracteres para un testeo .,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-13,texto de prueba,Esta frase contiene en total 99 caracteres para testear las restricciones de mi aplicacion ACME-L3.,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-14,texto de prueba,Esta frase contiene en total 100 caracteres para testear las restricciones de mi aplicacion ACME-L3.,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-15,texto de prueba,証明,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-16,texto de prueba,证明,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-17,texto de prueba,<p>Mi gato es muy gruñon</p>,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-18,texto de prueba,<script>alert('adio!')</script>,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-19,texto de prueba,texto de prueba,2020/12/31 23:59,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-20,texto de prueba,texto de prueba,2020/12/31 00:00,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-21,texto de prueba,texto de prueba,2021/01/01 00:00,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-22,texto de prueba,texto de prueba,2021/02/13 00:00,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-23,texto de prueba,texto de prueba,2021/02/13 12:00,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
-auditing-record-24,texto de prueba,texto de prueba,2021/02/13 19:39,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
+auditing-record-02,Es,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-03,La frase contiene 40 caracteres en total,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-04,La frase contiene 74 caracteres para hacer realizar testeo en nuestra app.,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-05,La frase contiene 75 caracteres para hacer realizar testeo en nuestra app .,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-06,証明,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-07,证明,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-08,<p>Mi gato es muy gruñon</p>,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-09,<script>alert('adio!')</script>,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-10,texto de prueba,E,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-11,texto de prueba,Es,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-12,texto de prueba,Esta frase contiene 50 caracteres para un testeo .,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-13,texto de prueba,Esta frase contiene en total 99 caracteres para testear las restricciones de mi aplicacion ACME-L3.,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-14,texto de prueba,Esta frase contiene en total 100 caracteres para testear las restricciones de mi aplicacion ACME-L3.,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-15,texto de prueba,証明,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-16,texto de prueba,证明,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-17,texto de prueba,<p>Mi gato es muy gruñon</p>,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-18,texto de prueba,<script>alert('adio!')</script>,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-19,texto de prueba,texto de prueba,2020/12/31 23:59,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-20,texto de prueba,texto de prueba,2020/12/31 00:00,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-21,texto de prueba,texto de prueba,2021/01/01 00:00,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-22,texto de prueba,texto de prueba,2021/02/13 00:00,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-23,texto de prueba,texto de prueba,2021/02/13 12:00,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
+auditing-record-24,texto de prueba,texto de prueba,2021/02/13 19:39,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,true,false,audit-01
 auditing-record-25,texto de prueba,texto de prueba,2021/02/13 23:59,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
 auditing-record-26,texto de prueba,texto de prueba,1990/01/15 09:20,2020/12/31 23:59,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01
 auditing-record-27,texto de prueba,texto de prueba,1990/01/15 09:20,2020/12/31 00:00,APLUS,https://github.com/laurolmer/Acme-L3-D02,false,false,audit-01

@@ -1,0 +1,24 @@
+recordTutorialIndex,recordSessionIndex,title,abstractSession,sessionType,startPeriod,finishPeriod,link
+13,0,#નમૂના ટેક્સ્ટ.,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,http://www.example.com
+13,1,<script>alert('exampleJS');</script>,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
+13,2,<title>ExampleHTML</title>,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
+13,3,T,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
+13,4,T1,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
+13,5,This session is going to reach 74 chars in order to prove the restriction.,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
+13,6,This session is going to reach 75 charac in order to prove the restriction.,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
+13,7,Title,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
+13,8,Title,This abstract is going to reach exactly 100 characters so it can be proven the specific restriction.,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
+13,9,Title,This abstract is going to reach exactly 99 characters so it can be proven the specific restriction.,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
+13,10,Title,A,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
+13,11,Title,A1,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
+13,12,Title,<title>ExampleHTML</title>,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
+13,13,Title,<script>alert('exampleJS');</script>,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
+13,14,Title,نص بسيط,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
+13,15,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,
+13,16,Title,Abstract,THEORY,2023/12/31 00:00,2023/12/31 05:00,
+13,17,Title,Abstract,THEORY,2023/08/21 00:00,2023/08/21 04:59,
+13,18,Title,Abstract,THEORY,2023/08/21 00:00,2023/08/21 01:00,
+13,19,Title,Abstract,THEORY,2023/08/21 00:00,2023/08/21 01:01,
+13,20,Title,Abstract,THEORY,2023/12/31 23:59,2024/01/01 01:45,
+13,21,Title,Abstract,THEORY,2022/07/31 00:00,2022/07/31 04:00,http://www.example.com
+13,22,Title,Abstract,THEORY,2100/12/31 21:30,2100/12/31 23:59,http://www.example.com

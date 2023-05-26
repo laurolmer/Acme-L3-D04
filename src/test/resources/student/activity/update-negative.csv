@@ -1,0 +1,15 @@
+enrolmentRecordIndex,activityRecordIndex,title,abstractActivity,activityType,startPeriod,endPeriod,link
+1,0,,Resume example,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.google.com/
+1,0,This title is going to reach more than 75 characters so it can trigger an error about the input's length,Resume example,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.google.com/
+1,0,Title example,,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.google.com/
+1,0,Title example,This title is going to reach more than 100 characters so it can trigger an error about the input's length,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.google.com/
+1,0,Title example,Resume example,---,2022/01/03 08:00,2022/01/04 11:00,https://www.google.com/
+1,0,Title example,Resume example,HANDS_ON,,2022/01/04 11:00,https://www.google.com/
+1,0,Title example,Resume example,HANDS_ON,1999/12/31 00:01,2022/01/04 11:00,https://www.google.com/
+1,0,Title example,Resume example,HANDS_ON,1999/12/31 23:59,2022/01/04 11:00,https://www.google.com/
+1,0,Title example,Resume example,HANDS_ON,2022/01/03 08:00,,https://www.google.com/
+1,0,Title example,Resume example,HANDS_ON,2022/01/03 08:00,2101/01/01 00:01,https://www.google.com/
+1,0,Title example,Resume example,HANDS_ON,2022/01/03 08:00,2101/01/01 00:10,https://www.google.com/
+1,0,Title example,Resume example,HANDS_ON,2022/01/04 11:00,2022/01/03 08:00,https://www.google.com/
+1,0,Title example,Resume example,HANDS_ON,2022/00/00 00:01,2000/01/01 00:10,https://www.google.com/
+1,0,Title example,Resume example,HANDS_ON,2022/01/03 08:00,2022/00/00 11:00,https://www.google.com/

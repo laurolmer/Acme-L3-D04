@@ -11,16 +11,18 @@
 assistant.dashboard.form.title.general-metrics = Indicadores generales
 
 assistant.dashboard.form.title.tutorial-time = Longitud Tutorial 
+assistant.dashboard.form.label.tutorial-time.count = Total
 assistant.dashboard.form.label.tutorial-time.average  = Media
 assistant.dashboard.form.label.tutorial-time.minimum = Mínimo
 assistant.dashboard.form.label.tutorial-time.maximum = Máximo
 assistant.dashboard.form.label.tutorial-time.deviation = Desviación
 
 assistant.dashboard.form.title.session-time = Longitud Sesión
+assistant.dashboard.form.label.session-time.count = Total
 assistant.dashboard.form.label.session-time.average = Media
 assistant.dashboard.form.label.session-time.minimum = Mínimo
 assistant.dashboard.form.label.session-time.maximum = Máximo
 assistant.dashboard.form.label.session-time.deviation = Desviación
 
 assistant.dashboard.form.label.theory-tutorials = Número de tutoriales de teoría
-assistant.dashboard.form.label.handson-tutorials = Número de tutoriales de práctica
+assistant.dashboard.form.label.handson-tutorials = Número de tutoriales balanceados

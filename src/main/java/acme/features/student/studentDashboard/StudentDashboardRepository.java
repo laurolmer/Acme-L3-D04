@@ -17,6 +17,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
 import org.springframework.data.jpa.repository.Query;
@@ -81,12 +82,12 @@ public interface StudentDashboardRepository extends AbstractRepository {
 
 	default Double averageTimeCoursesByStudentId(final int studentId) {
 		final Map<Course, Double> totalTimeCourse = this.totalTimeCoursesByStudent(studentId);
-		return totalTimeCourse.entrySet().stream().collect(Collectors.summingDouble(x -> x.getValue())) / totalTimeCourse.keySet().size();
+		return totalTimeCourse.entrySet().stream().collect(Collectors.summingDouble(Entry::getValue)) / totalTimeCourse.size();
 	}
 
 	default Double deviationTimeCoursesByStudentId(final int studentId, final Double averageValue) {
 		final Map<Course, Double> totalTimeCourse = this.totalTimeCoursesByStudent(studentId);
-		return Math.sqrt(totalTimeCourse.entrySet().stream().collect(Collectors.summingDouble(x -> Math.pow(x.getValue() - averageValue, 2.))) / totalTimeCourse.keySet().size());
+		return Math.sqrt(totalTimeCourse.entrySet().stream().collect(Collectors.summingDouble(x -> Math.pow(x.getValue() - averageValue, 2.))) / totalTimeCourse.size());
 	}
 
 	default Double minimumTimeCoursesOfStudentId(final int studentId) {

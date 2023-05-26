@@ -50,10 +50,8 @@ public class AuditorAuditCreateService extends AbstractService<Auditor, Audit> {
 	@Override
 	public void bind(final Audit object) {
 		assert object != null;
-
 		final int courseId = super.getRequest().getData("course", int.class);
 		final Course course = this.repository.findCourseById(courseId);
-
 		super.bind(object, "code", "conclusion", "strongPoints", "weakPoints", "draftMode");
 		final Auditor auditor = this.repository.findAuditorByAccountId(super.getRequest().getPrincipal().getAccountId());
 		object.setAuditor(auditor);
@@ -63,15 +61,20 @@ public class AuditorAuditCreateService extends AbstractService<Auditor, Audit> {
 	@Override
 	public void validate(final Audit object) {
 		assert object != null;
-
+		boolean validCourse = false;
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 
 			final boolean existing = this.repository.existsAuditWithCode(object.getCode());
 			super.state(!existing, "code", "auditor.audit.error.code.duplicated");
 		}
+		if (!super.getBuffer().getErrors().hasErrors("course")) {
+			final Integer courseId = super.getRequest().getData("course", Integer.class);
+			validCourse = courseId != null && courseId > 0;
+			super.state(validCourse, "*", "auditor.audit.error.course.null");
+		}
 
-		super.state(!object.getCourse().isDraftMode(), "courseCode", "auditor.audit.error.course.null");
-
+		if (validCourse)
+			super.state(!object.getCourse().isDraftMode(), "courseCode", "auditor.audit.error.course.null");
 	}
 
 	@Override
