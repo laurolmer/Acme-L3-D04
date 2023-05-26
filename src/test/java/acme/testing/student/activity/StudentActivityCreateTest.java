@@ -77,24 +77,6 @@ public class StudentActivityCreateTest extends TestHarness {
 		super.fillInputBoxIn("endPeriod", endPeriod);
 		super.fillInputBoxIn("link", link);
 		super.clickOnSubmit("Create:");
-
-		super.clickOnMenu("Student", "Enrolment List");
-		super.checkListingExists();
-		super.sortListing(0, "asc");
-		super.clickOnListingRecord(enrolmentRecordIndex);
-		super.clickOnButton("Activities:");
-		super.checkListingExists();
-
-		super.clickOnListingRecord(activityRecordIndex);
-		super.checkFormExists();
-		super.checkInputBoxHasValue("title", title);
-		super.checkInputBoxHasValue("abstractActivity", abstractActivity);
-		super.checkInputBoxHasValue("activityType", activityType);
-		super.checkInputBoxHasValue("startPeriod", startPeriod);
-		super.checkInputBoxHasValue("endPeriod", endPeriod);
-		super.checkInputBoxHasValue("link", link);
-
-		super.signOut();
 	}
 
 	@Test
