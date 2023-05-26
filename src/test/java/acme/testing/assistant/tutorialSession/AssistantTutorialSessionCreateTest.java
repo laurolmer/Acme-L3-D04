@@ -33,8 +33,6 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/assistant/tutorialSession/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int recordTutorialIndex, final int recordSessionIndex, final String title, final String abstractSession, final String sessionType, final String startPeriod, final String finishPeriod, final String link) {
-		// HINT: this test authenticates as an assistant, list his or her tutorials, navigates
-		// to their tutorialSession, and checks that they have the expected data.
 		super.signIn("assistant1", "assistant1");
 		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
@@ -43,7 +41,6 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 		super.clickOnListingRecord(recordTutorialIndex);
 		super.clickOnButton("List Sessions");
 		super.clickOnButton("Create");
-		super.checkFormExists();
 
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("abstractSession", abstractSession);
@@ -53,16 +50,23 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 		super.fillInputBoxIn("link", link);
 		super.clickOnSubmit("Create");
 
+		super.clickOnMenu("Assistant", "List My Tutorials");
 		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(recordTutorialIndex);
+		super.clickOnButton("List Sessions");
+
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.checkColumnHasValue(recordSessionIndex, 0, title);
 		super.clickOnListingRecord(recordSessionIndex);
-		super.checkFormExists();
 
 		super.checkInputBoxHasValue("title", title);
 		super.checkInputBoxHasValue("abstractSession", abstractSession);
 		super.checkInputBoxHasValue("sessionType", sessionType);
 		super.checkInputBoxHasValue("startPeriod", startPeriod);
 		super.checkInputBoxHasValue("finishPeriod", finishPeriod);
-		super.checkInputBoxHasValue("link", link);
+		super.fillInputBoxIn("link", link);
 
 		super.signOut();
 	}

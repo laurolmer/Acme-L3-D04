@@ -42,7 +42,7 @@ public class AssistantTutorialSessionShowService extends AbstractService<Assista
 		session = this.repository.findTutorialSessionById(sessionId);
 		tutorial = this.repository.findTutorialByTutorialSessionId(sessionId);
 		assistant = session == null ? null : session.getTutorial().getAssistant();
-		status = session != null && (!tutorial.isDraftMode() || principal.hasRole(assistant));
+		status = tutorial != null && session != null && assistant.getId() == principal.getActiveRoleId() && principal.hasRole(Assistant.class);
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -66,7 +66,6 @@ public class AssistantTutorialSessionShowService extends AbstractService<Assista
 		estimatedTotalTime = tutorialSession.computeEstimatedTotalTime();
 		if (estimatedTotalTime != null)
 			tuple.put("estimatedTotalTime", estimatedTotalTime);
-		//tuple.put("finishPeriod", tutorialSession.computeEstimatedTotalTime());
 		tuple.put("masterId", super.getRequest().getData("id", int.class));
 		tuple.put("sessionType", choices);
 		tuple.put("draftMode", tutorialSession.getTutorial().isDraftMode());

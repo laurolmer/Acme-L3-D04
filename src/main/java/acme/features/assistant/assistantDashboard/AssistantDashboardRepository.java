@@ -63,8 +63,8 @@ public interface AssistantDashboardRepository extends AbstractRepository {
 	@Query("select ts from TutorialSession ts where ts.tutorial.id = :id")
 	Collection<TutorialSession> findSessionsByTutorialId(int id);
 
-	@Query("select t.course from Tutorial t")
-	Collection<Course> findAllCourses();
+	@Query("select t.course from Tutorial t where t.assistant.id = :assistantId")
+	Collection<Course> findAllCoursesFromAssistantId(int assistantId);
 
 	@Query("select l from Lecture l inner join CourseLecture cl on l = cl.lecture inner join Course c on cl.course = c where c.id = :id")
 	Collection<Lecture> findLecturesByCourseId(int id);
@@ -76,15 +76,14 @@ public interface AssistantDashboardRepository extends AbstractRepository {
 	Collection<Tutorial> findTutorialsByAssistantId(int id);
 
 	// AUXILIARY METHODS
-	default Map<CourseType, Collection<Course>> coursesRegardingCourseType() {
+	default Map<CourseType, Collection<Course>> coursesRegardingCourseType(final int assistantId) {
 		final Map<CourseType, Collection<Course>> coursesByType = new HashMap<>();
-		final Collection<Course> allCourses = this.findAllCourses();
+		final Collection<Course> allCourses = this.findAllCoursesFromAssistantId(assistantId);
 		for (final Course c : allCourses) {
 			final CourseType ct = c.computeCourseType(this.findLecturesByCourseId(c.getId()));
 			Collection<Course> coursesListByType = new ArrayList<>();
-			if (coursesByType.containsKey(ct)) {
+			if (coursesByType.containsKey(ct))
 				coursesListByType = coursesByType.get(ct);
-			}
 			coursesListByType.add(c);
 			coursesByType.put(ct, coursesListByType);
 		}

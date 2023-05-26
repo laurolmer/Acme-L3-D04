@@ -65,6 +65,21 @@ public class AssistantTutorialSessionDeleteTest extends TestHarness {
 	@CsvFileSource(resources = "/assistant/tutorialSession/delete-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test200Negative(final int recordTutorialIndex, final int sessionRecordIndex) {
 		// HINT: this test attempts to delete a session with wrong data.
+		super.signIn("assistant1", "assistant1");
+		super.clickOnMenu("Assistant", "List My Tutorials");
+		super.checkListingExists();
+
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(recordTutorialIndex);
+
+		super.clickOnButton("List Sessions");
+		super.checkListingExists();
+
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(sessionRecordIndex);
+
+		super.checkNotButtonExists("Delete");
+		super.signOut();
 	}
 
 	@Test

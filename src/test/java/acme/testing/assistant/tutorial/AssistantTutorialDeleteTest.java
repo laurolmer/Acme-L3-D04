@@ -44,10 +44,19 @@ public class AssistantTutorialDeleteTest extends TestHarness {
 		super.signOut();
 	}
 
-	@Test
-	public void test200Negative() {
-		// HINT: there aren't any negative tests for this feature because it's a delete
-		// that doesn't involve entering any data in any forms.
+	@ParameterizedTest
+	@CsvFileSource(resources = "/assistant/tutorial/delete-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test200Negative(final int recordTutorialIndex) {
+		// HINT: this test attempts to publish a tutorial that cannot be published.
+		super.signIn("assistant1", "assistant1");
+		super.clickOnMenu("Assistant", "List My Tutorials");
+		super.checkListingExists();
+
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(recordTutorialIndex);
+
+		super.checkNotButtonExists("Delete");
+		super.signOut();
 	}
 
 	public void test300Hacking() {
