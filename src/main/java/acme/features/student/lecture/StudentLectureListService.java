@@ -48,7 +48,7 @@ public class StudentLectureListService extends AbstractService<Student, Lecture>
 		final Collection<Lecture> objects;
 		final int courseId = super.getRequest().getData("courseId", int.class);
 		final Collection<CourseLecture> courseLectures = this.repository.findCourseLectureByCourseId(courseId);
-		objects = courseLectures.stream().map(courseLecture -> courseLecture.getLecture()).collect(Collectors.toList());
+		objects = courseLectures.stream().map(CourseLecture::getLecture).collect(Collectors.toList());
 		super.getResponse().setGlobal("courseId", courseId);
 		super.getBuffer().setData(objects);
 	}

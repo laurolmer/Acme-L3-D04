@@ -1,0 +1,25 @@
+practicumRecordIndex,course,code,title,abstractPracticum,goals
+0,"A006","A001",Title,Abstract,Goals
+1,"A006","AA002",Title,Abstract,Goals
+2,"A006","AAA003",Title,Abstract,Goals
+3,"A006","AAA004","This title is going to reach exactly 75chr so the restriction can be proved",Abstract,Goals
+4,"A006","AAA005","This title will reach exactly 75 - 1 char so the restriction can be proved",Abstract,Goals
+5,"A006","AAA006","T",Abstract,Goals
+6,"A006","AAA007","Ti",Abstract,Goals
+7,"A006","AAA008","<title>ExampleHTML</title>",Abstract,Goals
+8,"A006","AAA009","<script>alert('exampleJS');</script>",Abstract,Goals
+9,"A006","AAA010","示例文本",Abstract,Goals
+10,"A006","AAA011",Title,"This explanation is going to reach 100 charac so the restriction can be proved in the maximum value.",Goals
+11,"A006","AAA012",Title,"This explanation is going to reach 100-1 chars so the restriction can be proved in the max-1 value.",Goals
+12,"A006","AAA013",Title,"A",Goals
+13,"A006","AAA014",Title,"A1",Goals
+14,"A006","AAA015",Title,"<title>ExampleHTML</title>",Goals
+15,"A006","AAA016",Title,"<script>alert('exampleJS');</script>",Goals
+16,"A006","AAA017",Title,"示例文本",Goals
+17,"A006","AAA018",Title,Abstract,"This text for goals will reach 100 characters so the restriction can be proved in the maximum value."
+18,"A006","AAA019",Title,Abstract,"This text for goals will reach 100 - 1 chars so the restriction can be proved in the max - 1 value."
+19,"A006","AAA020",Title,Abstract,"G"
+20,"A006","AAA021",Title,Abstract,"G1"
+21,"A006","AAA022",Title,Abstract,"<title>ExampleHTML</title>"
+22,"A006","AAA023",Title,Abstract,"<script>alert('exampleJS');</script>"
+23,"A006","AAA024",Title,Abstract,"示例文本"

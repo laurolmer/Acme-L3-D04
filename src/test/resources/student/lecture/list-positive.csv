@@ -1,0 +1,11 @@
+courseRecordIndex,lectureRecordIndex,title,activityType
+0,0,title-lecture,HANDS_ON
+0,1,title-lecture,THEORETICAL
+1,0,T,THEORETICAL
+1,1,title-lecture,HANDS_ON
+2,0,title-lecture,HANDS_ON
+2,1,title-lecture,THEORETICAL
+3,0,title-lecture,HANDS_ON
+3,1,title-lecture,THEORETICAL
+4,0,title-lecture,HANDS_ON
+4,1,title-lecture,THEORETICAL

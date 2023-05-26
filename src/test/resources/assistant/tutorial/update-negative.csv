@@ -1,0 +1,30 @@
+tutorialRecordIndex,course,code,title,abstractTutorial,goals
+11,---,,Title,Abstract,Goals
+11,A003,T,Title,Abstract,Goals
+11,A003,0,Title,Abstract,Goals
+11,A003,03,Title,Abstract,Goals
+11,A003,033,Title,Abstract,Goals
+11,A003,T0,Title,Abstract,Goals
+11,A003,T03,Title,Abstract,Goals
+11,A003,T0341,Title,Abstract,Goals
+11,A003,TT,Title,Abstract,Goals
+11,A003,TT0,Title,Abstract,Goals
+11,A003,TT03,Title,Abstract,Goals
+11,A003,TT0341,Title,Abstract,Goals
+11,A003,TTT,Title,Abstract,Goals
+11,A003,TTT0,Title,Abstract,Goals
+11,A003,TTT03,Title,Abstract,Goals
+11,A003,TTTT0341,Title,Abstract,Goals
+11,A003,randomInput,Title,Abstract,Goals
+11,A003,123.45,Title,Abstract,Goals
+11,A003,-123,Title,Abstract,Goals
+11,A003,true,Title,Abstract,Goals
+11,A003,2023/01/01 00:00,Title,Abstract,Goals
+11,A003,T010,Title,Abstract,Goals
+11,A003,T010,Title,Abstract,Goals
+11,A003,T035,,Abstract,Goals
+11,A003,T036,This title is going to reach more than 75 characters so it can trigger an error about the input's length,Abstract,Goals
+11,A003,T037,Title,,Goals
+11,A003,T038,Title,"This title is going to reach more than 100 characters so it can trigger an error about the input's length",Goals
+11,A003,T039,Title,Abstract,
+11,A003,T040,Title,Abstract,This title is going to reach more than 100 characters so it can trigger an error about the input's length

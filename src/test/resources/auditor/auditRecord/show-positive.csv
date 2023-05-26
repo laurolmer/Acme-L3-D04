@@ -1,0 +1,9 @@
+auditRecordIndex,auditRecordRecordIndex,subject,link,assesment,startDate,finishDate,mark
+0,0,E,https://github.com/laurolmer/Acme-L3-D02,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS
+0,1,Es,https://github.com/laurolmer/Acme-L3-D02,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS
+0,2,La frase contiene 40 caracteres en total,texto de prueba,https://github.com/laurolmer/Acme-L3-D02,1990/01/15 09:20,1990/01/15 09:20,APLUS
+0,3,La frase contiene 74 caracteres para hacer realizar testeo en nuestra app.,https://github.com/laurolmer/Acme-L3-D02,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS
+0,4,La frase contiene 75 caracteres para hacer realizar testeo en nuestra app .,https://github.com/laurolmer/Acme-L3-D02,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS
+0,5,証明,https://github.com/laurolmer/Acme-L3-D02,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS
+0,6,证明,https://github.com/laurolmer/Acme-L3-D02,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS
+0,7,<p>Mi gato es muy gruñon</p>,https://github.com/laurolmer/Acme-L3-D02,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS

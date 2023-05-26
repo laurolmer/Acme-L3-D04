@@ -1,0 +1,15 @@
+practicumRecordIndex,PracticumSessionRecordIndex,title,abstract-session,start,end,link,code
+6,0,,abstractSession-00,2024/01/01 08:00,2024/01/08 08:00,https://www.google.com,AA000
+6,1,Probando un titulo que tenga como máximo 76 caracteres para el campo titleAAAAAAAAAAAAAAAAA.,abstractSession-04,2024/04/01 08:00,2024/04/08 08:00,,AA004
+6,2,title-00,,2024/07/01 08:00,2024/07/08 08:00,https://www.google.com,AA007
+6,3,title-01,Esto es un resumen de máximo 101 caracteres para abstractPracticum el campo summary del archivo csv.AAAAAAAAAAAAAAA,2024/10/01 08:00,2024/10/08 08:00,,AA010
+6,4,title-02,abstractSession-00,,2024/01/08 08:00,https://www.google.com,AA000
+6,5,title-02,abstractSession-00,2024/01/08 08:00,2024/01/08 08:00,https://www.google.com,AA000
+6,6,title-02,abstractSession-00,2024/01/01 08:00,,https://www.google.com,AA000
+6,7,title-02,abstractSession-00,2024/01/01 08:00,2024/01/02 08:00,https://www.google.com,AA000
+6,8,title-02,abstractSession-00,2024/01/01 08:00,2024/01/08 08:00,https://www.google.com,AA000
+6,9,title-02,abstractSession-00,2024/01/01 08:00,2024/01/08 08:00,AAAAAA,AA000
+6,10,title-02,abstractSession-00,2024/01/01 08:00,2024/01/08 08:00,https://www.google.com,000
+6,11,title-02,abstractSession-00,2024/01/01 08:00,2024/01/08 08:00,https://www.google.com,aa000
+6,12,title-02,abstractSession-00,2024/01/01 08:00,2024/01/08 08:00,https://www.google.com,AA0000
+6,13,title-02,abstractSession-00,2024/01/01 08:00,2024/01/08 08:00,https://www.google.com,AAAAA000

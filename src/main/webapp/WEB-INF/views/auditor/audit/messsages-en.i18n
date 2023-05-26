@@ -17,7 +17,9 @@ auditor.audit.list.label.conclusion = Conclusion
 auditor.audit.list.label.courseId = Course Id
 auditor.audit.list.label.courseCode = Course Code
 auditor.audit.list.label.course = Course
-auditor.audit.form.label.draftMode = Released
+auditor.audit.list.label.released = Drafted
+auditor.audit.list.label.draftMode = Drafted
+
 
 # Messages for label in form
 auditor.audit.form.label.code = Code
@@ -25,7 +27,8 @@ auditor.audit.form.label.conclusion = Conclusion
 auditor.audit.form.label.strongPoints = StrongPoints
 auditor.audit.form.label.weakPoints = WeakPoints
 auditor.audit.form.label.courseCode = Course Code
-auditor.audit.form.label.released = Released
+auditor.audit.form.label.released = Drafted
+auditor.audit.form.label.draftMode = Drafted
 auditor.audit.form.label.marks = Marks
 
 auditor.audit.form.button.update = Update
@@ -37,5 +40,5 @@ auditor.audit.list.button.create = Create
 auditor.audit.form.button.addCorrect = Add correction
 
 
-auditor.audit.form.button.auditRecords.list = Audit Records list
+auditor.audit.form.button.auditRecords.list = Audit Records List
 auditor.audit.form.button.auditRecords.create = Audit Record create

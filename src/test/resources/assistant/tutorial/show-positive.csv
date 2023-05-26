@@ -1,0 +1,8 @@
+recordTutorialIndex,course,code,title,abstractTutorial,goals
+0,A004,T003,How to publish a course.,Example abstract.,"goal-1, goal-2, goal-3"
+1,A004,T004,This title is going to reach exactly 75chr so the restriction can be proved,Example abstract.,"goal-1, goal-2, goal-3"
+2,A005,T005,This title will reach exactly 75 - 1 char so the restriction can be proved,Example abstract.,"goal-1, goal-2, goal-3"
+3,A004,T006,T,Example abstract.,"goal-1, goal-2, goal-3"
+4,A003,T013,"How to publish a course.","T","goal-1, goal-2, goal-3"
+5,A004,T014,"How to publish a course.","T1","goal-1, goal-2, goal-3"
+

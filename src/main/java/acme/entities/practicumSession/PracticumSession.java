@@ -1,6 +1,7 @@
 
 package acme.entities.practicumSession;
 
+import java.time.Duration;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -18,6 +19,7 @@ import org.hibernate.validator.constraints.URL;
 
 import acme.entities.practicum.Practicum;
 import acme.framework.data.AbstractEntity;
+import acme.framework.helpers.MomentHelper;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -44,11 +46,11 @@ public class PracticumSession extends AbstractEntity {
 	protected String			abstractSession;
 
 	@NotNull
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				start;
 
 	@NotNull								//(at least one week ahead, at least one week long)
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				end;
 
 	@URL
@@ -60,18 +62,20 @@ public class PracticumSession extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 
-	//	public double computeEstimatedTotalTime() {
-	//		double estimatedTotalTime;
-	//		Duration timeBetween;
-	//		timeBetween = MomentHelper.computeDuration(this.start, this.end);
-	//		estimatedTotalTime = timeBetween.toHours();
-	//		return estimatedTotalTime;
-	//	}
+
+	public double computeEstimatedTotalTime() {
+		double estimatedTotalTime;
+		Duration timeBetween;
+		timeBetween = MomentHelper.computeDuration(this.start, this.end);
+		estimatedTotalTime = timeBetween.toHours();
+		return estimatedTotalTime;
+	}
 
 	// Relationships ----------------------------------------------------------
+
 
 	@Valid
 	@NotNull
 	@ManyToOne(optional = false)
-	protected Practicum			practicum;
+	protected Practicum practicum;
 }
