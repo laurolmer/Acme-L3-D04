@@ -23,8 +23,6 @@ public class CompanyPracticumSessionController extends AbstractController<Compan
 	@Autowired
 	private CompanyPracticumSessionDeleteService	deleteService;
 	@Autowired
-	private CompanyPracticumSessionConfirmService	confirmService;
-	@Autowired
 	private CompanyPracticumSessionListService		listService;
 
 
@@ -36,7 +34,5 @@ public class CompanyPracticumSessionController extends AbstractController<Compan
 		super.addBasicCommand("update", this.updateService);
 		super.addBasicCommand("delete", this.deleteService);
 		super.addBasicCommand("list", this.listService);
-
-		super.addCustomCommand("confirm", "update", this.confirmService);
 	}
 }

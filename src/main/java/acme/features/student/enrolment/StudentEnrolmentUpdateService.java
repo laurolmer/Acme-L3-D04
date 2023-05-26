@@ -46,12 +46,12 @@ public class StudentEnrolmentUpdateService extends AbstractService<Student, Enro
 	public void authorise() {
 		boolean status;
 		int enrolmentId;
+		final int id;
 		Enrolment enrolment;
-		Student student;
+		id = super.getRequest().getPrincipal().getAccountId();
 		enrolmentId = super.getRequest().getData("id", int.class);
 		enrolment = this.repository.findEnrolmentById(enrolmentId);
-		student = enrolment == null ? null : enrolment.getStudent();
-		status = enrolment != null && !enrolment.isDraftMode() || super.getRequest().getPrincipal().hasRole(student);
+		status = enrolment.isDraftMode() && enrolment.getStudent().getUserAccount().getId() == id;
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -83,13 +83,11 @@ public class StudentEnrolmentUpdateService extends AbstractService<Student, Enro
 	@Override
 	public void validate(final Enrolment object) {
 		assert object != null;
-		final Enrolment otherEnrolment;
+		Enrolment enrolment;
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
-			otherEnrolment = this.repository.findAEnrolmentByCode(object.getCode());
-			super.state(otherEnrolment == null || otherEnrolment.getCode().equals(object.getCode()) && otherEnrolment.getId() == object.getId(), "code", "student.enrolment.form.error.code");
+			enrolment = this.repository.findAEnrolmentByCode(object.getCode());
+			super.state(enrolment.getCode().equals(object.getCode()) && enrolment.getId() == object.getId(), "code", "student.enrolment.form.error.code");
 		}
-		if (!super.getBuffer().getErrors().hasErrors("course"))
-			super.state(!object.getCourse().isDraftMode(), "course", "student.enrolment.error.course-in-draft");
 	}
 
 	@Override
@@ -104,9 +102,11 @@ public class StudentEnrolmentUpdateService extends AbstractService<Student, Enro
 		SelectChoices choices;
 		Collection<Course> courses;
 		Tuple tuple;
+		final String estimatedTotalTime = super.getRequest().getData("estimatedTotalTime", String.class);
 		courses = this.repository.findNotInDraftCourses();
 		choices = SelectChoices.from(courses, "code", object.getCourse());
 		tuple = super.unbind(object, "code", "motivation", "goals", "course");
+		tuple.put("estimatedTotalTime", estimatedTotalTime);
 		tuple.put("draftMode", object.isDraftMode());
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);

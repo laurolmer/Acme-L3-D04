@@ -49,14 +49,6 @@ master.menu.bulletin.list = List all bulletins
 master.menu.administrator.bulletin.form = Create a Bulletin
 
 master.menu.offer.list= List all offers
-master.menu.authenticated.exchange-money.perform = Exchange Money
-
-
-# master.menu.assistant ###################################################
-
-master.menu.assistant = Assistant
-master.menu.assistant.tutorial.list-mine = List my tutorials
-master.menu.assistant.tutorial.list-all = List all tutorials
 
 
 # master.menu.administrator.offer ###################################################
@@ -98,9 +90,10 @@ master.menu.lecturer.lecture.dashboard = Dashboard
 
 # master.menu.company ###################################################
 
-master.menu.company= Practicums
-master.menu.company.practicum.list-mine = List my practicum
-master.menu.company.practicum.list-all = List all practicum
+master.menu.company= Company
+master.menu.company.practicum.list-mine = List my practicums
+master.menu.company.practicum.list-all = List all practicums
+master.menu.company.dashboard= DashBoard
 
 # master.menu.studentCourse ##########################################################
 
@@ -130,3 +123,5 @@ master.menu.user-account.student = Student data
 master.menu.user-account.become-student = Become a student
 master.menu.user-account.lecturer = Lecturer data
 master.menu.user-account.become-lecturer = Become a lecturer
+master.menu.user-account.become-auditor = Become an auditor
+master.menu.user-account.auditor = Auditor data

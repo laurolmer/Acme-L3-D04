@@ -37,4 +37,3 @@ public class ExchangeMoney extends AbstractForm {
 	public Date					date;
 
 }
-

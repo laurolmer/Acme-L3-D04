@@ -60,18 +60,18 @@ public class StudentDashboardShowService extends AbstractService<Student, Studen
 		final Student student;
 
 		final Statistic activityLength;
-		final double averageActivityLength;
-		final double deviationActivityLength;
-		final double minimumActivityLength;
-		final double maximumActivityLength;
-		int countActivity;
+		final Double averageActivityLength;
+		final Double deviationActivityLength;
+		final Double minimumActivityLength;
+		final Double maximumActivityLength;
+		final int countActivity;
 
 		final Statistic courseLength;
-		final double averageCourseLength;
-		final double deviationCourseLength;
-		final double minimumCourseLength;
-		final double maximumCourseLength;
-		int countCourse;
+		final Double averageCourseLength;
+		final Double deviationCourseLength;
+		final Double minimumCourseLength;
+		final Double maximumCourseLength;
+		final int countCourse;
 
 		final Map<String, Integer> activitiesByActivityType;
 
@@ -80,17 +80,17 @@ public class StudentDashboardShowService extends AbstractService<Student, Studen
 		student = this.repository.findStudentByUserAccountId(userAccountId);
 		studentId = student.getId();
 
-		averageActivityLength = this.repository.findAverageActivityLength(studentId);
-		deviationActivityLength = this.repository.findDeviationActivityLength(studentId);
-		minimumActivityLength = this.repository.findMinimumActivityLength(studentId);
-		maximumActivityLength = this.repository.findMaximumActivityLength(studentId);
+		averageActivityLength = this.repository.findAverageActivityLength(studentId) == null ? 0 : this.repository.findAverageActivityLength(studentId);
+		deviationActivityLength = this.repository.findDeviationActivityLength(studentId) == null ? 0 : this.repository.findDeviationActivityLength(studentId);
+		minimumActivityLength = this.repository.findMinimumActivityLength(studentId) == null ? 0 : this.repository.findMinimumActivityLength(studentId);
+		maximumActivityLength = this.repository.findMaximumActivityLength(studentId) == null ? 0 : this.repository.findMaximumActivityLength(studentId);
 		countActivity = this.repository.findCountActivity(studentId);
 		activityLength = new Statistic(countActivity, averageActivityLength, minimumActivityLength, maximumActivityLength, deviationActivityLength);
 
-		averageCourseLength = this.repository.averageTimeCoursesByStudentId(studentId);
-		deviationCourseLength = this.repository.deviationTimeCoursesByStudentId(studentId, averageCourseLength);
-		minimumCourseLength = this.repository.minimumTimeCoursesOfStudentId(studentId);
-		maximumCourseLength = this.repository.maximumTimeCoursesOfStudentId(studentId);
+		averageCourseLength = this.repository.averageTimeCoursesByStudentId(studentId) == null ? 0 : this.repository.averageTimeCoursesByStudentId(studentId);
+		deviationCourseLength = this.repository.deviationTimeCoursesByStudentId(studentId, averageCourseLength) == null ? 0 : this.repository.deviationTimeCoursesByStudentId(studentId, averageCourseLength);
+		minimumCourseLength = this.repository.minimumTimeCoursesOfStudentId(studentId) == null ? 0 : this.repository.minimumTimeCoursesOfStudentId(studentId);
+		maximumCourseLength = this.repository.maximumTimeCoursesOfStudentId(studentId) == null ? 0 : this.repository.maximumTimeCoursesOfStudentId(studentId);
 		countCourse = this.repository.findCountEnrolment(studentId);
 		courseLength = new Statistic(countCourse, averageCourseLength, minimumCourseLength, maximumCourseLength, deviationCourseLength);
 

@@ -41,7 +41,13 @@ public class StudentEnrolmentListService extends AbstractService<Student, Enrolm
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		final boolean status;
+		final Principal principal;
+
+		principal = super.getRequest().getPrincipal();
+		status = principal.hasRole(Student.class);
+
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override

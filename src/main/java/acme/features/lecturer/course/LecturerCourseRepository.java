@@ -71,8 +71,7 @@ public interface LecturerCourseRepository extends AbstractRepository {
 		final int theoreticalLectures = this.numLecturesFromCourseByType(id, LectureType.THEORETICAL);
 		if (handsOnLectures > theoreticalLectures)
 			return CourseType.HANDS_ON;
-		else
-			return CourseType.THEORY_COURSE;
+		return CourseType.THEORY_COURSE;
 	}
 
 	@Query("select c.acceptedCurrencies from Configuration c")

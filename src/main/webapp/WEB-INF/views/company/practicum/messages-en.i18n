@@ -13,6 +13,7 @@ company.practicum.form.label.title = Title
 company.practicum.form.label.abstractPracticum = Abstract
 company.practicum.form.label.goals = Goals
 company.practicum.form.label.course = Course
+company.practicum-session.label.estimatedTotalTime= EstimatedTotalTime
 company.practicum.form.label.draftMode= DraftMode 
 
 
@@ -32,3 +33,4 @@ company.practicum.list.button.publish = Publish
 company.practicum.form.button.practicumSession= Sessions
 
 company.practicum.form.error.code-uniqueness = The code is repeated and it must be unique.
+company.practicum.form.error.praticum-without-session= Need Session to be publish.

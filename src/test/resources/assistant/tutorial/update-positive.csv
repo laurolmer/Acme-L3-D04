@@ -1,0 +1,25 @@
+tutorialRecordIndex,course,code,title,abstractTutorial,goals
+11,A003,A000,Title,Abstract,Goals
+0,A003,A001,This title is going to reach exactly 75chr so the restriction can be proved,Abstract,Goals
+0,A003,A002,This title will reach exactly 75 - 1 char so the restriction can be proved,Abstract,Goals
+0,A003,A003,T,Abstract,Goals
+0,A003,A004,Ti,Abstract,Goals
+0,A003,A005,<title>ExampleHTML</title>,Abstract,Goals
+0,A003,A006,<script>alert('exampleJS');</script>,Abstract,Goals
+0,A003,A007,示例文本,Abstract,Goals
+0,A003,A008,Title,This explanation is going to reach 100 charac so the restriction can be proved in the maximum value.,Goals
+0,A003,A009,Title,This explanation is going to reach 100-1 chars so the restriction can be proved in the max-1 value.,Goals
+0,A003,A010,Title,A,Goals
+0,A003,A003,A012,A1,Goals
+0,A003,A013,Title,<title>ExampleHTML</title>,Goals
+0,A003,A014,Title,<script>alert('exampleJS');</script>,Goals
+0,A003,A015,Title,Образец текста,Goals
+0,A003,A016,Title,Abstract,This text for goals will reach 100 characters so the restriction can be proved in the maximum value.
+0,A003,A017,Title,Abstract,This text for goals will reach 100 - 1 chars so the restriction can be proved in the max - 1 value.
+0,A003,A018,Title,Abstract,G
+0,A003,A019,Title,Abstract,G1
+0,A003,A020,Title,Abstract,<title>ExampleHTML</title>
+0,A003,A021,Title,Abstract,<script>alert('exampleJS');</script>
+0,A003,A022,Title,Abstract,ข้อความตัวอย่าง
+0,A003,AB000,Title,Abstract,Goals
+0,A003,ABC000,Title,Abstract,Goals
