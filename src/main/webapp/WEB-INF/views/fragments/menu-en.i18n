@@ -61,10 +61,6 @@ master.menu.administrator.offer.list = Offers list
 master.menu.auditor = Auditor
 master.menu.auditor.audit.list = My audits
 
-# master.menu.provider ########################################################
-
-master.menu.provider = Provider
-master.menu.provider.favourite-link = Favourite Link
 
 # master.menu.assistant ########################################################
 
@@ -72,11 +68,6 @@ master.menu.assistant = Assistant
 master.menu.assistant.tutorial.list-mine = List My Tutorials
 master.menu.assistant.tutorial.list-all = List All Tutorials
 master.menu.assistant.dashboard = Assistant's Dashboard
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumer
-master.menu.consumer.favourite-link = Favourite link
 
 # master.menu.lecturer ##########################################################
 

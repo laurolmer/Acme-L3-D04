@@ -66,17 +66,6 @@ master.menu.administrator.offer.list = Lista de ofertas
 master.menu.auditor = Auditor
 master.menu.auditor.audit.list = Mis auditorías
 
-# master.menu.provider ########################################################
-
-master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
-
-
 # master.menu.assistant ########################################################
 
 master.menu.assistant = Asistente

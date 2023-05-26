@@ -89,11 +89,13 @@ public class ConfigurationUpdateService extends AbstractService<Administrator, C
 	@Override
 	public void perform(final Configuration object) {
 		assert object != null;
+		String currencyList = "";
 		final String[] currencies = super.getRequest().getData("acceptedCurrencies", String.class).split(",");
 		final Set<String> currenciesSet = new HashSet<>();
 		for (final String currency : currencies)
 			currenciesSet.add(currency);
-		object.setAcceptedCurrencies(currenciesSet.toString().replaceAll("[\\[\\]]", ""));
+		currencyList = currenciesSet.toString().replaceAll("[\\[\\]]", "");
+		object.setAcceptedCurrencies(currencyList.replaceAll(", ", ","));
 		this.repository.save(object);
 	}
 
