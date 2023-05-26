@@ -24,7 +24,7 @@ public class LecturerCourseShowPublishedTest extends TestHarness {
 
 		super.clickOnMenu("Lecturer", "List my courses");
 		super.checkListingExists();
-		super.sortListing(1, "asc");
+		super.sortListing(0, "asc");
 
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
@@ -37,7 +37,10 @@ public class LecturerCourseShowPublishedTest extends TestHarness {
 		super.checkInputBoxHasValue("courseType", courseType);
 		super.checkInputBoxHasValue("estimatedTotalTime", estimatedTotalTime);
 		super.checkLinkExists("Lectures list");
-		super.checkButtonExists("Return");
+		super.checkLinkExists("Return");
+		super.checkNotSubmitExists("Update");
+		super.checkNotSubmitExists("Delete");
+		super.checkNotSubmitExists("Publish");
 
 		super.signOut();
 	}

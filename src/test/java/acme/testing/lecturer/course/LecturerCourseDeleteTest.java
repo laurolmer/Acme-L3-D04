@@ -31,6 +31,7 @@ public class LecturerCourseDeleteTest extends TestHarness {
 		super.clickOnListingRecord(recordIndex);
 		super.checkInputBoxHasValue("code", code);
 		super.checkInputBoxHasValue("published", "false");
+		super.checkSubmitExists("Delete");
 		super.clickOnSubmit("Delete");
 		super.checkNotErrorsExist();
 

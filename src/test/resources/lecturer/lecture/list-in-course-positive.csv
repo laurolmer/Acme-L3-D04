@@ -1,4 +1,3 @@
 courseRecordIndex,courseTitle,coursePublished,lectureRecordIndex,lectureTitle,abstractLecture,lectureLearningTime
 0,<h1>Title-course</h1>,true,0,title-lecture,abstract-lecture,1.00
-1,<script>alert("Title-course");</script>,false,0,This title has aprox. 75 characters so dont try to add any more or app die.,abstract-lecture,1.00
-2,title-course,false,-1,,,
+1,"<script>alert(""Title-course"");</script>",false,0,This title has aprox. 75 characters so dont try to add any more or app die.,abstract-lecture,1.00

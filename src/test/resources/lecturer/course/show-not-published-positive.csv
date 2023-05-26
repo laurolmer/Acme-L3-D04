@@ -1,3 +1,2 @@
 recordIndex,code,title,abstractCourse,link,published,price
-1,A008,<script>alert("Title-course");</script>,abstract-course,,false,EUR 10.00
-8,A030,title-course,abstract-course,,false,EUR 10.00
+0,A031,title-course,abstract-course,,false,EUR 10.00

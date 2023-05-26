@@ -33,6 +33,7 @@ public class LecturerCourseLectureDeleteTest extends TestHarness {
 
 		super.checkLinkExists("Lectures list");
 		super.clickOnButton("Lectures list");
+		super.checkLinkExists("Delete");
 		super.clickOnButton("Delete");
 
 		super.checkInputBoxHasValue("courseCode", courseCode);

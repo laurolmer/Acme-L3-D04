@@ -1,4 +1,4 @@
 recordIdex,title,abstractLecture,lectureLearningTime
 0,<h1>Title-lecture</h1>,abstract-lecture,1.00
 1,<script>alert("Title-lecture");</script>,abstract-lecture,1.00
-4,T,abstract-lecture,1.00
+4,This title has aprox. 75 characters so dont try to add any more or app die.,abstract-lecture,1.00

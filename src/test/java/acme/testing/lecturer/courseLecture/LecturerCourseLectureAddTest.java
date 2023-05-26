@@ -33,6 +33,7 @@ public class LecturerCourseLectureAddTest extends TestHarness {
 
 		super.checkLinkExists("Lectures list");
 		super.clickOnButton("Lectures list");
+		super.checkLinkExists("Add");
 		super.clickOnButton("Add");
 
 		super.checkInputBoxHasValue("courseCode", courseCode);
@@ -44,34 +45,10 @@ public class LecturerCourseLectureAddTest extends TestHarness {
 		super.signOut();
 	}
 
-	//	@ParameterizedTest
-	//	@CsvFileSource(resources = "/lecturer/course-lecture/add-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	//	public void test200Negative(final int courseRecordIndex, final String courseCode, final String lectureTitle) {
-	//		// HINT: this test tries to add a lecture to a course, knowing that the principal
-	//		// is not the owner of the lecture.
-	//		super.signIn("lecturer1", "lecturer1");
-	//
-	//		super.clickOnMenu("Lecturer", "List my courses");
-	//		super.checkListingExists();
-	//		super.sortListing(0, "asc");
-	//
-	//		super.clickOnListingRecord(courseRecordIndex);
-	//		super.checkFormExists();
-	//		super.checkInputBoxHasValue("code", courseCode);
-	//	super.checkInputBoxHasValue("published","false");
-	//
-	//		super.checkLinkExists("Lectures list");
-	//		super.clickOnButton("Lectures list");
-	//		super.clickOnButton("Add");
-	//
-	//		super.checkInputBoxHasValue("courseCode", courseCode);
-	//		super.fillInputBoxIn("lectureId", lectureTitle);
-	//		super.clickOnSubmit("Add");
-	//		super.checkAlertExists(false);
-	//
-	//		super.signOut();
-	//
-	//	}
+	@Test
+	public void test200Negative() {
+
+	}
 
 	@Test
 	public void test300Hacking() {

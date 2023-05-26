@@ -27,6 +27,7 @@ public class LecturerCourseCreateTest extends TestHarness {
 		super.fillInputBoxIn("courseAbstract", abstractCourse);
 		super.fillInputBoxIn("link", link);
 		super.fillInputBoxIn("retailPrice", price);
+		super.checkSubmitExists("Create");
 		super.clickOnSubmit("Create");
 
 		super.clickOnMenu("Lecturer", "List my courses");
@@ -45,6 +46,11 @@ public class LecturerCourseCreateTest extends TestHarness {
 		super.checkInputBoxHasValue("link", link);
 		super.checkInputBoxHasValue("published", published);
 
+		super.checkLinkExists("Lectures list");
+		super.checkLinkExists("Return");
+		super.checkSubmitExists("Update");
+		super.checkSubmitExists("Delete");
+		super.checkSubmitExists("Publish");
 		super.clickOnButton("Lectures list");
 		super.checkListingExists();
 		super.checkListingEmpty();

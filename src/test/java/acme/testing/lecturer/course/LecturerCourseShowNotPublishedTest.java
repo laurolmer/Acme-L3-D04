@@ -20,7 +20,7 @@ public class LecturerCourseShowNotPublishedTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/lecturer/course/show-not-published-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int recordIndex, final String code, final String title, final String abstractCourse, final String link, final String published, final String price) {
-		super.signIn("lecturer1", "lecturer1");
+		super.signIn("lecturer2", "lecturer2");
 
 		super.clickOnMenu("Lecturer", "List my courses");
 		super.checkListingExists();
@@ -35,10 +35,10 @@ public class LecturerCourseShowNotPublishedTest extends TestHarness {
 		super.checkInputBoxHasValue("link", link);
 		super.checkInputBoxHasValue("published", published);
 		super.checkLinkExists("Lectures list");
-		super.checkButtonExists("Update");
-		super.checkButtonExists("Delete");
-		super.checkButtonExists("Publish");
-		super.checkButtonExists("Return");
+		super.checkSubmitExists("Update");
+		super.checkSubmitExists("Delete");
+		super.checkSubmitExists("Publish");
+		super.checkLinkExists("Return");
 
 		super.signOut();
 	}

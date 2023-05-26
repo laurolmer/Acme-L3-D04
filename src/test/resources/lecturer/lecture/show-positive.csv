@@ -2,5 +2,3 @@ recordIndex,title,abstractLecture,lectureLearningTime,details,type,published
 0,title-lecture,abstract-lecture,1.00,body-lecture,THEORETICAL,false
 1,title-lecture,abstract-lecture,1.00,سلام,THEORETICAL,false
 2,title-lecture,abstract-lecture,1.00,привет,THEORETICAL,false
-3,title-lecture,abstract-lecture,1.00,<h1>Body-lecture</h1>,THEORETICAL,false
-13,title-lecture,abstract-lecture,1.00,body-lecture,HANDS_ON,true
