@@ -14,6 +14,7 @@ package acme.features.administrator.configuration;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -75,10 +76,10 @@ public class ConfigurationUpdateService extends AbstractService<Administrator, C
 		// SystemCurrency has pattern
 		if (super.getBuffer().getErrors().hasErrors("defaultCurrency"))
 			super.state(!object.getDefaultCurrency().matches("^[A-Z]{3}$"), "defaultCurrency", "administrator.configuration.form.error.defaultCurrency");
-		final boolean b = systemCurrency.contains(object.getDefaultCurrency());
-		super.state(b, "defaultCurrency", "administrator.configuration.form.error.not-found-in-list");
-		final boolean b2 = systemCurrency.containsAll(currencies);
-		super.state(b2, "acceptedCurrencies", "administrator.configuration.form.error.not-found-in-system");
+		final boolean currencyInList = systemCurrency.contains(object.getDefaultCurrency());
+		super.state(currencyInList, "defaultCurrency", "administrator.configuration.form.error.not-found-in-list");
+		final boolean currencyInSystem = systemCurrency.containsAll(currencies);
+		super.state(currencyInSystem, "acceptedCurrencies", "administrator.configuration.form.error.not-found-in-system");
 		// AcceptedCurrencies has pattern
 		if (super.getBuffer().getErrors().hasErrors("acceptedCurrencies"))
 			super.state(!object.getAcceptedCurrencies().matches("^[A-Z]{3}(,[A-Z]{3})*$"), "acceptedCurrencies", "administrator.configuration.form.error.pattern.accepted-currencies");
@@ -88,7 +89,11 @@ public class ConfigurationUpdateService extends AbstractService<Administrator, C
 	@Override
 	public void perform(final Configuration object) {
 		assert object != null;
-
+		final String[] currencies = super.getRequest().getData("acceptedCurrencies", String.class).split(",");
+		final Set<String> currenciesSet = new HashSet<>();
+		for (final String currency : currencies)
+			currenciesSet.add(currency);
+		object.setAcceptedCurrencies(currenciesSet.toString().replaceAll("[\\[\\]]", ""));
 		this.repository.save(object);
 	}
 

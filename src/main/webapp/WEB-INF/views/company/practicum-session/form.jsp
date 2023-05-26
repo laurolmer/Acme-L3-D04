@@ -27,10 +27,9 @@
             <acme:submit code="company.practicum-session.form.button.update" action="/company/practicum-session/update"/>
             <acme:submit code="company.practicum-session.form.button.delete" action="/company/practicum-session/delete"/>
         </jstl:when>
-        <jstl:when test="${acme:anyOf(_command, 'show|update|delete|confirm') && draftMode == false && confirmed==false}">
+        <jstl:when test="${acme:anyOf(_command, 'show|update|delete') && draftMode == false && confirmed==false}">
             <acme:submit code="company.practicum-session.form.button.update" action="/company/practicum-session/update"/>
             <acme:submit code="company.practicum-session.form.button.delete" action="/company/practicum-session/delete"/>
-            <acme:submit code="company.practicum-session.form.button.confirm" action="/company/practicum-session/confirm"/>
         </jstl:when>
         <jstl:when test="${_command == 'create'}">
             <acme:submit code="company.practicum-session.form.button.create" action="/company/practicum-session/create?masterId=${masterId}"/>

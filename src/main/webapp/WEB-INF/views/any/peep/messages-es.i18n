@@ -20,6 +20,7 @@ any.peep.form.label.publish= Publicado
 any.peep.list.title = Título
 any.peep.list.nick = Nombre
 any.peep.list.message = Mensaje
+any.peep.list.moment = Momento
 
 any.peep.form.button.publish= Publicar Peep
 any.peep.form.button.create = Crear Peep

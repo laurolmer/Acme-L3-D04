@@ -43,25 +43,25 @@ public interface LecturerDashboardRepository extends AbstractRepository {
 	@Query("select sum(abs(time_to_sec(timediff(cl.lecture.endPeriod,cl.lecture.startPeriod))/3600.0)) from CourseLecture cl where cl.course.lecturer.id = :lecturerId group by cl.course.id")
 	Collection<Double> getCoursesTimeByLecturerId(int lecturerId);
 
-	public static Double avgCourseTimeByLecturerId(final Collection<Double> coursesTimes) {
+	static Double avgCourseTimeByLecturerId(final Collection<Double> coursesTimes) {
 		if (!coursesTimes.isEmpty())
 			return coursesTimes.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
 		return 0.0;
 	}
 
-	public static Double maxCourseTimeByLecturerId(final Collection<Double> coursesTimes) {
+	static Double maxCourseTimeByLecturerId(final Collection<Double> coursesTimes) {
 		if (!coursesTimes.isEmpty())
 			return coursesTimes.stream().mapToDouble(Double::doubleValue).max().getAsDouble();
 		return 0.0;
 	}
 
-	public static Double minCourseTimeByLecturerId(final Collection<Double> coursesTimes) {
+	static Double minCourseTimeByLecturerId(final Collection<Double> coursesTimes) {
 		if (!coursesTimes.isEmpty())
 			return coursesTimes.stream().mapToDouble(Double::doubleValue).min().getAsDouble();
 		return 0.0;
 	}
 
-	public static Double deviationCourseTimeByLecturerId(final Collection<Double> coursesTimes) {
+	static Double deviationCourseTimeByLecturerId(final Collection<Double> coursesTimes) {
 		if (!coursesTimes.isEmpty()) {
 			final Double avg = LecturerDashboardRepository.avgCourseTimeByLecturerId(coursesTimes);
 			final Double squareSum = coursesTimes.stream().mapToDouble(t -> Math.pow(t - avg, 2)).sum();

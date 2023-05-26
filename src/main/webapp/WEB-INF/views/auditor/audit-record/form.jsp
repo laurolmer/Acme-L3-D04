@@ -28,7 +28,7 @@
 	<acme:input-textbox code="auditor.auditRecord.form.label.assesment" path="assesment"/>
 	<acme:input-url code="auditor.auditRecord.form.label.link" path="link"/>
 	<acme:input-textbox code="auditor.auditRecord.form.label.released" path="draftMode" readonly="true"/>
-	<acme:input-textbox code="auditor.auditRecord.form.label.periodStart" path="periodStart"/>
+	<acme:input-moment code="auditor.auditRecord.form.label.periodStart" path="periodStart"/>
 	<acme:input-moment code="auditor.auditRecord.form.label.periodFin" path="periodFin"/>
 	<acme:input-moment code="auditor.auditRecord.form.label.hours" path="hours" readonly="true"/>
 	<acme:input-select code="auditor.auditRecord.form.label.mark" path="mark" choices="${elecs}"/>

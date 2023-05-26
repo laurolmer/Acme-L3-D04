@@ -1,0 +1,6 @@
+recordPracticumIndex,code,title
+0,FFF666,Probando un titulo que tenga como máximo 74 caracteres para el campo title
+1,GGG777,Probando un titulo que tenga como máximo 75 caracteres para el campo title.
+3,III999,<title>ExampleHTML</title>
+4,JJJ000,<script>alert('exampleJS');</script>
+5,MMM111,title-04

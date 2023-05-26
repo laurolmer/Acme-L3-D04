@@ -37,13 +37,15 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 	@Override
 	public void authorise() {
 		boolean status;
-		Principal principal;
 		Tutorial tutorial;
 		int tutorialId;
+		Principal principal;
+		Assistant assistant;
+		principal = super.getRequest().getPrincipal();
 		tutorialId = super.getRequest().getData("masterId", int.class);
 		tutorial = this.repository.findTutorialById(tutorialId);
-		principal = super.getRequest().getPrincipal();
-		status = tutorial != null && (tutorial.isDraftMode() || principal.hasRole(Assistant.class));
+		assistant = tutorial == null ? null : tutorial.getAssistant();
+		status = tutorial != null && tutorial.isDraftMode() && principal.hasRole(Assistant.class) && assistant.getId() == principal.getActiveRoleId();
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -56,7 +58,6 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 		tutorial = this.repository.findTutorialById(tutorialId);
 		tutorialSession = new TutorialSession();
 		tutorialSession.setStartPeriod(MomentHelper.getCurrentMoment());
-		tutorialSession.setDraftMode(true);
 		tutorialSession.setTutorial(tutorial);
 		super.getBuffer().setData(tutorialSession);
 	}
@@ -64,12 +65,9 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 	@Override
 	public void bind(final TutorialSession tutorialSession) {
 		assert tutorialSession != null;
-		Date finishPeriod;
-		double estimatedTotalTime;
-		estimatedTotalTime = super.getRequest().getData("finishPeriod", Double.class);
-		finishPeriod = tutorialSession.deltaFromStartMoment(estimatedTotalTime);
+		final Date endPeriod;
+		final double estimatedTotalTime;
 		super.bind(tutorialSession, "title", "abstractSession", "sessionType", "startPeriod", "finishPeriod", "link");
-		tutorialSession.setFinishPeriod(finishPeriod);
 	}
 
 	@Override
@@ -83,7 +81,7 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 		// El periodo de inicio de la sesión de tutoría debe ser mínimo un día después a la fecha actual.
 		if (!super.getBuffer().getErrors().hasErrors("startPeriod")) {
 			minStartPeriod = MomentHelper.deltaFromCurrentMoment(1, ChronoUnit.DAYS);
-			super.state(MomentHelper.isAfter(tutorialSession.getStartPeriod(), minStartPeriod), "startPeriod", "assistant.session.startPeriod-before-instantiationMoment");
+			super.state(MomentHelper.isAfterOrEqual(tutorialSession.getStartPeriod(), minStartPeriod), "startPeriod", "assistant.session.startPeriod-before-instantiationMoment");
 		}
 		// El periodo de finalización debe ser posterior al periodo de inicio.
 		if (!super.getBuffer().getErrors().hasErrors("finishPeriod"))
@@ -120,13 +118,13 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 		SelectChoices choices;
 		Double estimatedTotalTime;
 		choices = SelectChoices.from(SessionType.class, tutorialSession.getSessionType());
-		tuple = super.unbind(tutorialSession, "title", "abstractSession", "sessionType", "startPeriod", "finishPeriod", "link", "draftMode");
+		tuple = super.unbind(tutorialSession, "title", "abstractSession", "sessionType", "startPeriod", "finishPeriod", "link");
 		estimatedTotalTime = tutorialSession.computeEstimatedTotalTime();
 		if (estimatedTotalTime != null)
-			tuple.put("finishPeriod", estimatedTotalTime);
+			tuple.put("estimatedTotalTime", estimatedTotalTime);
 		tuple.put("masterId", super.getRequest().getData("masterId", int.class));
 		tuple.put("sessionType", choices);
-		tuple.put("draftMode", tutorialSession.getTutorial().isDraftMode() && tutorialSession.isDraftMode());
+		tuple.put("draftMode", tutorialSession.getTutorial().isDraftMode());
 		super.getResponse().setData(tuple);
 	}
 }

@@ -59,7 +59,7 @@ public class AuditorAuditRecordPublishService extends AbstractService<Auditor, A
 			if (!MomentHelper.isBefore(object.getPeriodStart(), object.getPeriodFin()))
 				super.state(false, "periodStart", "auditor.auditRecord.error.date.StartFinError");
 			else
-				super.state(!(object.getARDuration() <= 1), "startDate", "auditor.auditRecord.error.date.oneHourRule");
+				super.state((object.getARDuration() > 1), "startDate", "auditor.auditRecord.error.date.oneHourRule");
 
 	}
 
