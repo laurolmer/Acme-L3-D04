@@ -1,0 +1,10 @@
+auditRecordIndex,auditRecordRecordIndex,subject,link,assesment,startDate,finishDate,mark
+29,9,prueba,,prueba,2019/02/02 15:30,02/02/2019 20:30,APLUS
+29,9,prueba,,prueba,02/02/2019 11:30,2019/02/02 15:30,APLUS
+29,9,Esta proposicion contiene mas de 100 caracteres para testear la base de datos de mi aplicacion de ACME-L3 .,https://www.google.com/search?client=opera-gx&q=cuanto+es+giga&sourceid=opera&ie=UTF-8&oe=UTF-8,prueba,2019/02/02 11:30,2019/02/02 15:30,APLUS
+29,9,prueba,,prueba,2019/02/02 11:30,2019/02/02 15:30,APLUS
+29,9,prueba,https://www.google.com/search?client=opera-gx&q=cuanto+es+giga&sourceid=opera&ie=UTF-8&oe=UTF-8,Esta proposicion contiene mas de 100 caracteres para testear la base de datos de mi aplicacion de ACME-L3 .,2019/02/02 11:30,2019/02/02 15:30,FMINUS
+29,9,証明,https://www.google.com/search?client=opera-gx&q=cuanto+es+giga&sourceid=opera&ie=UTF-8&oe=UTF-8,prueba,2019/02/02 11:30,2019/02/02 15:30,null
+29,9,prueba,hola,prueba,2019/02/02 11:30,2019/02/02 15:30,APLUS
+29,9,prueba,,prueba,02/02/2019 11:30,2019/02/02 15:30,APLUS
+29,9,prueba,,prueba,2019/02/02 11:30,02/02/2019 15:30,APLUS

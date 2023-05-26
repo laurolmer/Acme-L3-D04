@@ -1,0 +1,4 @@
+auditRecordIndex,auditRecordRecordIndex,subject,nextSubject
+0,1,Es,La frase contiene 40 caracteres en total
+0,2,La frase contiene 40 caracteres en total,La frase contiene 74 caracteres para hacer realizar testeo en nuestra app.
+0,3,La frase contiene 74 caracteres para hacer realizar testeo en nuestra app.,La frase contiene 75 caracteres para hacer realizar testeo en nuestra app .

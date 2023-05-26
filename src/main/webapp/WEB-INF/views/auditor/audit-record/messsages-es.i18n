@@ -24,8 +24,8 @@ auditor.auditRecord.form.label.link = Link
 auditor.auditRecord.form.label.mark = Nota
 auditor.auditRecord.form.label.released = Borrador
 auditor.auditRecord.form.label.confirmated = Confirmado
-auditor.auditRecord.form.label.periodStart= Hora de inicio
-auditor.auditRecord.form.label.periodFin = Hora de finalización
+auditor.auditRecord.form.label.periodStart= Fecha de inicio
+auditor.auditRecord.form.label.periodFin = Fecha de finalización
 auditor.auditRecord.form.label.hours = Horas de duración
 
 auditor.audit.form.button.update = Actualizar
