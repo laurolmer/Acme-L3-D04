@@ -10,8 +10,8 @@ course-08,ZA010,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
 course-09,GV547,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
 course-10,MHI863,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
 course-11,OPK209,title-course,abstract-course,EUR 10.00,null,true,lecturer-01
-course-12,A003,T,abstract-course,EUR 10.00,null,false,lecturer-01
-course-13,A004,Ti,abstract-course,EUR 10.00,null,false,lecturer-01
+course-12,A003,Z,abstract-course,EUR 10.00,null,false,lecturer-01
+course-13,A004,Zi,abstract-course,EUR 10.00,null,false,lecturer-01
 course-14,A005,This title has aprox. 75 characters so dont try to add any more or app die.,abstract-course,EUR 10.00,null,false,lecturer-01
 course-15,A006,This title has aprox. 74 characters so dont try to add any more or app die,abstract-course,EUR 10.00,null,false,lecturer-01
 course-16,A007,<h1>Title-course</h1>,abstract-course,EUR 10.00,null,false,lecturer-01

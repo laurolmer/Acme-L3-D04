@@ -55,7 +55,7 @@ public class LecturerLectureCreateService extends AbstractService<Lecturer, Lect
 	public void bind(final Lecture object) {
 		assert object != null;
 
-		double estimatedLearningTime;
+		Double estimatedLearningTime;
 		Date endPeriod;
 		int activeRoleId;
 		Lecturer lecturer;
@@ -77,7 +77,7 @@ public class LecturerLectureCreateService extends AbstractService<Lecturer, Lect
 		assert object != null;
 
 		if (!super.getBuffer().getErrors().hasErrors("endPeriod")) {
-			final boolean eval = object.computeEstimatedLearningTime() > 0.0;
+			final boolean eval = object.computeEstimatedLearningTime() > 0.00;
 			super.state(eval, "endPeriod", "lecturer.lecture.error.estimatedLearningTime");
 		}
 	}

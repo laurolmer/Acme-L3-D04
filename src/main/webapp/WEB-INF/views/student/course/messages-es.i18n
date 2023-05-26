@@ -19,8 +19,5 @@ student.course.form.label.lecturer = Alma Mater:
 student.course.list.label.code = Codigo:
 student.course.list.label.title = Titulo:
 student.course.list.label.courseAbstract = Resumen:
-student.course.list.label.courseType = Tipo de Curso:
-student.course.list.label.retailPrice = Precio:
-student.course.list.label.link = Link:
 
 student.course.form.button.lecture = Clases:

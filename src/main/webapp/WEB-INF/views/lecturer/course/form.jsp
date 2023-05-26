@@ -16,19 +16,17 @@
 		<acme:input-double code="lecturer.course.label.courseType" path="courseType" readonly="true"/>
 		<acme:input-textbox code="lecturer.course.label.estimatedTotalTime" path="estimatedTotalTime" readonly="true"/>
 	</jstl:if>
-	
-	<jstl:if test="${ _command == 'create' }" >
+	<jstl:choose> 
+		<jstl:when  test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode }">	
+			<acme:submit code="lecturer.course.button.update" action="/lecturer/course/update"/>
+			<acme:submit code="lecturer.course.button.delete" action="/lecturer/course/delete"/>		
+			<acme:submit code="lecturer.course.button.publish" action="/lecturer/course/publish"/>		
+		</jstl:when>
+		<jstl:when test="${ _command == 'create' }" >
 		<acme:submit code="lecturer.course.button.create" action="/lecturer/course/create"/>
-	</jstl:if>
-	
+		</jstl:when>
+	</jstl:choose>
 	<jstl:if test="${ _command != 'create' && !lectureList}">
 		<acme:button code="lecturer.course.button.lectureList" action="/lecturer/lecture/list?courseId=${id}"/>
 	</jstl:if>
-	
-	<jstl:if test="${ _command != 'create' && draftMode }">	
-		<acme:submit code="lecturer.course.button.update" action="/lecturer/course/update"/>
-		<acme:submit code="lecturer.course.button.delete" action="/lecturer/course/delete"/>		
-		<acme:submit code="lecturer.course.button.publish" action="/lecturer/course/publish"/>		
-	</jstl:if>
-	
 </acme:form>

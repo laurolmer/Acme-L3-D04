@@ -1,0 +1,34 @@
+recordIndex,code,Title,abstractCourse,price,link
+0,,,,,
+0,,Title,Abstract,EUR 10.00,https://hola.com
+0,T,Title,Abstract,EUR 10.00,https://hola.com
+0,0,Title,Abstract,EUR 10.00,https://hola.com
+0,03,Title,Abstract,EUR 10.00,https://hola.com
+0,033,Title,Abstract,EUR 10.00,https://hola.com
+0,T0,Title,Abstract,EUR 10.00,https://hola.com
+0,T03,Title,Abstract,EUR 10.00,https://hola.com
+0,T0341,Title,Abstract,EUR 10.00,https://hola.com
+0,TT,Title,Abstract,EUR 10.00,https://hola.com
+0,TT0,Title,Abstract,EUR 10.00,https://hola.com
+0,TT03,Title,Abstract,EUR 10.00,https://hola.com
+0,TT0341,Title,Abstract,EUR 10.00,https://hola.com
+0,TTT,Title,Abstract,EUR 10.00,https://hola.com
+0,TTT0,Title,Abstract,EUR 10.00,https://hola.com
+0,TTT03,Title,Abstract,EUR 10.00,https://hola.com
+0,TTTT0341,Title,Abstract,EUR 10.00,https://hola.com
+0,randomInput,Title,Abstract,EUR 10.00,https://hola.com
+0,123.45,Title,Abstract,EUR 10.00,https://hola.com
+0,-123,Title,Abstract,EUR 10.00,https://hola.com
+0,true,Title,Abstract,EUR 10.00,https://hola.com
+0,2023/01/01 00:00,Title,Abstract,EUR 10.00,https://hola.com
+0,T010,,Abstract,EUR 10.00,https://hola.com
+0,T010,This Title has aprox. 75 characters so dont try to add any more or app die..,Abstract,EUR 10.00,https://hola.com
+0,T010,Title,,EUR 10.00,https://hola.com
+0,T010,Title,This summary has aprox 100 characters so dont try add any more or ap'll die with terrible suffering..,EUR 10.00,https://hola.com
+0,T010,Title,Abstract,,https://hola.com
+0,T010,Title,Abstract,EUR,https://hola.com
+0,T010,Title,Abstract,123,https://hola.com
+0,T010,Title,Abstract,123.45,https://hola.com
+0,T010,Title,Abstract,EUR -10.00,https://hola.com
+0,T010,Title,Abstract,EUR 10.00,url
+0,T010,Title,Abstract,EUR 10.00,123

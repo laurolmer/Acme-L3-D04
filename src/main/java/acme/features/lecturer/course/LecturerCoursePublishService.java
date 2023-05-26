@@ -90,6 +90,11 @@ public class LecturerCoursePublishService extends AbstractService<Lecturer, Cour
 		if (!super.getBuffer().getErrors().hasErrors("retailPrice")) {
 			final double retailPrice = object.getRetailPrice().getAmount();
 			super.state(retailPrice >= 0, "retailPrice", "lecturer.course.error.retailPrice.negative");
+
+			final String currency = object.getRetailPrice().getCurrency();
+			final String acceptedCurrencies = this.repository.findAcceptedCurrencies();
+			final boolean validCurrency = acceptedCurrencies.contains(currency);
+			super.state(validCurrency, "retailPrice", "lecturer.course.error.retailPrice.currency");
 		}
 
 		courseId = object.getId();
@@ -98,7 +103,7 @@ public class LecturerCoursePublishService extends AbstractService<Lecturer, Cour
 		hasHandsOnLecturesInCourse = this.repository.hasACourseHandsOnLecturesByCourseId(courseId);
 
 		super.state(hasLectures, "*", "lecturer.course.form.error.noLecture");
-		super.state(hasLecturesNotPublished, "*", "lecturer.course.form.error.lectureNotPublished");
+		super.state(!hasLecturesNotPublished, "*", "lecturer.course.form.error.lectureNotPublished");
 		super.state(hasHandsOnLecturesInCourse, "*", "lecturer.course.form.error.noHandsOn");
 	}
 
@@ -125,6 +130,7 @@ public class LecturerCoursePublishService extends AbstractService<Lecturer, Cour
 		tuple.put("courseType", courseType);
 		tuple.put("estimatedTotalTime", estimatedTotalTime);
 		tuple.put("published", !object.isDraftMode());
+		tuple.put("draftMode", object.isDraftMode());
 		super.getResponse().setData(tuple);
 	}
 }

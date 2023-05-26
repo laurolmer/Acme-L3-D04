@@ -1,0 +1,36 @@
+recordTutorialIndex,recordSessionIndex,title,abstractSession,sessionType,startPeriod,finishPeriod,link
+11,0,,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,http://www.example.com
+11,0,This session is going to reach over 75 characters in order to trigger a restriction.,Abstract,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,http://www.example.com
+11,0,Title,,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
+11,0,Title,This abstract is going to reach more than 100 characters so it can trigger a specific restriction to see if it works.,HANDS_ON,2023/08/21 19:30,2023/08/21 20:45,
+11,0,Title,Abstract,---,2023/08/21 19:30,2023/08/21 20:45,
+11,0,Title,Abstract,THEORY,,2023/08/21 20:45,
+11,0,Title,Abstract,THEORY,2023/08/21,2023/08/21 20:45,
+11,0,Title,Abstract,THEORY,19:30,2023/08/21 20:45,
+11,0,Title,Abstract,THEORY,notADate,2023/08/21 20:45,
+11,0,Title,Abstract,THEORY,123.45,2023/08/21 20:45,
+11,0,Title,Abstract,THEORY,-123,2023/08/21 20:45,
+11,0,Title,Abstract,THEORY,false,2023/08/21 20:45,
+11,0,Title,Abstract,THEORY,2023/08/21 19:30,,
+11,0,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21,
+11,0,Title,Abstract,THEORY,2023/08/21 19:30,20:45,
+11,0,Title,Abstract,THEORY,2023/08/21 19:30,notADate,
+11,0,Title,Abstract,THEORY,2023/08/21 19:30,123.45,
+11,0,Title,Abstract,THEORY,2023/08/21 19:30,-123,
+11,0,Title,Abstract,THEORY,2023/08/21 19:30,false,
+11,0,Title,Abstract,THEORY,2023/08/21 00:00,2023/08/21 00:30,
+11,0,Title,Abstract,THEORY,2023/08/21 00:00,2023/08/21 00:59,
+11,0,Title,Abstract,THEORY,2023/08/21 00:00,2023/08/21 07:00,
+11,0,Title,Abstract,THEORY,2023/08/21 00:00,2023/08/21 05:01,
+11,0,Title,Abstract,THEORY,1999/12/31 23:59,2000/01/01 03:00,
+11,0,Title,Abstract,THEORY,1999/01/01 00:00,1999/01/01 03:00,
+11,0,Title,Abstract,THEORY,2000/01/01 03:00,1999/12/31 23:59,
+11,0,Title,Abstract,THEORY,2101/01/01 00:00,2101/01/01 03:00,
+11,0,Title,Abstract,THEORY,2100/12/31 23:59,2101/01/01 03:00,
+11,0,Title,Abstract,THEORY,2101/12/31 23:59,2100/01/01 03:00,
+11,0,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,not-A-URL
+11,0,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,123.45
+11,0,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,123
+11,0,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,2023/08/21
+11,0,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,00:00
+11,0,Title,Abstract,THEORY,2023/08/21 19:30,2023/08/21 20:45,true

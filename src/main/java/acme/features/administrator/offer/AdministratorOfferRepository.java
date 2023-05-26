@@ -21,4 +21,7 @@ public interface AdministratorOfferRepository extends AbstractRepository {
 
 	@Query("select o from Offer o where o.availabilityPeriodEnd > :currentMoment")
 	Collection<Offer> findAllNotFinishedOffers(Date currentMoment);
+
+	@Query("SELECT c.acceptedCurrencies FROM Configuration c")
+	String findAllAcceptedCurrencies();
 }

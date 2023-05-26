@@ -23,4 +23,4 @@ assistant.dashboard.form.label.session-time.maximum = Maximum
 assistant.dashboard.form.label.session-time.deviation = Deviation
 
 assistant.dashboard.form.label.theory-tutorials = Number of Theory Tutorials
-assistant.dashboard.form.label.handson-tutorials = Number of Hands-On Tutorials
+assistant.dashboard.form.label.handson-tutorials = Number of Balanced Tutorials

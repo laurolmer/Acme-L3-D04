@@ -43,7 +43,7 @@ public class LecturerLectureUpdateService extends AbstractService<Lecturer, Lect
 		principal = super.getRequest().getPrincipal();
 		userAccountId = principal.getAccountId();
 
-		status = object.getLecturer().getUserAccount().getId() == userAccountId;
+		status = object.getLecturer().getUserAccount().getId() == userAccountId && object.isDraftMode();
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -63,7 +63,7 @@ public class LecturerLectureUpdateService extends AbstractService<Lecturer, Lect
 	public void bind(final Lecture object) {
 		assert object != null;
 
-		final double estimatedLearningTime;
+		final Double estimatedLearningTime;
 		final Date endPeriod;
 		int activeRoleId;
 		Lecturer lecturer;
