@@ -17,7 +17,8 @@ auditor.audit.list.label.conclusion = Conclusion
 auditor.audit.list.label.courseId = Id del curso
 auditor.audit.list.label.courseCode = Código del curso
 auditor.audit.list.label.course = Curso
-auditor.audit.form.label.draftMode = Publicado
+auditor.audit.list.label.released = Borrador
+auditor.audit.list.label.draftMode = Borrador
 
 
 # Messages for label in form
@@ -26,7 +27,8 @@ auditor.audit.form.label.conclusion = Conclusion
 auditor.audit.form.label.strongPoints = PuntosFuertes
 auditor.audit.form.label.weakPoints = PuntosDébiles
 auditor.audit.form.label.courseCode = Código del curso
-auditor.audit.form.label.released = Publicado
+auditor.audit.form.label.released = Borrador
+auditor.audit.form.label.draftMode = Borrador
 auditor.audit.form.label.marks = Notas
 
 auditor.audit.form.button.update = Actualizar

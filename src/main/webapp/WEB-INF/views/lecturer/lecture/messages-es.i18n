@@ -23,3 +23,12 @@ lecturer.lecture.error.estimatedLearningTime = Tiempo estimado debe ser positivo
 ## UPDATE --------------------------------------------------------------------------
 
 lecturer.lecture.error.draftMode.published = No se puede actualizar una lección ya publicada
+
+## PUBLISH -------------------------------------------------------------------------
+
+lecturer.lecture.error.dataNotFilled = No se puede publicar una lección con campos obligatorios vacíos
+
+## DELETE --------------------------------------------------------------------------
+
+lecturer.lecture.error.delete = No se puede borrar una lección ya publicada
+lecturer.lecture.error.deleteLectureAssigned = No se puede borrar una lección asociada a un curso

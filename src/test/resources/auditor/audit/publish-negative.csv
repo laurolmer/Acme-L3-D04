@@ -1,0 +1,4 @@
+auditIndex,code,conclusion,strong-points,weak-points,course
+0,A969,Esta frase contiene en total mas de 100 caracteres para testear las restricciones de mi aplicacion ACME-L3 y esperamos un fallo,texto de prueba,texto de prueba,A006
+0,A969,texto de prueba,Esta frase contiene en total mas de 100 caracteres para testear las restricciones de mi aplicacion ACME-L3 y esperamos un fallo,texto de prueba,A006
+0,A969,texto de prueba,texto de prueba,Esta frase contiene en total mas de 100 caracteres para testear las restricciones de mi aplicacion ACME-L3 y esperamos un fallo,A006

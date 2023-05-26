@@ -26,6 +26,7 @@ lecturer.course.button.lectureList = Lista de lecciones
 lecturer.course.error.draftMode.published = No se puede crear un curso ya publicado
 lecturer.course.error.code.duplicated = El código de curso ya está en uso
 lecturer.course.error.retailPrice.negative = El precio debe ser mayor de cero
+lecturer.course.error.retailPrice.currency = Tipo de moneda inválido
  
 ## PUBLISH ----------------------------------------------------------------------------
 

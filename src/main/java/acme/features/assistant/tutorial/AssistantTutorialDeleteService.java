@@ -39,7 +39,7 @@ public class AssistantTutorialDeleteService extends AbstractService<Assistant, T
 		tutorialId = super.getRequest().getData("id", int.class);
 		tutorial = this.repository.findTutorialById(tutorialId);
 		assistant = tutorial == null ? null : tutorial.getAssistant();
-		status = tutorial != null && tutorial.isDraftMode() || super.getRequest().getPrincipal().hasRole(assistant);
+		status = tutorial != null && tutorial.isDraftMode() && super.getRequest().getPrincipal().hasRole(assistant);
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -89,7 +89,7 @@ public class AssistantTutorialDeleteService extends AbstractService<Assistant, T
 		Collection<Course> courses;
 		Tuple tuple;
 		courses = this.repository.findNotInDraftCourses();
-		choices = SelectChoices.from(courses, "title", object.getCourse());
+		choices = SelectChoices.from(courses, "code", object.getCourse());
 		tuple = super.unbind(object, "code", "title", "abstractTutorial", "goals", "course");
 		tuple.put("draftMode", object.isDraftMode());
 		tuple.put("course", choices.getSelected().getKey());

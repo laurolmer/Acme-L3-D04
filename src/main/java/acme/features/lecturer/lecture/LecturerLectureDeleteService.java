@@ -71,6 +71,16 @@ public class LecturerLectureDeleteService extends AbstractService<Lecturer, Lect
 	@Override
 	public void validate(final Lecture object) {
 		assert object != null;
+
+		boolean isLectureAssigned;
+
+		if (!super.getBuffer().getErrors().hasErrors("draftMode")) {
+			final boolean draftMode = object.isDraftMode();
+			super.state(draftMode, "draftMode", "lecturer.lecture.error.draftMode.delete");
+		}
+
+		isLectureAssigned = this.repository.isLectureAssignedById(object.getId());
+		super.state(!isLectureAssigned, "*", "lecturer.lecture.error.deleteLectureAssigned");
 	}
 
 	@Override

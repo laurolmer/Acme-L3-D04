@@ -1,34 +1,33 @@
 key,code,conclusion,strong-points,weak-points,draft-mode,key:auditor,key:course
-audit-01,A900,texto de prueba,texto de prueba,texto de prueba,false,auditor-01,course-01
-audit-02,AA900,texto de prueba,texto de prueba,texto de prueba,false,auditor-01,course-01
-audit-03,AAA900,texto de prueba,texto de prueba,texto de prueba,false,auditor-01,course-01
-audit-04,AAA901,E,texto de prueba,texto de prueba,false,auditor-01,course-01
-audit-05,AAA902,Es,texto de prueba,texto de prueba,false,auditor-01,course-01
-audit-06,AAA903,Esta frase contiene 50 caracteres para un testeo .,texto de prueba,texto de prueba,false,auditor-01,course-01
-audit-07,AAA904,Esta frase contiene en total 99 caracteres para testear las restricciones de mi aplicacion ACME-L3.,texto de prueba,texto de prueba,false,auditor-01,course-01
-audit-08,AAA905,Esta frase contiene en total 100 caracteres para testear las restricciones de mi aplicacion ACME-L3.,texto de prueba,texto de prueba,false,auditor-01,course-01
-audit-09,AAA906,証明,texto de prueba,texto de prueba,false,auditor-01,course-01
-audit-10,AAA907,证明,texto de prueba,texto de prueba,false,auditor-01,course-01
-audit-11,AAA908,<p>Suki para de molestar</p>,texto de prueba,texto de prueba,false,auditor-01,course-01
-audit-12,AAA909,<script>alert('adio!')</script>,texto de prueba,texto de prueba,false,auditor-01,course-01
-audit-13,AAA910,texto de prueba,E,texto de prueba,false,auditor-01,course-01
-audit-14,AAA911,texto de prueba,Es,texto de prueba,false,auditor-01,course-01
-audit-15,AAA912,texto de prueba,Esta proposicion contiene 50 caracteres para test.,texto de prueba,false,auditor-01,course-01
-audit-16,AAA913,texto de prueba,Esta proposicion contiene 99 caracteres para testear la base de datos de mi aplicacion de ACME-L3 .,texto de prueba,false,auditor-01,course-01
-audit-17,AAA914,texto de prueba,Esta proposicion contiene 100 caracteres para testear la base de datos de mi aplicacion ACME-L3-D02.,texto de prueba,false,auditor-01,course-01
-audit-18,AAA915,texto de prueba,証明,texto de prueba,false,auditor-01,course-01
-audit-19,AAA916,texto de prueba,证明,texto de prueba,false,auditor-01,course-01
-audit-20,AAA917,texto de prueba,<p>Suki para de molestar</p>,texto de prueba,false,auditor-01,course-01
-audit-21,AAA918,texto de prueba,<script>alert('adio!')</script>,texto de prueba,false,auditor-01,course-01
-audit-22,AAA919,texto de prueba,texto de prueba,E,false,auditor-01,course-01
-audit-23,AAA920,texto de prueba,texto de prueba,Es,false,auditor-01,course-01
-audit-24,AAA921,texto de prueba,texto de prueba,Esta proposicion contiene 50 caracteres para test.,false,auditor-01,course-01
-audit-25,AAA922,texto de prueba,texto de prueba,Esta proposicion contiene 99 caracteres para testear la base de datos de mi aplicacion de ACME-L3 .,false,auditor-01,course-01
-audit-26,AAA923,texto de prueba,texto de prueba,Esta proposicion contiene 100 caracteres para testear la base de datos de mi aplicacion ACME-L3-D02.,false,auditor-01,course-01
-audit-27,AAA924,texto de prueba,texto de prueba,証明,false,auditor-01,course-01
-audit-28,AAA925,texto de prueba,texto de prueba,证明,false,auditor-01,course-01
-audit-29,AAA926,texto de prueba,texto de prueba,<p>Suki para de molestar</p>,false,auditor-01,course-01
-audit-30,AAA927,texto de prueba,texto de prueba,<script>alert('adio!')</script>,false,auditor-01,course-01
-audit-31,AAA928,texto de prueba,texto de prueba,texto de prueba,false,auditor-01,course-01
-audit-32,AAA929,texto de prueba,texto de prueba,texto de prueba,false,auditor-02,course-01
-audit-33,AAA930,texto de prueba,texto de prueba,texto de prueba,true,auditor-01,course-01
+audit-01,A900,texto de prueba,texto de prueba,texto de prueba,true,auditor-01,course-01
+audit-02,AA900,texto de prueba,texto de prueba,texto de prueba,true,auditor-01,course-01
+audit-03,AAA900,texto de prueba,texto de prueba,texto de prueba,true,auditor-01,course-01
+audit-04,AAA901,E,texto de prueba,texto de prueba,true,auditor-01,course-01
+audit-05,AAA902,Es,texto de prueba,texto de prueba,true,auditor-01,course-01
+audit-06,AAA903,Esta frase contiene 50 caracteres para un testeo .,texto de prueba,texto de prueba,true,auditor-01,course-01
+audit-07,AAA904,Esta frase contiene en total 99 caracteres para testear las restricciones de mi aplicacion ACME-L3.,texto de prueba,texto de prueba,true,auditor-01,course-01
+audit-08,AAA906,証明,texto de prueba,texto de prueba,true,auditor-01,course-01
+audit-09,AAA907,证明,texto de prueba,texto de prueba,true,auditor-01,course-01
+audit-10,AAA908,<p>Suki para de molestar</p>,texto de prueba,texto de prueba,true,auditor-01,course-01
+audit-11,AAA909,<script>alert('adio!')</script>,texto de prueba,texto de prueba,true,auditor-01,course-01
+audit-12,AAA910,texto de prueba,E,texto de prueba,true,auditor-01,course-01
+audit-13,AAA911,texto de prueba,Es,texto de prueba,true,auditor-01,course-01
+audit-14,AAA912,texto de prueba,Esta proposicion contiene 50 caracteres para test.,texto de prueba,true,auditor-01,course-01
+audit-15,AAA913,texto de prueba,Esta proposicion contiene 99 caracteres para testear la base de datos de mi aplicacion de ACME-L3 .,texto de prueba,true,auditor-01,course-01
+audit-16,AAA915,texto de prueba,証明,texto de prueba,true,auditor-01,course-01
+audit-17,AAA916,texto de prueba,证明,texto de prueba,true,auditor-01,course-01
+audit-18,AAA917,texto de prueba,<p>Suki para de molestar</p>,texto de prueba,true,auditor-01,course-01
+audit-19,AAA918,texto de prueba,<script>alert('adio!')</script>,texto de prueba,true,auditor-01,course-01
+audit-20,AAA919,texto de prueba,texto de prueba,E,true,auditor-01,course-01
+audit-21,AAA920,texto de prueba,texto de prueba,Es,true,auditor-01,course-01
+audit-22,AAA921,texto de prueba,texto de prueba,Esta proposicion contiene 50 caracteres para test.,true,auditor-01,course-01
+audit-23,AAA922,texto de prueba,texto de prueba,Esta proposicion contiene 99 caracteres para testear la base de datos de mi aplicacion de ACME-L3 .,true,auditor-01,course-01
+audit-24,AAA924,texto de prueba,texto de prueba,証明,true,auditor-01,course-01
+audit-25,AAA925,texto de prueba,texto de prueba,证明,true,auditor-01,course-01
+audit-26,AAA926,texto de prueba,texto de prueba,<p>Suki para de molestar</p>,true,auditor-01,course-01
+audit-27,AAA927,texto de prueba,texto de prueba,<script>alert('adio!')</script>,true,auditor-01,course-01
+audit-28,AAA928,texto de prueba,texto de prueba,texto de prueba,true,auditor-01,course-01
+audit-29,AAA929,texto de prueba,texto de prueba,texto de prueba,true,auditor-02,course-01
+audit-30,AAA930,texto de prueba,texto de prueba,texto de prueba,true,auditor-01,course-01
+audit-31,AAA931,prueba,prueba,prueba,true,auditor-01,course-01
+audit-32,AAA932,prueba,prueba,prueba,false,auditor-01,course-01

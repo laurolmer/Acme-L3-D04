@@ -74,6 +74,11 @@ public class LecturerCourseCreateService extends AbstractService<Lecturer, Cours
 		if (!super.getBuffer().getErrors().hasErrors("retailPrice")) {
 			final double retailPrice = object.getRetailPrice().getAmount();
 			super.state(retailPrice > 0, "retailPrice", "lecturer.course.error.retailPrice.negative");
+
+			final String currency = object.getRetailPrice().getCurrency();
+			final String acceptedCurrencies = this.repository.findAcceptedCurrencies();
+			final boolean validCurrency = acceptedCurrencies.contains(currency);
+			super.state(validCurrency, "retailPrice", "lecturer.course.error.retailPrice.currency");
 		}
 	}
 

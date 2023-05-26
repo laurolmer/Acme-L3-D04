@@ -1,6 +1,9 @@
 
 package acme.entities.enrolment;
 
+import java.util.Collection;
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -11,6 +14,7 @@ import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 
+import acme.entities.activity.Activity;
 import acme.entities.course.Course;
 import acme.framework.data.AbstractEntity;
 import acme.roles.Student;
@@ -54,5 +58,20 @@ public class Enrolment extends AbstractEntity {
 	@NotNull
 	@ManyToOne(optional = false)
 	protected Course			course;
+
+
+	//Metodos derivados ----------------------------------------------------
+	public Double workTime(final Collection<Activity> activities) {
+		double res = 0.0;
+		if (!activities.isEmpty())
+			for (final Activity activity : activities) {
+				Double hours;
+				final Date startDate = activity.getStartPeriod();
+				final Date endDate = activity.getEndPeriod();
+				hours = Math.abs(endDate.getTime() / 3600000. - startDate.getTime() / 3600000.);
+				res += hours;
+			}
+		return res;
+	}
 
 }

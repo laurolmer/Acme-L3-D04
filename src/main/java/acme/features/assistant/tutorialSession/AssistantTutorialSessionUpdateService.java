@@ -47,7 +47,7 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 		session = this.repository.findTutorialSessionById(sessionId);
 		assistant = session == null ? null : session.getTutorial().getAssistant();
 		tutorial = this.repository.findTutorialByTutorialSessionId(sessionId);
-		status = tutorial != null && session != null && (tutorial.isDraftMode() || principal.hasRole(assistant));
+		status = tutorial != null && session != null && tutorial.isDraftMode() && assistant.getId() == principal.getActiveRoleId() && principal.hasRole(Assistant.class);
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -65,10 +65,10 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 		assert tutorialSession != null;
 		final double estimatedTotalTime;
 		final Date finishPeriod;
-		estimatedTotalTime = super.getRequest().getData("finishPeriod", Double.class);
-		finishPeriod = tutorialSession.deltaFromStartMoment(estimatedTotalTime);
+		//estimatedTotalTime = super.getRequest().getData("finishPeriod", Double.class);
+		//finishPeriod = tutorialSession.deltaFromStartMoment(estimatedTotalTime);
 		super.bind(tutorialSession, "title", "abstractSession", "sessionType", "startPeriod", "finishPeriod", "link");
-		tutorialSession.setFinishPeriod(finishPeriod);
+		//tutorialSession.setFinishPeriod(finishPeriod);
 	}
 
 	@Override
@@ -82,7 +82,7 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 		// El periodo de inicio de la sesión de tutoría debe ser mínimo un día después a la fecha actual.
 		if (!super.getBuffer().getErrors().hasErrors("startPeriod")) {
 			minStartPeriod = MomentHelper.deltaFromCurrentMoment(1, ChronoUnit.DAYS);
-			super.state(MomentHelper.isAfter(tutorialSession.getStartPeriod(), minStartPeriod), "startPeriod", "assistant.session.startPeriod-before-instantiationMoment");
+			super.state(MomentHelper.isAfterOrEqual(tutorialSession.getStartPeriod(), minStartPeriod), "startPeriod", "assistant.session.startPeriod-before-instantiationMoment");
 		}
 		// El periodo de finalización debe ser posterior al periodo de inicio.
 		if (!super.getBuffer().getErrors().hasErrors("finishPeriod"))
@@ -122,10 +122,10 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 		tuple = super.unbind(tutorialSession, "title", "abstractSession", "sessionType", "startPeriod", "finishPeriod", "link");
 		estimatedTotalTime = tutorialSession.computeEstimatedTotalTime();
 		if (estimatedTotalTime != null)
-			tuple.put("finishPeriod", estimatedTotalTime);
+			tuple.put("estimatedTotalTime", estimatedTotalTime);
 		tuple.put("masterId", super.getRequest().getData("id", int.class));
 		tuple.put("sessionType", choices);
-		tuple.put("draftMode", tutorialSession.getTutorial().isDraftMode() && tutorialSession.isDraftMode());
+		tuple.put("draftMode", tutorialSession.getTutorial().isDraftMode());
 		super.getResponse().setData(tuple);
 	}
 }
