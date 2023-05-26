@@ -91,6 +91,21 @@ public class AssistantTutorialUpdateTest extends TestHarness {
 		super.signOut();
 	}
 
+	@ParameterizedTest
+	@CsvFileSource(resources = "/assistant/tutorial/update2-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test201Negative(final int recordTutorialIndex) {
+		// HINT: this test attempts to publish a tutorial that cannot be published.
+		super.signIn("assistant1", "assistant1");
+		super.clickOnMenu("Assistant", "List My Tutorials");
+		super.checkListingExists();
+
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(recordTutorialIndex);
+
+		super.checkNotButtonExists("Update");
+		super.signOut();
+	}
+
 	@Test
 	public void test300Hacking() {
 		// HINT: this test tries to update a tutorial with a role other than "Assistant",

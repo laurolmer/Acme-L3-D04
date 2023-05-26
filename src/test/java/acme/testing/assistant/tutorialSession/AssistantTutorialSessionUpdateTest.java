@@ -41,11 +41,11 @@ public class AssistantTutorialSessionUpdateTest extends TestHarness {
 
 		super.signIn("assistant1", "assistant1");
 
-		super.clickOnMenu("Assistant", "List My Tutorials");
+		super.clickOnMenu("Assistant", "List my tutorials");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(recordTutorialIndex);
-		super.clickOnButton("List Sessions");
+		super.clickOnButton("List of Sessions");
 
 		super.clickOnListingRecord(recordSessionIndex);
 		super.fillInputBoxIn("title", title);
@@ -58,7 +58,6 @@ public class AssistantTutorialSessionUpdateTest extends TestHarness {
 
 		super.checkListingExists();
 		super.sortListing(0, "asc");
-		//super.checkColumnHasValue(recordSessionIndex, 0, title);
 		super.clickOnListingRecord(recordSessionIndex);
 
 		super.checkFormExists();
@@ -96,6 +95,23 @@ public class AssistantTutorialSessionUpdateTest extends TestHarness {
 		super.clickOnSubmit("Update");
 		super.checkErrorsExist();
 
+		super.signOut();
+	}
+
+	@ParameterizedTest
+	@CsvFileSource(resources = "/assistant/tutorialSession/update2-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test201Negative(final int recordTutorialIndex, final int sessionRecordIndex) {
+		// HINT: this test attempts to publish a tutorial that cannot be published.
+		super.signIn("assistant1", "assistant1");
+		super.clickOnMenu("Assistant", "List My Tutorials");
+		super.checkListingExists();
+
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(recordTutorialIndex);
+		super.clickOnButton("List Sessions");
+
+		super.clickOnListingRecord(sessionRecordIndex);
+		super.checkNotButtonExists("Update");
 		super.signOut();
 	}
 

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.tutorial.Tutorial;
 import acme.entities.tutorialSession.SessionType;
 import acme.entities.tutorialSession.TutorialSession;
+import acme.framework.components.accounts.Principal;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.helpers.MomentHelper;
@@ -38,11 +39,13 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 		boolean status;
 		Tutorial tutorial;
 		int tutorialId;
+		Principal principal;
 		Assistant assistant;
+		principal = super.getRequest().getPrincipal();
 		tutorialId = super.getRequest().getData("masterId", int.class);
 		tutorial = this.repository.findTutorialById(tutorialId);
 		assistant = tutorial == null ? null : tutorial.getAssistant();
-		status = tutorial != null && tutorial.isDraftMode() && super.getRequest().getPrincipal().hasRole(assistant);
+		status = tutorial != null && tutorial.isDraftMode() && principal.hasRole(Assistant.class) && assistant.getId() == principal.getActiveRoleId();
 		super.getResponse().setAuthorised(status);
 	}
 
