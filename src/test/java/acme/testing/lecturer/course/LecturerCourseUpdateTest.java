@@ -40,6 +40,7 @@ public class LecturerCourseUpdateTest extends TestHarness {
 		super.fillInputBoxIn("courseAbstract", abstractCourse);
 		super.fillInputBoxIn("link", link);
 		super.fillInputBoxIn("retailPrice", price);
+		super.checkSubmitExists("Update");
 		super.clickOnSubmit("Update");
 
 		super.checkListingExists();

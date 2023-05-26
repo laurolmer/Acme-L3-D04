@@ -32,6 +32,7 @@ public class LecturerLecturePublishTest extends TestHarness {
 		super.clickOnListingRecord(recordIndex);
 		super.checkInputBoxHasValue("published", "false");
 		super.checkInputBoxHasValue("title", title);
+		super.checkSubmitExists("Publish");
 		super.clickOnSubmit("Publish");
 		super.checkNotErrorsExist();
 
@@ -40,6 +41,10 @@ public class LecturerLecturePublishTest extends TestHarness {
 		super.clickOnListingRecord(recordIndex);
 		super.checkInputBoxHasValue("published", "true");
 		super.checkInputBoxHasValue("title", title);
+		super.checkLinkExists("Return");
+		super.checkNotSubmitExists("Update");
+		super.checkNotSubmitExists("Delete");
+		super.checkNotSubmitExists("Publish");
 
 		super.signOut();
 	}
@@ -59,7 +64,7 @@ public class LecturerLecturePublishTest extends TestHarness {
 		super.checkInputBoxHasValue("published", "false");
 		super.fillInputBoxIn("title", title);
 		super.clickOnSubmit("Publish");
-		super.checkAlertExists(false);
+		super.checkErrorsExist();
 
 		super.signOut();
 	}

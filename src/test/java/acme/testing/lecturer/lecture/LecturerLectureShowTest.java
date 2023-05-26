@@ -36,6 +36,17 @@ public class LecturerLectureShowTest extends TestHarness {
 		super.checkInputBoxHasValue("body", details);
 		super.checkInputBoxHasValue("lectureType", type);
 
+		if (!Boolean.getBoolean(published)) {
+			super.checkSubmitExists("Update");
+			super.checkSubmitExists("Delete");
+			super.checkSubmitExists("Publish");
+		} else {
+			super.checkNotSubmitExists("Update");
+			super.checkNotSubmitExists("Delete");
+			super.checkNotSubmitExists("Publish");
+		}
+		super.checkLinkExists("Return");
+
 		super.signOut();
 	}
 

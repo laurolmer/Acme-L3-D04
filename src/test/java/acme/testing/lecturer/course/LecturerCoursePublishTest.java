@@ -31,6 +31,7 @@ public class LecturerCoursePublishTest extends TestHarness {
 		super.clickOnListingRecord(recordIndex);
 		super.checkInputBoxHasValue("code", code);
 		super.checkInputBoxHasValue("published", "false");
+		super.checkSubmitExists("Publish");
 		super.clickOnSubmit("Publish");
 		super.checkNotErrorsExist();
 
@@ -42,6 +43,14 @@ public class LecturerCoursePublishTest extends TestHarness {
 		super.checkInputBoxHasValue("courseType", courseType);
 		super.checkInputBoxHasValue("estimatedTotalTime", estimatedTotalTime);
 		super.checkLinkExists("Lectures list");
+		super.checkLinkExists("Return");
+		super.checkNotSubmitExists("Update");
+		super.checkNotSubmitExists("Delete");
+		super.checkNotSubmitExists("Publish");
+
+		super.clickOnLink("Lectures list");
+		super.checkNotLinkExists("Add");
+		super.checkNotLinkExists("Delete");
 
 		super.signOut();
 	}

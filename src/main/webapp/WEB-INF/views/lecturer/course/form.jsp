@@ -6,7 +6,9 @@
 <acme:form>
 
 	<acme:hidden-data path="id"/>
-	<acme:input-checkbox code="lecturer.course.label.draftMode" path="published" readonly="true"/>
+	<jstl:if test="${ _command != 'create' }" >
+		<acme:input-checkbox code="lecturer.course.label.draftMode" path="published" readonly="true"/>	
+	</jstl:if>
 	<acme:input-textbox code="lecturer.course.label.code" path="code" placeholder="XYZ123"/>
 	<acme:input-textbox code="lecturer.course.label.title" path="title" placeholder="course title"/>
 	<acme:input-textarea code="lecturer.course.label.courseAbstract" path="courseAbstract" placeholder="course abstract"/>	

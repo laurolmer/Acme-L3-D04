@@ -6,7 +6,9 @@
 <acme:form>
 
 	<acme:hidden-data path="id"/>
-	<acme:input-checkbox code="lecturer.lecture.label.draftMode" path="published" readonly="true"/>
+	<jstl:if test="${_command != 'create'}">
+		<acme:input-checkbox code="lecturer.lecture.label.draftMode" path="published" readonly="true"/>	
+	</jstl:if>
 	<acme:input-textbox code="lecturer.lecture.label.title" path="title"/>
 	<acme:input-textbox code="lecturer.lecture.label.lectureAbstract" path="lectureAbstract"/>	
 	<acme:input-double code="lecturer.lecture.label.estimatedLearningTime" path="endPeriod"/>

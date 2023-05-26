@@ -1,5 +1,4 @@
 recordIndex,code,title,abstractCourse,link,published,courseType,price,estimatedTotalTime
 0,A007,<h1>Title-course</h1>,abstract-course,,true,BALANCED,EUR 10.00,2.00
-2,A003,T,abstract-course,,true,BALANCED,EUR 10.00,2.00
-3,A006,This title has aprox. 74 characters so dont try to add any more or app die,abstract-course,,true,BALANCED,EUR 10.00,2.00
-4,A005,This title has aprox. 75 characters so dont try to add any more or app die.,abstract-course,,true,BALANCED,EUR 10.00,2.00
+4,A006,This title has aprox. 74 characters so dont try to add any more or app die,abstract-course,,true,BALANCED,EUR 10.00,2.00
+5,A005,This title has aprox. 75 characters so dont try to add any more or app die.,abstract-course,,true,BALANCED,EUR 10.00,2.00
