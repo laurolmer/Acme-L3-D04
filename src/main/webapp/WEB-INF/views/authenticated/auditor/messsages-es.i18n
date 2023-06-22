@@ -9,7 +9,7 @@
 # they accept any liabilities with respect to them.
 
 authenticated.auditor.form.label.firm = Empresa
-authenticated.auditor.form.label.resume = Currículum
+authenticated.auditor.form.label.resume = Identificador profesional
 authenticated.auditor.form.label.certifications = Certificaciones
 authenticated.auditor.form.label.link = Enlace
 
