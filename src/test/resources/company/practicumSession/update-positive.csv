@@ -1,0 +1,17 @@
+practicumRecordIndex,sessionPracticumRecordIndex,title,abstractSession,start,end,link,code
+0,0,T,abstractSession-02,2024/02/01 08:00,2024/02/08 08:00,,BBB555
+0,0,T,abstractSession-02,2024/02/01 08:00,2024/02/08 08:00,,BBB555
+0,0,Probando un titulo que tenga como máximo 74 caracteres para el campo title,abstractSession-02,2024/02/01 08:00,2024/02/08 08:00,,BBB555
+0,0,Probando un titulo que tenga como máximo 75 caracteres para el campo title.,abstractSession-02,2024/02/01 08:00,2024/02/08 08:00,,BBB555
+0,0,<title>ExampleHTML</title>,abstractSession-02,2024/02/01 08:00,2024/02/08 08:00,,BBB555
+0,0,テキスト,abstractSession-02,2024/02/01 08:00,2024/02/08 08:00,,BBB555
+0,0,Ti,a,2024/02/01 08:00,2024/02/08 08:00,,BBB555
+0,0,Ti,ab,2024/02/01 08:00,2024/02/08 08:00,,BBB555
+0,0,Ti,Esto es un resumen de máximo 99 caracteres para abstractPracticum el campo summary del archivo csv,2024/02/01 08:00,2024/02/08 08:00,,BBB555
+0,0,Ti,Esto es un resumen de máximo 100 caracteres para abstractPracticum el campo summary del archivo csv,2024/02/01 08:00,2024/02/08 08:00,,BBB555
+0,0,Ti,<title>ExampleHTML</title>,2024/02/01 08:00,2024/02/08 08:00,,BBB555
+0,0,Ti,#テキスト,2024/02/01 08:00,2024/02/08 08:00,,BBB555
+0,0,Ti,abstractSession-02,2024/02/01 08:00,2024/02/08 08:00,,B555
+0,0,Ti,abstractSession-02,2024/02/01 08:00,2024/02/08 08:00,,BB555
+0,0,Ti,abstractSession-02,2024/02/01 08:00,2024/02/18 08:00,,BBB555
+0,0,Ti,abstractSession-02,2024/01/01 08:00,2024/02/08 08:00,,BBB555

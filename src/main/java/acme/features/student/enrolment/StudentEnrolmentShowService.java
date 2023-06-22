@@ -47,11 +47,12 @@ public class StudentEnrolmentShowService extends AbstractService<Student, Enrolm
 	public void authorise() {
 		boolean status;
 		int enrolmentId;
+		final int id;
 		Enrolment enrolment;
-		final int id = super.getRequest().getPrincipal().getAccountId();
+		id = super.getRequest().getPrincipal().getAccountId();
 		enrolmentId = super.getRequest().getData("id", int.class);
 		enrolment = this.repository.findEnrolmentById(enrolmentId);
-		status = enrolment.getStudent().getUserAccount().getId() == id && enrolment != null;
+		status = enrolment.getStudent().getUserAccount().getId() == id;
 		super.getResponse().setAuthorised(status);
 	}
 

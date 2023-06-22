@@ -37,7 +37,13 @@ public class AuthenticatedCompanyUpdateService extends AbstractService<Authentic
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		boolean status;
+		Principal principal;
+
+		principal = super.getRequest().getPrincipal();
+		status = principal.hasRole(Company.class);
+
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override

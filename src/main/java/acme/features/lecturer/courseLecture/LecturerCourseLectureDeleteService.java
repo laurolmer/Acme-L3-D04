@@ -84,8 +84,22 @@ public class LecturerCourseLectureDeleteService extends AbstractService<Lecturer
 	@Override
 	public void validate(final CourseLecture object) {
 		assert object != null;
+		final boolean courseInDraftMode;
+		boolean validLectureId = false;
+
 		if (!super.getBuffer().getErrors().hasErrors("course"))
 			super.state(object.getCourse().isDraftMode(), "course", "lecturer.course-lecture.error.course.published.delete");
+
+		if (!super.getBuffer().getErrors().hasErrors("lectureId")) {
+			final Integer lectureId = super.getRequest().getData("lectureId", Integer.class);
+			validLectureId = lectureId != null && lectureId > 0;
+			super.state(validLectureId, "*", "lecturer.course-lecture.error.lectureIdNull");
+		}
+
+		if (validLectureId) {
+			courseInDraftMode = this.repository.isCourseInDraftModeByCourseId(object.getCourse().getId());
+			super.state(courseInDraftMode, "*", "lecturer.course-lecture.error.course.published.delete");
+		}
 	}
 
 	@Override

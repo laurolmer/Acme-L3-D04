@@ -25,7 +25,7 @@ public class StudentEnrolmentCreateTest extends TestHarness {
 
 	public void test100Positive(final int recordIndex, final String code, final String motivation, final String goals, final String course) {
 
-		super.signIn("student3", "student3");
+		super.signIn("student1", "student1");
 		super.clickOnMenu("Student", "Enrolment List");
 		super.checkListingExists();
 		super.clickOnButton("Create:");
@@ -56,7 +56,7 @@ public class StudentEnrolmentCreateTest extends TestHarness {
 	@CsvFileSource(resources = "/student/enrolment/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test200Negative(final int recordIndex, final String code, final String motivation, final String goals, final String course) {
 
-		super.signIn("student3", "student3");
+		super.signIn("student1", "student1");
 		super.clickOnMenu("Student", "Enrolment List");
 		super.clickOnButton("Create:");
 		super.checkFormExists();

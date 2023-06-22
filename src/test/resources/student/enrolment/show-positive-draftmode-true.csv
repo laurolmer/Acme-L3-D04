@@ -1,6 +1,6 @@
 recordIndex,code,motivation,goals,estimatedTotalTime,creditCard,holderName,expiryDate,cvc,course
-0,T003,Motivation example,"goal-1, goal-2, goal-3","27.15",,,,,A006
-1,T006,M,"goal-1, goal-2, goal-3","27.00",,,,,A004
-2,T008,<title>ExampleHTML</title>,"goal-1, goal-2, goal-3","27.00",,,,,A007
-3,T010,示例文本,"goal-1, goal-2, goal-3","27.00",,,,,A004
-4,T012,Motivation example,This text for goals will reach 100 - 1 chars so the restriction can be proved in the max - 1 value.,"27.00",,,,,A006
+0,T003,Motivation example,"goal-1, goal-2, goal-3",54.15,,,,,A006
+1,T006,M,"goal-1, goal-2, goal-3",27.00,,,,,A004
+2,T008,<title>ExampleHTML</title>,"goal-1, goal-2, goal-3",27.00,,,,,A007
+3,T010,示例文本,"goal-1, goal-2, goal-3",27.00,,,,,A004
+4,T012,Motivation example,This text for goals will reach 100 - 1 chars so the restriction can be proved in the max - 1 value.,27.00,,,,,A006

@@ -40,7 +40,7 @@ public class AssistantTutorialSessionDeleteService extends AbstractService<Assis
 		session = this.repository.findTutorialSessionById(sessionId);
 		assistant = session == null ? null : session.getTutorial().getAssistant();
 		tutorial = this.repository.findTutorialByTutorialSessionId(sessionId);
-		status = tutorial != null && session != null && (tutorial.isDraftMode() || principal.hasRole(assistant));
+		status = tutorial != null && session != null && tutorial.isDraftMode() && principal.hasRole(Assistant.class) && assistant.getId() == principal.getActiveRoleId();
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -77,9 +77,9 @@ public class AssistantTutorialSessionDeleteService extends AbstractService<Assis
 		Tutorial tutorial;
 		Tuple tuple;
 		tutorial = tutorialSession.getTutorial();
-		tuple = super.unbind(tutorialSession, "title", "abstractSession", "sessionType", "startPeriod", "finishPeriod", "link", "draftMode");
+		tuple = super.unbind(tutorialSession, "title", "abstractSession", "sessionType", "startPeriod", "finishPeriod", "link");
 		tuple.put("masterId", super.getRequest().getData("id", int.class));
-		tuple.put("draftMode", tutorialSession.getTutorial().isDraftMode() && tutorialSession.isDraftMode());
+		tuple.put("draftMode", tutorialSession.getTutorial().isDraftMode());
 		super.getResponse().setData(tuple);
 	}
 }

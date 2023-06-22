@@ -39,6 +39,7 @@ student.enrolment.list.label.student = Student:
 student.enrolment.list.button.create = Create:
 
 student.enrolment.form.error.expiryDate.pattern = The expiry date's format must be MM/YY
+student.enrolment.form.expiryDate.placeholder = yy/MM
 student.enrolment.form.error.expiryDate.before = The expiry date's format must be after the current date
 student.enrolment.form.error.expiryDate.month = The expiry date's format must be a real date
 student.enrolment.form.error.cvc = The CVC's format must be 3 numbers

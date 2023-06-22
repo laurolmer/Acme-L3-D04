@@ -14,22 +14,19 @@ import acme.roles.Assistant;
 public class AssistantTutorialSessionController extends AbstractController<Assistant, TutorialSession> {
 
 	@Autowired
-	protected AssistantTutorialSessionShowService		showService;
+	protected AssistantTutorialSessionShowService	showService;
 
 	@Autowired
-	protected AssistantTutorialSessionCreateService		createService;
+	protected AssistantTutorialSessionCreateService	createService;
 
 	@Autowired
-	protected AssistantTutorialSessionUpdateService		updateService;
+	protected AssistantTutorialSessionUpdateService	updateService;
 
 	@Autowired
-	protected AssistantTutorialSessionDeleteService		deleteService;
+	protected AssistantTutorialSessionDeleteService	deleteService;
 
 	@Autowired
-	protected AssistantTutorialSessionListService		listService;
-
-	@Autowired
-	protected AssistantTutorialSessionPublishService	publishService;
+	protected AssistantTutorialSessionListService	listService;
 
 
 	@PostConstruct
@@ -38,7 +35,6 @@ public class AssistantTutorialSessionController extends AbstractController<Assis
 		super.addBasicCommand("create", this.createService);
 		super.addBasicCommand("update", this.updateService);
 		super.addBasicCommand("delete", this.deleteService);
-		super.addCustomCommand("publish", "update", this.publishService);
 		super.addBasicCommand("list", this.listService);
 	}
 }

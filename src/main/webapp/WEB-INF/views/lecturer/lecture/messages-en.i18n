@@ -22,4 +22,13 @@ lecturer.lecture.error.estimatedLearningTime = Estimated time must be positive
 
 ## UPDATE --------------------------------------------------------------------------
 
-lecturer.lecture.error.draftMode.published = Can't update a course already published
+lecturer.lecture.error.draftMode.published = Can't update a lecture already published
+
+## PUBLISH -------------------------------------------------------------------------
+
+lecturer.lecture.error.dataNotFilled = Can't publish a lecture with mandatory fields empty
+
+## DELETE --------------------------------------------------------------------------
+
+lecturer.lecture.error.delete = Can't delete a published lecture
+lecturer.lecture.error.deleteLectureAssigned = Can't delete an assigned lecture

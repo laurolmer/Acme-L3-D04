@@ -3,6 +3,8 @@ package acme.features.administrator.offer;
 
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -59,6 +61,10 @@ public class AdministratorOfferCreateService extends AbstractService<Administrat
 		Date minStartPeriod;
 		final Date maxValue = new Date("2100/12/31 23:59");
 		final Date minValue = new Date("2000/01/01 00:00");
+		final String[] currencies = this.repository.findAllAcceptedCurrencies().split(",");
+		final Set<String> currenciesSet = new HashSet<>();
+		for (final String currency : currencies)
+			currenciesSet.add(currency);
 		// StartPeriod -> At least one day after the offer is instantiated.
 		if (!super.getBuffer().getErrors().hasErrors("availabilityPeriodStart")) {
 			minStartPeriod = MomentHelper.deltaFromCurrentMoment(1, ChronoUnit.DAYS);
@@ -82,6 +88,8 @@ public class AdministratorOfferCreateService extends AbstractService<Administrat
 		// Max price -> 1,000,000
 		if (!super.getBuffer().getErrors().hasErrors("price"))
 			super.state(object.getPrice().getAmount() <= 1000000, "price", "administrator.offer.price-reached-limit-value");
+		if (!super.getBuffer().getErrors().hasErrors("price"))
+			super.state(currenciesSet.contains(object.getPrice().getCurrency()), "price", "administrator.offer.currency-not-valid");
 	}
 
 	@Override

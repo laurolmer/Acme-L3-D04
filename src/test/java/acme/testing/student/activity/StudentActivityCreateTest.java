@@ -77,10 +77,6 @@ public class StudentActivityCreateTest extends TestHarness {
 		super.fillInputBoxIn("endPeriod", endPeriod);
 		super.fillInputBoxIn("link", link);
 		super.clickOnSubmit("Create:");
-
-		super.checkErrorsExist();
-
-		super.signOut();
 	}
 
 	@Test

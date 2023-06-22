@@ -8,5 +8,5 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-student.course.list.label.title = Title:
-student.course.list.label.lectureType = Lecture Type:
+student.lecture.list.label.title = Title:
+student.lecture.list.label.lectureType = Lecture Type:

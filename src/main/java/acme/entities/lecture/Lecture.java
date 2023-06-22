@@ -76,9 +76,9 @@ public class Lecture extends AbstractEntity {
 		long delta, millis;
 
 		hour = (long) Math.floor(amount);
-		minutes = (long) ((amount - hour) * ChronoUnit.HOURS.getDuration().toMinutes());
+		minutes = (long) ((amount - hour) * ChronoUnit.HOURS.getDuration().toMillis());
 
-		delta = hour * ChronoUnit.HOURS.getDuration().toMillis() + minutes * ChronoUnit.MINUTES.getDuration().toMillis();
+		delta = hour * ChronoUnit.HOURS.getDuration().toMillis() + minutes;
 		millis = this.startPeriod.getTime() + delta;
 		result = new Date(millis);
 
@@ -90,7 +90,7 @@ public class Lecture extends AbstractEntity {
 
 		if (this.endPeriod != null) {
 			timeBetween = MomentHelper.computeDuration(this.startPeriod, this.endPeriod);
-			return (double) timeBetween.toMinutes() / ChronoUnit.HOURS.getDuration().toMinutes();
+			return (double) timeBetween.toMillis() / ChronoUnit.HOURS.getDuration().toMillis();
 		}
 
 		return 0.0;

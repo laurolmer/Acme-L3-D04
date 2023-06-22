@@ -30,7 +30,7 @@ assistant.tutorial-session.list.label.startPeriod = Periodo inicial
 assistant.tutorial-session.list.button.create = Crear
 
 
-assistant.session.startPeriod-before-instantiationMoment = El periodo de inicio debe ser después de la fecha actual
+assistant.session.startPeriod-before-instantiationMoment = El periodo de inicio debe ser 1 día después de la fecha actual
 assistant.session.finishPeriod-before-startPeriod = El periodo final debe ser después del periodo de inicio
 assistant.session.bad-finishPeriod-time = El periodo final debe durar entre 1 a 5 horas respecto al periodo inicial
 assistant.session.end-reached-max-value = El periodo final no debe ser posterior a la fecha "2100/12/31" a las "23:59"

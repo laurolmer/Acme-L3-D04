@@ -20,7 +20,7 @@ company.practicum-session.form.label.link = Link
 company.practicum-session.form.button.create = Create
 company.practicum-session.form.button.update = Update
 company.practicum-session.form.button.delete = Delete
-company.practicum-session.form.button.confirm = Confirm
+
 
 # Messages for label in list
 company.practicum-session.list.label.yes= Yes
@@ -31,12 +31,11 @@ company.practicum-session.list.label.abstractSession = Abstract
 company.practicum-session.list.label.end = end
 company.practicum-session.list.label.start = start
 company.practicum-session.list.label.additional = Additional
-company.practicum-session.list.label.confirmed = Confirmed
 company.practicum-session.list.label.exact-duration= Duration
 
 # Messages for button in list
 company.practicum-session.list.button.create = Create
 
 # Messages for error in form
-company.session-practicum.error.start-after-now = The start date must be after today
-company.session-practicum.error.end-after-start = The end date must be after the start date
+company.practicum-session.error.start-after-now = The start date must be after today
+company.practicum-session.error.end-after-start = The end date must be after the start date

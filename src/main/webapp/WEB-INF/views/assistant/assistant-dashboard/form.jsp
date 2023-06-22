@@ -24,7 +24,7 @@
 <table class="table table-sm">
 	<tr>
 	<th scope="row">
-			<acme:message code="assistant.dashboard.form.label.tutorial-time.average"/>
+			<acme:message code="assistant.dashboard.form.label.tutorial-time.count"/>
 		</th>
 		<td>
 			<acme:print value="${tutorialTime.count}"/>
@@ -63,7 +63,7 @@
 <table class="table table-sm">
 	<tr>
 		<th scope="row">
-			<acme:message code="assistant.dashboard.form.label.session-time.average"/>
+			<acme:message code="assistant.dashboard.form.label.session-time.count"/>
 		</th>
 		<td>
 			<acme:print value="${sessionTime.count}"/>
@@ -95,13 +95,13 @@
 	</tr>
 </table>
 
-	<h2>
+	<h3>
 		<acme:message code="assistant.dashboard.form.label.theory-tutorials"/>
 		<acme:print value="${totalNumTheoryTutorials}"/>
-	</h2>
-	<h2>
+	</h3>
+	<h3>
 		<acme:message code="assistant.dashboard.form.label.handson-tutorials"/>
 		<acme:print value="${totalNumHandsOnTutorials}"/>
-	</h2>
+	</h3>
 
 <acme:return/>
