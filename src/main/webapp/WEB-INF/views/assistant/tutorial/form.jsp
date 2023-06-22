@@ -32,6 +32,8 @@
 			<acme:button code="assistant.tutorial-session.form.button.list" action="/assistant/tutorial-session/list?masterId=${id}"/>
 			<acme:submit code="assistant.tutorial.form.button.update" action="/assistant/tutorial/update"/>
 			<acme:submit code="assistant.tutorial.form.button.delete" action="/assistant/tutorial/delete"/>
+		</jstl:if>
+		<jstl:if test="${_command == 'show' && draftMode == true && hasNoSessions.isEmpty() == false}">
 			<acme:submit code="assistant.tutorial.form.button.publish" action="/assistant/tutorial/publish"/>
 		</jstl:if>
 		<jstl:if test="${_command == 'create'}">

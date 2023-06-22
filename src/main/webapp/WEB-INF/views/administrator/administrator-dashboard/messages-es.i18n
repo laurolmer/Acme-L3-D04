@@ -1,0 +1,22 @@
+administrator.dashboard.form.title.general-indicators = Indicadores generales
+
+administrator.dashboard.form.title.num-principals = Número de usuarios
+administrator.dashboard.form.label.lecturer = Profesor
+administrator.dashboard.form.label.assistant = Asistente
+administrator.dashboard.form.label.provider = Proveedor
+administrator.dashboard.form.label.company = Empresa
+administrator.dashboard.form.label.student = Estudiante
+administrator.dashboard.form.label.administrator = Administrador
+administrator.dashboard.form.label.auditor = Auditor
+
+administrator.dashboard.form.title.bulletins-by-critically = Anuncios por nivel de criticidad
+administrator.dashboard.form.label.critical = Crítico
+administrator.dashboard.form.label.non-critical = No crítico
+
+administrator.dashboard.form.label.offer.count = Número
+administrator.dashboard.form.label.offer.average = Media
+administrator.dashboard.form.label.offer.min = Mínimo
+administrator.dashboard.form.label.offer.max = Máximo
+administrator.dashboard.form.label.offer.deviation = Desviación
+
+administrator.dashboard.form.title.notes-in-last-ten-weeks = Notas en las últimas 10 semanas

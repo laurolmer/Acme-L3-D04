@@ -49,14 +49,6 @@ master.menu.bulletin.list = List all bulletins
 master.menu.administrator.bulletin.form = Create a Bulletin
 
 master.menu.offer.list= List all offers
-master.menu.authenticated.exchange-money.perform = Exchange Money
-
-
-# master.menu.assistant ###################################################
-
-master.menu.assistant = Assistant
-master.menu.assistant.tutorial.list-mine = List my tutorials
-master.menu.assistant.tutorial.list-all = List all tutorials
 
 
 # master.menu.administrator.offer ###################################################
@@ -69,10 +61,6 @@ master.menu.administrator.offer.list = Offers list
 master.menu.auditor = Auditor
 master.menu.auditor.audit.list = My audits
 
-# master.menu.provider ########################################################
-
-master.menu.provider = Provider
-master.menu.provider.favourite-link = Favourite Link
 
 # master.menu.assistant ########################################################
 
@@ -80,11 +68,6 @@ master.menu.assistant = Assistant
 master.menu.assistant.tutorial.list-mine = List My Tutorials
 master.menu.assistant.tutorial.list-all = List All Tutorials
 master.menu.assistant.dashboard = Assistant's Dashboard
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumer
-master.menu.consumer.favourite-link = Favourite link
 
 # master.menu.lecturer ##########################################################
 
@@ -98,9 +81,10 @@ master.menu.lecturer.lecture.dashboard = Dashboard
 
 # master.menu.company ###################################################
 
-master.menu.company= Practicums
-master.menu.company.practicum.list-mine = List my practicum
-master.menu.company.practicum.list-all = List all practicum
+master.menu.company= Company
+master.menu.company.practicum.list-mine = List my practicums
+master.menu.company.practicum.list-all = List all practicums
+master.menu.company.dashboard= DashBoard
 
 # master.menu.studentCourse ##########################################################
 

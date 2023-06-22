@@ -1,0 +1,2 @@
+courseRecordIndex,courseCode,lectureTitle
+1,A008,<script>alert("Title-lecture");</script>

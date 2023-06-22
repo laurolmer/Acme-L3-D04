@@ -41,7 +41,7 @@ public class AdministratorOfferListService extends AbstractService<Administrator
 	public void unbind(final Offer object) {
 		assert object != null;
 		Tuple tuple;
-		tuple = super.unbind(object, "heading", "summary", "price", "availabilityPeriodStart", "availabilityPeriodEnd", "link");
+		tuple = super.unbind(object, "heading", "summary", "price");
 		super.getResponse().setData(tuple);
 	}
 }

@@ -75,7 +75,7 @@ public class CompanyPracticumCreateService extends AbstractService<Company, Prac
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			Practicum isCodeUnique;
 			isCodeUnique = this.repository.findAPracticumByCode(object.getCode());
-			super.state(isCodeUnique == null, "code", "Company.Practicum.form.error.code-uniqueness");
+			super.state(isCodeUnique == null, "code", "company.practicum.form.error.code-uniqueness");
 		}
 	}
 
@@ -92,7 +92,7 @@ public class CompanyPracticumCreateService extends AbstractService<Company, Prac
 		Collection<Course> courses;
 		Tuple tuple;
 		courses = this.repository.findNotInDraftCourses();
-		choices = SelectChoices.from(courses, "title", object.getCourse());
+		choices = SelectChoices.from(courses, "code", object.getCourse());
 		tuple = super.unbind(object, "code", "title", "abstractPracticum", "goals", "course", "draftMode");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);

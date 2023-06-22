@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-administrator.offer.form.label.instantiationMoment = Momento de instancia
+administrator.offer.form.label.instantationMoment = Momento de instancia
 administrator.offer.form.label.heading = Titulo
 administrator.offer.form.label.summary = Resumen
 administrator.offer.form.label.price = Precio
@@ -24,9 +24,6 @@ administrator.offer.form.button.delete = Eliminar
 administrator.offer.list.label.headding = Encabezado
 administrator.offer.list.label.summary = Resumen
 administrator.offer.list.label.price = Precio
-administrator.offer.list.label.availabilityPeriodStart = Periodo inicial
-administrator.offer.list.label.availabilityPeriodEnd = Periodo final 
-administrator.offer.list.label.link = Enlace
 
 administrator.offer.list.button.create = Crear
 
@@ -37,3 +34,4 @@ administrator.offer.end-after-start = El periodo final debe ser posterior al per
 administrator.offer.end-reached-max-value = El periodo final no debe ser posterior a la fecha "2100/12/31" a las "23:59"
 administrator.offer.start-didnot-reach-min-value = El periodo inicial debe ser posterior a la fecha "2000/01/01" a las "00:00"
 administrator.offer.price-reached-limit-value = El precio debe ser menor que 1,000,000
+administrator.offer.currency-not-valid = La moneda debe ser una moneda aceptada

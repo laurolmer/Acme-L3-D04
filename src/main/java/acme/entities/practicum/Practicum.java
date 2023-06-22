@@ -1,6 +1,9 @@
 
 package acme.entities.practicum;
 
+import java.util.Collection;
+import java.util.Optional;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -12,6 +15,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 
 import acme.entities.course.Course;
+import acme.entities.practicumSession.PracticumSession;
 import acme.framework.data.AbstractEntity;
 import acme.roles.Company;
 import lombok.Getter;
@@ -48,27 +52,29 @@ public class Practicum extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 
+
 	// computed from sessions plus/minus 10%
 	// Métodos derivados ------------------------------------------------------
-	//	public Double computeEstimatedTotalTime(final Collection<PracticumSession> sessions) {
-	//		double estimatedTotalTime = 0.;
-	//		Optional<Double> optEstimatedTotalTime;
-	//		optEstimatedTotalTime = sessions.stream().map(PracticumSession::computeEstimatedTotalTime).reduce(Double::sum);
-	//		if (optEstimatedTotalTime.isPresent())
-	//			estimatedTotalTime = optEstimatedTotalTime.get();
-	//		return estimatedTotalTime;
-	//	}
+	public Double computeEstimatedTotalTime(final Collection<PracticumSession> sessions) {
+		double estimatedTotalTime = 0.;
+		Optional<Double> optEstimatedTotalTime;
+		optEstimatedTotalTime = sessions.stream().map(PracticumSession::computeEstimatedTotalTime).reduce(Double::sum);
+		if (optEstimatedTotalTime.isPresent())
+			estimatedTotalTime = optEstimatedTotalTime.get();
+		return estimatedTotalTime;
+	}
 
 	// Relationships ----------------------------------------------------------
 
+
 	@Valid
 	@NotNull
 	@ManyToOne(optional = false)
-	protected Company			company;
+	protected Company	company;
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Course				course;
+	private Course		course;
 
 }

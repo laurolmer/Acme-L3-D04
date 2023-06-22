@@ -1,0 +1,14 @@
+practicumRecordIndex,course,code,title,abstractPracticum,goals
+0,---,"BB222",title-02,abstractPracticum-02,goal-02
+0,"A001","222",title-02,abstractPracticum-02,goal-02
+0,"A001","b222",title-02,abstractPracticum-02,goal-02
+0,"A001","BBBB222",title-02,abstractPracticum-02,goal-02
+0,"A001","BB2222",title-02,abstractPracticum-02,goal-02
+0,"A001","BB",title-02,abstractPracticum-02,goal-02
+0,"A001",,title-02,abstractPracticum-02,goal-02
+0,"A001","BB222",,abstractPracticum-02,goal-02
+0,"A001","BB222",Probando un titulo que tenga como máximo 76 caracteres para el campo title..,abstractPracticum-02,goal-02
+0,"A001","BB222",title-02,,goal-02
+0,"A001","BB222",title-02,Esto es un resumen de máximo 101 caracteres para abstractPracticum el campo summary del archivo csv.AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,goal-02
+0,"A001","BB222",title-02,abstractPracticum-02,
+0,"A001","BB222",title-02,abstractPracticum-02,Esto es un resumen de máximo 100 caracteres para abstractPracticum el campo summary del archivo csvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA

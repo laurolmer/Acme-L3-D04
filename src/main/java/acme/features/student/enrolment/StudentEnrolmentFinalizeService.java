@@ -17,6 +17,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
+import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -42,7 +43,15 @@ public class StudentEnrolmentFinalizeService extends AbstractService<Student, En
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		boolean status;
+		int enrolmentId;
+		final int id;
+		Enrolment enrolment;
+		id = super.getRequest().getPrincipal().getAccountId();
+		enrolmentId = super.getRequest().getData("id", int.class);
+		enrolment = this.repository.findEnrolmentById(enrolmentId);
+		status = enrolment.isDraftMode() && enrolment.getStudent().getUserAccount().getId() == id;
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
@@ -86,10 +95,13 @@ public class StudentEnrolmentFinalizeService extends AbstractService<Student, En
 			super.state(false, "cvc", "student.enrolment.form.error.cvc");
 
 		expiryDate = super.getRequest().getData("expiryDate", String.class);
-		final DateFormat format = new SimpleDateFormat("MM/yy");
+		final Locale local = super.getRequest().getLocale();
+		final String localString = local.equals(Locale.ENGLISH) ? "yy/MM" : "MM/yy";
+		final DateFormat formate = new SimpleDateFormat(localString);
 		try {
-			final Date date = format.parse(expiryDate);
-			final int month = Integer.parseInt(expiryDate.split("/")[0]);
+			final Date date = formate.parse(expiryDate);
+			final int i = local.equals(Locale.ENGLISH) ? 1 : 0;
+			final int month = Integer.parseInt(expiryDate.split("/")[i]);
 			if (month < 1 || month > 12)
 				super.state(false, "expiryDate", "student.enrolment.form.error.expiryDate.month");
 			if (MomentHelper.isBefore(date, MomentHelper.getCurrentMoment()))
@@ -97,6 +109,7 @@ public class StudentEnrolmentFinalizeService extends AbstractService<Student, En
 		} catch (final ParseException e) {
 			super.state(false, "expiryDate", "student.enrolment.form.error.expiryDate.pattern");
 		}
+
 	}
 
 	@Override
@@ -114,15 +127,17 @@ public class StudentEnrolmentFinalizeService extends AbstractService<Student, En
 	@Override
 	public void unbind(final Enrolment object) {
 		assert object != null;
-		final String creditCard = "";
-		final String cvc = "";
-		final String expiryDate = "";
+		final String creditCard = super.getRequest().getData("creditCard", String.class);
+		final String cvc = super.getRequest().getData("cvc", String.class);
+		final String expiryDate = super.getRequest().getData("expiryDate", String.class);
+		final String estimatedTotalTime = super.getRequest().getData("estimatedTotalTime", String.class);
 		SelectChoices choices;
 		Collection<Course> courses;
 		Tuple tuple;
 		courses = this.repository.findNotInDraftCourses();
 		choices = SelectChoices.from(courses, "code", object.getCourse());
 		tuple = super.unbind(object, "code", "motivation", "goals", "course", "holderName");
+		tuple.put("estimatedTotalTime", estimatedTotalTime);
 		tuple.put("draftMode", object.isDraftMode());
 		tuple.put("creditCard", creditCard);
 		tuple.put("cvc", cvc);

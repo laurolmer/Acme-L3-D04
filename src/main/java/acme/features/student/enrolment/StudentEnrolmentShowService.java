@@ -17,6 +17,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.activity.Activity;
 import acme.entities.course.Course;
 import acme.entities.enrolment.Enrolment;
 import acme.framework.components.jsp.SelectChoices;
@@ -45,11 +46,13 @@ public class StudentEnrolmentShowService extends AbstractService<Student, Enrolm
 	@Override
 	public void authorise() {
 		boolean status;
-		int id;
+		int enrolmentId;
+		final int id;
 		Enrolment enrolment;
-		id = super.getRequest().getData("id", int.class);
-		enrolment = this.repository.findEnrolmentById(id);
-		status = enrolment != null;
+		id = super.getRequest().getPrincipal().getAccountId();
+		enrolmentId = super.getRequest().getData("id", int.class);
+		enrolment = this.repository.findEnrolmentById(enrolmentId);
+		status = enrolment.getStudent().getUserAccount().getId() == id;
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -68,14 +71,18 @@ public class StudentEnrolmentShowService extends AbstractService<Student, Enrolm
 	public void unbind(final Enrolment object) {
 		assert object != null;
 		Tuple tuple;
+		Double estimatedTotalTime;
 		Collection<Course> courses;
 		SelectChoices choices;
+		final Collection<Activity> activities;
+		activities = this.repository.findManyActivitiesByEnrolmentId(object.getId());
+		estimatedTotalTime = object.workTime(activities);
 		courses = this.repository.findNotInDraftCourses();
 		choices = SelectChoices.from(courses, "code", object.getCourse());
 		tuple = super.unbind(object, "code", "motivation", "goals", "holderName", "lowerNibble", "draftMode");
+		tuple.put("estimatedTotalTime", estimatedTotalTime);
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
-		tuple.put("published", !object.isDraftMode());
 		super.getResponse().setData(tuple);
 		tuple.put("objectId", object.getId());
 	}

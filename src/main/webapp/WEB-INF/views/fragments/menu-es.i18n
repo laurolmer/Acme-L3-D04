@@ -53,15 +53,8 @@ master.menu.administrator.bulletin.form = Crear un Bulletin
 
 
 master.menu.offer.list= Listar todas las ofertas
-master.menu.authenticated.exchange-money.perform = Cambio de Moneda
 master.menu.offer.list = Listar todas las ofertas
 
-
-# master.menu.assistant ###################################################
-
-master.menu.assistant = Asistente
-master.menu.assistant.tutorial.list-mine = Listar mis tutoriales
-master.menu.assistant.tutorial.list-all = Listar todos los tutoriales
 
 # master.menu.administrator.offer ###################################################
 
@@ -72,17 +65,6 @@ master.menu.administrator.offer.list = Lista de ofertas
 
 master.menu.auditor = Auditor
 master.menu.auditor.audit.list = Mis auditorías
-
-# master.menu.provider ########################################################
-
-master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
-
 
 # master.menu.assistant ########################################################
 
@@ -103,9 +85,10 @@ master.menu.lecturer.lecture.dashboard = Estadísticas
 
 # master.menu.company ###################################################
 
-master.menu.company= Prácticas
+master.menu.company= Compañía
 master.menu.company.practicum.list-mine = Mis prácticas
 master.menu.company.practicum.list-all = Todas las prácticas
+master.menu.company.dashboard= DashBoard de la Compañía
 
 # master.menu.studentCourse ##########################################################
 

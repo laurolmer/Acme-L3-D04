@@ -41,7 +41,7 @@ public class LecturerLecturePublishService extends AbstractService<Lecturer, Lec
 		objectId = super.getRequest().getData("id", int.class);
 		object = this.repository.findOneLectureById(objectId);
 
-		status = object.getLecturer().getUserAccount().getId() == userAccountId;
+		status = object.getLecturer().getUserAccount().getId() == userAccountId && object.isDraftMode();
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -72,6 +72,9 @@ public class LecturerLecturePublishService extends AbstractService<Lecturer, Lec
 			final boolean draftMode = object.isDraftMode();
 			super.state(draftMode, "draftMode", "lecturer.lecture.error.draftMode.published");
 		}
+
+		final boolean data = object.getTitle() == null || object.getLectureAbstract() == null || object.getBody() == null || object.getLectureType() == null || object.getStartPeriod() == null || object.getEndPeriod() == null;
+		super.state(!data, "*", "lecturer.lecture.error.dataNotFilled");
 	}
 
 	@Override
@@ -91,6 +94,7 @@ public class LecturerLecturePublishService extends AbstractService<Lecturer, Lec
 		tuple = super.unbind(object, "title", "lectureAbstract", "body", "lectureType", "link");
 		tuple.put("lectureType", choices.getSelected().getKey());
 		tuple.put("lectureTypes", choices);
+		tuple.put("draftMode", object.isDraftMode());
 		super.getResponse().setData(tuple);
 	}
 

@@ -60,7 +60,7 @@ public class AdministratorBannerCreateService extends AbstractService<Administra
 		instantiationMoment = MomentHelper.getCurrentMoment();
 		object.setUpgrade(instantiationMoment);
 
-		//a display period (must start at any moment after the instantiation/update 
+		//a display period (must start at any moment after the instantiation/update
 		//moment and must last for at least one week)
 
 		if (!super.getBuffer().getErrors().hasErrors("startDisplay") || !super.getBuffer().getErrors().hasErrors("endDisplay")) {

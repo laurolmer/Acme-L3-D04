@@ -47,23 +47,6 @@ bg=green
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1194</x>
-      <y>132</y>
-      <w>132</w>
-      <h>54</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Provider
-bg=green
---
-+ company: String {NotBlank}
-+ sector: String {NotBlank}
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
       <x>786</x>
       <y>570</y>
       <w>318</w>
@@ -119,23 +102,6 @@ bg=green
 + periodStart: Date {NotNull, Temporal(TemporalType.TIMESTAMP)}
 + periodEnd: Date {NotNull, Temporal(TemporalType.TIMESTAMP)}
 + link: String {URL}</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1194</x>
-      <y>66</y>
-      <w>132</w>
-      <h>54</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Consumer
-bg=green
---
-+ company: String {NotBlank}
-+ sector: String {NotBlank}
-</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -374,7 +340,7 @@ bg=green
     <coordinates>
       <x>948</x>
       <y>324</y>
-      <w>72</w>
+      <w>66</w>
       <h>102</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
@@ -592,7 +558,7 @@ m2=1..*
     <coordinates>
       <x>564</x>
       <y>492</y>
-      <w>264</w>
+      <w>258</w>
       <h>372</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
@@ -656,7 +622,7 @@ bg=green
     <coordinates>
       <x>1050</x>
       <y>288</y>
-      <w>150</w>
+      <w>144</w>
       <h>354</h>
     </coordinates>
     <panel_attributes>lt=&lt;-

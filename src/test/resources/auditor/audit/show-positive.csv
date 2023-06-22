@@ -1,0 +1,6 @@
+auditIndex,code,conclusion,strong-points,weak-points,course
+0,A900,texto de prueba,texto de prueba,texto de prueba,A001
+1,AA900,texto de prueba,texto de prueba,texto de prueba,A001
+2,AAA900,texto de prueba,texto de prueba,texto de prueba,A001
+3,AAA901,E,texto de prueba,texto de prueba,A001
+4,AAA902,Es,texto de prueba,texto de prueba,A001
