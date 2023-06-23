@@ -9,7 +9,7 @@
 # they accept any liabilities with respect to them.
 
 authenticated.auditor.form.label.firm = Firm
-authenticated.auditor.form.label.resume = Resume
+authenticated.auditor.form.label.resume = professionalId
 authenticated.auditor.form.label.certifications = Certifictions
 authenticated.auditor.form.label.link = Link
 
