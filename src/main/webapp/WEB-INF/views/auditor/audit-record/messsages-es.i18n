@@ -40,4 +40,4 @@ auditor.audit.list.button.create = Create
 auditor.auditRecord.announce.correction = Este registro de auditoría ha sido publicado después de la publicación de la auditoría
 auditor.auditRecord.error.date.StartFinError = La fecha de finalicación no debe fijarse antes que la de inicio.
 auditor.auditingrecord.error.date.oneHourRule = El tiempo total debe ser de mas de una hora
-auditor.auditRecord.correction.confirmation = Registro de auditoría para correción
+auditor.auditRecord.correction.confirmation = Debe pulsar el botón Confirmar

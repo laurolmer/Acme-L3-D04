@@ -40,4 +40,4 @@ auditor.auditRecord.list.button.create = Create
 auditor.auditRecord.announce.correction = This AuditRecord has been created after publishing the Audit
 auditor.auditRecord.error.date.StartFinError = The finish date cannot be before the start date
 auditor.auditRecord.error.date.oneHourRule = The time period must be up an hour
-auditor.auditRecord.correction.confirmation = Audit Record for correction
+auditor.auditRecord.correction.confirmation = You must press the Confirmation button

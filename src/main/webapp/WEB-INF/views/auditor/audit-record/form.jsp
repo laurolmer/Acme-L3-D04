@@ -27,15 +27,17 @@
 	<acme:input-textbox code="auditor.auditRecord.form.label.subject" path="subject"/>
 	<acme:input-textbox code="auditor.auditRecord.form.label.assesment" path="assesment"/>
 	<acme:input-url code="auditor.auditRecord.form.label.link" path="link"/>
-	<acme:input-textbox code="auditor.auditRecord.form.label.released" path="draftMode" readonly="true"/>
 	<acme:input-moment code="auditor.auditRecord.form.label.periodStart" path="periodStart"/>
 	<acme:input-moment code="auditor.auditRecord.form.label.periodFin" path="periodFin"/>
-	<acme:input-moment code="auditor.auditRecord.form.label.hours" path="hours" readonly="true"/>
 	<acme:input-select code="auditor.auditRecord.form.label.mark" path="mark" choices="${elecs}"/>
 	
 	
 	<jstl:if test="${_command == 'correction'}">
 		<acme:input-checkbox code="auditor.auditRecord.form.button.confirmation" path="confirmation"/>
+	</jstl:if>
+	<jstl:if test="${acme:anyOf(_command, 'show|update|delete|publish')">
+		<acme:input-textbox code="auditor.auditRecord.form.label.released" path="draftMode" readonly="true"/>
+		<acme:input-moment code="auditor.auditRecord.form.label.hours" path="hours" readonly="true"/>
 	</jstl:if>
 <jstl:choose>	 
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
