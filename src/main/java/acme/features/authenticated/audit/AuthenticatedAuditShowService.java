@@ -37,8 +37,9 @@ public class AuthenticatedAuditShowService extends AbstractService<Authenticated
 		id = super.getRequest().getData("id", int.class);
 		audit = this.repository.findAuditById(id);
 		status = audit != null;
+		final boolean draft = !audit.isDraftMode();
 
-		super.getResponse().setAuthorised(status && authenticated);
+		super.getResponse().setAuthorised(status && authenticated && draft);
 	}
 
 	@Override

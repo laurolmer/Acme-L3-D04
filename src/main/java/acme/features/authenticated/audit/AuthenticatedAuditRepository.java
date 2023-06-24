@@ -13,7 +13,7 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AuthenticatedAuditRepository extends AbstractRepository {
 
-	@Query("select audit from Audit audit where audit.draftMode = false and audit.course.id = :courseId")
+	@Query("select audit from Audit audit where audit.course.id = :courseId")
 	List<Audit> findAllAuditsByCourseId(int courseId);
 
 	@Query("select audit from Audit audit where audit.id = :id")

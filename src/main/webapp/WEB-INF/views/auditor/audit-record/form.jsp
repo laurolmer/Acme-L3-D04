@@ -30,15 +30,15 @@
 	<acme:input-moment code="auditor.auditRecord.form.label.periodStart" path="periodStart"/>
 	<acme:input-moment code="auditor.auditRecord.form.label.periodFin" path="periodFin"/>
 	<acme:input-select code="auditor.auditRecord.form.label.mark" path="mark" choices="${elecs}"/>
-	
+	<jstl:if test="${acme:anyOf(_command, 'show|update|delete|publish')}">
+		<acme:input-textbox code="auditor.auditRecord.form.label.released" path="draftMode" readonly="true"/>
+		<acme:input-moment code="auditor.auditRecord.form.label.hours" path="hours" readonly="true"/>
+	</jstl:if>
 	
 	<jstl:if test="${_command == 'correction'}">
 		<acme:input-checkbox code="auditor.auditRecord.form.button.confirmation" path="confirmation"/>
 	</jstl:if>
-	<jstl:if test="${acme:anyOf(_command, 'show|update|delete|publish')">
-		<acme:input-textbox code="auditor.auditRecord.form.label.released" path="draftMode" readonly="true"/>
-		<acme:input-moment code="auditor.auditRecord.form.label.hours" path="hours" readonly="true"/>
-	</jstl:if>
+
 <jstl:choose>	 
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
 			<acme:submit code="auditor.auditRecord.form.button.update" action="/auditor/audit-record/update"/>
