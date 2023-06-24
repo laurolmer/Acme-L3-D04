@@ -16,6 +16,9 @@ public interface AuthenticatedAuditRepository extends AbstractRepository {
 	@Query("select audit from Audit audit where audit.course.id = :courseId")
 	List<Audit> findAllAuditsByCourseId(int courseId);
 
+	@Query("select audit from Audit audit where audit.course.id = :courseId and audit.draftMode = false")
+	List<Audit> findAllAuditsByCourseIdDraft(int courseId);
+
 	@Query("select audit from Audit audit where audit.id = :id")
 	Audit findAuditById(int id);
 
