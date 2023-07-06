@@ -18,8 +18,10 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.course.Course;
 import acme.entities.course.CourseLecture;
 import acme.entities.lecture.Lecture;
+import acme.framework.components.accounts.Principal;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Student;
@@ -40,7 +42,16 @@ public class StudentLectureListService extends AbstractService<Student, Lecture>
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		boolean status;
+		final Principal principal;
+		int courseId;
+		Course course;
+		courseId = super.getRequest().getData("courseId", int.class);
+		course = this.repository.findOneCourseById(courseId);
+		principal = super.getRequest().getPrincipal();
+		status = course != null && principal.hasRole(Student.class);
+
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override

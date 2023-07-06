@@ -15,6 +15,7 @@ package acme.features.student.enrolment;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Locale;
@@ -79,19 +80,22 @@ public class StudentEnrolmentFinalizeService extends AbstractService<Student, En
 	public void validate(final Enrolment object) {
 		assert object != null;
 
-		final String creditCard;
+		String creditCard;
 		final String cvc;
 		final String expiryDate;
+		int enrolmentId;
+		boolean isSingleEnrollmentAllowed = false;
 
 		creditCard = super.getRequest().getData("creditCard", String.class);
-		if (!creditCard.matches("^\\d{4}\\/\\d{4}\\/\\d{4}\\/\\d{4}$"))
+		creditCard = creditCard.replaceAll("\\D", "");
+		if (!StudentEnrolmentFinalizeService.validateCreditCard(creditCard) || !creditCard.matches("\\d+") || creditCard.isEmpty())
 			super.state(false, "creditCard", "student.enrolment.form.error.card");
 
 		if (!super.getBuffer().getErrors().hasErrors("holderName"))
 			super.state(!object.getHolderName().isEmpty(), "holderName", "student.enrolment.form.error.holder");
 
 		cvc = super.getRequest().getData("cvc", String.class);
-		if (!cvc.matches("^\\d{3}$"))
+		if (cvc.length() < 1 || cvc.length() > 3 || !cvc.matches("\\d+"))
 			super.state(false, "cvc", "student.enrolment.form.error.cvc");
 
 		expiryDate = super.getRequest().getData("expiryDate", String.class);
@@ -100,16 +104,30 @@ public class StudentEnrolmentFinalizeService extends AbstractService<Student, En
 		final DateFormat formate = new SimpleDateFormat(localString);
 		try {
 			final Date date = formate.parse(expiryDate);
+			final Calendar calendar = Calendar.getInstance();
+			calendar.setTime(date);
+			final int lastDayOfMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+			calendar.set(Calendar.DAY_OF_MONTH, lastDayOfMonth);
+			final Date lastDayDate = calendar.getTime();
 			final int i = local.equals(Locale.ENGLISH) ? 1 : 0;
 			final int month = Integer.parseInt(expiryDate.split("/")[i]);
 			if (month < 1 || month > 12)
 				super.state(false, "expiryDate", "student.enrolment.form.error.expiryDate.month");
-			if (MomentHelper.isBefore(date, MomentHelper.getCurrentMoment()))
+			if (MomentHelper.isBefore(lastDayDate, MomentHelper.getCurrentMoment()))
 				super.state(false, "expiryDate", "student.enrolment.form.error.expiryDate.before");
 		} catch (final ParseException e) {
 			super.state(false, "expiryDate", "student.enrolment.form.error.expiryDate.pattern");
 		}
-
+		enrolmentId = super.getRequest().getData("id", int.class);
+		final Course course = this.repository.findEnrolmentById(enrolmentId).getCourse();
+		final Collection<Enrolment> enrolmentsCourse = this.repository.findEnrolmentsByCourseId(course.getId());
+		for (final Enrolment enrolment : enrolmentsCourse)
+			if (!enrolment.isDraftMode()) {
+				isSingleEnrollmentAllowed = true;
+				break;
+			}
+		if (isSingleEnrollmentAllowed)
+			super.state(false, "*", "student.enrolment.form.error.enrolmentAllowed");
 	}
 
 	@Override
@@ -118,6 +136,7 @@ public class StudentEnrolmentFinalizeService extends AbstractService<Student, En
 		String creditCard;
 		object.setDraftMode(false);
 		creditCard = super.getRequest().getData("creditCard", String.class);
+		creditCard = creditCard.replaceAll("\\D", "");
 		object.setLowerNibble(creditCard.substring(creditCard.length() - 4));
 
 		this.repository.save(object);
@@ -145,5 +164,30 @@ public class StudentEnrolmentFinalizeService extends AbstractService<Student, En
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
 		super.getResponse().setData(tuple);
+	}
+
+	//Metodos auxiliares ----------------------------------------------------
+	public static boolean validateCreditCard(final String creditCardNumber) {
+		// Eliminar espacios en blanco y caracteres no numéricos
+
+		int sum = 0;
+		boolean alternate = false;
+
+		// Iterar sobre los dígitos de derecha a izquierda
+		for (int i = creditCardNumber.length() - 1; i >= 0; i--) {
+			int digit = Integer.parseInt(creditCardNumber.substring(i, i + 1));
+
+			if (alternate) {
+				digit *= 2;
+				if (digit > 9)
+					digit = digit % 10 + 1;
+			}
+
+			sum += digit;
+			alternate = !alternate;
+		}
+
+		// La suma total debe ser divisible por 10 para que el número sea válido
+		return sum % 10 == 0;
 	}
 }

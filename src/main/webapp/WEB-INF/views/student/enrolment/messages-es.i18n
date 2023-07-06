@@ -38,13 +38,14 @@ student.enrolment.list.label.student = Estudiante:
 
 student.enrolment.list.button.create = Crear:
 
-student.enrolment.form.error.expiryDate.pattern = La fecha de caducidad debe ser formato MM/YY
+student.enrolment.form.error.expiryDate.pattern = La fecha de caducidad debe ser formato MM/yy
 student.enrolment.form.expiryDate.placeholder = MM/yy
 student.enrolment.form.error.expiryDate.before = La fecha de caducidad debe ser posterior a la fecha actual
 student.enrolment.form.error.expiryDate.month = La fecha de caducidad debe ser una fecha real
-student.enrolment.form.error.cvc = El CVC debe tener 3 números
-student.enrolment.form.error.card = La tarjeta de crédito debe ser formato XXXX/XXXX/XXXX/XXXX
+student.enrolment.form.error.cvc = El CVC debe ser valido
+student.enrolment.form.error.card = La tarjeta de crédito debe ser valida
 student.enrolment.form.error.code = Código duplicado
 student.enrolment.form.error.holder = Este campo no debe ser vacío
+student.enrolment.form.error.enrolmentAllowed = Solo se puede finalizar una matricula por curso
 
 student.enrolment.form.button.activities = Actividades:

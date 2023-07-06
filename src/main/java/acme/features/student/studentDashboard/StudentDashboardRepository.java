@@ -17,8 +17,6 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.stream.Collectors;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -82,22 +80,23 @@ public interface StudentDashboardRepository extends AbstractRepository {
 
 	default Double averageTimeCoursesByStudentId(final int studentId) {
 		final Map<Course, Double> totalTimeCourse = this.totalTimeCoursesByStudent(studentId);
-		return totalTimeCourse.entrySet().stream().collect(Collectors.summingDouble(Entry::getValue)) / totalTimeCourse.size();
+
+		return totalTimeCourse.entrySet().stream().mapToDouble(Map.Entry::getValue).average().orElse(0);
 	}
 
 	default Double deviationTimeCoursesByStudentId(final int studentId, final Double averageValue) {
 		final Map<Course, Double> totalTimeCourse = this.totalTimeCoursesByStudent(studentId);
-		return Math.sqrt(totalTimeCourse.entrySet().stream().collect(Collectors.summingDouble(x -> Math.pow(x.getValue() - averageValue, 2.))) / totalTimeCourse.size());
+		return Math.sqrt(totalTimeCourse.entrySet().stream().mapToDouble(x -> Math.pow(x.getValue() - averageValue, 2)).average().orElse(0.0));
 	}
 
 	default Double minimumTimeCoursesOfStudentId(final int studentId) {
 		final Map<Course, Double> totalTimeCourse = this.totalTimeCoursesByStudent(studentId);
-		return totalTimeCourse.values().stream().min(Comparator.naturalOrder()).get();
+		return totalTimeCourse.values().stream().min(Comparator.naturalOrder()).orElse(0.0);
 	}
 
 	default Double maximumTimeCoursesOfStudentId(final int studentId) {
 		final Map<Course, Double> totalTimeCourse = this.totalTimeCoursesByStudent(studentId);
-		return totalTimeCourse.values().stream().max(Comparator.naturalOrder()).get();
+		return totalTimeCourse.values().stream().max(Comparator.naturalOrder()).orElse(0.0);
 	}
 
 	//AUXILIARY QUERIES

@@ -73,17 +73,10 @@ public class ConfigurationUpdateService extends AbstractService<Administrator, C
 		final Set<String> currenciesCourse = courses.stream().map(Course::getRetailPrice).map(Money::getCurrency).collect(Collectors.toSet());
 		final Set<String> currencies = Stream.concat(currenciesOffer.stream(), currenciesCourse.stream()).collect(Collectors.toSet());
 		final List<String> systemCurrency = Arrays.asList(object.getAcceptedCurrencies().split(","));
-		// SystemCurrency has pattern
-		if (super.getBuffer().getErrors().hasErrors("defaultCurrency"))
-			super.state(!object.getDefaultCurrency().matches("^[A-Z]{3}$"), "defaultCurrency", "administrator.configuration.form.error.defaultCurrency");
 		final boolean currencyInList = systemCurrency.contains(object.getDefaultCurrency());
 		super.state(currencyInList, "defaultCurrency", "administrator.configuration.form.error.not-found-in-list");
 		final boolean currencyInSystem = systemCurrency.containsAll(currencies);
 		super.state(currencyInSystem, "acceptedCurrencies", "administrator.configuration.form.error.not-found-in-system");
-		// AcceptedCurrencies has pattern
-		if (super.getBuffer().getErrors().hasErrors("acceptedCurrencies"))
-			super.state(!object.getAcceptedCurrencies().matches("^[A-Z]{3}(,[A-Z]{3})*$"), "acceptedCurrencies", "administrator.configuration.form.error.pattern.accepted-currencies");
-
 	}
 
 	@Override

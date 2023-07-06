@@ -38,13 +38,14 @@ student.enrolment.list.label.student = Student:
 
 student.enrolment.list.button.create = Create:
 
-student.enrolment.form.error.expiryDate.pattern = The expiry date's format must be MM/YY
+student.enrolment.form.error.expiryDate.pattern = The expiry date's format must be yy/MM
 student.enrolment.form.expiryDate.placeholder = yy/MM
 student.enrolment.form.error.expiryDate.before = The expiry date's format must be after the current date
 student.enrolment.form.error.expiryDate.month = The expiry date's format must be a real date
-student.enrolment.form.error.cvc = The CVC's format must be 3 numbers
-student.enrolment.form.error.card = The credit card's format must be XXXX/XXXX/XXXX/XXXX
+student.enrolment.form.error.cvc = The CVC must be valid
+student.enrolment.form.error.card = The credit card's must be valid
 student.enrolment.form.error.code = Duplicated code
 student.enrolment.form.error.holder = This field mustn't be empty
+student.enrolment.form.error.enrolmentAllowed = Only one enrollment per course can be completed
 
 student.enrolment.form.button.activities = Activities:
