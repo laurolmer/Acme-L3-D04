@@ -50,7 +50,7 @@
 			<acme:submit code="student.enrolment.form.button.create" action="/student/enrolment/create"/>
 		</jstl:when>
 	</jstl:choose>	
-	<jstl:if test="${ _command == 'show' }" >
+	<jstl:if test="${ _command == 'show' && !draftMode}" >
 		<acme:button code="student.enrolment.form.button.activities" action="/student/activity/list?enrolmentId=${id}"/>
 	</jstl:if>	
 </acme:form>
