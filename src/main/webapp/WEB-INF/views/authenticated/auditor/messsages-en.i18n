@@ -10,7 +10,7 @@
 
 authenticated.auditor.form.label.firm = Firm
 authenticated.auditor.form.label.resume = professionalId
-authenticated.auditor.form.label.certifications = Certifictions
+authenticated.auditor.form.label.certifications = Certifications
 authenticated.auditor.form.label.link = Link
 
 authenticated.auditor.form.button.create = Create

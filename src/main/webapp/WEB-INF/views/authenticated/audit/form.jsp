@@ -21,7 +21,7 @@
 	<acme:input-textbox code="authenticated.audit.form.label.strongPoints" path="strongPoints"/>
 	<acme:input-textbox code="authenticated.audit.form.label.weakPoints" path="weakPoints"/>
 	<acme:input-textbox code="authenticated.audit.form.label.auditor" path="auditor" readonly = "true"/>
-	<acme:input-textbox code="authenticated.audit.form.label.draftMode" path="draftMode" readonly = "true"/>
+	<acme:input-checkbox code="authenticated.audit.form.label.draftMode" path="draftMode" readonly = "true"/>
 	<acme:input-textbox code="authenticated.audit.form.label.courseName" path="title" readonly = "true"/>
 	<acme:input-textbox code="authenticated.audit.form.label.lecturer" path="lecturer" readonly = "true"/>		
 
