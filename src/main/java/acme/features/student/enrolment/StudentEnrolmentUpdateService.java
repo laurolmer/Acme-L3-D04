@@ -86,7 +86,7 @@ public class StudentEnrolmentUpdateService extends AbstractService<Student, Enro
 		Enrolment enrolment;
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			enrolment = this.repository.findAEnrolmentByCode(object.getCode());
-			super.state(enrolment.getCode().equals(object.getCode()) && enrolment.getId() == object.getId(), "code", "student.enrolment.form.error.code");
+			super.state(enrolment == null || enrolment.getCode().equals(object.getCode()) && enrolment.getId() == object.getId(), "code", "student.enrolment.form.error.code");
 		}
 	}
 
