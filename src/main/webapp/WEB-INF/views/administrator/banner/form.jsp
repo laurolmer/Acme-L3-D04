@@ -17,8 +17,8 @@
 
 <acme:form>
 
-	<acme:input-moment code="administrator.banner.form.label.upgrade" path="upgrade"/>
-	<acme:input-moment code="administrator.banner.form.label.startDisplay" path="startDisplay"/>
+	<acme:input-moment code="administrator.banner.form.label.upgrade" path="upgrade" readonly="true"/>
+	<acme:input-moment code="administrator.banner.form.label.startDisplay" path="startDisplay" />
 	<acme:input-moment code="administrator.banner.form.label.endDisplay" path="endDisplay"/>
 	<acme:input-url code="administrator.banner.form.label.imgLink" path="imgLink"/>
 	<acme:input-textbox code="administrator.banner.form.label.slogan" path="slogan"/>

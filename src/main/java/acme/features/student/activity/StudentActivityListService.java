@@ -53,7 +53,7 @@ public class StudentActivityListService extends AbstractService<Student, Activit
 		id = super.getRequest().getPrincipal().getAccountId();
 		enrolmentId = super.getRequest().getData("enrolmentId", int.class);
 		enrolment = this.repository.findEnrolmentById(enrolmentId);
-		status = enrolment != null && enrolment.getStudent().getUserAccount().getId() == id;
+		status = enrolment != null && enrolment.getStudent().getUserAccount().getId() == id && !enrolment.isDraftMode();
 		super.getResponse().setAuthorised(status);
 	}
 

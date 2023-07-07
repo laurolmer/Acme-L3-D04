@@ -27,7 +27,7 @@
 		<br>	
 		<h3><acme:message code="student.enrolment.form.title.finalize"/></h3>		
 			<jstl:if test="${draftMode}">
-				<acme:input-textbox code="student.enrolment.form.label.creditCard" path="creditCard" placeholder="XXXX/XXXX/XXXX/XXXX"/>
+				<acme:input-textbox code="student.enrolment.form.label.creditCard" path="creditCard" placeholder="XXXX XXXX XXXX XXXX"/>
 			</jstl:if>
 				<acme:input-textbox code="student.enrolment.form.label.holderName" path="holderName"/>
 			<jstl:if test="${draftMode}">
@@ -50,7 +50,7 @@
 			<acme:submit code="student.enrolment.form.button.create" action="/student/enrolment/create"/>
 		</jstl:when>
 	</jstl:choose>	
-	<jstl:if test="${ _command == 'show' }" >
+	<jstl:if test="${ _command == 'show' && !draftMode}" >
 		<acme:button code="student.enrolment.form.button.activities" action="/student/activity/list?enrolmentId=${id}"/>
 	</jstl:if>	
 </acme:form>

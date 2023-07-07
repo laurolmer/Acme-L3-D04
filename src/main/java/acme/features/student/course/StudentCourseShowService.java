@@ -45,10 +45,9 @@ public class StudentCourseShowService extends AbstractService<Student, Course> {
 		boolean status;
 		int id;
 		Course course;
-
 		id = super.getRequest().getData("id", int.class);
 		course = this.repository.findCourseById(id);
-		status = course != null;
+		status = course != null && super.getRequest().getPrincipal().hasRole(Student.class);
 		super.getResponse().setAuthorised(status);
 	}
 
