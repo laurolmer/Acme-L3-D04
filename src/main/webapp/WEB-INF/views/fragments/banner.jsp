@@ -16,6 +16,12 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <div class="rounded" style="background: <acme:message code='master.banner.background'/>"> 
-	<img src="images/banner.png" alt="<acme:message code='master.banner.alt'/>" class="img-fluid rounded"/>
-	<a href="${banner.docLink}"> <img src="${banner.imgLink}" alt="${banner.slogan}" class="img-fluid rounded" style="width: 10%; height: 10%;"/> </a>
+    <img src="images/banner.png" alt="<acme:message code='master.banner.alt'/>" class="img-fluid rounded"/>
+    <div>
+        <a href="${banner.docLink}">
+            <img src="${banner.imgLink}" alt="${banner.slogan}" class="img-fluid rounded" style="width: 10%; height: 10%;"/>
+        </a>
+        <p style="color: white; font-size: 24px;">${banner.slogan}</p>
+    </div>
 </div>
+
