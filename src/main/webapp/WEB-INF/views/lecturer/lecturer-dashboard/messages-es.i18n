@@ -10,6 +10,7 @@ lecturer.dashboard.course.data = Información sobre cursos
 
 lecturer.dashboard.lecture.numTheory = Lecciones teóricas
 lecturer.dashboard.lecture.numHandsOn = Lecciones prácticas
+lecturer.dashboard.lecture.numBalanced = Lecciones balanceadas
 
 # LECTURE -------------------------------------------------------------------------
 

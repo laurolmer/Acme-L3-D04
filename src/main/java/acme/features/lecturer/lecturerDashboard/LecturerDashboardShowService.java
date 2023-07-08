@@ -38,6 +38,8 @@ public class LecturerDashboardShowService extends AbstractService<Lecturer, Lect
 		final Statistic lectureTime;
 		final Statistic courseTime;
 		final Integer totalNumTheoryLectures;
+		final Integer totalNumHandsOnLectures;
+		final Integer totalNumBalancedLectures;
 
 		final Integer countLectures;
 		final Double averageLectureTime;
@@ -54,7 +56,9 @@ public class LecturerDashboardShowService extends AbstractService<Lecturer, Lect
 
 		// Lectures ------------------------------------------------------------------------
 
-		totalNumTheoryLectures = this.repository.countHandsOnLecturesByLecturerId(lecturerId);
+		totalNumTheoryLectures = this.repository.countTheoreticalLecturesByLecturerId(lecturerId);
+		totalNumBalancedLectures = this.repository.countBalancedLecturesByLecturerId(lecturerId);
+		totalNumHandsOnLectures = this.repository.countHandsOnLecturesByLecturerId(lecturerId);
 
 		countLectures = this.repository.countLecturesByLecturerId(lecturerId);
 		averageLectureTime = this.repository.avgLectureTimeByLecturerId(lecturerId);
@@ -90,6 +94,8 @@ public class LecturerDashboardShowService extends AbstractService<Lecturer, Lect
 
 		dashboard = new LecturerDashboard();
 		dashboard.setTotalNumTheoryLectures(totalNumTheoryLectures);
+		dashboard.setTotalNumHandsOnLectures(totalNumHandsOnLectures);
+		dashboard.setTotalNumBalancedLectures(totalNumBalancedLectures);
 		dashboard.setLectureTime(lectureTime);
 		dashboard.setCourseTime(courseTime);
 
@@ -99,12 +105,8 @@ public class LecturerDashboardShowService extends AbstractService<Lecturer, Lect
 	@Override
 	public void unbind(final LecturerDashboard object) {
 		Tuple tuple;
-		Integer totalNumHandsOnLectures;
 
-		tuple = super.unbind(object, "totalNumTheoryLectures");
-
-		totalNumHandsOnLectures = Math.abs(object.getTotalNumTheoryLectures() - object.getLectureTime().getCount());
-		tuple.put("totalNumHandsOnLectures", totalNumHandsOnLectures);
+		tuple = super.unbind(object, "totalNumTheoryLectures", "totalNumHandsOnLectures", "totalNumBalancedLectures");
 
 		tuple.put("countLectures", object.getLectureTime().getCount());
 		tuple.put("avgLectureTime", object.getLectureTime().getAverage());

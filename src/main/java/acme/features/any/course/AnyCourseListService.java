@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.course.Course;
 import acme.framework.components.accounts.Any;
+import acme.framework.components.accounts.Principal;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 
@@ -27,7 +28,14 @@ public class AnyCourseListService extends AbstractService<Any, Course> {
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		final boolean status;
+		final Principal principal;
+
+		principal = super.getRequest().getPrincipal();
+		status = principal.isAuthenticated();
+
+		super.getResponse().setAuthorised(status);
+
 	}
 
 	@Override

@@ -18,6 +18,12 @@
 		<td>
 			<acme:print value="${totalNumHandsOnLectures}"/>
 		</td>
+		<th scope="row">
+			<acme:message code="lecturer.dashboard.lecture.numBalanced"/>
+		</th>
+		<td>
+			<acme:print value="${totalNumBalancedLectures}"/>
+		</td>
 	</tr>
 </table>
 
