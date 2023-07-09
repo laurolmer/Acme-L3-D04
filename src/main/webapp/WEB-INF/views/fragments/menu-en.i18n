@@ -73,7 +73,6 @@ master.menu.assistant.dashboard = Assistant's Dashboard
 
 master.menu.lecturer = Lecturer
 master.menu.lecturer.course.create = Create course
-master.menu.lecturer.course.list.all = List courses
 master.menu.lecturer.course.list.mine = List my courses
 master.menu.lecturer.lecture.list.all = List my lectures
 master.menu.lecturer.lecture.create = Create lecture

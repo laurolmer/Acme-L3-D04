@@ -16,7 +16,9 @@ public class LecturerDashboard extends AbstractForm {
 
 	protected Integer			totalNumTheoryLectures;
 
-	//	totalNumHandsOnLectures = totalLectures - totalNumTheoryLectures
+	protected Integer			totalNumHandsOnLectures;
+
+	protected Integer			totalNumBalancedLectures;
 
 	protected Statistic			lectureTime;
 

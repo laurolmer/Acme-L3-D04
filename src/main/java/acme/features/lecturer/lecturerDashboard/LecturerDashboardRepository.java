@@ -20,6 +20,12 @@ public interface LecturerDashboardRepository extends AbstractRepository {
 	@Query("select count(l) from Lecture l where l.lecturer.id = :lecturerId")
 	Integer countLecturesByLecturerId(int lecturerId);
 
+	@Query("select count(l) from Lecture l where l.lecturer.id = :lecturerId and l.lectureType = acme.entities.lecture.LectureType.THEORETICAL")
+	Integer countTheoreticalLecturesByLecturerId(int lecturerId);
+
+	@Query("select count(l) from Lecture l where l.lecturer.id = :lecturerId and l.lectureType = acme.entities.lecture.LectureType.BALANCED")
+	Integer countBalancedLecturesByLecturerId(int lecturerId);
+
 	@Query("select count(l) from Lecture l where l.lecturer.id = :lecturerId and l.lectureType = acme.entities.lecture.LectureType.HANDS_ON")
 	Integer countHandsOnLecturesByLecturerId(int lecturerId);
 

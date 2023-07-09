@@ -2,6 +2,8 @@
 package acme.features.lecturer.courseLecture;
 
 import java.util.Collection;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,13 +42,23 @@ public class LecturerCourseLectureAddService extends AbstractService<Lecturer, C
 		final int userAccountId;
 		int objectId;
 		final Course object;
+		final int lectureId;
+		final Set<Integer> selectChoices;
+		boolean lectureIdInSelect = true;
 
 		principal = super.getRequest().getPrincipal();
 		userAccountId = principal.getAccountId();
 		objectId = super.getRequest().getData("courseId", int.class);
 		object = this.repository.findOneCourseById(objectId);
 
-		status = object.getLecturer().getUserAccount().getId() == userAccountId;
+		if (super.getRequest().hasData("lectureId")) {
+			lectureId = super.getRequest().getData("lectureId", int.class);
+			selectChoices = this.repository.findPublishedLecturesByLecturerId(principal.getActiveRoleId()).stream().map(Lecture::getId).collect(Collectors.toSet());
+			selectChoices.add(0);
+			lectureIdInSelect = selectChoices.contains(lectureId);
+		}
+
+		status = object.getLecturer().getUserAccount().getId() == userAccountId && lectureIdInSelect;
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -91,7 +103,7 @@ public class LecturerCourseLectureAddService extends AbstractService<Lecturer, C
 		boolean validLectureId = false;
 
 		if (!super.getBuffer().getErrors().hasErrors("lectureId")) {
-			final Integer lectureId = super.getRequest().getData("lectureId", Integer.class);
+			final Integer lectureId = super.getRequest().getData("lectureId", int.class);
 			validLectureId = lectureId != null && lectureId > 0;
 			super.state(validLectureId, "*", "lecturer.course-lecture.error.lectureIdNull");
 		}
