@@ -21,7 +21,7 @@
 	<name>Acme-L3-D04</name>
 	<description>This is a Acme-L3-D04 Design &amp; Testing II.</description>
 
-	<groupId>Acme</groupId>	
+	<groupId>C2.02.06</groupId>	
 	<artifactId>Acme-L3-D04</artifactId>
 	<version>23.4.0</version>
 	<packaging>war</packaging>
